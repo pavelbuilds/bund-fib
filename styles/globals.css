@@ -330,19 +330,19 @@ html {
 /* Image Card */
 .erstesKennenlernen {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../public/images/Kennenlernen.JPG');
+    url('../public/images/Kennenlernen.jpg');
   background-size: cover;
 }
 
 .kostenloseProbestunde {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../public/images/privatunterricht.JPG');
+    url('../public/images/privatunterricht.jpg');
   background-size: cover;
 }
 
 .downloadsCSS {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../public/images/title.JPG');
+    url('../public/images/title.jpg');
   background-size: cover;
 }
 
@@ -392,12 +392,12 @@ html {
 /* Bildungsprojekte */
 .bildungsProjektFit {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../public/images/bildungsprojekte.JPG');
+    url('../public/images/bildungsprojekte.jpg');
   background-size: cover;
 }
 
 .kostenloseProbestunde {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../public/images/privatunterricht.JPG');
+    url('../public/images/privatunterricht.jpg');
   background-size: cover;
 }

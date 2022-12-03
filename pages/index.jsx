@@ -31,6 +31,19 @@ import 'aos/dist/aos.css';
 import { InlineWidget } from 'react-calendly';
 import InstaImage from '../components/InstaImage';
 
+// fetch instagram images with static props
+export async function getStaticProps() {
+  const res = await fetch(
+    `https://graph.instagram.com/me/media?fields=id,caption,media_url,media_type,permalink,thumbnail_url,timestamp,username&access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}`
+  );
+  const data = await res.json();
+  return {
+    props: {
+      instaImages: data.data,
+    },
+  };
+
+
 export default function Home() {
   // Initialize AOS
   useEffect(() => {

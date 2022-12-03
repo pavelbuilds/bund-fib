@@ -1,3 +1,403 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Berlin Sans FB';
+  src: url('../public/fonts/BerlinSansFBRegular.ttf');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 200;
+  src: url('../public/fonts/SourceSansPro-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  src: url('../public/fonts/SourceSansPro-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  src: url('../public/fonts/SourceSansPro-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  src: url('../public/fonts/SourceSansPro-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+  src: url('../public/fonts/SourceSansPro-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 600;
+  src: url('../public/fonts/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 700;
+  src: url('../public/fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 800;
+  src: url('../public/fonts/Poppins-ExtraBold.ttf');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Wave */
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.wave .shape-fill {
+  fill: #fffaf1;
+}
+
+/* Wave Two */
+
+.wave-two {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-two svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 289px;
+  transform: rotateY(180deg);
+}
+
+.wave-two .shape-fill {
+  fill: #fde4b8;
+}
+
+/* Wave Three */
+.wave-three {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-three svg {
+  position: relative;
+  display: block;
+  width: calc(151% + 1.3px);
+  height: 500px;
+  transform: rotateY(180deg);
+}
+
+.wave-three .shape-fill {
+  fill: #fffaf1;
+}
+
+/* Wave Four */
+.wave-four {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-four svg {
+  position: relative;
+  display: block;
+  width: calc(159% + 1.3px);
+  height: 238px;
+  transform: rotateY(180deg);
+}
+
+.wave-four .shape-fill {
+  fill: #fff2da;
+}
+
+/* Wave Five */
+.wave-5 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-5 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 269px;
+}
+
+.wave-5 .shape-fill {
+  fill: #fde4b8;
+}
+
+/* Wave Six */
+
+.wave-6 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-6 svg {
+  position: relative;
+  display: block;
+  width: calc(131% + 1.3px);
+  height: 367px;
+  transform: rotateY(180deg);
+}
+
+.wave-6 .shape-fill {
+  fill: #fff2da;
+}
+
+/* Wave Seven */
+
+.wave-7 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-7 svg {
+  position: relative;
+  display: block;
+  width: calc(128% + 1.3px);
+  height: 295px;
+  transform: rotateY(180deg);
+}
+
+.wave-7 .shape-fill {
+  fill: #fde4b8;
+}
+
+/* Wave Eight */
+
+.wave-8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-8 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 123px;
+}
+
+.wave-8 .shape-fill {
+  fill: #fde4b8;
+}
+
+/* Hamburger Menu */
+
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  margin-top: auto;
+  overflow: visible;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: '';
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/* Slider */
+.hamburger--slider .hamburger-inner {
+  top: 2px;
+}
+.hamburger--slider .hamburger-inner::before {
+  top: 10px;
+  transition-property: transform, opacity;
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+}
+.hamburger--slider .hamburger-inner::after {
+  top: 20px;
+}
+
+.hamburger--slider.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.hamburger--slider.is-active .hamburger-inner::before {
+  transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+  opacity: 0;
+}
+.hamburger--slider.is-active .hamburger-inner::after {
+  transform: translate3d(0, -20px, 0) rotate(-90deg);
+}
+
+/* Image Card */
+.erstesKennenlernen {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../public/images/Kennenlernen.JPG');
+  background-size: cover;
+}
+
+.kostenloseProbestunde {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../public/images/privatunterricht.JPG');
+  background-size: cover;
+}
+
+.downloadsCSS {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../public/images/title.JPG');
+  background-size: cover;
+}
+
+/* Swipter */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet-active {
+  background: black !important;
+  transform: scale(1.3);
+}
+
+.swiper-pagination-bullet-active-main {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+/* Bildungsprojekte */
+.bildungsProjektFit {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../public/images/bildungsprojekte.JPG');
+  background-size: cover;
+}
+
+.kostenloseProbestunde {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../public/images/privatunterricht.JPG');
+  background-size: cover;
+}

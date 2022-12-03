@@ -1,10 +1,4 @@
-import { useState } from 'react';
-
 const BurgerMenu = ({ state, onClickFunc }) => {
-  const [isClicked, setIsClicked] = useState(false);
-  const toogleHamburgerMenu = () => {
-    setIsClicked(!isClicked);
-  };
   return (
     <button
       onClick={onClickFunc}

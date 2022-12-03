@@ -139,7 +139,7 @@ export default function Home() {
         <div className='max-w-screen-xl flex justify-between items-center mx-auto sm:px-20 px-5'>
           {/* Logo */}
           <div>
-            <img className='h-9' src='images/logos/bund_fib_logo.png' alt='' />
+            <img className='h-9' src='/images/logos/bund_fib_logo.png' alt='' />
           </div>
           {/* Menu */}
           <ul className='hidden lg:flex items-center font-source justify-between text-sm w-[400px]'>
@@ -229,7 +229,7 @@ export default function Home() {
       </div>
 
       {/* --Titelseite-- */}
-      <section className='bg-[url("images/title.jpg")] bg-cover sm:h-[85vh] h-[78vh] relative'>
+      <section className='bg-[url("/images/title.jpg")] bg-cover sm:h-[85vh] h-[78vh] relative'>
         <div className='w-full h-full bg-black bg-opacity-60 flex flex-col justify-center items-center'>
           {/* Title Slogal */}
           <h1 className='sm:w-[600px] font-berlin text-white sm:text-6xl text-5xl text-center'>
@@ -271,16 +271,16 @@ export default function Home() {
         <Container styling={'pt-5'}>
           {/* Partner Logos */}
           <div className='flex justify-between items-center pt-5 overflow-hidden'>
-            <img className='sm:h-12 h-9 sm:px-0' src='images/logos/haus_der_jugend.png' alt='' />
-            <img className='sm:h-12 h-9 sm:px-0' src='images/logos/OASE_logo.png' alt='' />
+            <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/haus_der_jugend.png' alt='' />
+            <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.png' alt='' />
             <img
               className='sm:h-12 h-9 sm:px-0'
-              src='images/logos/bundesvereinigung_nachhaltigkeit.svg'
+              src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
               alt=''
             />
             <img
               className='sm:h-9 h-9 sm:block hidden sm:px-0'
-              src='images/logos/weißes_berlin_logo.png'
+              src='/images/logos/weißes_berlin_logo.png'
               alt=''
             />
           </div>
@@ -322,7 +322,7 @@ export default function Home() {
             >
               <img
                 className='rounded-t-3xl brightness-[0.6]'
-                src='images/lernfoe_übersicht.jpg'
+                src='/images/lernfoe_übersicht.jpg'
                 alt=''
               />
               <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Lernförderung</div>
@@ -342,7 +342,7 @@ export default function Home() {
             >
               <img
                 className='rounded-t-3xl brightness-[0.6]'
-                src='images/privatunterricht.jpg'
+                src='/images/privatunterricht.jpg'
                 alt=''
               />
               <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Privatunterricht</div>
@@ -362,7 +362,7 @@ export default function Home() {
             >
               <img
                 className='rounded-t-3xl brightness-[0.6] w-full h-48 object-cover'
-                src='images/bildungsprojekte.jpg'
+                src='/images/bildungsprojekte.jpg'
                 alt=''
               />
               <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Bildungsprojekte</div>
@@ -421,7 +421,7 @@ export default function Home() {
             <div data-aos-anchor-placement='center-bottom' className='lg:w-1/2 w-full'>
               <img
                 className='shadow-2xl lg:h-full lg:block hidden object-cover filter brightness-50 lg:rounded-tl-3xl'
-                src='images/lernfoe_übersicht.jpg'
+                src='/images/lernfoe_übersicht.jpg'
                 alt=''
               />
             </div>
@@ -460,7 +460,7 @@ export default function Home() {
             <div className='w-1/2'>
               <img
                 className='shadow-2xl lg:block hidden h-full w-full object-cover filter brightness-50 rounded-br-3xl'
-                src='images/fuer_eltern.jpg'
+                src='/images/fuer_eltern.jpg'
                 alt=''
               />
             </div>
@@ -685,18 +685,18 @@ export default function Home() {
           >
             <img
               className='sm:h-12 h-9 sm:px-0 sm:px-6'
-              src='images/logos/haus_der_jugend.png'
+              src='/images/logos/haus_der_jugend.png'
               alt=''
             />
-            <img className='sm:h-12 h-9 sm:px-0 sm:px-6' src='images/logos/OASE_logo.png' alt='' />
+            <img className='sm:h-12 h-9 sm:px-0 sm:px-6' src='/images/logos/OASE_logo.png' alt='' />
             <img
               className='sm:h-12 h-9 sm:px-0 sm:px-6'
-              src='images/logos/bundesvereinigung_nachhaltigkeit.svg'
+              src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
               alt=''
             />
             <img
               className='sm:h-9 h-9 sm:block hidden sm:px-0 sm:px-6'
-              src='images/logos/weißes_berlin_logo.png'
+              src='/images/logos/weißes_berlin_logo.png'
               alt=''
             />
           </div>
@@ -746,16 +746,16 @@ export default function Home() {
           </div>
           {/* Mitarbeiter Übersicht */}
           <div data-aos='fade-up' className='flex justify-between sm:mt-24 mt-10 flex-wrap'>
-            <Mitarbeiter bild={'images/anna.jpg'} name={'Anna'} job={'Erzieherin'} />
-            <Mitarbeiter bild={'images/arin.jpg'} name={'Arin'} job={'Rolle'} />
-            <Mitarbeiter bild={'images/karin.jpg'} name={'Karin'} job={'Rolle'} />
-            <Mitarbeiter bild={'images/lukas.jpg'} name={'Lukas'} job={'Rolle'} />
-            <Mitarbeiter bild={'images/madeleine.jpg'} name={'Madeleine'} job={'Rolle'} />
-            <Mitarbeiter bild={'images/maggy.jpg'} name={'Maggy'} job={'Rolle'} />
-            <Mitarbeiter bild={'images/matthias.jpg'} name={'Matthias'} job={'Rolle'} />
-            <Mitarbeiter bild={'images/pauline.jpg'} name={'Pauline'} job={'Rolle'} />
-            <Mitarbeiter bild={'images/salim.jpg'} name={'Salim'} job={'Rolle'} />
-            <Mitarbeiter bild={'images/victoria.jpg'} name={'Victoria'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/anna.jpg'} name={'Anna'} job={'Erzieherin'} />
+            <Mitarbeiter bild={'/images/arin.jpg'} name={'Arin'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/karin.jpg'} name={'Karin'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/lukas.jpg'} name={'Lukas'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/madeleine.jpg'} name={'Madeleine'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/maggy.jpg'} name={'Maggy'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/matthias.jpg'} name={'Matthias'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/pauline.jpg'} name={'Pauline'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/salim.jpg'} name={'Salim'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/victoria.jpg'} name={'Victoria'} job={'Rolle'} />
           </div>
         </Container>{' '}
       </section>
@@ -772,7 +772,7 @@ export default function Home() {
             <div className='sm:w-1/2 w-full hidden lg:block'>
               <img
                 className='shadow-2xl sm:h-full sm:block hidden object-cover rounded-tl-3xl rounded-bl-3xl'
-                src='images/jobs.jpg'
+                src='/images/jobs.jpg'
                 alt=''
               />
             </div>
@@ -832,25 +832,25 @@ export default function Home() {
             <div className=''>
               <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Angebot</div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
-              <InstaImage src={'images/insta_1.png'} />
-              <InstaImage src={'images/insta_1.png'} />
-              <InstaImage src={'images/insta_1.png'} />
+              <InstaImage src={'/images/insta_1.png'} />
+              <InstaImage src={'/images/insta_1.png'} />
+              <InstaImage src={'/images/insta_1.png'} />
             </div>
             {/* Second Column */}
             <div className=''>
               <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Ausflüge</div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
-              <InstaImage src={'images/insta_2.jpg'} />
-              <InstaImage src={'images/insta_2.jpg'} />
-              <InstaImage src={'images/insta_2.jpg'} />
+              <InstaImage src={'/images/insta_2.jpg'} />
+              <InstaImage src={'/images/insta_2.jpg'} />
+              <InstaImage src={'/images/insta_2.jpg'} />
             </div>
             {/* Third Column */}
             <div className=''>
               <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Mitarbeiter</div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
-              <InstaImage src={'images/insta_3.png'} />
-              <InstaImage src={'images/insta_3.png'} />
-              <InstaImage src={'images/insta_3.png'} />
+              <InstaImage src={'/images/insta_3.png'} />
+              <InstaImage src={'/images/insta_3.png'} />
+              <InstaImage src={'/images/insta_3.png'} />
             </div>
           </div>
           <Button styling={'my-10'} cta={'mehr anzeigen'} />
@@ -988,7 +988,7 @@ export default function Home() {
         {/* Container */}
         <div className='flex sm:flex-row flex-col justify-between sm:pt-28 pt-20'>
           {/* Logo */}
-          <img className='h-12 object-contain' src='images/logos/bund_fib_logo.png' alt='' />
+          <img className='h-12 object-contain' src='/images/logos/bund_fib_logo.png' alt='' />
           {/* Leistungen */}
           <div className='lg:block hidden'>
             <div className='font-poppins text-base'>Leistungen</div>

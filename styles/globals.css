@@ -330,19 +330,18 @@ html {
 /* Image Card */
 .erstesKennenlernen {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../public/images/Kennenlernen.jpg');
+    url('/images/Kennenlernen.jpg');
   background-size: cover;
 }
 
 .kostenloseProbestunde {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../public/images/privatunterricht.jpg');
+    url('/images/privatunterricht.jpg');
   background-size: cover;
 }
 
 .downloadsCSS {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../public/images/title.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/title.jpg');
   background-size: cover;
 }
 

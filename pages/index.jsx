@@ -322,7 +322,7 @@ export default function Home() {
             >
               <img
                 className='rounded-t-3xl brightness-[0.6]'
-                src='/images/lernfoe_übersicht.jpg'
+                src='/images/lernfoe_uebersicht.jpg'
                 alt=''
               />
               <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Lernförderung</div>
@@ -421,7 +421,7 @@ export default function Home() {
             <div data-aos-anchor-placement='center-bottom' className='lg:w-1/2 w-full'>
               <img
                 className='shadow-2xl lg:h-full lg:block hidden object-cover filter brightness-50 lg:rounded-tl-3xl'
-                src='/images/lernfoe_übersicht.jpg'
+                src='/images/lernfoe_uebersicht.jpg'
                 alt=''
               />
             </div>

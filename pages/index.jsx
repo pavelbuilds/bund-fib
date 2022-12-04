@@ -381,11 +381,7 @@ export default function Home() {
               href='#Lernförderung'
               className='lg:hover:scale-[102%] transition-all sm:w-[45%] w-full rounded-2xl bg-white shadow-2xl'
             >
-              <img
-                className='rounded-t-3xl brightness-[0.6]'
-                src='/images/lernfoe_uebersicht.jpg'
-                alt=''
-              />
+              <img className='rounded-t-3xl brightness-[0.6]' src='/images/schule.jpg' alt='' />
               <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Lernförderung</div>
               <div className='font-source text-sm lg:mt-5 mt-8 mx-7'>
                 Wir kommen an Ihre Schule und fördern Ihre Schülerinnen und Schüler, um

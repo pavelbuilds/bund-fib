@@ -397,11 +397,7 @@ export default function Home() {
               href='#Privatunterricht'
               className='lg:hover:scale-[102%] transition-all sm:w-[45%] rounded-2xl bg-white shadow-2xl lg:mt-56 sm:mt-0 mt-16'
             >
-              <img
-                className='rounded-t-3xl brightness-[0.6]'
-                src='/images/privatunterricht.jpg'
-                alt=''
-              />
+              <img className='rounded-t-3xl brightness-[0.6]' src='/images/privat.jpg' alt='' />
               <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Privatunterricht</div>
               <div className='font-source text-sm lg:mt-5 mt-8 mx-7'>
                 Ihr Kind steht im Mittelpunkt. Gemeinsam mit unseren Tutoren und Tutorinnen finden
@@ -419,7 +415,7 @@ export default function Home() {
             >
               <img
                 className='rounded-t-3xl brightness-[0.6] w-full h-48 object-cover'
-                src='/images/bildungsprojekte.jpg'
+                src='/images/projekte.jpg'
                 alt=''
               />
               <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Bildungsprojekte</div>
@@ -478,7 +474,7 @@ export default function Home() {
             <div data-aos-anchor-placement='center-bottom' className='lg:w-1/2 w-full'>
               <img
                 className='shadow-2xl lg:h-full lg:block hidden object-cover filter brightness-50 lg:rounded-tl-3xl'
-                src='/images/lernfoe_uebersicht.jpg'
+                src='/images/schule.jpg'
                 alt=''
               />
             </div>
@@ -517,7 +513,7 @@ export default function Home() {
             <div className='w-1/2'>
               <img
                 className='shadow-2xl lg:block hidden h-full w-full object-cover filter brightness-50 rounded-br-3xl'
-                src='/images/fuer_eltern.jpg'
+                src='/images/eltern.jpg'
                 alt=''
               />
             </div>
@@ -829,7 +825,7 @@ export default function Home() {
             <div className='sm:w-1/2 w-full hidden lg:block'>
               <img
                 className='shadow-2xl sm:h-full sm:block hidden object-cover rounded-tl-3xl rounded-bl-3xl'
-                src='/images/jobs.jpg'
+                src='/images/jobsKarte.jpg'
                 alt=''
               />
             </div>
@@ -889,25 +885,25 @@ export default function Home() {
             <div className=''>
               <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Angebot</div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
-              <InstaImage src={'/images/insta_1.png'} />
-              <InstaImage src={'/images/insta_1.png'} />
-              <InstaImage src={'/images/insta_1.png'} />
+              <InstaImage src={'/images/insta_bild_1.png'} />
+              <InstaImage src={'/images/insta_bild_1.png'} />
+              <InstaImage src={'/images/insta_bild_1.png'} />
             </div>
             {/* Second Column */}
             <div className=''>
               <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Ausflüge</div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
-              <InstaImage src={'/images/insta_2.jpg'} />
-              <InstaImage src={'/images/insta_2.jpg'} />
-              <InstaImage src={'/images/insta_2.jpg'} />
+              <InstaImage src={'/images/insta_bild_2.jpg'} />
+              <InstaImage src={'/images/insta_bild_2.jpg'} />
+              <InstaImage src={'/images/insta_bild_2.jpg'} />
             </div>
             {/* Third Column */}
             <div className=''>
               <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Mitarbeiter</div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
-              <InstaImage src={'/images/insta_3.png'} />
-              <InstaImage src={'/images/insta_3.png'} />
-              <InstaImage src={'/images/insta_3.png'} />
+              <InstaImage src={'/images/insta_bild_3.png'} />
+              <InstaImage src={'/images/insta_bild_3.png'} />
+              <InstaImage src={'/images/insta_bild_3.png'} />
             </div>
           </div>
           <Button styling={'my-10'} cta={'mehr anzeigen'} />

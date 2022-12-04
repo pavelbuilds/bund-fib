@@ -329,14 +329,12 @@ html {
 
 /* Image Card */
 .erstesKennenlernen {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('/images/Kennenlernen.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/kennen.jpg');
   background-size: cover;
 }
 
 .kostenloseProbestunde {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('/images/privatunterricht.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/privat.jpg');
   background-size: cover;
 }
 
@@ -390,13 +388,11 @@ html {
 
 /* Bildungsprojekte */
 .bildungsProjektFit {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('/images/bildungsprojekte.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/projekte.jpg');
   background-size: cover;
 }
 
 .kostenloseProbestunde {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('/images/privatunterricht.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/privat.jpg');
   background-size: cover;
 }

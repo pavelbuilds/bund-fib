@@ -17,6 +17,7 @@ import {
   faSquarePhone,
   faEnvelope,
   faXmark,
+  faColonSign,
 } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 // Import Swiper
@@ -30,6 +31,8 @@ import 'aos/dist/aos.css';
 // Import Calendly
 import { InlineWidget } from 'react-calendly';
 import InstaImage from '../components/InstaImage';
+// // Import Instagram API
+// import { IgApiClient } from 'instagram-private-api';
 
 export default function Home() {
   // Initialize AOS
@@ -38,6 +41,8 @@ export default function Home() {
       duration: 1000,
     });
   }, []);
+
+  // console.log(posts);
 
   const [show, setShow] = useState(false);
 
@@ -61,6 +66,16 @@ export default function Home() {
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
   const toogleHamburgerMenu = () => {
     setHamburgerClicked(!hamburgerClicked);
+  };
+
+  const [impressum, setImpressum] = useState(false);
+  const toggleImpressum = () => {
+    setImpressum(!impressum);
+  };
+
+  const [datenschutz, setDateschutz] = useState(false);
+  const toggleDatenschutz = () => {
+    setDateschutz(!datenschutz);
   };
 
   return (
@@ -110,18 +125,24 @@ export default function Home() {
           </div>
           {/* Icons */}
           <div className='flex justify-center'>
-            <div className='text-[10px] text-center font-poppins'>
-              <FontAwesomeIcon className='w-7 mx-10 mb-2' icon={faEnvelope} />
-              E-Mail
-            </div>
-            <div className='text-[10px] text-center font-poppins'>
-              <FontAwesomeIcon className='w-6 mx-10 mb-2' icon={faSquarePhone} />
-              Telefon
-            </div>
-            <div className='text-[10px] text-center font-poppins'>
-              <FontAwesomeIcon className='w-6 mx-10 mb-2' icon={faInstagram} />
-              Instagram
-            </div>
+            <a href='mailto:verwaltung@bund-fib.de'>
+              <div className='text-[10px] text-center font-poppins'>
+                <FontAwesomeIcon className='w-7 mx-10 mb-2' icon={faEnvelope} />
+                E-Mail
+              </div>
+            </a>
+            <a href='tel:+4915758745855'>
+              <div className='text-[10px] text-center font-poppins'>
+                <FontAwesomeIcon className='w-6 mx-10 mb-2' icon={faSquarePhone} />
+                Telefon
+              </div>
+            </a>
+            <a href='https://www.instagram.com/bund_fib/'>
+              <div className='text-[10px] text-center font-poppins'>
+                <FontAwesomeIcon className='w-6 mx-10 mb-2' icon={faInstagram} />
+                Instagram
+              </div>
+            </a>
           </div>
           <Button
             click={toggleKontaktieren}
@@ -129,6 +150,88 @@ export default function Home() {
             cta={'Schließen'}
           />
         </div>
+      </div>
+
+      {/* Burger Menu */}
+      <div
+        className={`transition-all duration-700 ease-out fixed bg-lightYellow z-40 w-screen lg:pt-24 h-screen min-h-[600px] ${
+          hamburgerClicked ? '-translate-y-0' : '-translate-y-full'
+        }`}
+      >
+        {/* Container */}
+        <div className='max-w-screen-xl h-full flex flex-col justify-center items-center sm:text-[40px] text-3xl font-berlin'>
+          {/* Header */}
+          <a href='#Lernförderung'>
+            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
+              Lernförderung
+            </div>
+          </a>
+          <a href='#Privatunterricht'>
+            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
+              Privatunterricht
+            </div>
+          </a>
+          <a href='#Bildungsprojekte'>
+            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
+              Bildungsprojekte
+            </div>
+          </a>
+          <a href='#ÜberUns'>
+            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
+              Über Uns
+            </div>
+          </a>
+          <a href='#Jobs'>
+            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
+              Jobs
+            </div>
+          </a>
+          <a href='#Aktuelles'>
+            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
+              Aktuelles
+            </div>
+          </a>
+        </div>
+      </div>
+
+      {/* Impressum Popup */}
+      <div
+        className={`transition-all duration-700 ease-out fixed bg-lightYellow z-50 w-screen lg:pt-24 sm:pt-36 pt-24 h-screen min-h-[600px] ${
+          impressum ? 'translate-y-0' : 'translate-y-full'
+        }`}
+      >
+        {/* Container */}
+        <Container>
+          {/* Header */}
+          <div className='flex justify-between'>
+            <div className='font-berlin text-2xl text-center'>Impressum</div>
+            <FontAwesomeIcon
+              onClick={toggleImpressum}
+              className='w-6 cursor-pointer'
+              icon={faXmark}
+            />
+          </div>
+        </Container>
+      </div>
+
+      {/* Datenschutz Popup */}
+      <div
+        className={`transition-all duration-700 ease-out fixed bg-lightYellow z-50 w-screen lg:pt-24 sm:pt-36 pt-24 h-screen min-h-[600px] ${
+          datenschutz ? 'translate-y-0' : 'translate-y-full'
+        }`}
+      >
+        {/* Container */}
+        <Container>
+          {/* Header */}
+          <div className='flex justify-between'>
+            <div className='font-berlin text-2xl text-center'>Datenschutz</div>
+            <FontAwesomeIcon
+              onClick={toggleDatenschutz}
+              className='w-6 cursor-pointer'
+              icon={faXmark}
+            />
+          </div>
+        </Container>
       </div>
 
       {/* --Navigationsleiste-- */}
@@ -185,48 +288,6 @@ export default function Home() {
           <BurgerMenu state={hamburgerClicked} onClickFunc={toogleHamburgerMenu} />
         </div>
       </nav>
-
-      {/* Burger Menu (mobile) */}
-      <div
-        className={`transition-all duration-700 ease-out fixed bg-lightYellow z-40 w-screen lg:pt-24 h-screen min-h-[600px] ${
-          hamburgerClicked ? '-translate-y-0' : '-translate-y-full'
-        }`}
-      >
-        {/* Container */}
-        <div className='max-w-screen-xl h-full flex flex-col justify-center items-center sm:text-[40px] text-3xl font-berlin'>
-          {/* Header */}
-          <a href='#Lernförderung'>
-            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
-              Lernförderung
-            </div>
-          </a>
-          <a href='#Privatunterricht'>
-            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
-              Privatunterricht
-            </div>
-          </a>
-          <a href='#Bildungsprojekte'>
-            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
-              Bildungsprojekte
-            </div>
-          </a>
-          <a href='#ÜberUns'>
-            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
-              Über Uns
-            </div>
-          </a>
-          <a href='#Jobs'>
-            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
-              Jobs
-            </div>
-          </a>
-          <a href='#Aktuelles'>
-            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
-              Aktuelles
-            </div>
-          </a>
-        </div>
-      </div>
 
       {/* --Titelseite-- */}
       <section className='bg-[url("/images/title.jpg")] bg-cover sm:h-[85vh] h-[78vh] relative'>
@@ -970,7 +1031,7 @@ export default function Home() {
       </section>
 
       {/* --Footer-- */}
-      <footer className='mx-auto sm:px-20  px-7 bg-lightYellow max-w-screen-xl pt-20 pb-10 relative'>
+      <footer className='mx-auto sm:px-20  px-7 bg-lightYellow pt-20 pb-10 relative'>
         {/* Wave */}
         <div className='wave-8'>
           <svg
@@ -986,7 +1047,7 @@ export default function Home() {
           </svg>{' '}
         </div>
         {/* Container */}
-        <div className='flex sm:flex-row flex-col justify-between sm:pt-28 pt-20'>
+        <div className='max-w-screen-xl mx-auto flex sm:flex-row flex-col justify-between sm:pt-28 pt-20'>
           {/* Logo */}
           <img className='h-12 object-contain' src='/images/logos/bund_fib_logo.png' alt='' />
           {/* Leistungen */}
@@ -1024,12 +1085,12 @@ export default function Home() {
           <div className='lg:block hidden'>
             <div className='font-poppins text-base'>Informationen</div>
             <div className='w-8 h-[5px] bg-primary mt-2 mb-5'></div>
-            <a href=''>
-              <div className='font-source text-sm my-1'>Impressum</div>
-            </a>
-            <a href=''>
-              <div className='font-source text-sm my-1'>Datenschutz</div>
-            </a>
+            <div onClick={toggleImpressum} className='cursor-pointer font-source text-sm my-1'>
+              Impressum
+            </div>
+            <div onClick={toggleDatenschutz} className='cursor-pointer font-source text-sm my-1'>
+              Datenschutz
+            </div>
             <a href='#Downloads'>
               <div className='font-source text-sm my-1'>Downloads</div>
             </a>
@@ -1050,8 +1111,8 @@ export default function Home() {
           </div>
           {/* Mobile Block*/}
           <div className='lg:hidden block flex items-center justify-between sm:w-1/2  w-full font-poppins mt-10'>
-            <div>Impressum</div>
-            <div>Datenschutz</div>
+            <div onClick={toggleImpressum}>Impressum</div>
+            <div onClick={toggleDatenschutz}>Datenschutz</div>
             <div>Kontakt</div>
           </div>
         </div>
@@ -1059,3 +1120,22 @@ export default function Home() {
     </div>
   );
 }
+
+// // Get Data from Instagram
+// export async function getStaticProps() {
+//   const ig = new IgApiClient();
+//   ig.state.generateDevice(process.env.INSTA_USERNAME);
+//   const loggedInUser = await ig.account.login(process.env.INSTA_USERNAME, process.env.INSTA_PW);
+
+//   const userFeed = ig.feed.user(loggedInUser.pk);
+//   const myPostsFirstPage = await userFeed.items();
+//   const myPostsSecondPage = await userFeed.items();
+//   const myPostsThirdPage = await userFeed.items();
+//   const posts = [...myPostsFirstPage, ...myPostsSecondPage, ...myPostsThirdPage];
+
+//   return {
+//     props: {
+//       posts,
+//     },
+//   };
+// }

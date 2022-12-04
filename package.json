@@ -15,6 +15,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "aos": "^3.0.0-beta.6",
+    "instagram-private-api": "^1.45.3",
     "next": "13.0.4",
     "nodemailer": "^6.8.0",
     "react": "18.2.0",

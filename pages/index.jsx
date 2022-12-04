@@ -102,7 +102,7 @@ export default function Home() {
             {/* Kalender */}
             <div className='w-1/2 flex justify-center items-center relative z-10 lg:border-r border-solid border-primary pt-5'>
               <div className='p-1 bg-white rounded-xl shadow-xl'>
-                {/* <InlineWidget
+                <InlineWidget
                   styles={{
                     width: '40vh',
                     height: '40vh',
@@ -115,7 +115,7 @@ export default function Home() {
                     textColor: '4d5055',
                   }}
                   url='https://calendly.com/bundfib/erstes_kennenlernen'
-                />{' '} */}
+                />{' '}
               </div>
             </div>
             {/* Kontaktformular */}
@@ -932,7 +932,7 @@ export default function Home() {
           {/* Calendly */}
           <div className='w-1/2 flex justify-center items-center relative z-10'>
             <div className='p-1 bg-white rounded-xl shadow-xl'>
-              {/* <InlineWidget
+              <InlineWidget
                 styles={{
                   width: '360px',
                   height: '360px',
@@ -945,7 +945,7 @@ export default function Home() {
                   textColor: '4d5055',
                 }}
                 url='https://calendly.com/bundfib/erstes_kennenlernen'
-              /> */}
+              />
             </div>
           </div>
           <div />

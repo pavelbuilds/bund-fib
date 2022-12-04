@@ -87,7 +87,7 @@ export default function Home() {
 
       {/* Kontaktieren Popup */}
       <div
-        className={`transition-all duration-700 ease-out fixed bg-lightYellow z-50 w-screen lg:pt-24 sm:pt-36 pt-24 h-screen min-h-[600px] ${
+        className={`transition-all duration-700 ease-out fixed bg-lightYellow z-50 w-screen lg:pt-24 sm:pt-[10vh] pt-24 h-screen min-h-[600px] ${
           kontaktieren ? '-translate-y-0' : '-translate-y-full'
         }`}
       >
@@ -98,14 +98,14 @@ export default function Home() {
             Buchen Sie ein Gespräch mit uns oder schreiben Sie uns eine Nachricht
           </div>
           {/* Kalender & Kontaktfomular */}
-          <div className='flex w-full justify-center lg:mt-10 sm:mt-20 mt-0 lg:mb-10 sm:mb-32 mb-10'>
+          <div className='flex w-full justify-center lg:mt-10 sm:mt-[5vh] mt-0 lg:mb-10 sm:mb-[10vh] mb-10'>
             {/* Kalender */}
             <div className='w-1/2 flex justify-center items-center relative z-10 lg:border-r border-solid border-primary pt-5'>
               <div className='p-1 bg-white rounded-xl shadow-xl'>
-                <InlineWidget
+                {/* <InlineWidget
                   styles={{
-                    width: '360px',
-                    height: '360px',
+                    width: '40vh',
+                    height: '40vh',
                   }}
                   pageSettings={{
                     backgroundColor: 'ffffff',
@@ -115,7 +115,7 @@ export default function Home() {
                     textColor: '4d5055',
                   }}
                   url='https://calendly.com/bundfib/erstes_kennenlernen'
-                />{' '}
+                />{' '} */}
               </div>
             </div>
             {/* Kontaktformular */}
@@ -146,7 +146,7 @@ export default function Home() {
           </div>
           <Button
             click={toggleKontaktieren}
-            styling={'lg:hidden sm:mt-32 mt-10 w-40 mx-auto'}
+            styling={'lg:hidden sm:mt-[10vh] mt-10 w-40 mx-auto'}
             cta={'Schließen'}
           />
         </div>
@@ -932,7 +932,7 @@ export default function Home() {
           {/* Calendly */}
           <div className='w-1/2 flex justify-center items-center relative z-10'>
             <div className='p-1 bg-white rounded-xl shadow-xl'>
-              <InlineWidget
+              {/* <InlineWidget
                 styles={{
                   width: '360px',
                   height: '360px',
@@ -945,7 +945,7 @@ export default function Home() {
                   textColor: '4d5055',
                 }}
                 url='https://calendly.com/bundfib/erstes_kennenlernen'
-              />
+              /> */}
             </div>
           </div>
           <div />

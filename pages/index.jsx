@@ -344,8 +344,8 @@ export default function Home() {
             Newsletters. Die bei der Newsletteranmeldung gemachten Daten werden ausschließlich auf
             Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) verarbeitet. Ein Widerruf
             Ihrer bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine
-            formlose Mitteilung per E-Mail oder Sie melden sich über den "Austragen"-Link im
-            Newsletter ab. Die Rechtmäßigkeit der bereits erfolgten Datenverarbeitungsvorgänge
+            formlose Mitteilung per E-Mail oder Sie melden sich über den &quot;Austragen&quot;-Link
+            im Newsletter ab. Die Rechtmäßigkeit der bereits erfolgten Datenverarbeitungsvorgänge
             bleibt vom Widerruf unberührt. Zur Einrichtung des Abonnements eingegebene Daten werden
             im Falle der Abmeldung gelöscht. Sollten diese Daten für andere Zwecke und an anderer
             Stelle an uns übermittelt worden sein, verbleiben diese weiterhin bei uns.
@@ -376,8 +376,8 @@ export default function Home() {
             <br />
             Unsere Website verwendet Funktionen des Webanalysedienstes Google Analytics. Anbieter
             des Webanalysedienstes ist die Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA
-            94043, USA. Google Analytics verwendet "Cookies." Das sind kleine Textdateien, die Ihr
-            Webbrowser auf Ihrem Endgerät speichert und eine Analyse der Website-Benutzung
+            94043, USA. Google Analytics verwendet &quot;Cookies.&quot; Das sind kleine Textdateien,
+            die Ihr Webbrowser auf Ihrem Endgerät speichert und eine Analyse der Website-Benutzung
             ermöglichen. Mittels Cookie erzeugte Informationen über Ihre Benutzung unserer Website
             werden an einen Server von Google übermittelt und dort gespeichert. Server-Standort ist
             im Regelfall die USA. Das Setzen von Google-Analytics-Cookies erfolgt auf Grundlage von
@@ -501,10 +501,10 @@ export default function Home() {
             erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Als Betreiber dieser Website haben
             wir ein berechtigtes Interesse an der optimalen Darstellung und Übertragung unseres
             Webauftritts. Das Unternehmen Google ist für das us-europäische Datenschutzübereinkommen
-            "Privacy Shield" zertifiziert. Dieses Datenschutzübereinkommen soll die Einhaltung des
-            in der EU geltenden Datenschutzniveaus gewährleisten. Einzelheiten über Google Web Fonts
-            finden Sie unter: https://www.google.com/fonts#AboutPlace:about und weitere
-            Informationen in den Datenschutzbestimmungen von Google:
+            &quot;Privacy Shield&quot; zertifiziert. Dieses Datenschutzübereinkommen soll die
+            Einhaltung des in der EU geltenden Datenschutzniveaus gewährleisten. Einzelheiten über
+            Google Web Fonts finden Sie unter: https://www.google.com/fonts#AboutPlace:about und
+            weitere Informationen in den Datenschutzbestimmungen von Google:
             https://policies.google.com/privacy/partners?hl=de
             <br />
           </p>

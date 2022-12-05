@@ -823,7 +823,7 @@ export default function Home({ feed }) {
         <div className='max-w-screen-xl flex justify-between items-center mx-auto sm:px-20 px-5'>
           {/* Logo */}
           <div>
-            <img className='h-9' src='/images/logos/bund_fib_logo.png' alt='' />
+            <img className='h-9' src='/images/logos/bund_fib_logo.webp' alt='' />
           </div>
           {/* Menu */}
           <ul className='hidden lg:flex items-center font-source justify-between text-sm w-[400px]'>
@@ -914,10 +914,14 @@ export default function Home({ feed }) {
           {/* Partner Logos */}
           <div className='flex justify-between flex-wrap items-center overflow-hidden'>
             <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-5'>
-              <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/haus_der_jugend.png' alt='' />
+              <img
+                className='sm:h-12 h-9 sm:px-0'
+                src='/images/logos/haus_der_jugend.webp'
+                alt=''
+              />
             </div>
             <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-5'>
-              <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.png' alt='' />
+              <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.webp' alt='' />
             </div>
             <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-10'>
               <img
@@ -929,7 +933,7 @@ export default function Home({ feed }) {
             <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-10'>
               <img
                 className='sm:h-9 h-9 sm:px-0'
-                src='/images/logos/weißes_berlin_logo.png'
+                src='/images/logos/weißes_berlin_logo.webp'
                 alt=''
               />
             </div>
@@ -1320,10 +1324,14 @@ export default function Home({ feed }) {
             className='relative z-10 w-full flex justify-between flex-wrap items-center overflow-hidden'
           >
             <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-5'>
-              <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/haus_der_jugend.png' alt='' />
+              <img
+                className='sm:h-12 h-9 sm:px-0'
+                src='/images/logos/haus_der_jugend.webp'
+                alt=''
+              />
             </div>
             <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-5'>
-              <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.png' alt='' />
+              <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.webp' alt='' />
             </div>
             <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-10'>
               <img
@@ -1335,7 +1343,7 @@ export default function Home({ feed }) {
             <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-10'>
               <img
                 className='sm:h-9 h-9 sm:px-0'
-                src='/images/logos/weißes_berlin_logo.png'
+                src='/images/logos/weißes_berlin_logo.webp'
                 alt=''
               />
             </div>
@@ -1629,7 +1637,7 @@ export default function Home({ feed }) {
         {/* Container */}
         <div className='max-w-screen-xl mx-auto flex sm:flex-row flex-col justify-between sm:pt-28 pt-20'>
           {/* Logo */}
-          <img className='h-12 object-contain' src='/images/logos/bund_fib_logo.png' alt='' />
+          <img className='h-12 object-contain' src='/images/logos/bund_fib_logo.webp' alt='' />
           {/* Leistungen */}
           <div className='lg:block hidden'>
             <div className='font-poppins text-base'>Leistungen</div>

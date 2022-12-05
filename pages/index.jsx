@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script';
 import { useState, useEffect } from 'react';
 // Import Components
 import Container from '../components/Container';
@@ -8,6 +9,7 @@ import BurgerMenu from '../components/BurgerMenu';
 import Mitarbeiter from '../components/Mitarbeiter';
 import Gründer from '../components/Gründer';
 import KontaktFormular from '../components/KontaktFormular';
+import Calender from '../components/Calender';
 // Import Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -31,19 +33,19 @@ import 'aos/dist/aos.css';
 // Import Calendly
 import { InlineWidget } from 'react-calendly';
 import InstaImage from '../components/InstaImage';
-// // Import Instagram API
-// import { IgApiClient } from 'instagram-private-api';
+
+import Iframe from 'react-iframe';
 
 export default function Home({ feed }) {
   const images = feed.data;
-  // Initialize AOS
+  // Initialize AOS Animation Library
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
   }, []);
 
-  // Functionality for Instagram loadMore Button
+  // Instagram loadMore Button
   const [end, setEnd] = useState(8);
   const loadMore = () => {
     if (end >= 23) {
@@ -54,35 +56,39 @@ export default function Home({ feed }) {
     }
   };
 
+  // Angebot Hover Dropdown
   const [show, setShow] = useState(false);
-
   const showDropdown = () => {
     setShow(true);
   };
-
   const hideDropdown = () => {
     setShow(false);
   };
 
+  // Swiper Slider Einstellungen
   const pagination = {
     clickable: true,
   };
 
+  // Kontaktieren PopUp Einstellungen
   const [kontaktieren, setKonktaktieren] = useState(false);
   const toggleKontaktieren = () => {
     setKonktaktieren(!kontaktieren);
   };
 
+  // Burger Menu Einstellungen
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
   const toogleHamburgerMenu = () => {
     setHamburgerClicked(!hamburgerClicked);
   };
 
+  // Impressum PopUp Einstellungen
   const [impressum, setImpressum] = useState(false);
   const toggleImpressum = () => {
     setImpressum(!impressum);
   };
 
+  // Datenschutz PopUp Einstellungen
   const [datenschutz, setDateschutz] = useState(false);
   const toggleDatenschutz = () => {
     setDateschutz(!datenschutz);
@@ -112,10 +118,19 @@ export default function Home({ feed }) {
             {/* Kalender */}
             <div className='w-1/2 flex justify-center items-center relative z-10 lg:border-r border-solid border-primary pt-5'>
               <div className='p-1 bg-white rounded-xl shadow-xl'>
-                <InlineWidget
+                <Iframe
+                  url='https://my.meetergo.com/book/u/pavel-kickler/new-meeting/pavel-kickler'
+                  width='360px'
+                  height='340px'
+                  id=''
+                  className=''
+                  display='block'
+                  position='relative'
+                />
+                {/* <InlineWidget
                   styles={{
-                    width: '40vh',
-                    height: '40vh',
+                    width: '50vh',
+                    height: '50vh',
                   }}
                   pageSettings={{
                     backgroundColor: 'ffffff',
@@ -125,7 +140,7 @@ export default function Home({ feed }) {
                     textColor: '4d5055',
                   }}
                   url='https://calendly.com/bundfib/erstes_kennenlernen'
-                />{' '}
+                /> */}
               </div>
             </div>
             {/* Kontaktformular */}
@@ -260,264 +275,544 @@ export default function Home({ feed }) {
               icon={faXmark}
             />
           </div>
-          {/* Text */}
-          <p>
-            <b>Allgemeiner Hinweis und Pflichtinformationen </b>
-            ​<br />
-            <br />
-            Benennung der verantwortlichen Stelle
-            <br />
-            Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
-            <br />
-            Basel Seido
-            <br />
-            Bund-fiB gUG (haftungsbeschränkt)
-            <br />
-            Schwedenstr. 17
-            <br />
-            13357 Berlin
+          {/* Text */}{' '}
+          <div>
+            <b>1. Datenschutz auf einen Blick</b>
             <br />
             <br />
-            Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die Zwecke
-            und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o.
-            Ä.).
+            <b>Allgemeine Hinweise</b>
+            <br />
+            <br />{' '}
+            <p>
+              Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit
+              Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.
+              Personenbezogene Daten sind alle Daten, mit denen Sie pers&ouml;nlich identifiziert
+              werden k&ouml;nnen. Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen
+              Sie unserer unter diesem Text aufgef&uuml;hrten Datenschutzerkl&auml;rung.
+            </p>
+            <br />
+            <br />
+            <br />
+            <b>Datenerfassung auf dieser Website</b>
+            <br />
+            <br /> <h4>
+              Wer ist verantwortlich f&uuml;r die Datenerfassung auf dieser Website?
+            </h4>{' '}
+            <p>
+              Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen
+              Kontaktdaten k&ouml;nnen Sie dem Abschnitt &bdquo;Hinweis zur Verantwortlichen
+              Stelle&ldquo; in dieser Datenschutzerkl&auml;rung entnehmen.
+            </p>{' '}
+            <h4>Wie erfassen wir Ihre Daten?</h4>{' '}
+            <p>
+              Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei
+              kann es sich z.&nbsp;B. um Daten handeln, die Sie in ein Kontaktformular eingeben.
+            </p>{' '}
+            <p>
+              Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website
+              durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.&nbsp;B.
+              Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser
+              Daten erfolgt automatisch, sobald Sie diese Website betreten.
+            </p>{' '}
+            <h4>Wof&uuml;r nutzen wir Ihre Daten?</h4>{' '}
+            <p>
+              Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu
+              gew&auml;hrleisten. Andere Daten k&ouml;nnen zur Analyse Ihres Nutzerverhaltens
+              verwendet werden.
+            </p>{' '}
+            <h4>Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?</h4>{' '}
+            <p>
+              Sie haben jederzeit das Recht, unentgeltlich Auskunft &uuml;ber Herkunft,
+              Empf&auml;nger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie
+              haben au&szlig;erdem ein Recht, die Berichtigung oder L&ouml;schung dieser Daten zu
+              verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, k&ouml;nnen
+              Sie diese Einwilligung jederzeit f&uuml;r die Zukunft widerrufen. Au&szlig;erdem haben
+              Sie das Recht, unter bestimmten Umst&auml;nden die Einschr&auml;nkung der Verarbeitung
+              Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein
+              Beschwerderecht bei der zust&auml;ndigen Aufsichtsbeh&ouml;rde zu.
+            </p>{' '}
+            <p>
+              Hierzu sowie zu weiteren Fragen zum Thema Datenschutz k&ouml;nnen Sie sich jederzeit
+              an uns wenden.
+            </p>
+            <br />
+            <br />
+            <br />
+            <b>Analyse-Tools und Tools von Dritt&shy;anbietern</b>
+            <br />
+            <br />{' '}
+            <p>
+              Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden. Das
+              geschieht vor allem mit sogenannten Analyseprogrammen.
+            </p>{' '}
+            <p>
+              Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgenden
+              Datenschutzerkl&auml;rung.
+            </p>
+            <br />
+            <br />
+            <br />
+            <b>2. Hosting</b>
+            <br />
+            <br />
+            <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
+            <br />
+            <b>Externes Hosting</b>
+            <br />
+            <br />{' '}
+            <p>
+              Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser
+              Website erfasst werden, werden auf den Servern des Hosters / der Hoster gespeichert.
+              Hierbei kann es sich v.&nbsp;a. um IP-Adressen, Kontaktanfragen, Meta- und
+              Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige
+              Daten, die &uuml;ber eine Website generiert werden, handeln.
+            </p>{' '}
+            <p>
+              Das externe Hosting erfolgt zum Zwecke der Vertragserf&uuml;llung gegen&uuml;ber
+              unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im
+              Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres
+              Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).
+              Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung
+              ausschlie&szlig;lich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und &sect; 25 Abs. 1
+              TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf
+              Informationen im Endger&auml;t des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne
+              des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar.
+            </p>{' '}
+            <p>
+              Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten, wie dies zur
+              Erf&uuml;llung seiner Leistungspflichten erforderlich ist und unsere Weisungen in
+              Bezug auf diese Daten befolgen.
+            </p>{' '}
+            <p>Wir setzen folgende(n) Hoster ein:</p>
+            <p>
+              GoDaddy.com, LLC <br />
+              Hansestr. 111 <br />
+              51149 K&ouml;ln
+            </p>
+            <h4>Auftragsverarbeitung</h4>{' '}
+            <p>
+              Wir haben einen Vertrag &uuml;ber Auftragsverarbeitung (AVV) zur Nutzung des oben
+              genannten Dienstes geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich
+              vorgeschriebenen Vertrag, der gew&auml;hrleistet, dass dieser die personenbezogenen
+              Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der
+              DSGVO verarbeitet.
+            </p>
+            <br />
+            <br />
+            <br />
+            <b>3. Allgemeine Hinweise und Pflicht&shy;informationen</b>
+            <br />
+            <br />
+            <b>Datenschutz</b>
+            <br />
+            <br />{' '}
+            <p>
+              Die Betreiber dieser Seiten nehmen den Schutz Ihrer pers&ouml;nlichen Daten sehr
+              ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den
+              gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerkl&auml;rung.
+            </p>{' '}
+            <p>
+              Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben.
+              Personenbezogene Daten sind Daten, mit denen Sie pers&ouml;nlich identifiziert werden
+              k&ouml;nnen. Die vorliegende Datenschutzerkl&auml;rung erl&auml;utert, welche Daten
+              wir erheben und wof&uuml;r wir sie nutzen. Sie erl&auml;utert auch, wie und zu welchem
+              Zweck das geschieht.
+            </p>{' '}
+            <p>
+              Wir weisen darauf hin, dass die Daten&uuml;bertragung im Internet (z.&nbsp;B. bei der
+              Kommunikation per E-Mail) Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser
+              Schutz der Daten vor dem Zugriff durch Dritte ist nicht m&ouml;glich.
+            </p>
+            <br />
+            <br />
+            <br />
+            <b>Hinweis zur verantwortlichen Stelle</b>
+            <br />
+            <br />{' '}
+            <p>
+              Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:
+            </p>{' '}
+            <p>
+              Basel Seido
+              <br />
+              Bund-fiB gUG (haftungsbeschr&auml;nkt)
+              <br />
+              Schwedenstra&szlig;e 17
+              <br />
+              13357 Berlin
+            </p>
+            <p>
+              Telefon: +49 157 58745855
+              <br />
+              E-Mail: verwaltung@bund-fib.de
+            </p>
+            <p>
+              Verantwortliche Stelle ist die nat&uuml;rliche oder juristische Person, die allein
+              oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von
+              personenbezogenen Daten (z.&nbsp;B. Namen, E-Mail-Adressen o. &Auml;.) entscheidet.
+            </p>
+            <br />
+            <br />
+            <br />
+            <b>Speicherdauer</b>
+            <br />
+            <br />{' '}
+            <p>
+              Soweit innerhalb dieser Datenschutzerkl&auml;rung keine speziellere Speicherdauer
+              genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck f&uuml;r
+              die Datenverarbeitung entf&auml;llt. Wenn Sie ein berechtigtes L&ouml;schersuchen
+              geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre
+              Daten gel&ouml;scht, sofern wir keine anderen rechtlich zul&auml;ssigen Gr&uuml;nde
+              f&uuml;r die Speicherung Ihrer personenbezogenen Daten haben (z.&nbsp;B. steuer- oder
+              handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die
+              L&ouml;schung nach Fortfall dieser Gr&uuml;nde.
+            </p>
+            <br />
+            <br />
+            <br />
+            <b>
+              Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website
+            </b>
+            <br />
+            <br />{' '}
+            <p>
+              Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre
+              personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs.
+              2 lit. a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet
+              werden. Im Falle einer ausdr&uuml;cklichen Einwilligung in die &Uuml;bertragung
+              personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung au&szlig;erdem
+              auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von
+              Cookies oder in den Zugriff auf Informationen in Ihr Endger&auml;t (z.&nbsp;B. via
+              Device-Fingerprinting) eingewilligt haben, erfolgt die Datenverarbeitung
+              zus&auml;tzlich auf Grundlage von &sect; 25 Abs. 1 TTDSG. Die Einwilligung ist
+              jederzeit widerrufbar. Sind Ihre Daten zur Vertragserf&uuml;llung oder zur
+              Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich, verarbeiten wir Ihre
+              Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre
+              Daten, sofern diese zur Erf&uuml;llung einer rechtlichen Verpflichtung erforderlich
+              sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner
+              auf Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO
+              erfolgen. &Uuml;ber die jeweils im Einzelfall einschl&auml;gigen Rechtsgrundlagen wird
+              in den folgenden Abs&auml;tzen dieser Datenschutzerkl&auml;rung informiert.
+            </p>
+            <br />
+            <br />
+            <br />
+            <b>Hinweis zur Datenweitergabe in die USA und sonstige Drittstaaten</b>
+            <br />
+            <br />{' '}
+            <p>
+              Wir verwenden unter anderem Tools von Unternehmen mit Sitz in den USA oder sonstigen
+              datenschutzrechtlich nicht sicheren Drittstaaten. Wenn diese Tools aktiv sind,
+              k&ouml;nnen Ihre personenbezogene Daten in diese Drittstaaten &uuml;bertragen und dort
+              verarbeitet werden. Wir weisen darauf hin, dass in diesen L&auml;ndern kein mit der EU
+              vergleichbares Datenschutzniveau garantiert werden kann. Beispielsweise sind
+              US-Unternehmen dazu verpflichtet, personenbezogene Daten an Sicherheitsbeh&ouml;rden
+              herauszugeben, ohne dass Sie als Betroffener hiergegen gerichtlich vorgehen
+              k&ouml;nnten. Es kann daher nicht ausgeschlossen werden, dass US-Beh&ouml;rden
+              (z.&nbsp;B. Geheimdienste) Ihre auf US-Servern befindlichen Daten zu
+              &Uuml;berwachungszwecken verarbeiten, auswerten und dauerhaft speichern. Wir haben auf
+              diese Verarbeitungst&auml;tigkeiten keinen Einfluss.
+            </p>
+            <br />
             <br />
             <br />
             <b>Widerruf Ihrer Einwilligung zur Datenverarbeitung</b>
             <br />
-            Nur mit Ihrer ausdrücklichen Einwilligung sind einige Vorgänge der Datenverarbeitung
-            möglich. Ein Widerruf Ihrer bereits erteilten Einwilligung ist jederzeit möglich. Für
-            den Widerruf genügt eine formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bis zum
-            Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
+            <br />{' '}
+            <p>
+              Viele Datenverarbeitungsvorg&auml;nge sind nur mit Ihrer ausdr&uuml;cklichen
+              Einwilligung m&ouml;glich. Sie k&ouml;nnen eine bereits erteilte Einwilligung
+              jederzeit widerrufen. Die Rechtm&auml;&szlig;igkeit der bis zum Widerruf erfolgten
+              Datenverarbeitung bleibt vom Widerruf unber&uuml;hrt.
+            </p>
             <br />
             <br />
-            <b>Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde</b>
             <br />
-            Als Betroffener steht Ihnen im Falle eines datenschutzrechtlichen Verstoßes ein
-            Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde
-            bezüglich datenschutzrechtlicher Fragen ist der Landesdatenschutzbeauftragte des
-            Bundeslandes, in dem sich der Sitz unseres Unternehmens befindet. Der folgende Link
-            stellt eine Liste der Datenschutzbeauftragten sowie deren Kontaktdaten bereit:
-            https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html.
+            <b>
+              Widerspruchsrecht gegen die Datenerhebung in besonderen F&auml;llen sowie gegen
+              Direktwerbung (Art. 21 DSGVO)
+            </b>
+            <br />
+            <br />{' '}
+            <p>
+              WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO
+              ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GR&Uuml;NDEN, DIE SICH AUS IHRER
+              BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN
+              WIDERSPRUCH EINZULEGEN; DIES GILT AUCH F&Uuml;R EIN AUF DIESE BESTIMMUNGEN
+              GEST&Uuml;TZTES PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG
+              BERUHT, ENTNEHMEN SIE DIESER DATENSCHUTZERKL&Auml;RUNG. WENN SIE WIDERSPRUCH EINLEGEN,
+              WERDEN WIR IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI
+              DENN, WIR K&Ouml;NNEN ZWINGENDE SCHUTZW&Uuml;RDIGE GR&Uuml;NDE F&Uuml;R DIE
+              VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN &Uuml;BERWIEGEN
+              ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUS&Uuml;BUNG ODER VERTEIDIGUNG VON
+              RECHTSANSPR&Uuml;CHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).
+            </p>{' '}
+            <p>
+              WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO
+              HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER
+              PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN; DIES GILT AUCH
+              F&Uuml;R DAS PROFILING, SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN VERBINDUNG STEHT. WENN
+              SIE WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM
+              ZWECKE DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).
+            </p>
             <br />
             <br />
-            <b>Recht auf Datenübertragbarkeit</b>
             <br />
-            Ihnen steht das Recht zu, Daten, die wir auf Grundlage Ihrer Einwilligung oder in
-            Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an Dritte aushändigen
-            zu lassen. Die Bereitstellung erfolgt in einem maschinenlesbaren Format. Sofern Sie die
-            direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies
-            nur, soweit es technisch machbar ist.
+            <b>Beschwerde&shy;recht bei der zust&auml;ndigen Aufsichts&shy;beh&ouml;rde</b>
             <br />
-            <br />
-            <b>Recht auf Auskunft, Berichtigung, Sperrung, Löschung</b>
-            <br />
-            Sie haben jederzeit im Rahmen der geltenden gesetzlichen Bestimmungen das Recht auf
-            unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, Herkunft der
-            Daten, deren Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf
-            Berichtigung, Sperrung oder Löschung dieser Daten. Diesbezüglich und auch zu weiteren
-            Fragen zum Thema personenbezogene Daten können Sie sich jederzeit über die im Impressum
-            aufgeführten Kontaktmöglichkeiten an uns wenden.
+            <br />{' '}
+            <p>
+              Im Falle von Verst&ouml;&szlig;en gegen die DSGVO steht den Betroffenen ein
+              Beschwerderecht bei einer Aufsichtsbeh&ouml;rde, insbesondere in dem Mitgliedstaat
+              ihres gew&ouml;hnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des
+              mutma&szlig;lichen Versto&szlig;es zu. Das Beschwerderecht besteht unbeschadet
+              anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
+            </p>
             <br />
             <br />
-            <b>SSL- bzw. TLS-Verschlüsselung</b>
             <br />
-            Aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, die Sie an
-            uns als Seitenbetreiber senden, nutzt unsere Website eine SSL-bzw. TLS-Verschlüsselung.
-            Damit sind Daten, die Sie über diese Website übermitteln, für Dritte nicht mitlesbar.
-            Sie erkennen eine verschlüsselte Verbindung an der „https://“ Adresszeile Ihres Browsers
-            und am Schloss-Symbol in der Browserzeile.
+            <b>Recht auf Daten&shy;&uuml;bertrag&shy;barkeit</b>
+            <br />
+            <br />{' '}
+            <p>
+              Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in
+              Erf&uuml;llung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten
+              in einem g&auml;ngigen, maschinenlesbaren Format aush&auml;ndigen zu lassen. Sofern
+              Sie die direkte &Uuml;bertragung der Daten an einen anderen Verantwortlichen
+              verlangen, erfolgt dies nur, soweit es technisch machbar ist.
+            </p>
+            <br />
+            <br />
+            <br />
+            <b>Auskunft, L&ouml;schung und Berichtigung</b>
+            <br />
+            <br />{' '}
+            <p>
+              Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf
+              unentgeltliche Auskunft &uuml;ber Ihre gespeicherten personenbezogenen Daten, deren
+              Herkunft und Empf&auml;nger und den Zweck der Datenverarbeitung und ggf. ein Recht auf
+              Berichtigung oder L&ouml;schung dieser Daten. Hierzu sowie zu weiteren Fragen zum
+              Thema personenbezogene Daten k&ouml;nnen Sie sich jederzeit an uns wenden.
+            </p>
+            <br />
+            <br />
+            <br />
+            <b>Recht auf Einschr&auml;nkung der Verarbeitung</b>
+            <br />
+            <br />{' '}
+            <p>
+              Sie haben das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen
+              Daten zu verlangen. Hierzu k&ouml;nnen Sie sich jederzeit an uns wenden. Das Recht auf
+              Einschr&auml;nkung der Verarbeitung besteht in folgenden F&auml;llen:
+            </p>{' '}
+            <ul>
+              {' '}
+              <li>
+                Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten
+                bestreiten, ben&ouml;tigen wir in der Regel Zeit, um dies zu &uuml;berpr&uuml;fen.
+                F&uuml;r die Dauer der Pr&uuml;fung haben Sie das Recht, die Einschr&auml;nkung der
+                Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+              </li>{' '}
+              <li>
+                Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtm&auml;&szlig;ig
+                geschah/geschieht, k&ouml;nnen Sie statt der L&ouml;schung die Einschr&auml;nkung
+                der Datenverarbeitung verlangen.
+              </li>{' '}
+              <li>
+                Wenn wir Ihre personenbezogenen Daten nicht mehr ben&ouml;tigen, Sie sie jedoch zur
+                Aus&uuml;bung, Verteidigung oder Geltendmachung von Rechtsanspr&uuml;chen
+                ben&ouml;tigen, haben Sie das Recht, statt der L&ouml;schung die Einschr&auml;nkung
+                der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+              </li>{' '}
+              <li>
+                Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine
+                Abw&auml;gung zwischen Ihren und unseren Interessen vorgenommen werden. Solange noch
+                nicht feststeht, wessen Interessen &uuml;berwiegen, haben Sie das Recht, die
+                Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+              </li>{' '}
+            </ul>{' '}
+            <p>
+              Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschr&auml;nkt haben,
+              d&uuml;rfen diese Daten &ndash; von ihrer Speicherung abgesehen &ndash; nur mit Ihrer
+              Einwilligung oder zur Geltendmachung, Aus&uuml;bung oder Verteidigung von
+              Rechtsanspr&uuml;chen oder zum Schutz der Rechte einer anderen nat&uuml;rlichen oder
+              juristischen Person oder aus Gr&uuml;nden eines wichtigen &ouml;ffentlichen Interesses
+              der Europ&auml;ischen Union oder eines Mitgliedstaats verarbeitet werden.
+            </p>
+            <br />
+            <br />
+            <br />
+            <b>SSL- bzw. TLS-Verschl&uuml;sselung</b>
+            <br />
+            <br />{' '}
+            <p>
+              Diese Seite nutzt aus Sicherheitsgr&uuml;nden und zum Schutz der &Uuml;bertragung
+              vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als
+              Seitenbetreiber senden, eine SSL- bzw. TLS-Verschl&uuml;sselung. Eine
+              verschl&uuml;sselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers
+              von &bdquo;http://&ldquo; auf &bdquo;https://&ldquo; wechselt und an dem
+              Schloss-Symbol in Ihrer Browserzeile.
+            </p>{' '}
+            <p>
+              Wenn die SSL- bzw. TLS-Verschl&uuml;sselung aktiviert ist, k&ouml;nnen die Daten, die
+              Sie an uns &uuml;bermitteln, nicht von Dritten mitgelesen werden.
+            </p>
+            <br />
+            <br />
+            <br />
+            <b>4. Datenerfassung auf dieser Website</b>
+            <br /> <br />
+            <b>Cookies</b>
+            <br />
+            <br />{' '}
+            <p>
+              Unsere Internetseiten verwenden so genannte &bdquo;Cookies&ldquo;. Cookies sind kleine
+              Datenpakete und richten auf Ihrem Endger&auml;t keinen Schaden an. Sie werden entweder
+              vor&uuml;bergehend f&uuml;r die Dauer einer Sitzung (Session-Cookies) oder dauerhaft
+              (permanente Cookies) auf Ihrem Endger&auml;t gespeichert. Session-Cookies werden nach
+              Ende Ihres Besuchs automatisch gel&ouml;scht. Permanente Cookies bleiben auf Ihrem
+              Endger&auml;t gespeichert, bis Sie diese selbst l&ouml;schen&nbsp;oder eine
+              automatische L&ouml;schung durch Ihren Webbrowser erfolgt.
+            </p>{' '}
+            <p>
+              Teilweise k&ouml;nnen auch Cookies von Drittunternehmen auf Ihrem Endger&auml;t
+              gespeichert werden, wenn Sie unsere Seite betreten (Third-Party-Cookies). Diese
+              erm&ouml;glichen uns oder Ihnen die Nutzung bestimmter Dienstleistungen des
+              Drittunternehmens (z.&nbsp;B. Cookies zur Abwicklung von Zahlungsdienstleistungen).
+            </p>{' '}
+            <p>
+              Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind technisch notwendig, da
+              bestimmte Websitefunktionen ohne diese nicht funktionieren w&uuml;rden (z.&nbsp;B. die
+              Warenkorbfunktion oder die Anzeige von Videos). Andere Cookies dienen dazu, das
+              Nutzerverhalten auszuwerten&nbsp;oder Werbung anzuzeigen.
+            </p>{' '}
+            <p>
+              Cookies, die zur Durchf&uuml;hrung des elektronischen Kommunikationsvorgangs, zur
+              Bereitstellung bestimmter, von Ihnen erw&uuml;nschter Funktionen (z.&nbsp;B. f&uuml;r
+              die Warenkorbfunktion) oder zur Optimierung der Website (z.&nbsp;B. Cookies zur
+              Messung des Webpublikums) erforderlich sind (notwendige Cookies), werden auf Grundlage
+              von Art. 6 Abs. 1 lit. f DSGVO gespeichert, sofern keine andere Rechtsgrundlage
+              angegeben wird. Der Websitebetreiber hat ein berechtigtes Interesse an der Speicherung
+              von notwendigen Cookies zur technisch fehlerfreien und optimierten Bereitstellung
+              seiner Dienste. Sofern eine Einwilligung zur Speicherung von Cookies und
+              vergleichbaren Wiedererkennungstechnologien abgefragt wurde, erfolgt die Verarbeitung
+              ausschlie&szlig;lich auf Grundlage dieser Einwilligung (Art. 6 Abs. 1 lit. a DSGVO und
+              &sect; 25 Abs. 1 TTDSG); die Einwilligung ist jederzeit widerrufbar.
+            </p>{' '}
+            <p>
+              Sie k&ouml;nnen Ihren Browser so einstellen, dass Sie &uuml;ber das Setzen von Cookies
+              informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies
+              f&uuml;r bestimmte F&auml;lle oder generell ausschlie&szlig;en sowie das automatische
+              L&ouml;schen der Cookies beim Schlie&szlig;en des Browsers aktivieren. Bei der
+              Deaktivierung von Cookies kann die Funktionalit&auml;t dieser Website
+              eingeschr&auml;nkt sein.
+            </p>{' '}
+            <p>
+              Soweit Cookies von Drittunternehmen oder zu Analysezwecken eingesetzt werden, werden
+              wir Sie hier&uuml;ber im Rahmen dieser Datenschutzerkl&auml;rung gesondert informieren
+              und ggf. eine Einwilligung abfragen.
+            </p>
+            <br />
             <br />
             <br />
             <b>Kontaktformular</b>
             <br />
-            Per Kontaktformular übermittelte Daten werden einschließlich Ihrer Kontaktdaten
-            gespeichert, um Ihre Anfrage bearbeiten zu können oder um für Anschlussfragen
-            bereitzustehen. Eine Weitergabe dieser Daten findet ohne Ihre Einwilligung nicht statt.
-            Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt ausschließlich
-            auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Ein Widerruf Ihrer
-            bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine
-            formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bis zum Widerruf erfolgten
-            Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt. Über das Kontaktformular
-            übermittelte Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre
-            Einwilligung zur Speicherung widerrufen oder keine Notwendigkeit der Datenspeicherung
-            mehr besteht. Zwingende gesetzliche Bestimmungen - insbesondere Aufbewahrungsfristen -
-            bleiben unberührt.
+            <br />{' '}
+            <p>
+              Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem
+              Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks
+              Bearbeitung der Anfrage und f&uuml;r den Fall von Anschlussfragen bei uns gespeichert.
+              Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+            </p>{' '}
+            <p>
+              Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO,
+              sofern Ihre Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur
+              Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich ist. In allen
+              &uuml;brigen F&auml;llen beruht die Verarbeitung auf unserem berechtigten Interesse an
+              der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f
+              DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt
+              wurde; die Einwilligung ist jederzeit widerrufbar.
+            </p>{' '}
+            <p>
+              Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns
+              zur L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der
+              Zweck f&uuml;r die Datenspeicherung entf&auml;llt (z.&nbsp;B. nach abgeschlossener
+              Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen &ndash; insbesondere
+              Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.
+            </p>
             <br />
             <br />
-            <b>​Newsletter-Daten</b>
             <br />
-            Zum Versenden unseres Newsletters benötigen wir von Ihnen eine E-Mail-Adresse. Eine
-            Verifizierung der angegebenen E-Mail-Adresse ist notwendig und der Empfang des
-            Newsletters ist einzuwilligen. Ergänzende Daten werden nicht erhoben oder sind
-            freiwillig. Die Verwendung der Daten erfolgt ausschließlich für den Versand des
-            Newsletters. Die bei der Newsletteranmeldung gemachten Daten werden ausschließlich auf
-            Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) verarbeitet. Ein Widerruf
-            Ihrer bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine
-            formlose Mitteilung per E-Mail oder Sie melden sich über den &quot;Austragen&quot;-Link
-            im Newsletter ab. Die Rechtmäßigkeit der bereits erfolgten Datenverarbeitungsvorgänge
-            bleibt vom Widerruf unberührt. Zur Einrichtung des Abonnements eingegebene Daten werden
-            im Falle der Abmeldung gelöscht. Sollten diese Daten für andere Zwecke und an anderer
-            Stelle an uns übermittelt worden sein, verbleiben diese weiterhin bei uns.
+            <b>Anfrage per E-Mail, Telefon oder Telefax</b>
             <br />
-            <br />
-            <b>Cookies</b>
-            <br />
-            Unsere Website verwendet Cookies. Das sind kleine Textdateien, die Ihr Webbrowser auf
-            Ihrem Endgerät speichert. Cookies helfen uns dabei, unser Angebot nutzerfreundlicher,
-            effektiver und sicherer zu machen. Einige Cookies sind “Session-Cookies.” Solche Cookies
-            werden nach Ende Ihrer Browser-Sitzung von selbst gelöscht. Hingegen bleiben andere
-            Cookies auf Ihrem Endgerät bestehen, bis Sie diese selbst löschen. Solche Cookies helfen
-            uns, Sie bei Rückkehr auf unserer Website wiederzuerkennen. Mit einem modernen
-            Webbrowser können Sie das Setzen von Cookies überwachen, einschränken oder unterbinden.
-            Viele Webbrowser lassen sich so konfigurieren, dass Cookies mit dem Schließen des
-            Programms von selbst gelöscht werden. Die Deaktivierung von Cookies kann eine
-            eingeschränkte Funktionalität unserer Website zur Folge haben. Das Setzen von Cookies,
-            die zur Ausübung elektronischer Kommunikationsvorgänge oder der Bereitstellung
-            bestimmter, von Ihnen erwünschter Funktionen (z.B. Warenkorb) notwendig sind, erfolgt
-            auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Als Betreiber dieser Website haben wir ein
-            berechtigtes Interesse an der Speicherung von Cookies zur technisch fehlerfreien und
-            reibungslosen Bereitstellung unserer Dienste. Sofern die Setzung anderer Cookies (z.B.
-            für Analyse-Funktionen) erfolgt, werden diese in dieser Datenschutzerklärung separat
-            behandelt.
+            <br />{' '}
+            <p>
+              Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage
+              inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum
+              Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese
+              Daten geben wir nicht ohne Ihre Einwilligung weiter.
+            </p>{' '}
+            <p>
+              Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO,
+              sofern Ihre Anfrage mit der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur
+              Durchf&uuml;hrung vorvertraglicher Ma&szlig;nahmen erforderlich ist. In allen
+              &uuml;brigen F&auml;llen beruht die Verarbeitung auf unserem berechtigten Interesse an
+              der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f
+              DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt
+              wurde; die Einwilligung ist jederzeit widerrufbar.
+            </p>{' '}
+            <p>
+              Die von Ihnen an uns per Kontaktanfragen &uuml;bersandten Daten verbleiben bei uns,
+              bis Sie uns zur L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen
+              oder der Zweck f&uuml;r die Datenspeicherung entf&auml;llt (z.&nbsp;B. nach
+              abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen
+              &ndash; insbesondere gesetzliche Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.
+            </p>
             <br />
             <br />
-            <b>Google Analytics</b>
-            <br />
-            Unsere Website verwendet Funktionen des Webanalysedienstes Google Analytics. Anbieter
-            des Webanalysedienstes ist die Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA
-            94043, USA. Google Analytics verwendet &quot;Cookies.&quot; Das sind kleine Textdateien,
-            die Ihr Webbrowser auf Ihrem Endgerät speichert und eine Analyse der Website-Benutzung
-            ermöglichen. Mittels Cookie erzeugte Informationen über Ihre Benutzung unserer Website
-            werden an einen Server von Google übermittelt und dort gespeichert. Server-Standort ist
-            im Regelfall die USA. Das Setzen von Google-Analytics-Cookies erfolgt auf Grundlage von
-            Art. 6 Abs. 1 lit. f DSGVO. Als Betreiber dieser Website haben wir ein berechtigtes
-            Interesse an der Analyse des Nutzerverhaltens, um unser Webangebot und ggf. auch Werbung
-            zu optimieren.
+            <b>5. Analyse-Tools und Werbung</b>
             <br />
             <br />
-            <b>IP-Anonymisierung</b>
             <br />
-            Wir setzen Google Analytics in Verbindung mit der Funktion IP-Anonymisierung ein. Sie
-            gewährleistet, dass Google Ihre IP-Adresse innerhalb von Mitgliedstaaten der
-            Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen
-            Wirtschaftsraum vor der Übermittlung in die USA kürzt. Es kann Ausnahmefälle geben, in
-            denen Google die volle IP-Adresse an einen Server in den USA überträgt und dort kürzt.
-            In unserem Auftrag wird Google diese Informationen benutzen, um Ihre Nutzung der Website
-            auszuwerten, um Reports über Websiteaktivitäten zu erstellen und um weitere mit der
-            Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber uns zu
-            erbringen. Es findet keine Zusammenführung der von Google Analytics übermittelten
-            IP-Adresse mit anderen Daten von Google statt.
+            <b>Matomo</b>
             <br />
-            <br />
-            <b>Browser Plugin</b>
-            <br />
-            ​Das Setzen von Cookies durch Ihren Webbrowser ist verhinderbar. Einige Funktionen
-            unserer Website könnten dadurch jedoch eingeschränkt werden. Ebenso können Sie die
-            Erfassung von Daten bezüglich Ihrer Website-Nutzung einschließlich Ihrer IP-Adresse
-            mitsamt anschließender Verarbeitung durch Google unterbinden. Dies ist möglich, indem
-            Sie das über folgenden Link erreichbare Browser-Plugin herunterladen und installieren:
-            https://tools.google.com/dlpage/gaoptout?hl=de.
-            <br />
-            <br />
-            <b>Widerspruch gegen die Datenerfassung</b>
-            <br />
-            Sie können die Erfassung Ihrer Daten durch Google Analytics verhindern, indem Sie auf
-            folgenden Link klicken. Es wird ein Opt-Out-Cookie gesetzt, der die Erfassung Ihrer
-            Daten bei zukünftigen Besuchen unserer Website verhindert: Google Analytics
-            deaktivieren. Einzelheiten zum Umgang mit Nutzerdaten bei Google Analytics finden Sie in
-            der Datenschutzerklärung von Google:
-            https://support.google.com/analytics/answer/6004245?hl=de.
-            <br />
-            <br />
-            <b>Auftragsverarbeitung</b>
-            <br />
-            Zur vollständigen Erfüllung der gesetzlichen Datenschutzvorgaben haben wir mit Google
-            einen Vertrag über die Auftragsverarbeitung abgeschlossen.
-            <br />
-            <br />
-            <b>​Demografische Merkmale bei Google Analytics</b>
-            <br />
-            Unsere Website verwendet die Funktion “demografische Merkmale” von Google Analytics. Mit
-            ihr lassen sich Berichte erstellen, die Aussagen zu Alter, Geschlecht und Interessen der
-            Seitenbesucher enthalten. Diese Daten stammen aus interessenbezogener Werbung von Google
-            sowie aus Besucherdaten von Drittanbietern. Eine Zuordnung der Daten zu einer bestimmten
-            Person ist nicht möglich. Sie können diese Funktion jederzeit deaktivieren. Dies ist
-            über die Anzeigeneinstellungen in Ihrem Google-Konto möglich oder indem Sie die
-            Erfassung Ihrer Daten durch Google Analytics, wie im Punkt “Widerspruch gegen die
-            Datenerfassung” erläutert, generell untersagen.
-            <br />
-            <br />
-            <b>Google AdSense</b>
-            <br />
-            Unsere Website verwendet Google AdSense. Anbieter ist die Google Inc., 1600 Amphitheatre
-            Parkway, Mountain View, CA 94043, USA. Google AdSense dient der Einbindung von
-            Werbeanzeigen und setzt Cookies. Cookies sind kleine Textdateien, die Ihr Webbrowser auf
-            Ihrem Endgerät speichert, um die Nutzung der Website analysieren. Google AdSense setzt
-            außerdem Web Beacons ein. Web Beacons sind unsichtbare Grafiken, die eine Analyse des
-            Besucherverkehrs auf unserer Wesite ermöglichen. Durch Cookies und Web Beacons erzeugten
-            Informationen werden an Server von Google übertragen und dort gespeichert.
-            Serverstandort sind die USA. Google kann diese Informationen an Vertragspartner
-            weiterreichen. Ihre IP-Adresse wird Google jedoch nicht mit anderen von Ihnen
-            gespeicherten Daten zusammenführen. Die Speicherung von AdSense-Cookies erfolgt auf
-            Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir als Websitebetreiber haben ein
-            berechtigtes Interesse an der Analyse des Nutzerverhaltens, um unser Webangebot und
-            unsere Werbung zu optimieren. Mit einem modernen Webbrowser können Sie das Setzen von
-            Cookies überwachen, einschränken und unterbinden. Die Deaktivierung von Cookies kann
-            eine eingeschränkte Funktionalität unserer Website zur Folge haben. Durch die Nutzung
-            unserer Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch
-            Google in der zuvor beschriebenen Art und Weise sowie dem zuvor benannten Zweck
-            einverstanden.
-            <br />
-            <br />
-            <b>​Google AdWords und Google Conversion-Tracking</b>
-            <br />
-            Unsere Website verwendet Google AdWords. Anbieter ist die Google Inc., 1600 Amphitheatre
-            Parkway, Mountain View, CA 94043, United States. AdWords ist ein Online-Werbeprogramm.
-            Im Rahmen des Online-Werbeprogramms arbeiten wir mit Conversion-Tracking. Nach einem
-            Klick auf eine von Google geschaltete Anzeige wird ein Cookie für das
-            Conversion-Tracking gesetzt. Cookies sind kleine Textdateien, die Ihr Webbrowser auf
-            Ihrem Endgerät speichert. Google AdWords Cookies verlieren nach 30 Tagen ihre Gültigkeit
-            und dienen nicht der persönlichen Identifizierung der Nutzer. Am Cookie können Google
-            und wir erkennen, dass Sie auf eine Anzeige geklickt haben und zu unserer Website
-            weitergeleitet wurden. Jeder Google AdWords-Kunde erhält ein anderes Cookie. Die Cookies
-            sind nicht über Websites von AdWords-Kunden nachverfolgbar. Mit Conversion-Cookies
-            werden Conversion-Statistiken für AdWords-Kunden, die Conversion-Tracking einsetzen,
-            erstellt. Adwords-Kunden erfahren wie viele Nutzer auf ihre Anzeige geklickt haben und
-            auf Seiten mit Conversion-Tracking-Tag weitergeleitet wurden. AdWords-Kunden erhalten
-            jedoch keine Informationen, die eine persönliche Identifikation der Nutzer ermöglichen.
-            Wenn Sie nicht am Tracking teilnehmen möchten, können Sie einer Nutzung widersprechen.
-            Hier ist das Conversion-Cookie in den Nutzereinstellungen des Browsers zu deaktivieren.
-            So findet auch keine Aufnahme in die Conversion-Tracking Statistiken statt. Die
-            Speicherung von “Conversion-Cookies” erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f
-            DSGVO. Wir als Websitebetreiber haben ein berechtigtes Interesse an der Analyse des
-            Nutzerverhaltens, um unser Webangebot und unsere Werbung zu optimieren. Einzelheiten zu
-            Google AdWords und Google Conversion-Tracking finden Sie in den Datenschutzbestimmungen
-            von Google: https://www.google.de/policies/privacy/. Mit einem modernen Webbrowser
-            können Sie das Setzen von Cookies überwachen, einschränken oder unterbinden. Die
-            Deaktivierung von Cookies kann eine eingeschränkte Funktionalität unserer Website zur
-            Folge haben.
-            <br />
-            <br />
-            <b>​Google Web Fonts</b>
-            <br />
-            Unsere Website verwendet Web Fonts von Google. Anbieter ist die Google Inc., 1600
-            Amphitheatre Parkway, Mountain View, CA 94043, USA. Durch den Einsatz dieser Web Fonts
-            wird es möglich Ihnen die von uns gewünschte Darstellung unserer Website zu
-            präsentieren, unabhängig davon welche Schriften Ihnen lokal zur Verfügung stehen. Dies
-            erfolgt über den Abruf der Google Web Fonts von einem Server von Google in den USA und
-            der damit verbundenen Weitergabe Ihre Daten an Google. Dabei handelt es sich um Ihre
-            IP-Adresse und welche Seite Sie bei uns besucht haben. Der Einsatz von Google Web Fonts
-            erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Als Betreiber dieser Website haben
-            wir ein berechtigtes Interesse an der optimalen Darstellung und Übertragung unseres
-            Webauftritts. Das Unternehmen Google ist für das us-europäische Datenschutzübereinkommen
-            &quot;Privacy Shield&quot; zertifiziert. Dieses Datenschutzübereinkommen soll die
-            Einhaltung des in der EU geltenden Datenschutzniveaus gewährleisten. Einzelheiten über
-            Google Web Fonts finden Sie unter: https://www.google.com/fonts#AboutPlace:about und
-            weitere Informationen in den Datenschutzbestimmungen von Google:
-            https://policies.google.com/privacy/partners?hl=de
-            <br />
-          </p>
+            <br /> <p>Diese Website benutzt den Open Source Webanalysedienst Matomo.</p>{' '}
+            <p>
+              Mit Hilfe von Matomo sind wir in der Lage Daten &uuml;ber die Nutzung unserer Website
+              durch die Websitebesucher zu erfassen und zu analysieren. Hierdurch k&ouml;nnen wir
+              u.&nbsp;a. herausfinden, wann welche Seitenaufrufe get&auml;tigt wurden und aus
+              welcher Region sie kommen. Au&szlig;erdem erfassen wir verschiedene Logdateien
+              (z.&nbsp;B. IP-Adresse, Referrer, verwendete Browser und Betriebssysteme) und
+              k&ouml;nnen messen, ob unsere Websitebesucher bestimmte Aktionen durchf&uuml;hren
+              (z.&nbsp;B. Klicks, K&auml;ufe u. &Auml;.).
+            </p>{' '}
+            <p>
+              Die Nutzung dieses Analyse-Tools erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.
+              Der Websitebetreiber hat ein berechtigtes Interesse an der Analyse des
+              Nutzerverhaltens, um sowohl sein Webangebot als auch seine Werbung zu optimieren.
+              Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung
+              ausschlie&szlig;lich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und &sect; 25 Abs. 1
+              TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf
+              Informationen im Endger&auml;t des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne
+              des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar.
+            </p>
+            <h4>IP-Anonymisierung</h4>{' '}
+            <p>
+              Bei der Analyse mit Matomo setzen wir IP-Anonymisierung ein. Hierbei wird Ihre
+              IP-Adresse vor der Analyse gek&uuml;rzt, sodass Sie Ihnen nicht mehr eindeutig
+              zuordenbar ist.
+            </p>
+            <h4>Cookielose Analyse</h4>{' '}
+            <p>
+              Wir haben Matomo so konfiguriert, dass Matomo keine Cookies in Ihrem Browser
+              speichert.
+            </p>
+            <h4>Hosting</h4>{' '}
+            <p>
+              Wir hosten Matomo ausschlie&szlig;lich auf unseren eigenen Servern, sodass alle
+              Analysedaten bei uns verbleiben und nicht weitergegeben werden.
+            </p>
+          </div>
         </Container>
       </div>
 
@@ -618,19 +913,27 @@ export default function Home({ feed }) {
       <section className='bg-lightYellow'>
         <Container styling={'pt-5'}>
           {/* Partner Logos */}
-          <div className='flex justify-between items-center pt-5 overflow-hidden'>
-            <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/haus_der_jugend.png' alt='' />
-            <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.png' alt='' />
-            <img
-              className='sm:h-12 h-9 sm:px-0'
-              src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
-              alt=''
-            />
-            <img
-              className='sm:h-9 h-9 sm:block hidden sm:px-0'
-              src='/images/logos/weißes_berlin_logo.png'
-              alt=''
-            />
+          <div className='flex justify-between flex-wrap items-center overflow-hidden'>
+            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+              <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/haus_der_jugend.png' alt='' />
+            </div>
+            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+              <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.png' alt='' />
+            </div>
+            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-10'>
+              <img
+                className='sm:h-12 h-9 sm:px-0'
+                src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
+                alt=''
+              />
+            </div>
+            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-10'>
+              <img
+                className='sm:h-9 h-9 sm:px-0'
+                src='/images/logos/weißes_berlin_logo.png'
+                alt=''
+              />
+            </div>
           </div>
         </Container>
       </section>
@@ -1014,31 +1317,29 @@ export default function Home({ feed }) {
           </Textbox>
           {/* Partner Logos */}
           <div
-            data-aos={'fade-up'}
-            className='relative z-10 font-poppins text-center text-lg sm:mt-20 mt-0'
+            data-aos='fade-up'
+            className='relative z-10 w-full flex justify-between flex-wrap items-center overflow-hidden'
           >
-            Das überzeugt auch unsere Partner
-          </div>
-          <div
-            data-aos={'fade-up'}
-            className='relative lg:w-[90%] w-full flex justify-between items-center pt-10 pb-32 overflow-hidden z-10'
-          >
-            <img
-              className='sm:h-12 h-9 sm:px-0 sm:px-6'
-              src='/images/logos/haus_der_jugend.png'
-              alt=''
-            />
-            <img className='sm:h-12 h-9 sm:px-0 sm:px-6' src='/images/logos/OASE_logo.png' alt='' />
-            <img
-              className='sm:h-12 h-9 sm:px-0 sm:px-6'
-              src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
-              alt=''
-            />
-            <img
-              className='sm:h-9 h-9 sm:block hidden sm:px-0 sm:px-6'
-              src='/images/logos/weißes_berlin_logo.png'
-              alt=''
-            />
+            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+              <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/haus_der_jugend.png' alt='' />
+            </div>
+            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+              <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.png' alt='' />
+            </div>
+            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-10'>
+              <img
+                className='sm:h-12 h-9 sm:px-0'
+                src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
+                alt=''
+              />
+            </div>
+            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-10'>
+              <img
+                className='sm:h-9 h-9 sm:px-0'
+                src='/images/logos/weißes_berlin_logo.png'
+                alt=''
+              />
+            </div>
           </div>
         </Container>{' '}
         {/* Wave */}
@@ -1167,17 +1468,20 @@ export default function Home({ feed }) {
             </div>
           </Textbox>
           {/* Instagram */}
-          <div data-aos='fade-up' className='w-[100%] m-auto flex flex-wrap justify-center'>
+          <div
+            data-aos='fade-up'
+            className='w-[100%] max-w-[950px] m-auto flex flex-wrap justify-center'
+          >
             {/* Headers */}
-            <div className='lg:w-72 sm:w-48 w-28'>
+            <div className='w-1/3'>
               <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Angebot</div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
             </div>
-            <div className='lg:w-72 sm:w-48  w-28'>
+            <div className='w-1/3'>
               <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Ausflüge</div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
             </div>
-            <div className='lg:w-72 sm:w-48  w-28'>
+            <div className='w-1/3'>
               <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Mitarbeiter</div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
             </div>
@@ -1222,19 +1526,14 @@ export default function Home({ feed }) {
           {/* Calendly */}
           <div className='w-1/2 flex justify-center items-center relative z-10'>
             <div className='p-1 bg-white rounded-xl shadow-xl'>
-              <InlineWidget
-                styles={{
-                  width: '360px',
-                  height: '360px',
-                }}
-                pageSettings={{
-                  backgroundColor: 'ffffff',
-                  hideEventTypeDetails: true,
-                  hideLandingPageDetails: false,
-                  primaryColor: 'F9B233',
-                  textColor: '4d5055',
-                }}
-                url='https://calendly.com/bundfib/erstes_kennenlernen'
+              <Iframe
+                url='https://my.meetergo.com/book/u/pavel-kickler/new-meeting/pavel-kickler'
+                width='360px'
+                height='340px'
+                id=''
+                className=''
+                display='block'
+                position='relative'
               />
             </div>
           </div>
@@ -1262,7 +1561,7 @@ export default function Home({ feed }) {
           styling={'pt-32 pb-12 flex lg:flex-row flex-col-reverse justify-between items-center'}
         >
           {/* Formular */}
-          <KontaktFormular styling={'lg:w-[40%] sm:w-[80%] w-full flex  flex-col w-full'} />
+          <KontaktFormular styling={'lg:w-[450px] sm:w-[400px] w-[300px] flex  flex-col w-full'} />
           {/* Text */}
           <Textbox
             section={'Schreiben Sie uns'}

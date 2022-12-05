@@ -12,7 +12,6 @@ export default function sendMail(req, res) {
     },
     secure: true,
   });
-  console.log(typeof req.body);
 
   // Define mail that is sent to website owner
   const mailData = {
@@ -26,10 +25,13 @@ export default function sendMail(req, res) {
       </div>
     `,
   };
-  // Send mail
-  transporter.sendMail(mailData, function (err, info) {
-    if (err) console.log(err);
-    else console.log(info);
-  });
-  res.status(200).json({ message: 'Success' });
+  console.log(req.body);
+  // Send mail if req.body.url is empty
+  if (req.body.url === '') {
+    transporter.sendMail(mailData, function (err, info) {
+      if (err) console.log(err);
+      else console.log(info);
+    });
+    res.status(200).json({ message: 'Success' });
+  }
 }

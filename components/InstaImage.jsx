@@ -1,8 +1,24 @@
+import { useRef, useState, useEffect } from 'react';
+
 const InstaImage = ({ src, link }) => {
+  // get the width of the anchor tag and set the height of the image to the same
+  const ref = useRef();
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    setHeight(ref.current.offsetWidth);
+    const handleResize = () => {
+      setHeight(ref.current.offsetWidth);
+    };
+    window.addEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <a href={link} target='_blank' rel='noreferrer'>
+    <a className='w-[30%] m-auto mx-1 my-1' href={link} target='_blank' rel='noreferrer'>
       <img
-        className='lg:w-72 lg:h-72 sm:w-48 sm:h-48 w-28 h-28 object-cover object-center m-auto mx-1 my-2'
+        ref={ref}
+        style={{ height: height }}
+        className='w-full object-cover object-top '
         src={src}
         alt=''
       />

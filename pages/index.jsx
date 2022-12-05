@@ -34,7 +34,8 @@ import InstaImage from '../components/InstaImage';
 // // Import Instagram API
 // import { IgApiClient } from 'instagram-private-api';
 
-export default function Home() {
+export default function Home({ feed }) {
+  const images = feed.data;
   // Initialize AOS
   useEffect(() => {
     AOS.init({
@@ -42,7 +43,16 @@ export default function Home() {
     });
   }, []);
 
-  // console.log(posts);
+  // Functionality for Instagram loadMore Button
+  const [end, setEnd] = useState(8);
+  const loadMore = () => {
+    if (end >= 23) {
+      // forward to Instagram
+      window.open('https://www.instagram.com/bund_fib/', '_blank');
+    } else {
+      setEnd(end + 3);
+    }
+  };
 
   const [show, setShow] = useState(false);
 
@@ -750,7 +760,7 @@ export default function Home() {
             {/* Für Schulen */}
             <div data-aos-anchor-placement='center-bottom' className='lg:w-1/2 w-full'>
               <img
-                className='shadow-2xl lg:h-full lg:block hidden object-cover filter brightness-50 lg:rounded-tl-3xl'
+                className='shadow-2xl lg:block hidden h-full w-full object-cover filter brightness-50 lg:rounded-tl-3xl'
                 src='/images/schule.jpg'
                 alt=''
               />
@@ -1101,7 +1111,7 @@ export default function Home() {
             {/* Bild - linke Seite */}
             <div className='sm:w-1/2 w-full hidden lg:block'>
               <img
-                className='shadow-2xl sm:h-full sm:block hidden object-cover rounded-tl-3xl rounded-bl-3xl'
+                className='shadow-2xl h-full w-full  lg:block hidden object-cover rounded-tl-3xl rounded-bl-3xl'
                 src='/images/jobsKarte.jpg'
                 alt=''
               />
@@ -1157,33 +1167,36 @@ export default function Home() {
             </div>
           </Textbox>
           {/* Instagram */}
-          <div data-aos='fade-up' className='w-[100%] m-auto flex justify-center'>
-            {/* First Column */}
-            <div className=''>
+          <div data-aos='fade-up' className='w-[100%] m-auto flex flex-wrap justify-center'>
+            {/* Headers */}
+            <div className='lg:w-72 sm:w-48 w-28'>
               <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Angebot</div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
-              <InstaImage src={'/images/insta_bild_1.png'} />
-              <InstaImage src={'/images/insta_bild_1.png'} />
-              <InstaImage src={'/images/insta_bild_1.png'} />
             </div>
-            {/* Second Column */}
-            <div className=''>
+            <div className='lg:w-72 sm:w-48  w-28'>
               <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Ausflüge</div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
-              <InstaImage src={'/images/insta_bild_2.jpg'} />
-              <InstaImage src={'/images/insta_bild_2.jpg'} />
-              <InstaImage src={'/images/insta_bild_2.jpg'} />
             </div>
-            {/* Third Column */}
-            <div className=''>
+            <div className='lg:w-72 sm:w-48  w-28'>
               <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Mitarbeiter</div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
-              <InstaImage src={'/images/insta_bild_3.png'} />
-              <InstaImage src={'/images/insta_bild_3.png'} />
-              <InstaImage src={'/images/insta_bild_3.png'} />
             </div>
+            {/* Posts */}
+            {images.map((image, index) => {
+              if (index <= end) {
+                return (
+                  <InstaImage
+                    key={index}
+                    src={image.media_type === 'VIDEO' ? image.thumbnail_url : image.media_url}
+                    alt={image.caption}
+                    link={image.permalink}
+                    prompt={image.media_type === 'VIDEO' ? true : false}
+                  />
+                );
+              }
+            })}
           </div>
-          <Button styling={'my-10'} cta={'mehr anzeigen'} />
+          <Button click={loadMore} styling={'my-10'} cta={'Mehr laden'}></Button>
         </Container>
       </section>
 
@@ -1390,21 +1403,16 @@ export default function Home() {
   );
 }
 
-// // Get Data from Instagram
-// export async function getStaticProps() {
-//   const ig = new IgApiClient();
-//   ig.state.generateDevice(process.env.INSTA_USERNAME);
-//   const loggedInUser = await ig.account.login(process.env.INSTA_USERNAME, process.env.INSTA_PW);
+// Get data from instagram api with getstaticprops
+export async function getStaticProps() {
+  const res = await fetch(
+    `https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,permalink,timestamp,thumbnail_url&access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}`
+  );
+  const feed = await res.json();
 
-//   const userFeed = ig.feed.user(loggedInUser.pk);
-//   const myPostsFirstPage = await userFeed.items();
-//   const myPostsSecondPage = await userFeed.items();
-//   const myPostsThirdPage = await userFeed.items();
-//   const posts = [...myPostsFirstPage, ...myPostsSecondPage, ...myPostsThirdPage];
-
-//   return {
-//     props: {
-//       posts,
-//     },
-//   };
-// }
+  return {
+    props: {
+      feed,
+    },
+  };
+}

@@ -9,7 +9,6 @@ import BurgerMenu from '../components/BurgerMenu';
 import Mitarbeiter from '../components/Mitarbeiter';
 import Gründer from '../components/Gründer';
 import KontaktFormular from '../components/KontaktFormular';
-import Calender from '../components/Calender';
 // Import Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {

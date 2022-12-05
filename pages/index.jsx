@@ -871,7 +871,7 @@ export default function Home({ feed }) {
       </nav>
 
       {/* --Titelseite-- */}
-      <section className='bg-[url("/images/title.jpg")] bg-cover sm:h-[85vh] h-[78vh] relative'>
+      <section className='bg-[url("/images/title.webp")] bg-cover sm:h-[85vh] h-[78vh] relative'>
         <div className='w-full h-full bg-black bg-opacity-60 flex flex-col justify-center items-center'>
           {/* Title Slogal */}
           <h1 className='sm:w-[600px] font-berlin text-white sm:text-6xl text-5xl text-center'>
@@ -970,7 +970,7 @@ export default function Home({ feed }) {
               href='#Lernförderung'
               className='lg:hover:scale-[102%] transition-all sm:w-[45%] w-full rounded-2xl bg-white shadow-2xl'
             >
-              <img className='rounded-t-3xl brightness-[0.6]' src='/images/schule.jpg' alt='' />
+              <img className='rounded-t-3xl brightness-[0.6]' src='/images/schule.webp' alt='' />
               <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Lernförderung</div>
               <div className='font-source text-sm lg:mt-5 mt-8 mx-7'>
                 Wir kommen an Ihre Schule und fördern Ihre Schülerinnen und Schüler, um
@@ -986,7 +986,7 @@ export default function Home({ feed }) {
               href='#Privatunterricht'
               className='lg:hover:scale-[102%] transition-all sm:w-[45%] rounded-2xl bg-white shadow-2xl lg:mt-56 sm:mt-0 mt-16'
             >
-              <img className='rounded-t-3xl brightness-[0.6]' src='/images/privat.jpg' alt='' />
+              <img className='rounded-t-3xl brightness-[0.6]' src='/images/privat.webp' alt='' />
               <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Privatunterricht</div>
               <div className='font-source text-sm lg:mt-5 mt-8 mx-7'>
                 Ihr Kind steht im Mittelpunkt. Gemeinsam mit unseren Tutoren und Tutorinnen finden
@@ -1004,7 +1004,7 @@ export default function Home({ feed }) {
             >
               <img
                 className='rounded-t-3xl brightness-[0.6] w-full h-48 object-cover'
-                src='/images/projekte.jpg'
+                src='/images/projekte.webp'
                 alt=''
               />
               <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Bildungsprojekte</div>
@@ -1063,7 +1063,7 @@ export default function Home({ feed }) {
             <div data-aos-anchor-placement='center-bottom' className='lg:w-1/2 w-full'>
               <img
                 className='shadow-2xl lg:block hidden h-full w-full object-cover filter brightness-50 lg:rounded-tl-3xl'
-                src='/images/schule.jpg'
+                src='/images/schule.webp'
                 alt=''
               />
             </div>
@@ -1102,7 +1102,7 @@ export default function Home({ feed }) {
             <div className='w-1/2'>
               <img
                 className='shadow-2xl lg:block hidden h-full w-full object-cover filter brightness-50 rounded-br-3xl'
-                src='/images/eltern.jpg'
+                src='/images/eltern.webp'
                 alt=''
               />
             </div>
@@ -1386,16 +1386,16 @@ export default function Home({ feed }) {
           </div>
           {/* Mitarbeiter Übersicht */}
           <div data-aos='fade-up' className='flex justify-between sm:mt-24 mt-10 flex-wrap'>
-            <Mitarbeiter bild={'/images/anna.jpg'} name={'Anna'} job={'Erzieherin'} />
-            <Mitarbeiter bild={'/images/arin.jpg'} name={'Arin'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/karin.jpg'} name={'Karin'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/lukas.jpg'} name={'Lukas'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/madeleine.jpg'} name={'Madeleine'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/maggy.jpg'} name={'Maggy'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/matthias.jpg'} name={'Matthias'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/pauline.jpg'} name={'Pauline'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/salim.jpg'} name={'Salim'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/victoria.jpg'} name={'Victoria'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/anna.webp'} name={'Anna'} job={'Erzieherin'} />
+            <Mitarbeiter bild={'/images/arin.webp'} name={'Arin'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/karin.webp'} name={'Karin'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/lukas.webp'} name={'Lukas'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/madeleine.webp'} name={'Madeleine'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/maggy.webp'} name={'Maggy'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/matthias.webp'} name={'Matthias'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/pauline.webp'} name={'Pauline'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/salim.webp'} name={'Salim'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/victoria.webp'} name={'Victoria'} job={'Rolle'} />
           </div>
         </Container>{' '}
       </section>
@@ -1412,7 +1412,7 @@ export default function Home({ feed }) {
             <div className='sm:w-1/2 w-full hidden lg:block'>
               <img
                 className='shadow-2xl h-full w-full  lg:block hidden object-cover rounded-tl-3xl rounded-bl-3xl'
-                src='/images/jobsKarte.jpg'
+                src='/images/jobsKarte.webp'
                 alt=''
               />
             </div>

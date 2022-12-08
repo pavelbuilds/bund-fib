@@ -1438,7 +1438,7 @@ export default function Home({ feed }) {
               <div className='w-10 h-[5px] bg-primary mt-5'></div>
               {/* Slogan */}
               <div className='font-berlin text-5xl leading-tight my-10 text-left'>
-                Sei dabei <br /> und hilf uns
+                Ich möchte mitmachen
               </div>
               {/* Beschreibung */}
               <div className='font-source mb-10 leading-tight lg:text-left text-left'>
@@ -1507,13 +1507,12 @@ export default function Home({ feed }) {
           <Textbox
             animation={'fade-up'}
             section={'Aktuelles'}
-            slogan={'Neuigkeiten von uns und unseren Projekten'}
+            slogan={'Neuigkeiten von uns, unseren Lerngruppen und Projekten.'}
             styling={'lg:w-3/5 -mt-1'}
           >
             <div className='font-source sm:mb-20 mb-0 leading-tight'>
-              Was macht den Privatunterricht bei Bund-fiB aus, was macht sie besonder? - Lorem ipsum
-              dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
-              Pellentesque sit amet sapien.Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              Ob Lagerfeuer und Stockbrot, Akrobatik und Theater oder regelmäßige Lernförderungen
+              mit spannenden Ausflügen. Hier können Sie sich ein Bild machen.
             </div>
           </Textbox>
           {/* Instagram */}
@@ -1560,16 +1559,14 @@ export default function Home({ feed }) {
           styling={'pt-32 pb-32 flex flex-col lg:flex-row items-center '}
         >
           <Textbox
-            section={'Termin mit Uns'}
-            slogan={'Buchen Sie ein Gespräch mit uns'}
+            section={'Persönlich oder digital'}
+            slogan={'Buchen Sie jetzt einen Termin mit uns'}
             styling={'lg:w-1/2 -mt-1 pb-16 lg:px-20 sm:px-0'}
             align={'left'}
           >
             <div className='font-source sm:mb-20 mb-5 leading-tight'>
-              Beschreibung was das Angebot als ganzes ausmacht - Lorem ipsum dolor sit amet
-              consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
-              sit amet sapien.Bei Allen Fragen beraten wir Sie gerne persönlich - natürlich
-              kostenlos und unverbindlich
+              Finde Sie jetzt die passende Lernförderung für Ihre Schule. Wir hören Ihre Wünsche und
+              Erwartungen und passen unsere Konzeption auf Ihre Schule an.
             </div>
           </Textbox>
           {/* Calendly */}
@@ -1613,16 +1610,14 @@ export default function Home({ feed }) {
           <KontaktFormular styling={'lg:w-[450px] sm:w-[400px] w-[300px] flex  flex-col w-full'} />
           {/* Text */}
           <Textbox
-            section={'Schreiben Sie uns'}
-            slogan={'Wir antworten Ihnen schnellst möglich'}
+            section={'Schreiben Sie uns jetzt'}
+            slogan={'Wir freuen uns auf Ihre Nachricht'}
             align={'left'}
             styling={'lg:w-[40%] sm:pb-16 pb-16'}
           >
             <div className='font-source leading-tight'>
-              Beschreibung was das Angebot als ganzes ausmacht - Lorem ipsum dolor sit amet
-              consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
-              sit amet sapien.Bei Allen Fragen beraten wir Sie gerne persönlich - natürlich
-              kostenlos und unverbindlich
+              Sie haben Fragen oder ihnen ist etwas unklar? Schreiben Sie uns! Wir versuchen Ihnen
+              schnellst möglichst zu antworten.
             </div>
           </Textbox>
         </Container>

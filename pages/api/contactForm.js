@@ -16,7 +16,7 @@ export default function sendMail(req, res) {
   // Define mail that is sent to website owner
   const mailData = {
     from: 'bundfib.webseite@gmail.com',
-    to: 'pavel.kickler@gmail.com',
+    to: 'verwaltung@bund-fib.de',
     subject: 'Neue Anfrage über Webseite',
     text: req.body.name,
     html: `

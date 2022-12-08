@@ -37,6 +37,7 @@ import Iframe from 'react-iframe';
 
 export default function Home({ feed }) {
   const images = feed.data;
+
   // Initialize AOS Animation Library
   useEffect(() => {
     AOS.init({
@@ -1261,15 +1262,21 @@ export default function Home({ feed }) {
                   <div className='bildungsProjektFit rounded-t-2xl'>
                     <div className='px-7 pt-44 pb-8 text-white text-left'>
                       <div className='text-sm'>Ein Projekt mit Hand und Fuß</div>
-                      <div className='text-3xl font-semibold mt-3'>Fit für die Schule</div>
+                      <div className='text-3xl font-semibold mt-3'>Erasmus+</div>
                     </div>
                   </div>
                   <div className='font-source text-sm text-left sm:mt-8 mt-8 mx-7'>
-                    Als Bildungsträger sehen wir uns in der Verantwortung, unsere Ressourcen mit
-                    geflüchteten Familien zu teilen. Manchmal dauert es leider länger bis ein
-                    geflüchtetes Kind einen Schulplatz zugewiesen bekommt. In diesem Fall, fangen
-                    wir die Kinder auf, beschulen sie und führen mit ihnen spannende Workshops und
-                    Projekte durch. Zusammen machen wir die ersten Schritte.
+                    Auch auf europäischer Ebene möchten wir sozialbenachteiligte Kinder und
+                    Jugendliche miteinbeziehen. Dabei steht die Teilhabe an Bildung an erster
+                    Stelle. Gemeinsam mit der&nbsp;
+                    <a href='https://nachhaltigkeit.bvng.org/' className='underline'>
+                      Bundesvereinigung Nachhaltigkeit
+                    </a>
+                    wollen wir den Kindern und Jugendlichen zeigen, dass die Europäische Union
+                    entschlossen und vereint für Chancengleichheit steht. Dazu soll den Kindern und
+                    Jugendlichen aus benachteiligten Verhältnissen eine Plattform geboten werden,
+                    sodass sie an kulturellen und sprachbildenden Angeboten in Europa teilnehmen
+                    können. Teilhabe steht an oberster Stelle.
                   </div>
                   <a
                     className='flex bg-primary text-white text-sm font-semibold float-right sm:mt-5 mt-10 px-4 py-2 rounded-tl-2xl rounded-br-2xl'
@@ -1284,7 +1291,7 @@ export default function Home({ feed }) {
           <Textbox
             animation={'fade-up'}
             section={'Bildungsprojekte'}
-            slogan={'Slogan über die Bildungsprojekte'}
+            slogan={'Jetzt für morgen!'}
             align={'left'}
             styling={'lg:w-3/5 sm:pb-0 lg:px-20 pb-16'}
           >
@@ -1313,9 +1320,10 @@ export default function Home({ feed }) {
             styling={'lg:w-3/5 -mt-1'}
           >
             <div className='font-source sm:mb-20 mb-10 leading-tight'>
-              Vision/ Mission/ Philosophie - Lorem ipsum dolor sit amet consectetur adipiscing elit
-              Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.Lorem ipsum
-              dolor sit amet consectetur adipiscing elit.
+              Wir sind ein junges, aufgeschlossene und hoch motiviertes Team mit dem Ziel, jedem
+              Kind die Möglichkeit zur Verbesserung der schulischen Leistungen zu geben und die
+              eigenen Talente zu entfalten. Wir betonen die Stärken unserer Schülerinnen und
+              Schüler.
             </div>
           </Textbox>
           {/* Partner Logos */}
@@ -1366,7 +1374,7 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Unser Team-- */}
-      <section id='UnserTeam' className='bg-darkYellow pb-14'>
+      <section id='UnserTeam' className='bg-darkYellow sm:pt-20 pb-14'>
         <Container styling={'pt-32'}>
           {/* Text & Gründer */}
           <div
@@ -1380,9 +1388,9 @@ export default function Home({ feed }) {
               align={'left'}
             >
               <div className='font-source mb-10 leading-tight lg:text-left text-center'>
-                Beschreibung was das Angebot als ganzes ausmacht - Lorem ipsum dolor sit amet
-                consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
-                sit amet sapien.
+                Unser einzigartiges Team setzt sich aus vielen motivierten und kreativen Köpfen
+                zusammen, die mit dir zielstrebig und kreativ an deinem Erfolg arbeiten. Gemeinsam
+                bleiben wir hilfsbereit und aufgeschlossen für deine kleinen und großen Probleme.
                 <br />
                 <br />
                 Bei Allen Fragen beraten wir Sie gerne persönlich - natürlich kostenlos und
@@ -1417,27 +1425,61 @@ export default function Home({ feed }) {
             className='sm:w-[90%] w-full flex mt-10 flex-wrap relative z-10 mb-72'
           >
             {/* Bild - linke Seite */}
-            <div className='sm:w-1/2 w-full hidden lg:block'>
+            <div className='sm:w-2/5 w-full hidden lg:block'>
               <img
                 className='shadow-2xl h-full w-full  lg:block hidden object-cover rounded-tl-3xl rounded-bl-3xl'
                 src='/images/jobsKarte.webp'
                 alt=''
               />
+              {/* Text - rechte Seite */}
             </div>
-            <div className='shadow-2xl lg:w-1/2 w-full bg-white py-20 sm:px-14 px-10 sm:mb-0 mb-12 lg:rounded-3xl lg:rounded-tl-none lg:rounded-bl-none rounded-3xl flex flex-col lg:items-start items-center'>
+            <div className='shadow-2xl lg:w-3/5 w-full bg-white py-20 sm:px-14 px-10 sm:mb-0 mb-12 lg:rounded-3xl lg:rounded-tl-none lg:rounded-bl-none rounded-3xl flex flex-col lg:items-start items-start'>
               <div className='font-poppins text-lg'>Jobs bei uns</div>
               <div className='w-10 h-[5px] bg-primary mt-5'></div>
-              <div className='font-berlin text-5xl leading-tight my-10 lg:text-left text-center'>
+              {/* Slogan */}
+              <div className='font-berlin text-5xl leading-tight my-10 text-left'>
                 Sei dabei <br /> und hilf uns
               </div>
-              <div className='font-source mb-10 leading-tight lg:text-left text-center'>
-                Beschreibung was das Angebot als ganzes ausmacht - Lorem ipsum dolor sit amet
-                consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
-                sit amet sapien.
+              {/* Beschreibung */}
+              <div className='font-source mb-10 leading-tight lg:text-left text-left'>
+                Wir organisieren langfristig angelegte Projekte und möchten Lebenswege zum Positiven
+                verändern. Dabei ist unsere wichtigste Ressource ein Team aus empathischen und
+                aufgeschlossenen Menschen, die den Kindern und Jugendlichen wertschätzend
+                entgegentreten und mehr sind als ihr/e Tutor/in.
                 <br />
                 <br />
-                Bei Allen Fragen beraten wir Sie gerne persönlich - natürlich kostenlos und
-                unverbindlich
+                <br />
+                <b>Wir bieten</b> <br />
+                <br />
+                <ol className='list-disc list-inside'>
+                  <li>Flexible Arbeitszeiten und Einsatzorte</li>
+                  <li>Eigenverantwortung und Selbstbestimmung</li>
+                  <li>Klare und zuverlässige Honorarabrechnungen</li>
+                  <li>
+                    Einen dokumentierten Arbeitsnachweis, der ggf. ein universitäres Praktikum
+                    ersetzt.
+                  </li>
+                  <li>
+                    Sympathisches, junges Team mit flachen Hierachien und fröhlichen Teammeetings in
+                    unserem Büro @PulsRaum
+                  </li>
+                </ol>
+                <br />
+                <br />
+                <b>Du bringst mit</b>
+                <br /> <br />
+                <ol className='list-disc list-inside'>
+                  <li>Eine Hochschulreife</li>
+                  <li>Empathie und Hilfsbereitschaft</li>
+                  <li>
+                    Interesse und Spaß an der Unterstützung von Schüler*innen mit individuellen
+                    Lernproblemen
+                  </li>
+                  <li>Und ein erweitertes Führungszeugnis ohne Eintragungen</li>
+                </ol>
+                Haben wir dein Interesse geweckt? Dann bewirb dich direkt bei uns mit deinem
+                Lebenslauf und deinen Kontaktdaten. Wir freuen uns auf ein persönliches
+                Kennenlernen.
               </div>
               <Button click={toggleKontaktieren} cta={'Bewirb dich hier bei uns!'}></Button>
             </div>

@@ -33,8 +33,6 @@ import 'aos/dist/aos.css';
 import { InlineWidget } from 'react-calendly';
 import InstaImage from '../components/InstaImage';
 
-import Iframe from 'react-iframe';
-
 export default function Home({ feed }) {
   const images = feed.data;
 
@@ -108,44 +106,28 @@ export default function Home({ feed }) {
         }`}
       >
         {/* Container */}
-        <div className='max-w-screen-xl flex flex-col justify-center'>
+        <div className='max-w-screen-xl mx-auto flex flex-col justify-center'>
           {/* Header */}
           <div className='font-berlin text-2xl text-center'>
             Buchen Sie ein Gespräch mit uns oder schreiben Sie uns eine Nachricht
           </div>
-          {/* Kalender & Kontaktfomular */}
+          {/* Kalender */}
           <div className='flex w-full justify-center lg:mt-10 sm:mt-[5vh] mt-0 lg:mb-10 sm:mb-[10vh] mb-10'>
-            {/* Kalender */}
-            <div className='w-1/2 flex justify-center items-center relative z-10 lg:border-r border-solid border-primary pt-5'>
-              <div className='p-1 bg-white rounded-xl shadow-xl'>
-                <Iframe
-                  url='https://my.meetergo.com/book/u/pavel-kickler/new-meeting/pavel-kickler'
-                  width='360px'
-                  height='340px'
-                  id=''
-                  className=''
-                  display='block'
-                  position='relative'
-                />
-                {/* <InlineWidget
-                  styles={{
-                    width: '50vh',
-                    height: '50vh',
-                  }}
-                  pageSettings={{
-                    backgroundColor: 'ffffff',
-                    hideEventTypeDetails: true,
-                    hideLandingPageDetails: true,
-                    primaryColor: 'F9B233',
-                    textColor: '4d5055',
-                  }}
-                  url='https://calendly.com/bundfib/erstes_kennenlernen'
-                /> */}
-              </div>
-            </div>
-            {/* Kontaktformular */}
-            <div className='lg:flex w-1/2 justify-center py-5 hidden'>
-              <KontaktFormular styling={'w-[320px] flex flex-col'} />
+            <div className='p-1 bg-white rounded-xl shadow-xl lg:my-10'>
+              <InlineWidget
+                styles={{
+                  width: '50vh',
+                  height: '50vh',
+                }}
+                pageSettings={{
+                  backgroundColor: 'ffffff',
+                  hideEventTypeDetails: true,
+                  hideLandingPageDetails: true,
+                  primaryColor: 'F9B233',
+                  textColor: '4d5055',
+                }}
+                url='https://calendly.com/bundfib/erstes_kennenlernen'
+              />
             </div>
           </div>
           {/* Icons */}
@@ -914,27 +896,41 @@ export default function Home({ feed }) {
         <Container styling={'pt-5'}>
           {/* Partner Logos */}
           <div className='flex justify-between flex-wrap items-center overflow-hidden'>
-            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+              <img
+                className='sm:h-9 h-9 sm:px-0'
+                src='/images/logos/weißes_berlin_logo.webp'
+                alt=''
+              />
+            </div>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+              <img
+                className='sm:h-14 h-9 sm:px-0'
+                src='/images/logos/stacked_berlin_logo.webp'
+                alt=''
+              />
+            </div>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
               <img
                 className='sm:h-12 h-9 sm:px-0'
                 src='/images/logos/haus_der_jugend.webp'
                 alt=''
               />
             </div>
-            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
               <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.webp' alt='' />
             </div>
-            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-10'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
               <img
                 className='sm:h-12 h-9 sm:px-0'
                 src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
                 alt=''
               />
             </div>
-            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-10'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
               <img
                 className='sm:h-9 h-9 sm:px-0'
-                src='/images/logos/weißes_berlin_logo.webp'
+                src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
                 alt=''
               />
             </div>
@@ -951,15 +947,15 @@ export default function Home({ feed }) {
           {/* Textabschnitt */}
           <Textbox
             section={'Leistungsübersicht'}
-            slogan={'Unser Angebot auf einen Blick'}
+            slogan={'Die richtige Lernförderung für jedes Kind'}
             align={'left'}
             styling={'lg:w-1/3'}
           >
             {/* Text */}
             <div className='font-source mb-10 leading-tight'>
-              Unsere Bildungsangebote sind auf Ihre Vorstellungen zugeschnitten. Dabei liegt uns
-              eine enge und vertrauensvolle Kommunikation am Herzen. Denn eine gemeinsam entwickelte
-              Vision stärkt die Motivation aller Beteiligten.
+              Von schulischen Förderprogrammen über Einzel- und Gruppennachhilfe bis hin zu
+              Austauschprogrammen auf europäischer Ebene bieten wir unseren Kooperationspartnern ein
+              umfangreiches und individuelles Leistungsangebot.
               <br />
               <br />
               Bei Allen Fragen beraten wir Sie gerne persönlich - natürlich kostenlos und
@@ -1046,7 +1042,7 @@ export default function Home({ feed }) {
           <Textbox
             animation={'fade-up'}
             section={'Lernförderung'}
-            slogan={'Slogan über die Lernförderung'}
+            slogan={'Zurück in die Erfolgsspur'}
             align={'center'}
             styling={'lg:w-3/5 pt-20'}
           >
@@ -1085,7 +1081,7 @@ export default function Home({ feed }) {
                 Austausch verlassen. Gerne organisieren wir die Lernförderung auch an Ihrer Schule.
                 <br />
                 <br />
-                <b>Mehr Informationen &#62;&#62;</b>
+                {/* <b>Mehr Informationen &#62;&#62;</b> */}
               </div>
             </div>
             {/* Für Eltern */}
@@ -1098,10 +1094,9 @@ export default function Home({ feed }) {
                 Spur findet. Mit einem berlinpass bekommt Ihr Kind sogar kostenlose Unterstützung.
                 <br />
                 <br />
-                <b>
-                  Mehr Informationen &#62;&#62; <br />
-                  <br />{' '}
-                </b>
+                {/* <b>Mehr Informationen &#62;&#62;</b> */}
+                <br />
+                <br />{' '}
               </div>
             </div>
             <div className='w-1/2'>
@@ -1147,7 +1142,7 @@ export default function Home({ feed }) {
           <Textbox
             animation={'fade-up'}
             section={'Privatunterricht'}
-            slogan={'Slogan über den Privatunterricht'}
+            slogan={'Individueller Unterricht auf Ihr Kind angepasst'}
             align={'center'}
             styling={'lg:w-3/5 -mt-1'}
           >
@@ -1229,7 +1224,7 @@ export default function Home({ feed }) {
               navigation={true}
               modules={[Autoplay, Pagination]}
               autoplay={{
-                delay: 5000,
+                delay: 10000,
                 disableOnInteraction: false,
               }}
               className='mySwiper'
@@ -1242,48 +1237,48 @@ export default function Home({ feed }) {
                       <div className='text-3xl font-semibold mt-3'>Fit für die Schule</div>
                     </div>
                   </div>
-                  <div className='font-source text-sm text-left sm:mt-8 mt-8 mx-7'>
+                  <div className='font-source text-sm text-left my-8 mx-7'>
                     Als Bildungsträger sehen wir uns in der Verantwortung, unsere Ressourcen mit
                     geflüchteten Familien zu teilen. Manchmal dauert es leider länger bis ein
                     geflüchtetes Kind einen Schulplatz zugewiesen bekommt. In diesem Fall, fangen
                     wir die Kinder auf, beschulen sie und führen mit ihnen spannende Workshops und
                     Projekte durch. Zusammen machen wir die ersten Schritte.
                   </div>
-                  <a
+                  {/* <a
                     className='flex bg-primary text-white text-sm font-semibold float-right sm:mt-5 mt-10 px-4 py-2 rounded-tl-2xl rounded-br-2xl'
                     href=''
                   >
                     mehr erfahren <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
-                  </a>
+                  </a> */}
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className='sm:w-[70%] w-full rounded-2xl bg-white sm:shadow-2xl mb-16'>
                   <div className='bildungsProjektFit rounded-t-2xl'>
                     <div className='px-7 pt-44 pb-8 text-white text-left'>
-                      <div className='text-sm'>Ein Projekt mit Hand und Fuß</div>
+                      <div className='text-sm'>
+                        Kulturelle und sprachbildende Angebote - europaweit
+                      </div>
                       <div className='text-3xl font-semibold mt-3'>Erasmus+</div>
                     </div>
                   </div>
-                  <div className='font-source text-sm text-left sm:mt-8 mt-8 mx-7'>
-                    Auch auf europäischer Ebene möchten wir sozialbenachteiligte Kinder und
-                    Jugendliche miteinbeziehen. Dabei steht die Teilhabe an Bildung an erster
-                    Stelle. Gemeinsam mit der&nbsp;
+                  <div className='font-source text-sm text-left my-8 mx-7'>
+                    {/* Auch auf europäischer Ebene möchten wir sozialbenachteiligte Kinder und
+                    Jugendliche miteinbeziehen und die Teilhabe an Bildung ermöglichen. Gemeinsam */}
+                    Gemeinsam mit der&nbsp;
                     <a href='https://nachhaltigkeit.bvng.org/' className='underline'>
                       Bundesvereinigung Nachhaltigkeit
                     </a>
-                    wollen wir den Kindern und Jugendlichen zeigen, dass die Europäische Union
-                    entschlossen und vereint für Chancengleichheit steht. Dazu soll den Kindern und
-                    Jugendlichen aus benachteiligten Verhältnissen eine Plattform geboten werden,
-                    sodass sie an kulturellen und sprachbildenden Angeboten in Europa teilnehmen
-                    können. Teilhabe steht an oberster Stelle.
+                    &nbsp;wollen wir den Kindern und Jugendlichen zeigen, dass die Europäische Union
+                    entschlossen und vereint für Chancengleichheit steht. Wir bieten die Plattform
+                    für kulturellen Austausch und sprachbildende Angebote in Europa.
                   </div>
-                  <a
+                  {/* <a
                     className='flex bg-primary text-white text-sm font-semibold float-right sm:mt-5 mt-10 px-4 py-2 rounded-tl-2xl rounded-br-2xl'
                     href=''
                   >
                     mehr erfahren <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
-                  </a>
+                  </a> */}
                 </div>
               </SwiperSlide>
             </Swiper>
@@ -1297,9 +1292,9 @@ export default function Home({ feed }) {
           >
             {/* Text */}
             <div className='font-source mb-10 leading-tight'>
-              Beschreibung was das Angebot als ganzes ausmacht - Lorem ipsum dolor sit amet
-              consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
-              sit amet sapien.
+              Zusammen mit unseren Kooperationspartnern machen wir nachhaltige Bildungsangebote
+              zugänglich für jedes Kind. Kommen Sie gerne auf uns zu und wir besprechen die
+              Umsetzung. Zusammen machen wir den ersten Schritt.
               <br />
               <br />
               Bei Allen Fragen beraten wir Sie gerne persönlich - natürlich kostenlos und
@@ -1331,27 +1326,41 @@ export default function Home({ feed }) {
             data-aos='fade-up'
             className='relative z-10 w-full flex justify-between flex-wrap items-center overflow-hidden'
           >
-            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+              <img
+                className='sm:h-9 h-9 sm:px-0'
+                src='/images/logos/weißes_berlin_logo.webp'
+                alt=''
+              />
+            </div>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+              <img
+                className='sm:h-14 h-9 sm:px-0'
+                src='/images/logos/stacked_berlin_logo.webp'
+                alt=''
+              />
+            </div>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
               <img
                 className='sm:h-12 h-9 sm:px-0'
                 src='/images/logos/haus_der_jugend.webp'
                 alt=''
               />
             </div>
-            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
               <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.webp' alt='' />
             </div>
-            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-10'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
               <img
                 className='sm:h-12 h-9 sm:px-0'
                 src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
                 alt=''
               />
             </div>
-            <div className='md:w-1/4 sm:w-1/2 w-1/2 flex justify-center pt-10'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
               <img
                 className='sm:h-9 h-9 sm:px-0'
-                src='/images/logos/weißes_berlin_logo.webp'
+                src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
                 alt=''
               />
             </div>
@@ -1383,7 +1392,7 @@ export default function Home({ feed }) {
           >
             <Textbox
               section={'Unser Team'}
-              slogan={'Slogan über Team Besonderheiten'}
+              slogan={'Lernen Sie unser Team kennen'}
               styling={'lg:w-2/5 sm:pb-0 pb-16'}
               align={'left'}
             >
@@ -1404,7 +1413,7 @@ export default function Home({ feed }) {
           <div data-aos='fade-up' className='flex justify-between sm:mt-24 mt-10 flex-wrap'>
             <Mitarbeiter bild={'/images/anna.webp'} name={'Anna'} job={'Erzieherin'} />
             <Mitarbeiter bild={'/images/arin.webp'} name={'Arin'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/karin.webp'} name={'Karin'} job={'Rolle'} />
+            <Mitarbeiter bild={'/images/karin.webp'} name={'Camilla'} job={'Rolle'} />
             <Mitarbeiter bild={'/images/lukas.webp'} name={'Lukas'} job={'Rolle'} />
             <Mitarbeiter bild={'/images/madeleine.webp'} name={'Madeleine'} job={'Rolle'} />
             <Mitarbeiter bild={'/images/maggy.webp'} name={'Maggy'} job={'Rolle'} />
@@ -1449,7 +1458,7 @@ export default function Home({ feed }) {
                 <br />
                 <br />
                 <br />
-                <b>Wir bieten</b> <br />
+                {/* <b>Wir bieten</b> <br />
                 <br />
                 <ol className='list-disc list-inside'>
                   <li>Flexible Arbeitszeiten und Einsatzorte</li>
@@ -1467,8 +1476,8 @@ export default function Home({ feed }) {
                 <br />
                 <br />
                 <b>Du bringst mit</b>
-                <br /> <br />
-                <ol className='list-disc list-inside'>
+                <br /> <br /> */}
+                {/* <ol className='list-disc list-inside'>
                   <li>Eine Hochschulreife</li>
                   <li>Empathie und Hilfsbereitschaft</li>
                   <li>
@@ -1479,7 +1488,7 @@ export default function Home({ feed }) {
                 </ol>
                 Haben wir dein Interesse geweckt? Dann bewirb dich direkt bei uns mit deinem
                 Lebenslauf und deinen Kontaktdaten. Wir freuen uns auf ein persönliches
-                Kennenlernen.
+                Kennenlernen. */}
               </div>
               <Button click={toggleKontaktieren} cta={'Bewirb dich hier bei uns!'}></Button>
             </div>
@@ -1560,7 +1569,7 @@ export default function Home({ feed }) {
         >
           <Textbox
             section={'Persönlich oder digital'}
-            slogan={'Buchen Sie jetzt einen Termin mit uns'}
+            slogan={'Buchen Sie jetzt einen Termin'}
             styling={'lg:w-1/2 -mt-1 pb-16 lg:px-20 sm:px-0'}
             align={'left'}
           >
@@ -1571,16 +1580,23 @@ export default function Home({ feed }) {
           </Textbox>
           {/* Calendly */}
           <div className='w-1/2 flex justify-center items-center relative z-10'>
-            <div className='p-1 bg-white rounded-xl shadow-xl'>
-              <Iframe
-                url='https://my.meetergo.com/book/u/pavel-kickler/new-meeting/pavel-kickler'
-                width='360px'
-                height='340px'
-                id=''
-                className=''
-                display='block'
-                position='relative'
-              />
+            <div className='flex w-full justify-center lg:mt-10 sm:mt-[5vh] mt-0 lg:mb-10 sm:mb-[10vh] mb-10'>
+              <div className='p-1 bg-white rounded-xl shadow-xl lg:my-10'>
+                <InlineWidget
+                  styles={{
+                    width: '50vh',
+                    height: '50vh',
+                  }}
+                  pageSettings={{
+                    backgroundColor: 'ffffff',
+                    hideEventTypeDetails: true,
+                    hideLandingPageDetails: true,
+                    primaryColor: 'F9B233',
+                    textColor: '4d5055',
+                  }}
+                  url='https://calendly.com/bundfib/erstes_kennenlernen'
+                />
+              </div>
             </div>
           </div>
           <div />
@@ -1647,7 +1663,7 @@ export default function Home({ feed }) {
               <a href='FIB-Heft.pdf' target='_blank'>
                 <div className='flex flex-col justify-center items-center text-white sm:text-sm text-xs'>
                   <FontAwesomeIcon className='w-10 text-white pb-4' icon={faFilePdf} />
-                  Bund-fiB Heft <br /> <br />
+                  Unser fiB-Heft – <br /> Das Lerntagebuch <br /> <br />
                 </div>
               </a>
             </div>
@@ -1747,7 +1763,7 @@ export default function Home({ feed }) {
 }
 
 // Get data from instagram api with getstaticprops
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(
     `https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,permalink,timestamp,thumbnail_url&access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}`
   );

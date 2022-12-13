@@ -15,41 +15,38 @@ const Gründer = ({ animation }) => {
         {/* Bild */}
         <div className='h-96 bg-black bg-[url(/images/founders.jpg)] bg-cover sm:[background-position-y:-100px] [background-position-y:-00px]  rounded-xl'></div>
         {/* Basel Button */}
-        <div
+        {/* <div
           onClick={() => {
             setGründer(`Das ist Basel Seido und das ist eine kurze Beschreibung über ihn`);
           }}
           className='hover:scale-110 transition-all cursor-pointer bg-[rgba(0,0,0,0.7)] py-2 px-3 absolute text-white sm:text-[10px] text-[14px] rounded-md flex items-center sm:top-[60%] top-[80%] left-[5%]'
         >
-          Basel Seido
           <FontAwesomeIcon className='w-3 ml-2' icon={faCircleInfo} />
-        </div>
+        </div> */}
         {/* Lars Button */}
-        <div
+        {/* <div
           onClick={() => {
             setGründer(`Das ist Lars Mikeler und das ist eine kurze Beschreibung über ihn`);
           }}
           className='hover:scale-110 transition-all cursor-pointer bg-[rgba(0,0,0,0.7)] py-2 px-3 absolute text-white sm:text-[10px] text-[14px] rounded-md flex items-center sm:top-[45%] top-[50%] left-[40%]'
         >
-          Lars Mikeler
           <FontAwesomeIcon className='w-3 ml-2' icon={faCircleInfo} />
-        </div>
+        </div> */}
         {/* Sören Button */}
-        <div
+        {/* <div
           onClick={() => {
             setGründer(`Das ist Sören Dübel und das ist eine kurze Beschreibung über ihn`);
           }}
           className='hover:scale-110 transition-all cursor-pointer bg-[rgba(0,0,0,0.7)] py-2 px-3 absolute text-white sm:text-[10px] text-[14px] rounded-md flex items-center sm:top-[65%] sm:left-[75%] top-[70%] left-[60%]'
         >
-          Sören Dübel
           <FontAwesomeIcon className='w-3 ml-2' icon={faCircleInfo} />
-        </div>
+        </div> */}
       </div>
       {/* Text */}
-      <div className='sm:text-sm text-xl font-source mt-3'>
+      {/* <div className='sm:text-sm text-xl font-source mt-3'>
         <b>Die Gründer: </b>
         {gründer}
-      </div>
+      </div> */}
     </div>
   );
 };

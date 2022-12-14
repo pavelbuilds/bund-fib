@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Script from 'next/script';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 // Import Components
 import Container from '../components/Container';
@@ -113,7 +113,7 @@ export default function Home({ feed }) {
           </div>
           {/* Kalender */}
           <div className='flex w-full justify-center lg:mt-10 sm:mt-[5vh] mt-0 lg:mb-10 sm:mb-[10vh] mb-10'>
-            <div className='p-1 bg-white rounded-xl shadow-xl lg:my-10'>
+            <div className='p-1 bg-white rounded-xl shadow-xl lg:my-4'>
               <InlineWidget
                 styles={{
                   width: '50vh',
@@ -806,7 +806,8 @@ export default function Home({ feed }) {
         <div className='max-w-screen-xl flex justify-between items-center mx-auto sm:px-20 px-5'>
           {/* Logo */}
           <div>
-            <img className='h-9' src='/images/logos/bund_fib_logo.webp' alt='' />
+            <Image src='/images/logos/bund_fib_logo.webp' width={170} height={75} />
+            {/* <img className='h-9' src='/images/logos/bund_fib_logo.webp' alt='' /> */}
           </div>
           {/* Menu */}
           <ul className='hidden lg:flex items-center font-source justify-between text-sm w-[400px]'>
@@ -897,42 +898,73 @@ export default function Home({ feed }) {
           {/* Partner Logos */}
           <div className='flex justify-between flex-wrap items-center overflow-hidden'>
             <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
-              <img
+              <Image
+                src='/images/logos/weißes_berlin_logo.webp'
+                width={200}
+                height={200}
+                alt='Berliner Senat Logo'
+              />
+              {/* <img
                 className='sm:h-9 h-9 sm:px-0'
                 src='/images/logos/weißes_berlin_logo.webp'
                 alt=''
-              />
+              /> */}
             </div>
             <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
-              <img
+              <Image
+                src='/images/logos/stacked_berlin_logo.webp'
+                width={130}
+                height={100}
+                alt='Berzirksamt Mitte Logo'
+              />
+              {/* <img
                 className='sm:h-14 h-9 sm:px-0'
                 src='/images/logos/stacked_berlin_logo.webp'
                 alt=''
-              />
+              /> */}
             </div>
             <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
-              <img
+              <Image
+                src='/images/logos/haus_der_jugend.webp'
+                width={120}
+                height={80}
+                alt='Haus der Jugend Logo'
+              />
+              {/* <img
                 className='sm:h-12 h-9 sm:px-0'
                 src='/images/logos/haus_der_jugend.webp'
                 alt=''
+              /> */}
+            </div>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
+              <Image src='/images/logos/OASE_logo.webp' width={160} height={80} alt='OASE Logo' />
+              {/* <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.webp' alt='' /> */}
+            </div>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
+              <Image
+                src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
+                width={170}
+                height={80}
+                alt='Bundesvereinigung Nachhaltigkeit Logo'
               />
-            </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
-              <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.webp' alt='' />
-            </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
-              <img
+              {/* <img
                 className='sm:h-12 h-9 sm:px-0'
                 src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
                 alt=''
-              />
+              /> */}
             </div>
             <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
-              <img
+              <Image
+                src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
+                width={240}
+                height={80}
+                alt='Deutsche Kinder und Jugendstiftung Logo'
+              />
+              {/* <img
                 className='sm:h-9 h-9 sm:px-0'
                 src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
                 alt=''
-              />
+              /> */}
             </div>
           </div>
         </Container>
@@ -971,7 +1003,14 @@ export default function Home({ feed }) {
               href='#Lernförderung'
               className='lg:hover:scale-[102%] transition-all sm:w-[45%] w-full rounded-2xl bg-white shadow-2xl'
             >
-              <img className='rounded-t-3xl brightness-[0.6]' src='/images/schule.webp' alt='' />
+              <Image
+                className='rounded-t-3xl brightness-[0.6] w-full h-48 object-cover '
+                src='/images/schule.webp'
+                width={100}
+                height={50}
+                alt='Schule'
+              />
+              {/* <img className='rounded-t-3xl brightness-[0.6]' src='/images/schule.webp' alt='' /> */}
               <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Lernförderung</div>
               <div className='font-source text-sm lg:mt-5 mt-8 mx-7'>
                 Wir kommen an Ihre Schule und fördern Ihre Schülerinnen und Schüler, um
@@ -987,7 +1026,14 @@ export default function Home({ feed }) {
               href='#Privatunterricht'
               className='lg:hover:scale-[102%] transition-all sm:w-[45%] rounded-2xl bg-white shadow-2xl lg:mt-56 sm:mt-0 mt-16'
             >
-              <img className='rounded-t-3xl brightness-[0.6]' src='/images/privat.webp' alt='' />
+              <Image
+                className='rounded-t-3xl brightness-[0.6] w-full h-48 object-cover'
+                src='/images/privat.webp'
+                width={100}
+                height={50}
+                alt='Privatunterricht'
+              />
+              {/* <img className='rounded-t-3xl brightness-[0.6]' src='/images/privat.webp' alt='' /> */}
               <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Privatunterricht</div>
               <div className='font-source text-sm lg:mt-5 mt-8 mx-7'>
                 Ihr Kind steht im Mittelpunkt. Gemeinsam mit unseren Tutoren und Tutorinnen finden
@@ -1003,11 +1049,18 @@ export default function Home({ feed }) {
               href='#Bildungsprojekte'
               className='lg:hover:scale-[102%] transition-all sm:w-[45%] rounded-2xl bg-white shadow-2xl lg:-mt-40 mt-16'
             >
-              <img
+              <Image
+                className='rounded-t-3xl brightness-[0.6] w-full h-48 object-cover'
+                src='/images/projekte.webp'
+                width={100}
+                height={50}
+                alt='Bildungsprojekte'
+              />
+              {/* <img
                 className='rounded-t-3xl brightness-[0.6] w-full h-48 object-cover'
                 src='/images/projekte.webp'
                 alt=''
-              />
+              /> */}
               <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Bildungsprojekte</div>
               <div className='font-source text-sm lg:mt-5 mt-8 mx-7'>
                 In enger Zusammenarbeit mit der Deutschen Kinder- und Jugendstiftung begleiten wir
@@ -1062,11 +1115,18 @@ export default function Home({ feed }) {
           >
             {/* Für Schulen */}
             <div data-aos-anchor-placement='center-bottom' className='lg:w-1/2 w-full'>
-              <img
+              <Image
+                className='shadow-2xl lg:block hidden h-full w-full object-cover filter brightness-50 lg:rounded-tl-3xl'
+                src='/images/schule.webp'
+                width={400}
+                height={300}
+                alt='Für Schulen'
+              />
+              {/* <img
                 className='shadow-2xl lg:block hidden h-full w-full object-cover filter brightness-50 lg:rounded-tl-3xl'
                 src='/images/schule.webp'
                 alt=''
-              />
+              /> */}
             </div>
             <div
               data-aos-anchor-placement='center-bottom'
@@ -1091,27 +1151,33 @@ export default function Home({ feed }) {
               <div className='w-10 h-[5px] bg-primary mt-6'></div>
               <div className='font-source mt-12 leading-tight lg:text-left text-center'>
                 Wir helfen Ihnen bei den kleinen und großen Problemen, damit Ihr Kind wieder in die
-                Spur findet. Mit einem berlinpass bekommt Ihr Kind sogar kostenlose Unterstützung.
-                <br />
-                <br />
+                Spur findet. Mit dem Bildungs und Teilhabe Programm (BuT), bekommt Ihr Kind sogar
+                kostenlose Unterstützung. Wir beraten Sie gerne dazu.
                 {/* <b>Mehr Informationen &#62;&#62;</b> */}
                 <br />
                 <br />{' '}
               </div>
             </div>
             <div className='w-1/2'>
-              <img
+              <Image
+                className='shadow-2xl lg:block hidden h-full w-full object-cover filter brightness-50 rounded-br-3xl'
+                src='/images/eltern.webp'
+                width={400}
+                height={300}
+                alt='Für Eltern'
+              />
+              {/* <img
                 className='shadow-2xl lg:block hidden h-full w-full object-cover filter brightness-50 rounded-br-3xl'
                 src='/images/eltern.webp'
                 alt=''
-              />
+              /> */}
             </div>
             {/* Termin Button */}
             <a onClick={toggleKontaktieren} className='cursor-pointer'>
-              <div className='lg:hover:scale-[105%] transition-transform h-40 w-40 bg-white border-8 border-primary shadow-[0_0_30px_-15px_rgba(0,0,0,0.4)] absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 rounded-full font-poppins text-center flex items-center justify-center'>
-                Beratung
+              <div className='text-sm lg:hover:scale-[105%] transition-transform h-40 w-40 bg-white border-8 border-primary shadow-[0_0_30px_-15px_rgba(0,0,0,0.4)] absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 rounded-full font-poppins text-center flex items-center justify-center'>
+                Hier kostenlos
                 <br />
-                vereinbaren
+                Beratung vereinbaren
               </div>
             </a>
           </div>
@@ -1327,42 +1393,73 @@ export default function Home({ feed }) {
             className='relative z-10 w-full flex justify-between flex-wrap items-center overflow-hidden'
           >
             <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
-              <img
+              <Image
+                src='/images/logos/weißes_berlin_logo.webp'
+                width={200}
+                height={200}
+                alt='Berliner Senat Logo'
+              />
+              {/* <img
                 className='sm:h-9 h-9 sm:px-0'
                 src='/images/logos/weißes_berlin_logo.webp'
                 alt=''
-              />
+              /> */}
             </div>
             <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
-              <img
+              <Image
+                src='/images/logos/stacked_berlin_logo.webp'
+                width={130}
+                height={100}
+                alt='Berzirksamt Mitte Logo'
+              />
+              {/* <img
                 className='sm:h-14 h-9 sm:px-0'
                 src='/images/logos/stacked_berlin_logo.webp'
                 alt=''
-              />
+              /> */}
             </div>
             <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
-              <img
+              <Image
+                src='/images/logos/haus_der_jugend.webp'
+                width={120}
+                height={80}
+                alt='Haus der Jugend Logo'
+              />
+              {/* <img
                 className='sm:h-12 h-9 sm:px-0'
                 src='/images/logos/haus_der_jugend.webp'
                 alt=''
+              /> */}
+            </div>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
+              <Image src='/images/logos/OASE_logo.webp' width={160} height={80} alt='OASE Logo' />
+              {/* <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.webp' alt='' /> */}
+            </div>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
+              <Image
+                src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
+                width={170}
+                height={80}
+                alt='Bundesvereinigung Nachhaltigkeit Logo'
               />
-            </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
-              <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.webp' alt='' />
-            </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
-              <img
+              {/* <img
                 className='sm:h-12 h-9 sm:px-0'
                 src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
                 alt=''
-              />
+              /> */}
             </div>
             <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
-              <img
+              <Image
+                src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
+                width={240}
+                height={80}
+                alt='Deutsche Kinder und Jugendstiftung Logo'
+              />
+              {/* <img
                 className='sm:h-9 h-9 sm:px-0'
                 src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
                 alt=''
-              />
+              /> */}
             </div>
           </div>
         </Container>{' '}
@@ -1411,16 +1508,21 @@ export default function Home({ feed }) {
           </div>
           {/* Mitarbeiter Übersicht */}
           <div data-aos='fade-up' className='flex justify-between sm:mt-24 mt-10 flex-wrap'>
-            <Mitarbeiter bild={'/images/anna.webp'} name={'Anna'} job={'Erzieherin'} />
-            <Mitarbeiter bild={'/images/arin.webp'} name={'Arin'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/karin.webp'} name={'Camilla'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/lukas.webp'} name={'Lukas'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/madeleine.webp'} name={'Madeleine'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/maggy.webp'} name={'Maggy'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/matthias.webp'} name={'Matthias'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/pauline.webp'} name={'Pauline'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/salim.webp'} name={'Salim'} job={'Rolle'} />
-            <Mitarbeiter bild={'/images/victoria.webp'} name={'Victoria'} job={'Rolle'} />
+            <Mitarbeiter
+              bild={'/images/marlene.webp'}
+              name={'Marlene'}
+              job={'Assistenz und Koordinatorin'}
+            />
+            <Mitarbeiter bild={'/images/anna.webp'} name={'Anna'} job={''} />
+            <Mitarbeiter bild={'/images/arin.webp'} name={'Arin'} job={''} />
+            <Mitarbeiter bild={'/images/karin.webp'} name={'Camilla'} job={''} />
+            <Mitarbeiter bild={'/images/lukas.webp'} name={'Lukas'} job={''} />
+            <Mitarbeiter bild={'/images/madeleine.webp'} name={'Madeleine'} job={''} />
+            <Mitarbeiter bild={'/images/maggy.webp'} name={'Maggy'} job={''} />
+            <Mitarbeiter bild={'/images/matthias.webp'} name={'Matthias'} job={''} />
+            <Mitarbeiter bild={'/images/pauline.webp'} name={'Pauline'} job={''} />
+            <Mitarbeiter bild={'/images/salim.webp'} name={'Salim'} job={''} />
+            <Mitarbeiter bild={'/images/victoria.webp'} name={'Victoria'} job={''} />
           </div>
         </Container>{' '}
       </section>
@@ -1435,11 +1537,18 @@ export default function Home({ feed }) {
           >
             {/* Bild - linke Seite */}
             <div className='sm:w-2/5 w-full hidden lg:block'>
-              <img
+              <Image
+                className='shadow-2xl h-full w-full  lg:block hidden object-cover rounded-tl-3xl rounded-bl-3xl'
+                src={'/images/jobsKarte.webp'}
+                width={500}
+                height={500}
+                alt='Jobs Karten Bild'
+              />
+              {/* <img
                 className='shadow-2xl h-full w-full  lg:block hidden object-cover rounded-tl-3xl rounded-bl-3xl'
                 src='/images/jobsKarte.webp'
                 alt=''
-              />
+              /> */}
               {/* Text - rechte Seite */}
             </div>
             <div className='shadow-2xl lg:w-3/5 w-full bg-white py-20 sm:px-14 px-10 sm:mb-0 mb-12 lg:rounded-3xl lg:rounded-tl-none lg:rounded-bl-none rounded-3xl flex flex-col lg:items-start items-start'>
@@ -1690,7 +1799,14 @@ export default function Home({ feed }) {
         {/* Container */}
         <div className='max-w-screen-xl mx-auto flex sm:flex-row flex-col justify-between sm:pt-28 pt-20'>
           {/* Logo */}
-          <img className='h-12 object-contain' src='/images/logos/bund_fib_logo.webp' alt='' />
+          <Image
+            className='h-12 object-contain'
+            src='/images/logos/bund_fib_logo.webp'
+            width={300}
+            height={30}
+            alt='Bund fiB Logo'
+          />
+          {/* <img className='h-12 object-contain' src='/images/logos/bund_fib_logo.webp' alt='' /> */}
           {/* Leistungen */}
           <div className='lg:block hidden'>
             <div className='font-poppins text-base'>Leistungen</div>

@@ -897,7 +897,7 @@ export default function Home({ feed }) {
         <Container styling={'pt-5'}>
           {/* Partner Logos */}
           <div className='flex justify-between flex-wrap items-center overflow-hidden'>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 pr-5 sm:pr-0 flex justify-center pt-5'>
               <Image
                 src='/images/logos/weißes_berlin_logo.webp'
                 width={200}
@@ -910,7 +910,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 pl-5 sm:pl-0 flex justify-center pt-5'>
               <Image
                 src='/images/logos/stacked_berlin_logo.webp'
                 width={130}
@@ -923,7 +923,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 pr-5 sm:pr-0 flex justify-center pt-5'>
               <Image
                 src='/images/logos/haus_der_jugend.webp'
                 width={120}
@@ -936,11 +936,11 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 pl-5 sm:pl-0 flex justify-center pt-14'>
               <Image src='/images/logos/OASE_logo.webp' width={160} height={80} alt='OASE Logo' />
               {/* <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.webp' alt='' /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 pr-5 sm:pr-0  flex justify-center pt-14'>
               <Image
                 src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
                 width={170}
@@ -953,7 +953,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 pl-5 sm:pl-0 flex justify-center pt-14'>
               <Image
                 src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
                 width={240}
@@ -1132,7 +1132,9 @@ export default function Home({ feed }) {
               data-aos-anchor-placement='center-bottom'
               className='shadow-2xl lg:w-1/2 w-full bg-white pt-14 pb-24 lg:px-28 px-14 lg:mb-0 mb-12 lg:rounded-tr-3xl lg:rounded-tl-none lg:rounded-b-none rounded-3xl lg:block flex flex-col items-center'
             >
-              <div className='font-poppins text-sm'>Innovatives Bildungsangebot</div>
+              <div className='font-poppins text-sm text-center sm:text-left'>
+                Innovatives Bildungsangebot
+              </div>
               <div className='font-poppints text-3xl font-semibold mt-5'>Für Schulen</div>
               <div className='w-10 h-[5px] bg-primary mt-6'></div>
               <div className='font-source mt-12 leading-tight lg:text-left text-center'>
@@ -1146,7 +1148,9 @@ export default function Home({ feed }) {
             </div>
             {/* Für Eltern */}
             <div className='shadow-2xl lg:w-1/2 w-full bg-white lg:pt-14 pt-20 pb-20 lg:px-28 px-14 lg:mt-0 sm:mt-12 mt-0 rounded-3xl lg:rounded-bl-3xl lg:rounded-br-none lg:rounded-t-none lg:block flex flex-col items-center'>
-              <div className='font-poppins text-sm'>Finanziertes Bildungsangebot</div>
+              <div className='font-poppins text-sm text-center sm:text-left'>
+                Finanziertes Bildungsangebot
+              </div>
               <div className='font-poppints text-3xl font-semibold mt-5'>Für Eltern</div>
               <div className='w-10 h-[5px] bg-primary mt-6'></div>
               <div className='font-source mt-12 leading-tight lg:text-left text-center'>
@@ -1392,7 +1396,7 @@ export default function Home({ feed }) {
             data-aos='fade-up'
             className='relative z-10 w-full flex justify-between flex-wrap items-center overflow-hidden'
           >
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 pr-5 sm:pr-0 flex justify-center pt-5'>
               <Image
                 src='/images/logos/weißes_berlin_logo.webp'
                 width={200}
@@ -1405,7 +1409,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 pl-5 sm:pl-0 flex justify-center pt-5'>
               <Image
                 src='/images/logos/stacked_berlin_logo.webp'
                 width={130}
@@ -1418,7 +1422,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-5'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 pr-5 sm:pr-0 flex justify-center pt-5'>
               <Image
                 src='/images/logos/haus_der_jugend.webp'
                 width={120}
@@ -1431,11 +1435,11 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 pl-5 sm:pl-0 flex justify-center pt-14'>
               <Image src='/images/logos/OASE_logo.webp' width={160} height={80} alt='OASE Logo' />
               {/* <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.webp' alt='' /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 pr-5 sm:pr-0  flex justify-center pt-14'>
               <Image
                 src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
                 width={170}
@@ -1448,7 +1452,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 flex justify-center pt-14'>
+            <div className='md:w-1/3 sm:w-1/2 w-1/2 pl-5 sm:pl-0 flex justify-center pt-14'>
               <Image
                 src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
                 width={240}
@@ -1693,8 +1697,8 @@ export default function Home({ feed }) {
               <div className='p-1 bg-white rounded-xl shadow-xl lg:my-10'>
                 <InlineWidget
                   styles={{
-                    width: '50vh',
-                    height: '50vh',
+                    width: '45vh',
+                    height: '45vh',
                   }}
                   pageSettings={{
                     backgroundColor: 'ffffff',

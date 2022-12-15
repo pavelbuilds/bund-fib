@@ -21,7 +21,7 @@ const Gründer = ({ animation }) => {
           }}
           className={`${
             showBaselInfo ? 'bg-[rgba(0,0,0,0.7)]' : ''
-          } hover:scale-110 transition-all cursor-pointer py-2 px-4 absolute text-white sm:text-[10px] text-[14px] rounded-2xl flex items-center sm:top-[70%] top-[70%] left-[7%]`}
+          } hover:scale-110 transition-all cursor-pointer py-2 px-4 absolute text-white sm:text-[10px] text-[14px] rounded-2xl flex items-center sm:top-[70%] top-[60%] left-[7%]`}
         >
           <FontAwesomeIcon className='w-8 text-primary' icon={faCircle} />
           {showBaselInfo && (
@@ -57,7 +57,7 @@ const Gründer = ({ animation }) => {
           }}
           className={`${
             showSorenInfo ? 'bg-[rgba(0,0,0,0.7)]' : ''
-          } transition-all hover:scale-110 cursor-pointer py-2 px-4 absolute text-white sm:text-[10px] text-[14px] rounded-2xl flex items-center sm:top-[65%] top-[55%] left-[70%]`}
+          } transition-all hover:scale-110 cursor-pointer py-2 px-4 absolute text-white sm:text-[10px] text-[14px] rounded-2xl flex items-center sm:top-[65%] top-[50%] left-[70%]`}
         >
           <FontAwesomeIcon className='w-8 text-primary' icon={faCircle} />
           {showSorenInfo && (

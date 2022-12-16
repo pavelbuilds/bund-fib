@@ -859,12 +859,11 @@ export default function Home({ feed }) {
         <div className='w-full h-full bg-black bg-opacity-60 flex flex-col justify-center items-center'>
           {/* Title Slogal */}
           <h1 className='sm:w-[600px] font-berlin text-white sm:text-6xl text-5xl text-center'>
-            Titel Slogan - Was wir machen in einem Satz
+            Die richtige Lernförderung für jedes Kind
           </h1>
           {/* Untertitle */}
           <div className='sm:w-[600px] mt-10 px-5 sm:px-0 font-source text-lg text-center text-white leading-tight'>
-            Kurze Zusammenfassung unserer Leistungspalette - Lorem ipsum dolor sit amet consectetur
-            adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
+            Wir fördern und fordern mit individuellem Erfolgskonzept.
           </div>
           {/* Buttons */}
           <div className='flex flex-col sm:flex-row items-center justify-center mt-10'>
@@ -979,7 +978,7 @@ export default function Home({ feed }) {
           {/* Textabschnitt */}
           <Textbox
             section={'Leistungsübersicht'}
-            slogan={'Die richtige Lernförderung für jedes Kind'}
+            slogan={'Unser Angebot auf einen Blick'}
             align={'left'}
             styling={'lg:w-1/3'}
           >

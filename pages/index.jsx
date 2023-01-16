@@ -978,18 +978,18 @@ export default function Home({ feed }) {
           {/* Textabschnitt */}
           <Textbox
             section={'Leistungsübersicht'}
-            slogan={'Unser Angebot auf einen Blick'}
+            slogan={'Unsere Leistungspalette im Überblick'}
             align={'left'}
             styling={'lg:w-1/3'}
           >
             {/* Text */}
             <div className='font-source mb-10 leading-tight'>
-              Von schulischen Förderprogrammen über Einzel- und Gruppennachhilfe bis hin zu
-              Austauschprogrammen auf europäischer Ebene bieten wir unseren Kooperationspartnern ein
+              Schulische Förderprogramme im Berliner Kiez, Einzel- und Gruppennachhilfe und
+              Austauschprogramme auf europäischer Ebene. Wir bieten unseren Kooperationspartnern ein
               umfangreiches und individuelles Leistungsangebot.
               <br />
               <br />
-              Bei Allen Fragen beraten wir Sie gerne persönlich - natürlich kostenlos und
+              Bei allen Fragen beraten wir Sie gerne persönlich - natürlich kostenlos und
               unverbindlich
             </div>
             <Button cta={'Termin buchen'} click={toggleKontaktieren} />
@@ -1100,11 +1100,8 @@ export default function Home({ feed }) {
           >
             {/* Text */}
             <div className='font-source sm:mb-10 mb-0 leading-tight'>
-              Der Bund-fiB hat es sich zum Ziel gesetzt, Schülerinnen und Schülern einen Raum zu
-              bieten, in dem sie sich sicher und willkommen fühlen. Insbesondere Kinder aus sozial
-              schwachen und finanziell schwierigen Lebenslagen sollen wieder an sich glauben. Unsere
-              Tutorinnen und Tutoren führen Ihre Schülerschaft empathisch, leidenschaftlich und
-              professionell zum Lernerfolg.
+              Wir kommen an Ihre Schule und fördern Ihre Schülerinnen und Schüler, damit sie
+              Wissenslücken schließen und Lernziele erreichen können.
             </div>
           </Textbox>
           {/* Für Schulen, für Eltern Karte */}
@@ -1217,11 +1214,9 @@ export default function Home({ feed }) {
           >
             {/* Text */}
             <div className='font-source mb-10 leading-tight'>
-              Unser Nachhilfeunterricht stellt Ihr Kind in den Mittelpunkt. Unsere pädagogisch- und
-              fachlich geprüften Tutorinnen und Tutoren führen Ihr Kind empathisch und
-              leidenschaftlich zum Lernerfolg. Dabei stellen wir sicher, dass die beiden gut
-              zusammenpassen. In regelmäßigen Feedbackgespräche reflektieren wir den Lernfortschritt
-              und gehen auf Ihre Wünsche ein.
+              Bei unserem Privatunterricht steht Ihr Kind im Mittelpunkt. Wir achten darauf, dass
+              unsere Tutoren und Tutorinnen mit Ihrem Kind auf einer Wellenlänge sind. Gemeinsam
+              finden wir eine Lösung für jedes Problem.
             </div>
           </Textbox>
           {/* Kennenlernen & Probestunde */}
@@ -1311,7 +1306,7 @@ export default function Home({ feed }) {
                     geflüchteten Familien zu teilen. Manchmal dauert es leider länger bis ein
                     geflüchtetes Kind einen Schulplatz zugewiesen bekommt. In diesem Fall, fangen
                     wir die Kinder auf, beschulen sie und führen mit ihnen spannende Workshops und
-                    Projekte durch. Zusammen machen wir die ersten Schritte.
+                    Projekte durch.
                   </div>
                   {/* <a
                     className='flex bg-primary text-white text-sm font-semibold float-right sm:mt-5 mt-10 px-4 py-2 rounded-tl-2xl rounded-br-2xl'
@@ -1363,10 +1358,10 @@ export default function Home({ feed }) {
             <div className='font-source mb-10 leading-tight'>
               Zusammen mit unseren Kooperationspartnern machen wir nachhaltige Bildungsangebote
               zugänglich für jedes Kind. Kommen Sie gerne auf uns zu und wir besprechen die
-              Umsetzung. Zusammen machen wir den ersten Schritt.
+              Umsetzung.
               <br />
               <br />
-              Bei Allen Fragen beraten wir Sie gerne persönlich - natürlich kostenlos und
+              Bei allen Fragen beraten wir Sie gerne persönlich - natürlich kostenlos und
               unverbindlich
             </div>
             <Button cta={'Ihr Projekt besprechen'} click={toggleKontaktieren}></Button>
@@ -1385,9 +1380,8 @@ export default function Home({ feed }) {
           >
             <div className='font-source sm:mb-20 mb-10 leading-tight'>
               Wir sind ein junges, aufgeschlossene und hoch motiviertes Team mit dem Ziel, jedem
-              Kind die Möglichkeit zur Verbesserung der schulischen Leistungen zu geben und die
-              eigenen Talente zu entfalten. Wir betonen die Stärken unserer Schülerinnen und
-              Schüler.
+              Kind die Verbesserung der schulischen Leistungen zu ermöglichen und dabei die eigenen
+              Talente zu entfalten. Wir betonen die Stärken unserer Schülerinnen und Schüler.
             </div>
           </Textbox>
           {/* Partner Logos */}
@@ -1497,12 +1491,16 @@ export default function Home({ feed }) {
               align={'left'}
             >
               <div className='font-source mb-10 leading-tight lg:text-left text-center'>
-                Unser einzigartiges Team setzt sich aus vielen motivierten und kreativen Köpfen
-                zusammen, die mit dir zielstrebig und kreativ an deinem Erfolg arbeiten. Gemeinsam
-                bleiben wir hilfsbereit und aufgeschlossen für deine kleinen und großen Probleme.
+                Unser einzigartiges Team setzt sich aus den schlausten, motiviertesten und
+                kreativsten Köpfen zusammen, die wir finden konnten. Wir garantieren, dass unsere
+                Mitarbeitenden die Hochschulreife oder eine abgeschlossene pädagogische Ausbildung
+                besitzen und Erfahrungen in der Arbeit mit Kindern und Jugendlichen vorweisen
+                können. Unsere verschiedenen kulturellen Erfahrungen und Hintergründe sorgen für
+                eine freundliche Vielfalt mit dem besonderen Wohlfühlfaktor. Lass uns gemeinsam
+                wachsen, wir freuen uns über Verstärkung im Team.
                 <br />
                 <br />
-                Bei Allen Fragen beraten wir Sie gerne persönlich - natürlich kostenlos und
+                Bei allen Fragen beraten wir Sie gerne persönlich - natürlich kostenlos und
                 unverbindlich
               </div>
               <Button cta={'Lernen Sie uns persönlich kennen'} click={toggleKontaktieren}></Button>
@@ -1564,9 +1562,9 @@ export default function Home({ feed }) {
               {/* Beschreibung */}
               <div className='font-source mb-10 leading-tight lg:text-left text-left'>
                 Wir organisieren langfristig angelegte Projekte und möchten Lebenswege zum Positiven
-                verändern. Dabei ist unsere wichtigste Ressource ein Team aus empathischen und
-                aufgeschlossenen Menschen, die den Kindern und Jugendlichen wertschätzend
-                entgegentreten und mehr sind als ihr/e Tutor/in.
+                verändern. Dabei zählen wir auf empathische und aufgeschlossene Menschen, die den
+                Kindern und Jugendlichen wertschätzend entgegentreten und bereit sind mehr als ein:e
+                Tutor:in zu sein.
                 <br />
                 <br />
                 <br />
@@ -1643,15 +1641,17 @@ export default function Home({ feed }) {
           >
             {/* Headers */}
             <div className='w-1/3'>
-              <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Angebot</div>
+              <div className='font-poppins sm:text-xl text-base mt-7 text-center'>News</div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
             </div>
             <div className='w-1/3'>
-              <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Ausflüge</div>
+              <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Lerngruppen</div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
             </div>
             <div className='w-1/3'>
-              <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Mitarbeiter</div>
+              <div className='font-poppins sm:text-xl text-base mt-7 text-center'>
+                Mitarbeitende
+              </div>
               <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
             </div>
             {/* Posts */}
@@ -1686,8 +1686,8 @@ export default function Home({ feed }) {
             align={'left'}
           >
             <div className='font-source sm:mb-20 mb-5 leading-tight'>
-              Finde Sie jetzt die passende Lernförderung für Ihre Schule. Wir hören Ihre Wünsche und
-              Erwartungen und passen unsere Konzeption auf Ihre Schule an.
+              Finden Sie jetzt die passende Lernförderung für Ihre Schule. Wir setzen uns zusammen
+              und passen unsere Konzeption auf Ihre Schule an.
             </div>
           </Textbox>
           {/* Calendly */}
@@ -1744,7 +1744,7 @@ export default function Home({ feed }) {
             styling={'lg:w-[40%] sm:pb-16 pb-16'}
           >
             <div className='font-source leading-tight'>
-              Sie haben Fragen oder ihnen ist etwas unklar? Schreiben Sie uns! Wir versuchen Ihnen
+              Sie haben Fragen oder Ihnen ist etwas unklar? Schreiben Sie uns! Wir versuchen Ihnen
               schnellst möglichst zu antworten.
             </div>
           </Textbox>

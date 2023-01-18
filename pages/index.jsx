@@ -873,7 +873,11 @@ export default function Home({ feed }) {
           </div>
           {/* Buttons */}
           <div className='flex flex-col sm:flex-row items-center justify-center mt-10'>
-            <Button cta={'Termin buchen'} click={toggleKontaktieren}></Button>
+            <Button
+              className='umami--click--TitleSeite-Termin-buchen'
+              cta={'Termin buchen'}
+              click={toggleKontaktieren}
+            ></Button>
             <a href='#Leistungsübersicht'>
               <button className=' lg:hover:scale-[102%] transition-all border-2 border-white font-source sm:ml-5 mt-5 sm:mt-0 px-9 sm:py-0 py-1 rounded-full text-white sm:text-sm text-lg sm:h-8 font-semibold'>
                 mehr erfahren
@@ -998,7 +1002,11 @@ export default function Home({ feed }) {
               Bei allen Fragen beraten wir Sie gerne persönlich - natürlich kostenlos und
               unverbindlich
             </div>
-            <Button cta={'Termin buchen'} click={toggleKontaktieren} />
+            <Button
+              className='umami--click--Leistungsübersicht-Termin-buchen'
+              cta={'Termin buchen'}
+              click={toggleKontaktieren}
+            />
           </Textbox>
           {/* Übersichtskarten */}
           <div className='relative z-10 bg-purple-500 bg-opacity-0 lg:w-[60%] w-full h-[780px] flex sm:flex-row flex-col sm:flex-wrap justify-between items-start'>
@@ -1179,7 +1187,10 @@ export default function Home({ feed }) {
               /> */}
             </div>
             {/* Termin Button */}
-            <a onClick={toggleKontaktieren} className='cursor-pointer'>
+            <a
+              onClick={toggleKontaktieren}
+              className='umami--click--Lernförderung-Termin-buchen cursor-pointer'
+            >
               <div className='text-sm lg:hover:scale-[105%] transition-transform h-40 w-40 bg-white border-8 border-primary shadow-[0_0_30px_-15px_rgba(0,0,0,0.4)] absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 rounded-full font-poppins text-center flex items-center justify-center'>
                 Hier kostenlos
                 <br />
@@ -1239,7 +1250,7 @@ export default function Home({ feed }) {
                 Gemeinsam können wir am meisten bewegen. Wir helfen, die beste Strategie für Ihr
                 Kind zu entwickeln.
               </div>
-              <a className='flex bg-primary text-white text-sm font-semibold float-right sm:mt-5 mt-10 px-6 py-2 rounded-tl-2xl rounded-br-2xl absolute bottom-0 right-0'>
+              <a className='umami--click--KennenlernenVereinabren-Termin-buchen flex bg-primary text-white text-sm font-semibold float-right sm:mt-5 mt-10 px-6 py-2 rounded-tl-2xl rounded-br-2xl absolute bottom-0 right-0'>
                 Kennenlernen vereinbaren
                 <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
               </a>
@@ -1257,7 +1268,7 @@ export default function Home({ feed }) {
               <div className='mx-12 sm:mt-10 mt-8 mb-5 font-source text-md'>
                 Am besten wir lernen uns persönlich kennen, um den ersten Schritt zu machen.
               </div>
-              <a className='flex bg-primary text-white text-sm font-semibold float-right sm:mt-5 mt-10 px-6 py-2 rounded-tl-2xl rounded-br-2xl absolute bottom-0 right-0'>
+              <a className='umami--click--ProbestundeVereinbaren-Termin-buchen flex bg-primary text-white text-sm font-semibold float-right sm:mt-5 mt-10 px-6 py-2 rounded-tl-2xl rounded-br-2xl absolute bottom-0 right-0'>
                 Probestunde vereinbaren
                 <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
               </a>
@@ -1370,7 +1381,11 @@ export default function Home({ feed }) {
               Bei allen Fragen beraten wir Sie gerne persönlich - natürlich kostenlos und
               unverbindlich
             </div>
-            <Button cta={'Ihr Projekt besprechen'} click={toggleKontaktieren}></Button>
+            <Button
+              className='umami--click--ProjektBesprechen-Termin-buchen'
+              cta={'Ihr Projekt besprechen'}
+              click={toggleKontaktieren}
+            ></Button>
           </Textbox>
         </Container>
       </section>
@@ -1509,7 +1524,11 @@ export default function Home({ feed }) {
                 Bei allen Fragen beraten wir Sie gerne persönlich - natürlich kostenlos und
                 unverbindlich
               </div>
-              <Button cta={'Lernen Sie uns persönlich kennen'} click={toggleKontaktieren}></Button>
+              <Button
+                className='umami--click--TeamKennenLernen-Termin-buchen'
+                cta={'Lernen Sie uns persönlich kennen'}
+                click={toggleKontaktieren}
+              ></Button>
             </Textbox>
             <Gründer />
           </div>
@@ -1606,7 +1625,11 @@ export default function Home({ feed }) {
                 Lebenslauf und deinen Kontaktdaten. Wir freuen uns auf ein persönliches
                 Kennenlernen. */}
               </div>
-              <Button click={toggleKontaktieren} cta={'Bewirb dich hier bei uns!'}></Button>
+              <Button
+                className='umami--click--Jobs-Termin-buchen'
+                click={toggleKontaktieren}
+                cta={'Bewirb dich hier bei uns!'}
+              ></Button>
             </div>
           </div>
         </Container>

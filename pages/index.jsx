@@ -139,13 +139,18 @@ export default function Home({ feed }) {
                 E-Mail
               </div>
             </a>
-            <a href='tel:+4915758745855'>
+            <a className='umami--click--menu-phone-button' href='tel:+4915758745855'>
               <div className='text-[10px] text-center font-poppins'>
                 <FontAwesomeIcon className='w-6 mx-10 mb-2' icon={faSquarePhone} />
                 Telefon
               </div>
             </a>
-            <a href='https://www.instagram.com/bund_fib/'>
+            <a
+              className='umami--click--menu-insta-button'
+              href='https://www.instagram.com/bund_fib/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <div className='text-[10px] text-center font-poppins'>
                 <FontAwesomeIcon className='w-6 mx-10 mb-2' icon={faInstagram} />
                 Instagram

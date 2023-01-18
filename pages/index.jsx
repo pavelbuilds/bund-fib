@@ -133,7 +133,7 @@ export default function Home({ feed }) {
           </div>
           {/* Icons */}
           <div className='flex justify-center'>
-            <a href='mailto:verwaltung@bund-fib.de'>
+            <a className='umami--click--menu-email-button' href='mailto:verwaltung@bund-fib.de'>
               <div className='text-[10px] text-center font-poppins'>
                 <FontAwesomeIcon className='w-7 mx-10 mb-2' icon={faEnvelope} />
                 E-Mail

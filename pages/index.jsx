@@ -811,10 +811,9 @@ export default function Home({ feed }) {
       >
         <div className='max-w-screen-xl flex justify-between items-center mx-auto sm:px-20 px-5'>
           {/* Logo */}
-          <div>
+          <a href='#Titelseite'>
             <Image src='/images/logos/bund_fib_logo.webp' width={170} height={75} />
-            {/* <img className='h-9' src='/images/logos/bund_fib_logo.webp' alt='' /> */}
-          </div>
+          </a>
           {/* Menu */}
           <ul className='hidden lg:flex items-center font-source justify-between text-sm w-[400px]'>
             <li className='relative py-5' onMouseEnter={showDropdown} onMouseLeave={hideDropdown}>
@@ -861,7 +860,10 @@ export default function Home({ feed }) {
       </nav>
 
       {/* --Titelseite-- */}
-      <section className='bg-[url("/images/title.webp")] bg-cover sm:h-[85vh] h-[78vh] relative'>
+      <section
+        id='Titelseite'
+        className='bg-[url("/images/title.webp")] bg-cover sm:h-[85vh] h-[78vh] relative'
+      >
         <div className='w-full h-full bg-black bg-opacity-60 flex flex-col justify-center items-center'>
           {/* Title Slogal */}
           <h1 className='sm:w-[600px] font-berlin text-white sm:text-6xl text-5xl text-center'>
@@ -1019,8 +1021,8 @@ export default function Home({ feed }) {
               <Image
                 className='rounded-t-3xl brightness-[0.6] w-full h-48 object-cover '
                 src='/images/schule.webp'
-                width={100}
-                height={50}
+                width={200}
+                height={100}
                 alt='Schule'
               />
               {/* <img className='rounded-t-3xl brightness-[0.6]' src='/images/schule.webp' alt='' /> */}
@@ -1042,8 +1044,8 @@ export default function Home({ feed }) {
               <Image
                 className='rounded-t-3xl brightness-[0.6] w-full h-48 object-cover'
                 src='/images/privat.webp'
-                width={100}
-                height={50}
+                width={200}
+                height={100}
                 alt='Privatunterricht'
               />
               {/* <img className='rounded-t-3xl brightness-[0.6]' src='/images/privat.webp' alt='' /> */}
@@ -1065,8 +1067,8 @@ export default function Home({ feed }) {
               <Image
                 className='rounded-t-3xl brightness-[0.6] w-full h-48 object-cover'
                 src='/images/projekte.webp'
-                width={100}
-                height={50}
+                width={200}
+                height={100}
                 alt='Bildungsprojekte'
               />
               {/* <img
@@ -1910,7 +1912,7 @@ export default function Home({ feed }) {
   );
 }
 
-// Get data from instagram api with getstaticprops
+// Get data from instagram api
 export async function getServerSideProps() {
   const res = await fetch(
     `https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,permalink,timestamp,thumbnail_url&access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}`

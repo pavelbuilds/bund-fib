@@ -113,22 +113,63 @@ export default function Home({ feed }) {
             Buchen Sie ein Gespräch mit uns oder schreiben Sie uns eine Nachricht
           </div>
           {/* Kalender */}
-          <div className='flex w-full justify-center lg:mt-10 sm:mt-[5vh] mt-0 lg:mb-10 sm:mb-[10vh] mb-10'>
-            <div className='p-1 bg-white rounded-xl shadow-xl lg:my-4'>
-              <InlineWidget
-                styles={{
-                  width: '50vh',
-                  height: '50vh',
-                }}
-                pageSettings={{
-                  backgroundColor: 'ffffff',
-                  hideEventTypeDetails: true,
-                  hideLandingPageDetails: true,
-                  primaryColor: 'F9B233',
-                  textColor: '4d5055',
-                }}
-                url='https://calendly.com/bundfib/kennenlerngesprach-allgemein'
-              />
+          <div className='flex md:flex-row flex-col w-full justify-center lg:mt-10 sm:mt-[5vh] mt-20 lg:mb-10 sm:mb-[10vh] mb-20'>
+            <div className='p-1 bg-white rounded-xl shadow-xl lg:my-4 ml-5 mr-5 mb-5 text-center'>
+              <div className='hidden md:block'>Standort Berlin</div>
+
+              <a
+                href='https://calendly.com/bundfib/erstes_kennenlernen_projekt_ffs'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='block md:hidden mb-5 mt-5'>
+                  <u>Standort Berlin</u>
+                </div>
+              </a>
+              <div className='md:block hidden'>
+                <InlineWidget
+                  styles={{
+                    width: '50vh',
+                    height: '50vh',
+                  }}
+                  pageSettings={{
+                    backgroundColor: 'ffffff',
+                    hideEventTypeDetails: true,
+                    hideLandingPageDetails: true,
+                    primaryColor: 'F9B233',
+                    textColor: '4d5055',
+                  }}
+                  url='https://calendly.com/bundfib/erstes_kennenlernen_projekt_ffs'
+                />
+              </div>
+            </div>
+            <div className='p-1 bg-white rounded-xl shadow-xl lg:my-4 ml-5 mr-5 text-center'>
+              <div className='hidden md:block'>Standort Leipzig</div>
+              <a
+                href='https://calendly.com/bundfib/kennenlerngesprach-lehkraft-in-leipzig'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='block md:hidden mb-5 mt-5'>
+                  <u>Standort Leipzig</u>
+                </div>
+              </a>
+              <div className='md:block hidden'>
+                <InlineWidget
+                  styles={{
+                    width: '50vh',
+                    height: '50vh',
+                  }}
+                  pageSettings={{
+                    backgroundColor: 'ffffff',
+                    hideEventTypeDetails: true,
+                    hideLandingPageDetails: true,
+                    primaryColor: 'F9B233',
+                    textColor: '4d5055',
+                  }}
+                  url='https://calendly.com/bundfib/kennenlerngesprach-lehkraft-in-leipzig'
+                />
+              </div>
             </div>
           </div>
           {/* Icons */}
@@ -1572,11 +1613,6 @@ export default function Home({ feed }) {
                 height={500}
                 alt='Jobs Karten Bild'
               />
-              {/* <img
-                className='shadow-2xl h-full w-full  lg:block hidden object-cover rounded-tl-3xl rounded-bl-3xl'
-                src='/images/jobsKarte.webp'
-                alt=''
-              /> */}
               {/* Text - rechte Seite */}
             </div>
             <div className='shadow-2xl lg:w-3/5 w-full bg-white py-20 sm:px-14 px-10 sm:mb-0 mb-12 lg:rounded-3xl lg:rounded-tl-none lg:rounded-bl-none rounded-3xl flex flex-col lg:items-start items-start'>
@@ -1595,37 +1631,6 @@ export default function Home({ feed }) {
                 <br />
                 <br />
                 <br />
-                {/* <b>Wir bieten</b> <br />
-                <br />
-                <ol className='list-disc list-inside'>
-                  <li>Flexible Arbeitszeiten und Einsatzorte</li>
-                  <li>Eigenverantwortung und Selbstbestimmung</li>
-                  <li>Klare und zuverlässige Honorarabrechnungen</li>
-                  <li>
-                    Einen dokumentierten Arbeitsnachweis, der ggf. ein universitäres Praktikum
-                    ersetzt.
-                  </li>
-                  <li>
-                    Sympathisches, junges Team mit flachen Hierachien und fröhlichen Teammeetings in
-                    unserem Büro @PulsRaum
-                  </li>
-                </ol>
-                <br />
-                <br />
-                <b>Du bringst mit</b>
-                <br /> <br /> */}
-                {/* <ol className='list-disc list-inside'>
-                  <li>Eine Hochschulreife</li>
-                  <li>Empathie und Hilfsbereitschaft</li>
-                  <li>
-                    Interesse und Spaß an der Unterstützung von Schüler*innen mit individuellen
-                    Lernproblemen
-                  </li>
-                  <li>Und ein erweitertes Führungszeugnis ohne Eintragungen</li>
-                </ol>
-                Haben wir dein Interesse geweckt? Dann bewirb dich direkt bei uns mit deinem
-                Lebenslauf und deinen Kontaktdaten. Wir freuen uns auf ein persönliches
-                Kennenlernen. */}
               </div>
               <Button
                 className='umami--click--Jobs-Termin-buchen'

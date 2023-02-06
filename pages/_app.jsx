@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Script
-        src='https://analytics.umami.is/script.js'
+        src='/stats/script.js'
         data-website-id='186092c3-68ed-4bcc-b1f8-0fb681b80065'
         strategy='lazyOnload'
       />

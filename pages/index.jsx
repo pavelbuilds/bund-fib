@@ -102,19 +102,19 @@ export default function Home({ feed }) {
 
       {/* Kontaktieren Popup */}
       <div
-        className={`transition-all duration-700 ease-out fixed bg-lightYellow z-50 w-screen lg:pt-24 sm:pt-[10vh] pt-24 h-screen min-h-[600px] ${
+        className={`fixed z-50 h-screen min-h-[600px] w-screen bg-lightYellow pt-24 transition-all duration-700 ease-out sm:pt-[10vh] lg:pt-24 ${
           kontaktieren ? '-translate-y-0' : '-translate-y-full'
         }`}
       >
         {/* Container */}
-        <div className='max-w-screen-xl mx-auto flex flex-col justify-center'>
+        <div className='mx-auto flex max-w-screen-xl flex-col justify-center'>
           {/* Header */}
-          <div className='font-berlin text-2xl text-center'>
+          <div className='text-center font-berlin text-2xl'>
             Buchen Sie ein Gespräch mit uns oder schreiben Sie uns eine Nachricht
           </div>
           {/* Kalender */}
-          <div className='flex md:flex-row flex-col w-full justify-center lg:mt-10 sm:mt-[5vh] mt-20 lg:mb-10 sm:mb-[10vh] mb-20'>
-            <div className='p-1 bg-white rounded-xl shadow-xl lg:my-4 ml-5 mr-5 mb-5 text-center'>
+          <div className='mt-20 mb-20 flex w-full flex-col justify-center sm:mt-[5vh] sm:mb-[10vh] md:flex-row lg:mt-10 lg:mb-10'>
+            <div className='ml-5 mr-5 mb-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
               <div className='hidden md:block'>Standort Berlin</div>
 
               <a
@@ -122,11 +122,11 @@ export default function Home({ feed }) {
                 target='_blank'
                 rel='noreferrer'
               >
-                <div className='block md:hidden mb-5 mt-5'>
+                <div className='mb-5 mt-5 block md:hidden'>
                   <u>Standort Berlin</u>
                 </div>
               </a>
-              <div className='md:block hidden'>
+              <div className='hidden md:block'>
                 <InlineWidget
                   styles={{
                     width: '50vh',
@@ -143,18 +143,18 @@ export default function Home({ feed }) {
                 />
               </div>
             </div>
-            <div className='p-1 bg-white rounded-xl shadow-xl lg:my-4 ml-5 mr-5 text-center'>
+            <div className='ml-5 mr-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
               <div className='hidden md:block'>Standort Leipzig</div>
               <a
                 href='https://calendly.com/bundfib/kennenlerngesprach-lehkraft-in-leipzig'
                 target='_blank'
                 rel='noreferrer'
               >
-                <div className='block md:hidden mb-5 mt-5'>
+                <div className='mb-5 mt-5 block md:hidden'>
                   <u>Standort Leipzig</u>
                 </div>
               </a>
-              <div className='md:block hidden'>
+              <div className='hidden md:block'>
                 <InlineWidget
                   styles={{
                     width: '50vh',
@@ -175,14 +175,14 @@ export default function Home({ feed }) {
           {/* Icons */}
           <div className='flex justify-center'>
             <a className='umami--click--menu-email-button' href='mailto:verwaltung@bund-fib.de'>
-              <div className='text-[10px] text-center font-poppins'>
-                <FontAwesomeIcon className='w-7 mx-10 mb-2' icon={faEnvelope} />
+              <div className='text-center font-poppins text-[10px]'>
+                <FontAwesomeIcon className='mx-10 mb-2 w-7' icon={faEnvelope} />
                 E-Mail
               </div>
             </a>
             <a className='umami--click--menu-phone-button' href='tel:+4915758745855'>
-              <div className='text-[10px] text-center font-poppins'>
-                <FontAwesomeIcon className='w-6 mx-10 mb-2' icon={faSquarePhone} />
+              <div className='text-center font-poppins text-[10px]'>
+                <FontAwesomeIcon className='mx-10 mb-2 w-6' icon={faSquarePhone} />
                 Telefon
               </div>
             </a>
@@ -192,8 +192,8 @@ export default function Home({ feed }) {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <div className='text-[10px] text-center font-poppins'>
-                <FontAwesomeIcon className='w-6 mx-10 mb-2' icon={faInstagram} />
+              <div className='text-center font-poppins text-[10px]'>
+                <FontAwesomeIcon className='mx-10 mb-2 w-6' icon={faInstagram} />
                 Instagram
               </div>
             </a>
@@ -208,40 +208,40 @@ export default function Home({ feed }) {
 
       {/* Burger Menu */}
       <div
-        className={`transition-all duration-700 ease-out fixed bg-lightYellow z-40 w-screen lg:pt-24 h-screen min-h-[600px] ${
+        className={`fixed z-40 h-screen min-h-[600px] w-screen bg-lightYellow transition-all duration-700 ease-out lg:pt-24 ${
           hamburgerClicked ? '-translate-y-0' : '-translate-y-full'
         }`}
       >
         {/* Container */}
-        <div className='max-w-screen-xl h-full flex flex-col justify-center items-center sm:text-[40px] text-3xl font-berlin'>
+        <div className='flex h-full max-w-screen-xl flex-col items-center justify-center font-berlin text-3xl sm:text-[40px]'>
           {/* Header */}
           <a href='#Lernförderung'>
-            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
+            <div onClick={toogleHamburgerMenu} className='mb-10 sm:mb-16'>
               Lernförderung
             </div>
           </a>
           <a href='#Privatunterricht'>
-            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
+            <div onClick={toogleHamburgerMenu} className='mb-10 sm:mb-16'>
               Privatunterricht
             </div>
           </a>
           <a href='#Bildungsprojekte'>
-            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
+            <div onClick={toogleHamburgerMenu} className='mb-10 sm:mb-16'>
               Bildungsprojekte
             </div>
           </a>
           <a href='#ÜberUns'>
-            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
+            <div onClick={toogleHamburgerMenu} className='mb-10 sm:mb-16'>
               Über Uns
             </div>
           </a>
           <a href='#Jobs'>
-            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
+            <div onClick={toogleHamburgerMenu} className='mb-10 sm:mb-16'>
               Jobs
             </div>
           </a>
           <a href='#Aktuelles'>
-            <div onClick={toogleHamburgerMenu} className='sm:mb-16 mb-10'>
+            <div onClick={toogleHamburgerMenu} className='mb-10 sm:mb-16'>
               Aktuelles
             </div>
           </a>
@@ -250,7 +250,7 @@ export default function Home({ feed }) {
 
       {/* Impressum Popup */}
       <div
-        className={`overflow-scroll transition-all duration-700 ease-out fixed bg-lightYellow z-50 w-screen lg:pt-24 sm:pt-36 pt-24 h-screen min-h-[600px] ${
+        className={`fixed z-50 h-screen min-h-[600px] w-screen overflow-scroll bg-lightYellow pt-24 transition-all duration-700 ease-out sm:pt-36 lg:pt-24 ${
           impressum ? 'translate-y-0' : 'translate-y-full'
         }`}
       >
@@ -258,7 +258,7 @@ export default function Home({ feed }) {
         <Container>
           {/* Header */}
           <div className='flex justify-between'>
-            <div className='font-berlin text-2xl text-center'>Impressum</div>
+            <div className='text-center font-berlin text-2xl'>Impressum</div>
             <FontAwesomeIcon
               onClick={toggleImpressum}
               className='w-6 cursor-pointer'
@@ -289,7 +289,7 @@ export default function Home({ feed }) {
 
       {/* Datenschutz Popup */}
       <div
-        className={`overflow-scroll transition-all duration-700 ease-out fixed bg-lightYellow z-50 w-screen lg:pt-24 sm:pt-36 pt-24 h-screen min-h-[600px] ${
+        className={`fixed z-50 h-screen min-h-[600px] w-screen overflow-scroll bg-lightYellow pt-24 transition-all duration-700 ease-out sm:pt-36 lg:pt-24 ${
           datenschutz ? 'translate-y-0' : 'translate-y-full'
         }`}
       >
@@ -297,7 +297,7 @@ export default function Home({ feed }) {
         <Container styling='overflow-scroll'>
           {/* Header */}
           <div className='flex justify-between'>
-            <div className='font-berlin text-2xl text-center'>Datenschutz</div>
+            <div className='text-center font-berlin text-2xl'>Datenschutz</div>
             <FontAwesomeIcon
               onClick={toggleDatenschutz}
               className='w-6 cursor-pointer'
@@ -847,29 +847,29 @@ export default function Home({ feed }) {
 
       {/* --Navigationsleiste-- */}
       <nav
-        className='fixed min-w-full bg-lightYellow z-50 shadow-md
-                      py-3 lg:py-0'
+        className='fixed z-50 min-w-full bg-lightYellow py-3
+                      shadow-md lg:py-0'
       >
-        <div className='max-w-screen-xl flex justify-between items-center mx-auto sm:px-20 px-5'>
+        <div className='mx-auto flex max-w-screen-xl items-center justify-between px-5 sm:px-20'>
           {/* Logo */}
           <a href='#Titelseite'>
             <Image src='/images/logos/bund_fib_logo.webp' width={170} height={75} />
           </a>
           {/* Menu */}
-          <ul className='hidden lg:flex items-center font-source justify-between text-sm w-[400px]'>
+          <ul className='hidden w-[400px] items-center justify-between font-source text-sm lg:flex'>
             <li className='relative py-5' onMouseEnter={showDropdown} onMouseLeave={hideDropdown}>
               <a href='#Leistungsübersicht' className='flex'>
                 Angebot <FontAwesomeIcon className='ml-2 w-2' icon={faCaretDown} />
                 {show && (
-                  <ul className='absolute bg-lightYellow mt-10 pb-5 -translate-x-1/3 rounded-b-xl shadow-md'>
+                  <ul className='absolute mt-10 -translate-x-1/3 rounded-b-xl bg-lightYellow pb-5 shadow-md'>
                     <a href='#Lernförderung'>
-                      <li className='py-3 hover:bg-darkYellow px-10'>Lernförderung</li>
+                      <li className='py-3 px-10 hover:bg-darkYellow'>Lernförderung</li>
                     </a>
                     <a href='#Privatunterricht'>
-                      <li className='py-3 hover:bg-darkYellow px-10'>Privatunterricht</li>
+                      <li className='py-3 px-10 hover:bg-darkYellow'>Privatunterricht</li>
                     </a>
                     <a href='#Bildungsprojekte'>
-                      <li className='py-3 hover:bg-darkYellow px-10'>Bildungsprojekte</li>
+                      <li className='py-3 px-10 hover:bg-darkYellow'>Bildungsprojekte</li>
                     </a>
                   </ul>
                 )}
@@ -903,26 +903,26 @@ export default function Home({ feed }) {
       {/* --Titelseite-- */}
       <section
         id='Titelseite'
-        className='bg-[url("/images/title.webp")] bg-cover sm:h-[85vh] h-[78vh] relative'
+        className='relative h-[78vh] bg-[url("/images/title.webp")] bg-cover sm:h-[85vh]'
       >
-        <div className='w-full h-full bg-black bg-opacity-60 flex flex-col justify-center items-center'>
+        <div className='flex h-full w-full flex-col items-center justify-center bg-black bg-opacity-60'>
           {/* Title Slogal */}
-          <h1 className='sm:w-[600px] font-berlin text-white sm:text-6xl text-5xl text-center'>
+          <h1 className='text-center font-berlin text-5xl text-white sm:w-[600px] sm:text-6xl'>
             Die richtige Lernförderung für jedes Kind
           </h1>
           {/* Untertitle */}
-          <div className='sm:w-[600px] mt-10 px-5 sm:px-0 font-source text-lg text-center text-white leading-tight'>
+          <div className='mt-10 px-5 text-center font-source text-lg leading-tight text-white sm:w-[600px] sm:px-0'>
             Wir fördern und fordern mit individuellem Erfolgskonzept.
           </div>
           {/* Buttons */}
-          <div className='flex flex-col sm:flex-row items-center justify-center mt-10'>
+          <div className='mt-10 flex flex-col items-center justify-center sm:flex-row'>
             <Button
               className='umami--click--TitleSeite-Termin-buchen'
               cta={'Termin buchen'}
               click={toggleKontaktieren}
             ></Button>
             <a href='#Leistungsübersicht'>
-              <button className=' lg:hover:scale-[102%] transition-all border-2 border-white font-source sm:ml-5 mt-5 sm:mt-0 px-9 sm:py-0 py-1 rounded-full text-white sm:text-sm text-lg sm:h-8 font-semibold'>
+              <button className=' mt-5 rounded-full border-2 border-white px-9 py-1 font-source text-lg font-semibold text-white transition-all sm:ml-5 sm:mt-0 sm:h-8 sm:py-0 sm:text-sm lg:hover:scale-[102%]'>
                 mehr erfahren
               </button>
             </a>
@@ -948,8 +948,8 @@ export default function Home({ feed }) {
       <section className='bg-lightYellow'>
         <Container styling={'pt-5'}>
           {/* Partner Logos */}
-          <div className='flex justify-between flex-wrap items-center overflow-hidden'>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 pr-5 sm:pr-0 flex justify-center pt-5'>
+          <div className='flex flex-wrap items-center justify-between overflow-hidden'>
+            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/3'>
               <Image
                 src='/images/logos/weißes_berlin_logo.webp'
                 width={200}
@@ -962,7 +962,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 pl-5 sm:pl-0 flex justify-center pt-5'>
+            <div className='flex w-1/2 justify-center pl-5 pt-5 sm:w-1/2 sm:pl-0 md:w-1/3'>
               <Image
                 src='/images/logos/stacked_berlin_logo.webp'
                 width={130}
@@ -975,7 +975,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 pr-5 sm:pr-0 flex justify-center pt-5'>
+            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/3'>
               <Image
                 src='/images/logos/haus_der_jugend.webp'
                 width={120}
@@ -988,11 +988,11 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 pl-5 sm:pl-0 flex justify-center pt-14'>
+            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/3'>
               <Image src='/images/logos/OASE_logo.webp' width={160} height={80} alt='OASE Logo' />
               {/* <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.webp' alt='' /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 pr-5 sm:pr-0  flex justify-center pt-14'>
+            <div className='flex w-1/2 justify-center pr-5 pt-14  sm:w-1/2 sm:pr-0 md:w-1/3'>
               <Image
                 src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
                 width={170}
@@ -1005,7 +1005,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 pl-5 sm:pl-0 flex justify-center pt-14'>
+            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/3'>
               <Image
                 src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
                 width={240}
@@ -1025,7 +1025,7 @@ export default function Home({ feed }) {
       {/* --Leistungsübersicht-- */}
       <section
         id='Leistungsübersicht'
-        className='bg-lightYellow relative lg:pb-0 sm:pb-28 pb-[650px] sm:pt-32 pt-20'
+        className='relative bg-lightYellow pb-[650px] pt-20 sm:pb-28 sm:pt-32 lg:pb-0'
       >
         <Container styling={'pb-40 flex lg:flex-row flex-col lg:items-center lg:justify-between'}>
           {/* Textabschnitt */}
@@ -1036,7 +1036,7 @@ export default function Home({ feed }) {
             styling={'lg:w-1/3'}
           >
             {/* Text */}
-            <div className='font-source mb-10 leading-tight'>
+            <div className='mb-10 font-source leading-tight'>
               Schulische Förderprogramme im Berliner Kiez, Einzel- und Gruppennachhilfe und
               Austauschprogramme auf europäischer Ebene. Wir bieten unseren Kooperationspartnern ein
               umfangreiches und individuelles Leistungsangebot.
@@ -1052,27 +1052,27 @@ export default function Home({ feed }) {
             />
           </Textbox>
           {/* Übersichtskarten */}
-          <div className='relative z-10 bg-purple-500 bg-opacity-0 lg:w-[60%] w-full h-[780px] flex sm:flex-row flex-col sm:flex-wrap justify-between items-start'>
+          <div className='relative z-10 flex h-[780px] w-full flex-col items-start justify-between bg-purple-500 bg-opacity-0 sm:flex-row sm:flex-wrap lg:w-[60%]'>
             {/* Lernförderung Karte*/}
             <a
               data-aos='fade-up'
               href='#Lernförderung'
-              className='lg:hover:scale-[102%] transition-all sm:w-[45%] w-full rounded-2xl bg-white shadow-2xl'
+              className='w-full rounded-2xl bg-white shadow-2xl transition-all sm:w-[45%] lg:hover:scale-[102%]'
             >
               <Image
-                className='rounded-t-3xl brightness-[0.6] w-full h-48 object-cover '
+                className='h-48 w-full rounded-t-3xl object-cover brightness-[0.6] '
                 src='/images/schule.webp'
                 width={200}
                 height={100}
                 alt='Schule'
               />
               {/* <img className='rounded-t-3xl brightness-[0.6]' src='/images/schule.webp' alt='' /> */}
-              <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Lernförderung</div>
-              <div className='font-source text-sm lg:mt-5 mt-8 mx-7'>
+              <div className='mx-7 mt-12 font-poppins text-xl lg:mt-7'>Lernförderung</div>
+              <div className='mx-7 mt-8 font-source text-sm lg:mt-5'>
                 Wir kommen an Ihre Schule und fördern Ihre Schülerinnen und Schüler, um
                 Wissenslücken zu schließen und Lernziele zu erreichen.
               </div>
-              <div className='flex bg-primary text-white text-sm font-semibold float-right lg:mt-5 mt-10 px-4 py-2 rounded-tl-2xl rounded-br-2xl'>
+              <div className='float-right mt-10 flex rounded-tl-2xl rounded-br-2xl bg-primary px-4 py-2 text-sm font-semibold text-white lg:mt-5'>
                 mehr erfahren <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
               </div>
             </a>
@@ -1080,22 +1080,22 @@ export default function Home({ feed }) {
             <a
               data-aos='fade-up'
               href='#Privatunterricht'
-              className='lg:hover:scale-[102%] transition-all sm:w-[45%] rounded-2xl bg-white shadow-2xl lg:mt-56 sm:mt-0 mt-16'
+              className='mt-16 rounded-2xl bg-white shadow-2xl transition-all sm:mt-0 sm:w-[45%] lg:mt-56 lg:hover:scale-[102%]'
             >
               <Image
-                className='rounded-t-3xl brightness-[0.6] w-full h-48 object-cover'
+                className='h-48 w-full rounded-t-3xl object-cover brightness-[0.6]'
                 src='/images/privat.webp'
                 width={200}
                 height={100}
                 alt='Privatunterricht'
               />
               {/* <img className='rounded-t-3xl brightness-[0.6]' src='/images/privat.webp' alt='' /> */}
-              <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Privatunterricht</div>
-              <div className='font-source text-sm lg:mt-5 mt-8 mx-7'>
+              <div className='mx-7 mt-12 font-poppins text-xl lg:mt-7'>Privatunterricht</div>
+              <div className='mx-7 mt-8 font-source text-sm lg:mt-5'>
                 Ihr Kind steht im Mittelpunkt. Gemeinsam mit unseren Tutoren und Tutorinnen finden
                 wir eine Lösung für jedes Problem.
               </div>
-              <div className='flex bg-primary text-white text-sm font-semibold float-right lg:mt-5 mt-10 px-4 py-2 rounded-tl-2xl rounded-br-2xl'>
+              <div className='float-right mt-10 flex rounded-tl-2xl rounded-br-2xl bg-primary px-4 py-2 text-sm font-semibold text-white lg:mt-5'>
                 mehr erfahren <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
               </div>
             </a>
@@ -1103,10 +1103,10 @@ export default function Home({ feed }) {
             <a
               data-aos='fade-up'
               href='#Bildungsprojekte'
-              className='lg:hover:scale-[102%] transition-all sm:w-[45%] rounded-2xl bg-white shadow-2xl lg:-mt-40 mt-16'
+              className='mt-16 rounded-2xl bg-white shadow-2xl transition-all sm:w-[45%] lg:-mt-40 lg:hover:scale-[102%]'
             >
               <Image
-                className='rounded-t-3xl brightness-[0.6] w-full h-48 object-cover'
+                className='h-48 w-full rounded-t-3xl object-cover brightness-[0.6]'
                 src='/images/projekte.webp'
                 width={200}
                 height={100}
@@ -1117,12 +1117,12 @@ export default function Home({ feed }) {
                 src='/images/projekte.webp'
                 alt=''
               /> */}
-              <div className='font-poppins text-xl lg:mt-7 mt-12 mx-7'>Bildungsprojekte</div>
-              <div className='font-source text-sm lg:mt-5 mt-8 mx-7'>
+              <div className='mx-7 mt-12 font-poppins text-xl lg:mt-7'>Bildungsprojekte</div>
+              <div className='mx-7 mt-8 font-source text-sm lg:mt-5'>
                 In enger Zusammenarbeit mit der Deutschen Kinder- und Jugendstiftung begleiten wir
                 geflüchtete Kinder und Jugendliche auf dem Weg in das deutsche Schulsystem.
               </div>
-              <div className='flex bg-primary text-white text-sm font-semibold float-right lg:mt-5 mt-10 px-4 py-2 rounded-tl-2xl rounded-br-2xl'>
+              <div className='float-right mt-10 flex rounded-tl-2xl rounded-br-2xl bg-primary px-4 py-2 text-sm font-semibold text-white lg:mt-5'>
                 mehr erfahren <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
               </div>
             </a>
@@ -1145,7 +1145,7 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Lernförderung-- */}
-      <section id='Lernförderung' className='bg-darkYellow relative'>
+      <section id='Lernförderung' className='relative bg-darkYellow'>
         <Container styling={'pb-2 flex flex-col items-center'}>
           {/* Textabschnitt */}
           <Textbox
@@ -1156,7 +1156,7 @@ export default function Home({ feed }) {
             styling={'lg:w-3/5 pt-20'}
           >
             {/* Text */}
-            <div className='font-source sm:mb-10 mb-0 leading-tight'>
+            <div className='mb-0 font-source leading-tight sm:mb-10'>
               Wir kommen an Ihre Schule und fördern Ihre Schülerinnen und Schüler, damit sie
               Wissenslücken schließen und Lernziele erreichen können.
             </div>
@@ -1164,12 +1164,12 @@ export default function Home({ feed }) {
           {/* Für Schulen, für Eltern Karte */}
           <div
             data-aos='fade-up'
-            className='w-full flex sm:mt-10 mt-0 flex-wrap relative z-10 mb-44'
+            className='relative z-10 mt-0 mb-44 flex w-full flex-wrap sm:mt-10'
           >
             {/* Für Schulen */}
-            <div data-aos-anchor-placement='center-bottom' className='lg:w-1/2 w-full'>
+            <div data-aos-anchor-placement='center-bottom' className='w-full lg:w-1/2'>
               <Image
-                className='shadow-2xl lg:block hidden h-full w-full object-cover filter brightness-50 lg:rounded-tl-3xl'
+                className='hidden h-full w-full object-cover shadow-2xl brightness-50 filter lg:block lg:rounded-tl-3xl'
                 src='/images/schule.webp'
                 width={400}
                 height={300}
@@ -1183,14 +1183,14 @@ export default function Home({ feed }) {
             </div>
             <div
               data-aos-anchor-placement='center-bottom'
-              className='shadow-2xl lg:w-1/2 w-full bg-white pt-14 pb-24 lg:px-28 px-14 lg:mb-0 mb-12 lg:rounded-tr-3xl lg:rounded-tl-none lg:rounded-b-none rounded-3xl lg:block flex flex-col items-center'
+              className='mb-12 flex w-full flex-col items-center rounded-3xl bg-white px-14 pt-14 pb-24 shadow-2xl lg:mb-0 lg:block lg:w-1/2 lg:rounded-b-none lg:rounded-tr-3xl lg:rounded-tl-none lg:px-28'
             >
-              <div className='font-poppins text-sm text-center sm:text-left'>
+              <div className='text-center font-poppins text-sm sm:text-left'>
                 Innovatives Bildungsangebot
               </div>
-              <div className='font-poppints text-3xl font-semibold mt-5'>Für Schulen</div>
-              <div className='w-10 h-[5px] bg-primary mt-6'></div>
-              <div className='font-source mt-12 leading-tight lg:text-left text-center'>
+              <div className='font-poppints mt-5 text-3xl font-semibold'>Für Schulen</div>
+              <div className='mt-6 h-[5px] w-10 bg-primary'></div>
+              <div className='mt-12 text-center font-source leading-tight lg:text-left'>
                 Jedes Kind ist anders, jede Schule ist anders. Wir passen unsere Konzeption auf Ihre
                 Vorstellungen an. Dabei können Sie sich auf einen verlässlichen und kooperativen
                 Austausch verlassen. Gerne organisieren wir die Lernförderung auch an Ihrer Schule.
@@ -1200,13 +1200,13 @@ export default function Home({ feed }) {
               </div>
             </div>
             {/* Für Eltern */}
-            <div className='shadow-2xl lg:w-1/2 w-full bg-white lg:pt-14 pt-20 pb-20 lg:px-28 px-14 lg:mt-0 sm:mt-12 mt-0 rounded-3xl lg:rounded-bl-3xl lg:rounded-br-none lg:rounded-t-none lg:block flex flex-col items-center'>
-              <div className='font-poppins text-sm text-center sm:text-left'>
+            <div className='mt-0 flex w-full flex-col items-center rounded-3xl bg-white px-14 pt-20 pb-20 shadow-2xl sm:mt-12 lg:mt-0 lg:block lg:w-1/2 lg:rounded-t-none lg:rounded-bl-3xl lg:rounded-br-none lg:px-28 lg:pt-14'>
+              <div className='text-center font-poppins text-sm sm:text-left'>
                 Finanziertes Bildungsangebot
               </div>
-              <div className='font-poppints text-3xl font-semibold mt-5'>Für Eltern</div>
-              <div className='w-10 h-[5px] bg-primary mt-6'></div>
-              <div className='font-source mt-12 leading-tight lg:text-left text-center'>
+              <div className='font-poppints mt-5 text-3xl font-semibold'>Für Eltern</div>
+              <div className='mt-6 h-[5px] w-10 bg-primary'></div>
+              <div className='mt-12 text-center font-source leading-tight lg:text-left'>
                 Wir helfen Ihnen bei den kleinen und großen Problemen, damit Ihr Kind wieder in die
                 Spur findet. Mit dem Bildungs und Teilhabe Programm (BuT), bekommt Ihr Kind sogar
                 kostenlose Unterstützung. Wir beraten Sie gerne dazu.
@@ -1217,7 +1217,7 @@ export default function Home({ feed }) {
             </div>
             <div className='w-1/2'>
               <Image
-                className='shadow-2xl lg:block hidden h-full w-full object-cover filter brightness-50 rounded-br-3xl'
+                className='hidden h-full w-full rounded-br-3xl object-cover shadow-2xl brightness-50 filter lg:block'
                 src='/images/eltern.webp'
                 width={400}
                 height={300}
@@ -1234,7 +1234,7 @@ export default function Home({ feed }) {
               onClick={toggleKontaktieren}
               className='umami--click--Lernförderung-Termin-buchen cursor-pointer'
             >
-              <div className='text-sm lg:hover:scale-[105%] transition-transform h-40 w-40 bg-white border-8 border-primary shadow-[0_0_30px_-15px_rgba(0,0,0,0.4)] absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 rounded-full font-poppins text-center flex items-center justify-center'>
+              <div className='absolute top-2/4 left-2/4 flex h-40 w-40 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-8 border-primary bg-white text-center font-poppins text-sm shadow-[0_0_30px_-15px_rgba(0,0,0,0.4)] transition-transform lg:hover:scale-[105%]'>
                 Hier kostenlos
                 <br />
                 Beratung vereinbaren
@@ -1261,7 +1261,7 @@ export default function Home({ feed }) {
       {/* --Privatunterricht-- */}
       <section
         id='Privatunterricht'
-        className='bg-lightYellow relative lg:pb-52 sm:pb-10 sm:pt-20 pt-0'
+        className='relative bg-lightYellow pt-0 sm:pb-10 sm:pt-20 lg:pb-52'
       >
         <Container styling={'pb-32 flex flex-col items-center'}>
           {/* Textabschnitt */}
@@ -1273,27 +1273,27 @@ export default function Home({ feed }) {
             styling={'lg:w-3/5 -mt-1'}
           >
             {/* Text */}
-            <div className='font-source mb-10 leading-tight'>
+            <div className='mb-10 font-source leading-tight'>
               Bei unserem Privatunterricht steht Ihr Kind im Mittelpunkt. Wir achten darauf, dass
               unsere Tutoren und Tutorinnen mit Ihrem Kind auf einer Wellenlänge sind. Gemeinsam
               finden wir eine Lösung für jedes Problem.
             </div>
           </Textbox>
           {/* Kennenlernen & Probestunde */}
-          <div className='flex lg:flex-row flex-col text-white sm:mt-14 mt-0 relative z-10'>
+          <div className='relative z-10 mt-0 flex flex-col text-white sm:mt-14 lg:flex-row'>
             {/* Kennenlernen Karte */}
             <div
               data-aos={'fade-up'}
               onClick={toggleKontaktieren}
-              className='cursor-pointer lg:hover:scale-[102%] transition-transform erstesKennenlernen rounded-2xl shadow-2xl relative lg:mr-12 lg:w-1/2 sm:w-full mb-20 lg:mb-0 h-72'
+              className='erstesKennenlernen relative mb-20 h-72 cursor-pointer rounded-2xl shadow-2xl transition-transform sm:w-full lg:mr-12 lg:mb-0 lg:w-1/2 lg:hover:scale-[102%]'
             >
-              <div className='mx-12 sm:mt-12 mt-12 font-poppins text-xl'>Erstes Kennenlernen</div>
-              <div className='mx-12 mt-5 w-10 h-[5px] bg-primary '></div>
-              <div className='mx-12 sm:mt-10 mt-8 mb-16 font-source text-md'>
+              <div className='mx-12 mt-12 font-poppins text-xl sm:mt-12'>Erstes Kennenlernen</div>
+              <div className='mx-12 mt-5 h-[5px] w-10 bg-primary '></div>
+              <div className='text-md mx-12 mt-8 mb-16 font-source sm:mt-10'>
                 Gemeinsam können wir am meisten bewegen. Wir helfen, die beste Strategie für Ihr
                 Kind zu entwickeln.
               </div>
-              <a className='umami--click--KennenlernenVereinabren-Termin-buchen flex bg-primary text-white text-sm font-semibold float-right sm:mt-5 mt-10 px-6 py-2 rounded-tl-2xl rounded-br-2xl absolute bottom-0 right-0'>
+              <a className='umami--click--KennenlernenVereinabren-Termin-buchen absolute bottom-0 right-0 float-right mt-10 flex rounded-tl-2xl rounded-br-2xl bg-primary px-6 py-2 text-sm font-semibold text-white sm:mt-5'>
                 Kennenlernen vereinbaren
                 <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
               </a>
@@ -1302,16 +1302,16 @@ export default function Home({ feed }) {
             <div
               data-aos={'fade-up'}
               onClick={toggleKontaktieren}
-              className='cursor-pointer lg:hover:scale-[102%] transition-transform kostenloseProbestunde rounded-2xl shadow-2xl relative lg:mr-12 lg:w-1/2 sm:w-full lg:mb-0 h-72'
+              className='kostenloseProbestunde relative h-72 cursor-pointer rounded-2xl shadow-2xl transition-transform sm:w-full lg:mr-12 lg:mb-0 lg:w-1/2 lg:hover:scale-[102%]'
             >
-              <div className='mx-12 sm:mt-12 mt-12 font-poppins text-xl'>
+              <div className='mx-12 mt-12 font-poppins text-xl sm:mt-12'>
                 Kostenlose Probestunde
               </div>
-              <div className='mx-12 mt-5 w-10 h-[5px] bg-primary '></div>
-              <div className='mx-12 sm:mt-10 mt-8 mb-5 font-source text-md'>
+              <div className='mx-12 mt-5 h-[5px] w-10 bg-primary '></div>
+              <div className='text-md mx-12 mt-8 mb-5 font-source sm:mt-10'>
                 Am besten wir lernen uns persönlich kennen, um den ersten Schritt zu machen.
               </div>
-              <a className='umami--click--ProbestundeVereinbaren-Termin-buchen flex bg-primary text-white text-sm font-semibold float-right sm:mt-5 mt-10 px-6 py-2 rounded-tl-2xl rounded-br-2xl absolute bottom-0 right-0'>
+              <a className='umami--click--ProbestundeVereinbaren-Termin-buchen absolute bottom-0 right-0 float-right mt-10 flex rounded-tl-2xl rounded-br-2xl bg-primary px-6 py-2 text-sm font-semibold text-white sm:mt-5'>
                 Probestunde vereinbaren
                 <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
               </a>
@@ -1335,12 +1335,12 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Bildungsprojekte-- */}
-      <section id='Bildungsprojekte' className='bg-middleYellow sm:pt-20 pt-10 pb-14'>
+      <section id='Bildungsprojekte' className='bg-middleYellow pt-10 pb-14 sm:pt-20'>
         <Container styling={'flex lg:flex-row flex-col-reverse'}>
           {/* Slider */}
           <div
             data-aos={'fade-up'}
-            className='lg:w-1/2 sm:w-[90%] sm:mx-auto lg:mx-0 sm:mt-16 lg:mt-0'
+            className='sm:mx-auto sm:mt-16 sm:w-[90%] lg:mx-0 lg:mt-0 lg:w-1/2'
           >
             <Swiper
               pagination={pagination}
@@ -1354,14 +1354,14 @@ export default function Home({ feed }) {
               className='mySwiper'
             >
               <SwiperSlide>
-                <div className='sm:w-[70%] w-full rounded-2xl bg-white sm:shadow-2xl mb-16'>
+                <div className='mb-16 w-full rounded-2xl bg-white sm:w-[70%] sm:shadow-2xl'>
                   <div className='bildungsProjektFit rounded-t-2xl'>
-                    <div className='px-7 pt-44 pb-8 text-white text-left'>
+                    <div className='px-7 pt-44 pb-8 text-left text-white'>
                       <div className='text-sm'>Ein Projekt mit Hand und Fuß</div>
-                      <div className='text-3xl font-semibold mt-3'>Fit für die Schule</div>
+                      <div className='mt-3 text-3xl font-semibold'>Fit für die Schule</div>
                     </div>
                   </div>
-                  <div className='font-source text-sm text-left my-8 mx-7'>
+                  <div className='my-8 mx-7 text-left font-source text-sm'>
                     Als Bildungsträger sehen wir uns in der Verantwortung, unsere Ressourcen mit
                     geflüchteten Familien zu teilen. Manchmal dauert es leider länger bis ein
                     geflüchtetes Kind einen Schulplatz zugewiesen bekommt. In diesem Fall, fangen
@@ -1377,16 +1377,16 @@ export default function Home({ feed }) {
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className='sm:w-[70%] w-full rounded-2xl bg-white sm:shadow-2xl mb-16'>
+                <div className='mb-16 w-full rounded-2xl bg-white sm:w-[70%] sm:shadow-2xl'>
                   <div className='bildungsProjektFit rounded-t-2xl'>
-                    <div className='px-7 pt-44 pb-8 text-white text-left'>
+                    <div className='px-7 pt-44 pb-8 text-left text-white'>
                       <div className='text-sm'>
                         Kulturelle und sprachbildende Angebote - europaweit
                       </div>
-                      <div className='text-3xl font-semibold mt-3'>Erasmus+</div>
+                      <div className='mt-3 text-3xl font-semibold'>Erasmus+</div>
                     </div>
                   </div>
-                  <div className='font-source text-sm text-left my-8 mx-7'>
+                  <div className='my-8 mx-7 text-left font-source text-sm'>
                     {/* Auch auf europäischer Ebene möchten wir sozialbenachteiligte Kinder und
                     Jugendliche miteinbeziehen und die Teilhabe an Bildung ermöglichen. Gemeinsam */}
                     Gemeinsam mit der&nbsp;
@@ -1415,7 +1415,7 @@ export default function Home({ feed }) {
             styling={'lg:w-3/5 sm:pb-0 lg:px-20 pb-16'}
           >
             {/* Text */}
-            <div className='font-source mb-10 leading-tight'>
+            <div className='mb-10 font-source leading-tight'>
               Zusammen mit unseren Kooperationspartnern machen wir nachhaltige Bildungsangebote
               zugänglich für jedes Kind. Kommen Sie gerne auf uns zu und wir besprechen die
               Umsetzung.
@@ -1434,7 +1434,7 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Über Uns-- */}
-      <section id='ÜberUns' className='bg-middleYellow relative pt-20'>
+      <section id='ÜberUns' className='relative bg-middleYellow pt-20'>
         <Container styling={'flex items-center flex-col'}>
           <Textbox
             animation={'fade-up'}
@@ -1442,7 +1442,7 @@ export default function Home({ feed }) {
             slogan={'Was uns als Partner besonders macht'}
             styling={'lg:w-3/5 -mt-1'}
           >
-            <div className='font-source sm:mb-20 mb-10 leading-tight'>
+            <div className='mb-10 font-source leading-tight sm:mb-20'>
               Wir sind ein junges, aufgeschlossene und hoch motiviertes Team mit dem Ziel, jedem
               Kind die Verbesserung der schulischen Leistungen zu ermöglichen und dabei die eigenen
               Talente zu entfalten. Wir betonen die Stärken unserer Schülerinnen und Schüler.
@@ -1451,9 +1451,9 @@ export default function Home({ feed }) {
           {/* Partner Logos */}
           <div
             data-aos='fade-up'
-            className='relative z-10 w-full flex justify-between flex-wrap items-center overflow-hidden'
+            className='relative z-10 flex w-full flex-wrap items-center justify-between overflow-hidden'
           >
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 pr-5 sm:pr-0 flex justify-center pt-5'>
+            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/3'>
               <Image
                 src='/images/logos/weißes_berlin_logo.webp'
                 width={200}
@@ -1466,7 +1466,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 pl-5 sm:pl-0 flex justify-center pt-5'>
+            <div className='flex w-1/2 justify-center pl-5 pt-5 sm:w-1/2 sm:pl-0 md:w-1/3'>
               <Image
                 src='/images/logos/stacked_berlin_logo.webp'
                 width={130}
@@ -1479,7 +1479,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 pr-5 sm:pr-0 flex justify-center pt-5'>
+            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/3'>
               <Image
                 src='/images/logos/haus_der_jugend.webp'
                 width={120}
@@ -1492,11 +1492,11 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 pl-5 sm:pl-0 flex justify-center pt-14'>
+            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/3'>
               <Image src='/images/logos/OASE_logo.webp' width={160} height={80} alt='OASE Logo' />
               {/* <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.webp' alt='' /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 pr-5 sm:pr-0  flex justify-center pt-14'>
+            <div className='flex w-1/2 justify-center pr-5 pt-14  sm:w-1/2 sm:pr-0 md:w-1/3'>
               <Image
                 src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
                 width={170}
@@ -1509,7 +1509,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='md:w-1/3 sm:w-1/2 w-1/2 pl-5 sm:pl-0 flex justify-center pt-14'>
+            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/3'>
               <Image
                 src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
                 width={240}
@@ -1525,7 +1525,7 @@ export default function Home({ feed }) {
           </div>
         </Container>{' '}
         {/* Wave */}
-        <div className='relative wave-5 z-0'>
+        <div className='wave-5 relative z-0'>
           <svg
             data-name='Layer 1'
             xmlns='http://www.w3.org/2000/svg'
@@ -1541,12 +1541,12 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Unser Team-- */}
-      <section id='UnserTeam' className='bg-darkYellow sm:pt-20 pb-14'>
+      <section id='UnserTeam' className='bg-darkYellow pb-14 sm:pt-20'>
         <Container styling={'pt-32'}>
           {/* Text & Gründer */}
           <div
             data-aos={'fade-up'}
-            className='flex lg:flex-row flex-col justify-between items-center'
+            className='flex flex-col items-center justify-between lg:flex-row'
           >
             <Textbox
               section={'Unser Team'}
@@ -1554,7 +1554,7 @@ export default function Home({ feed }) {
               styling={'lg:w-2/5 sm:pb-0 pb-16'}
               align={'left'}
             >
-              <div className='font-source mb-10 leading-tight lg:text-left text-center'>
+              <div className='mb-10 text-center font-source leading-tight lg:text-left'>
                 Unser einzigartiges Team setzt sich aus den schlausten, motiviertesten und
                 kreativsten Köpfen zusammen, die wir finden konnten. Wir garantieren, dass unsere
                 Mitarbeitenden die Hochschulreife oder eine abgeschlossene pädagogische Ausbildung
@@ -1576,12 +1576,8 @@ export default function Home({ feed }) {
             <Gründer />
           </div>
           {/* Mitarbeiter Übersicht */}
-          <div data-aos='fade-up' className='flex justify-between sm:mt-24 mt-10 flex-wrap'>
-            <Mitarbeiter
-              bild={'/images/marlene.webp'}
-              name={'Marlene'}
-              job={'Assistenz und Koordinatorin'}
-            />
+          <div data-aos='fade-up' className='mt-10 flex flex-wrap justify-between sm:mt-24'>
+            <Mitarbeiter bild={'/images/marlene.webp'} name={'Marlene'} job={'Projektleitung'} />
             <Mitarbeiter bild={'/images/anna.webp'} name={'Anna'} job={''} />
             <Mitarbeiter bild={'/images/arin.webp'} name={'Arin'} job={''} />
             <Mitarbeiter bild={'/images/karin.webp'} name={'Camilla'} job={''} />
@@ -1597,17 +1593,17 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Jobs-- */}
-      <section id='Jobs' className='bg-darkYellow relative'>
+      <section id='Jobs' className='relative bg-darkYellow'>
         <Container styling={'sm:pt-20 flex justify-center'}>
           {/* Jobs Karte */}
           <div
             data-aos='fade-up'
-            className='sm:w-[90%] w-full flex mt-10 flex-wrap relative z-10 mb-72'
+            className='relative z-10 mt-10 mb-72 flex w-full flex-wrap sm:w-[90%]'
           >
             {/* Bild - linke Seite */}
-            <div className='sm:w-2/5 w-full hidden lg:block'>
+            <div className='hidden w-full sm:w-2/5 lg:block'>
               <Image
-                className='shadow-2xl h-full w-full  lg:block hidden object-cover rounded-tl-3xl rounded-bl-3xl'
+                className='hidden h-full w-full  rounded-tl-3xl rounded-bl-3xl object-cover shadow-2xl lg:block'
                 src={'/images/jobsKarte.webp'}
                 width={500}
                 height={500}
@@ -1615,15 +1611,15 @@ export default function Home({ feed }) {
               />
               {/* Text - rechte Seite */}
             </div>
-            <div className='shadow-2xl lg:w-3/5 w-full bg-white py-20 sm:px-14 px-10 sm:mb-0 mb-12 lg:rounded-3xl lg:rounded-tl-none lg:rounded-bl-none rounded-3xl flex flex-col lg:items-start items-start'>
+            <div className='mb-12 flex w-full flex-col items-start rounded-3xl bg-white py-20 px-10 shadow-2xl sm:mb-0 sm:px-14 lg:w-3/5 lg:items-start lg:rounded-3xl lg:rounded-tl-none lg:rounded-bl-none'>
               <div className='font-poppins text-lg'>Jobs bei uns</div>
-              <div className='w-10 h-[5px] bg-primary mt-5'></div>
+              <div className='mt-5 h-[5px] w-10 bg-primary'></div>
               {/* Slogan */}
-              <div className='font-berlin text-5xl leading-tight my-10 text-left'>
+              <div className='my-10 text-left font-berlin text-5xl leading-tight'>
                 Ich möchte mitmachen
               </div>
               {/* Beschreibung */}
-              <div className='font-source mb-10 leading-tight lg:text-left text-left'>
+              <div className='mb-10 text-left font-source leading-tight lg:text-left'>
                 Wir organisieren langfristig angelegte Projekte und möchten Lebenswege zum Positiven
                 verändern. Dabei zählen wir auf empathische und aufgeschlossene Menschen, die den
                 Kindern und Jugendlichen wertschätzend entgegentreten und bereit sind mehr als ein:e
@@ -1657,7 +1653,7 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Aktuelles-- */}
-      <section id='Aktuelles' className='bg-middleYellow relative'>
+      <section id='Aktuelles' className='relative bg-middleYellow'>
         <Container styling={'flex flex-col items-center pt-10'}>
           <Textbox
             animation={'fade-up'}
@@ -1665,7 +1661,7 @@ export default function Home({ feed }) {
             slogan={'Neuigkeiten von uns, unseren Lerngruppen und Projekten.'}
             styling={'lg:w-3/5 -mt-1'}
           >
-            <div className='font-source sm:mb-20 mb-0 leading-tight'>
+            <div className='mb-0 font-source leading-tight sm:mb-20'>
               Ob Lagerfeuer und Stockbrot, Akrobatik und Theater oder regelmäßige Lernförderungen
               mit spannenden Ausflügen. Hier können Sie sich ein Bild machen.
             </div>
@@ -1673,22 +1669,22 @@ export default function Home({ feed }) {
           {/* Instagram */}
           <div
             data-aos='fade-up'
-            className='w-[100%] max-w-[950px] m-auto flex flex-wrap justify-center'
+            className='m-auto flex w-[100%] max-w-[950px] flex-wrap justify-center'
           >
             {/* Headers */}
             <div className='w-1/3'>
-              <div className='font-poppins sm:text-xl text-base mt-7 text-center'>News</div>
-              <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
+              <div className='mt-7 text-center font-poppins text-base sm:text-xl'>News</div>
+              <div className='mx-auto mt-3 mb-8 h-[5px] w-10 bg-primary'></div>
             </div>
             <div className='w-1/3'>
-              <div className='font-poppins sm:text-xl text-base mt-7 text-center'>Lerngruppen</div>
-              <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
+              <div className='mt-7 text-center font-poppins text-base sm:text-xl'>Lerngruppen</div>
+              <div className='mx-auto mt-3 mb-8 h-[5px] w-10 bg-primary'></div>
             </div>
             <div className='w-1/3'>
-              <div className='font-poppins sm:text-xl text-base mt-7 text-center'>
+              <div className='mt-7 text-center font-poppins text-base sm:text-xl'>
                 Mitarbeitende
               </div>
-              <div className='w-10 h-[5px] bg-primary mt-3 mx-auto mb-8'></div>
+              <div className='mx-auto mt-3 mb-8 h-[5px] w-10 bg-primary'></div>
             </div>
             {/* Posts */}
             {images.map((image, index) => {
@@ -1710,7 +1706,7 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Termin Formular-- */}
-      <section className='bg-middleYellow relative'>
+      <section className='relative bg-middleYellow'>
         <Container
           data-aos='fade-up'
           styling={'pt-32 pb-32 flex flex-col lg:flex-row items-center '}
@@ -1721,15 +1717,15 @@ export default function Home({ feed }) {
             styling={'lg:w-1/2 -mt-1 pb-16 lg:px-20 sm:px-0'}
             align={'left'}
           >
-            <div className='font-source sm:mb-20 mb-5 leading-tight'>
+            <div className='mb-5 font-source leading-tight sm:mb-20'>
               Finden Sie jetzt die passende Lernförderung für Ihre Schule. Wir setzen uns zusammen
               und passen unsere Konzeption auf Ihre Schule an.
             </div>
           </Textbox>
           {/* Calendly */}
-          <div className='w-1/2 flex justify-center items-center relative z-10'>
-            <div className='flex w-full justify-center lg:mt-10 sm:mt-[5vh] mt-0 lg:mb-10 sm:mb-[10vh] mb-10'>
-              <div className='p-1 bg-white rounded-xl shadow-xl lg:my-10'>
+          <div className='relative z-10 flex w-1/2 items-center justify-center'>
+            <div className='mt-0 mb-10 flex w-full justify-center sm:mt-[5vh] sm:mb-[10vh] lg:mt-10 lg:mb-10'>
+              <div className='rounded-xl bg-white p-1 shadow-xl lg:my-10'>
                 <InlineWidget
                   styles={{
                     width: '45vh',
@@ -1766,7 +1762,7 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Kontakt Formular-- */}
-      <section className='bg-darkYellow relative'>
+      <section className='relative bg-darkYellow'>
         <Container
           styling={'pt-32 pb-12 flex lg:flex-row flex-col-reverse justify-between items-center'}
         >
@@ -1791,26 +1787,26 @@ export default function Home({ feed }) {
       <section id='Downloads' className='bg-darkYellow pt-20'>
         <Container styling={'pb-2 flex justify-center'}>
           {/* Karte */}
-          <div className='flex mt-10 w-full flex-wrap relative z-10 mb-28'>
+          <div className='relative z-10 mt-10 mb-28 flex w-full flex-wrap'>
             {/* Text - linke Seite */}
-            <div className='shadow-2xl sm:w-2/5 w-full bg-navy py-16 px-14 rounded-tl-3xl rounded-tr-3xl sm:rounded-tr-none sm:rounded-bl-3xl sm:block flex flex-col items-center'>
-              <div className='font-source font-regular text-lg text-white'>Downloads</div>
-              <div className='w-10 h-[5px] bg-primary mt-5'></div>
-              <div className='font-pooppins font-bold lg:text-3xl sm:text-xl text-xl sm:text-left text-center leading-tight mt-10 text-white'>
+            <div className='flex w-full flex-col items-center rounded-tl-3xl rounded-tr-3xl bg-navy py-16 px-14 shadow-2xl sm:block sm:w-2/5 sm:rounded-tr-none sm:rounded-bl-3xl'>
+              <div className='font-regular font-source text-lg text-white'>Downloads</div>
+              <div className='mt-5 h-[5px] w-10 bg-primary'></div>
+              <div className='font-pooppins mt-10 text-center text-xl font-bold leading-tight text-white sm:text-left sm:text-xl lg:text-3xl'>
                 Hier finden Sie alle Dokumente und Dateien
               </div>
             </div>
             {/* Download Icons - rechte Seite */}
-            <div className='sm:w-3/5 w-full downloadsCSS rounded-br-3xl sm:rounded-tr-3xl rounded-tr-none sm:rounded-bl-none rounded-bl-3xl flex justify-evenly items-center'>
+            <div className='downloadsCSS flex w-full items-center justify-evenly rounded-br-3xl rounded-tr-none rounded-bl-3xl sm:w-3/5 sm:rounded-tr-3xl sm:rounded-bl-none'>
               <a href='zusatzbogen.pdf' target='_blank'>
-                <div className='flex flex-col justify-center items-center text-white sm:text-sm text-xs text-center sm:py-0 py-14'>
-                  <FontAwesomeIcon className='w-10 text-white pb-4' icon={faFilePdf} />
+                <div className='flex flex-col items-center justify-center py-14 text-center text-xs text-white sm:py-0 sm:text-sm'>
+                  <FontAwesomeIcon className='w-10 pb-4 text-white' icon={faFilePdf} />
                   Zusatzbogen für <br /> Lernförderung
                 </div>
               </a>
               <a href='FIB-Heft.pdf' target='_blank'>
-                <div className='flex flex-col justify-center items-center text-white sm:text-sm text-xs'>
-                  <FontAwesomeIcon className='w-10 text-white pb-4' icon={faFilePdf} />
+                <div className='flex flex-col items-center justify-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='w-10 pb-4 text-white' icon={faFilePdf} />
                   Unser fiB-Heft – <br /> Das Lerntagebuch <br /> <br />
                 </div>
               </a>
@@ -1820,7 +1816,7 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Footer-- */}
-      <footer className='mx-auto sm:px-20  px-7 bg-lightYellow pt-20 pb-10 relative'>
+      <footer className='relative mx-auto  bg-lightYellow px-7 pt-20 pb-10 sm:px-20'>
         {/* Wave */}
         <div className='wave-8'>
           <svg
@@ -1836,7 +1832,7 @@ export default function Home({ feed }) {
           </svg>{' '}
         </div>
         {/* Container */}
-        <div className='max-w-screen-xl mx-auto flex sm:flex-row flex-col justify-between sm:pt-28 pt-20'>
+        <div className='mx-auto flex max-w-screen-xl flex-col justify-between pt-20 sm:flex-row sm:pt-28'>
           {/* Logo */}
           <Image
             className='h-12 object-contain'
@@ -1847,66 +1843,66 @@ export default function Home({ feed }) {
           />
           {/* <img className='h-12 object-contain' src='/images/logos/bund_fib_logo.webp' alt='' /> */}
           {/* Leistungen */}
-          <div className='lg:block hidden'>
+          <div className='hidden lg:block'>
             <div className='font-poppins text-base'>Leistungen</div>
-            <div className='w-8 h-[5px] bg-primary mt-2 mb-5'></div>
+            <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
             <a href='#Lernförderung'>
-              <div className='font-source text-sm my-1'>Lernförderungen</div>
+              <div className='my-1 font-source text-sm'>Lernförderungen</div>
             </a>
             <a href='#Privatunterricht'>
-              <div className='font-source text-sm my-1'>Privatunterricht</div>
+              <div className='my-1 font-source text-sm'>Privatunterricht</div>
             </a>
             <a href='#Bildungsprojekte'>
-              <div className='font-source text-sm my-1'>Bildungsprojekte</div>
+              <div className='my-1 font-source text-sm'>Bildungsprojekte</div>
             </a>
             <a href='#Bildungsprojekte'>
-              <div className='font-source text-sm my-1'>Erasmus+</div>
+              <div className='my-1 font-source text-sm'>Erasmus+</div>
             </a>
           </div>
           {/* Unternehmen */}
-          <div className='lg:block hidden'>
+          <div className='hidden lg:block'>
             <div className='font-poppins text-base'>Unternehmen</div>
-            <div className='w-8 h-[5px] bg-primary mt-2 mb-5'></div>
+            <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
             <a href='#ÜberUns'>
-              <div className='font-source text-sm my-1'>Über Uns</div>
+              <div className='my-1 font-source text-sm'>Über Uns</div>
             </a>
             <a href='#UnserTeam'>
-              <div className='font-source text-sm my-1'>Unser Team</div>
+              <div className='my-1 font-source text-sm'>Unser Team</div>
             </a>
             <a href='#Jobs'>
-              <div className='font-source text-sm my-1'>Jobs</div>
+              <div className='my-1 font-source text-sm'>Jobs</div>
             </a>
           </div>
           {/* Informationen */}
-          <div className='lg:block hidden'>
+          <div className='hidden lg:block'>
             <div className='font-poppins text-base'>Informationen</div>
-            <div className='w-8 h-[5px] bg-primary mt-2 mb-5'></div>
-            <div onClick={toggleImpressum} className='cursor-pointer font-source text-sm my-1'>
+            <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
+            <div onClick={toggleImpressum} className='my-1 cursor-pointer font-source text-sm'>
               Impressum
             </div>
-            <div onClick={toggleDatenschutz} className='cursor-pointer font-source text-sm my-1'>
+            <div onClick={toggleDatenschutz} className='my-1 cursor-pointer font-source text-sm'>
               Datenschutz
             </div>
             <a href='#Downloads'>
-              <div className='font-source text-sm my-1'>Downloads</div>
+              <div className='my-1 font-source text-sm'>Downloads</div>
             </a>
           </div>
           {/* Kontakt */}
-          <div className='lg:block hidden'>
+          <div className='hidden lg:block'>
             <div className='font-poppins text-base'>Kontakt</div>
-            <div className='w-8 h-[5px] bg-primary mt-2 mb-5'></div>
+            <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
             <a className='cursor-pointer' onClick={toggleKontaktieren}>
-              <div className='font-source text-sm my-1'>Termin vereinbaren</div>
+              <div className='my-1 font-source text-sm'>Termin vereinbaren</div>
             </a>
             <a href='mailto:verwaltung@bund-fib.de'>
-              <div className='font-source text-sm my-1'>verwaltun@bund-fib.de</div>
+              <div className='my-1 font-source text-sm'>verwaltung@bund-fib.de</div>
             </a>
             <a href='tel:+4915758745855'>
-              <div className='font-source text-sm my-1'>+49 157 58745855</div>
+              <div className='my-1 font-source text-sm'>+49 157 58745855</div>
             </a>
           </div>
           {/* Mobile Block*/}
-          <div className='lg:hidden block flex items-center justify-between sm:w-1/2  w-full font-poppins mt-10'>
+          <div className='mt-10 block flex w-full items-center justify-between  font-poppins sm:w-1/2 lg:hidden'>
             <div onClick={toggleImpressum}>Impressum</div>
             <div onClick={toggleDatenschutz}>Datenschutz</div>
             <div>Kontakt</div>

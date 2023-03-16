@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useRef, useState, useEffect } from 'react';
 
-const InstaImage = ({ src, link }) => {
+const InstaImage = ({ src, link, alt }) => {
   // get the width of the anchor tag and set the height of the image to the same
   const ref = useRef();
   const [height, setHeight] = useState(0);
@@ -21,7 +21,7 @@ const InstaImage = ({ src, link }) => {
         style={{ height: height }}
         className='w-full object-cover object-top '
         src={src}
-        alt=''
+        alt={alt}
       />
     </a>
   );

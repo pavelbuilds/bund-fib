@@ -948,8 +948,8 @@ export default function Home({ feed }) {
       <section className='bg-lightYellow'>
         <Container styling={'pt-5'}>
           {/* Partner Logos */}
-          <div className='flex flex-wrap items-center justify-between overflow-hidden'>
-            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/3'>
+          <div className='flex flex-wrap items-center justify-evenly overflow-hidden'>
+            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/4'>
               <Image
                 src='/images/logos/weißes_berlin_logo.webp'
                 width={200}
@@ -962,7 +962,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='flex w-1/2 justify-center pl-5 pt-5 sm:w-1/2 sm:pl-0 md:w-1/3'>
+            <div className='flex w-1/2 justify-center pl-5 pt-5 sm:w-1/2 sm:pl-0 md:w-1/4'>
               <Image
                 src='/images/logos/stacked_berlin_logo.webp'
                 width={130}
@@ -975,7 +975,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/3'>
+            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/4'>
               <Image
                 src='/images/logos/haus_der_jugend.webp'
                 width={120}
@@ -988,11 +988,11 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/3'>
+            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/4'>
               <Image src='/images/logos/OASE_logo.webp' width={160} height={80} alt='OASE Logo' />
               {/* <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.webp' alt='' /> */}
             </div>
-            <div className='flex w-1/2 justify-center pr-5 pt-14  sm:w-1/2 sm:pr-0 md:w-1/3'>
+            <div className='flex w-1/2 justify-center pr-5 pt-14  sm:w-1/2 sm:pr-0 md:w-1/4'>
               <Image
                 src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
                 width={170}
@@ -1005,18 +1005,21 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/3'>
+            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/4'>
               <Image
                 src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
                 width={240}
                 height={80}
                 alt='Deutsche Kinder und Jugendstiftung Logo'
               />
-              {/* <img
-                className='sm:h-9 h-9 sm:px-0'
-                src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
-                alt=''
-              /> */}
+            </div>
+            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-[20%]'>
+              <Image
+                src='/images/logos/leipzig.png'
+                width={240}
+                height={80}
+                alt='Deutsche Kinder und Jugendstiftung Logo'
+              />
             </div>
           </div>
         </Container>
@@ -1451,9 +1454,9 @@ export default function Home({ feed }) {
           {/* Partner Logos */}
           <div
             data-aos='fade-up'
-            className='relative z-10 flex w-full flex-wrap items-center justify-between overflow-hidden'
+            className='relative z-10 flex w-full flex-wrap items-center justify-evenly overflow-hidden'
           >
-            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/3'>
+            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/4'>
               <Image
                 src='/images/logos/weißes_berlin_logo.webp'
                 width={200}
@@ -1466,7 +1469,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='flex w-1/2 justify-center pl-5 pt-5 sm:w-1/2 sm:pl-0 md:w-1/3'>
+            <div className='flex w-1/2 justify-center pl-5 pt-5 sm:w-1/2 sm:pl-0 md:w-1/4'>
               <Image
                 src='/images/logos/stacked_berlin_logo.webp'
                 width={130}
@@ -1479,7 +1482,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/3'>
+            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/4'>
               <Image
                 src='/images/logos/haus_der_jugend.webp'
                 width={120}
@@ -1492,11 +1495,11 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/3'>
+            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/4'>
               <Image src='/images/logos/OASE_logo.webp' width={160} height={80} alt='OASE Logo' />
               {/* <img className='sm:h-12 h-9 sm:px-0' src='/images/logos/OASE_logo.webp' alt='' /> */}
             </div>
-            <div className='flex w-1/2 justify-center pr-5 pt-14  sm:w-1/2 sm:pr-0 md:w-1/3'>
+            <div className='flex w-1/2 justify-center pr-5 pt-14  sm:w-1/2 sm:pr-0 md:w-1/4'>
               <Image
                 src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
                 width={170}
@@ -1509,7 +1512,7 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/3'>
+            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/4'>
               <Image
                 src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
                 width={240}
@@ -1521,6 +1524,14 @@ export default function Home({ feed }) {
                 src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
                 alt=''
               /> */}
+            </div>
+            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-[20%]'>
+              <Image
+                src='/images/logos/leipzig.png'
+                width={240}
+                height={80}
+                alt='Deutsche Kinder und Jugendstiftung Logo'
+              />
             </div>
           </div>
         </Container>{' '}

@@ -1013,14 +1013,14 @@ export default function Home({ feed }) {
                 alt='Deutsche Kinder und Jugendstiftung Logo'
               />
             </div>
-            {/* <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-[20%]'>
+            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-[20%]'>
               <Image
                 src='/images/logos/leipzig.png'
                 width={240}
                 height={80}
                 alt='Deutsche Kinder und Jugendstiftung Logo'
               />
-            </div> */}
+            </div>
           </div>
         </Container>
       </section>
@@ -1525,14 +1525,14 @@ export default function Home({ feed }) {
                 alt=''
               /> */}
             </div>
-            {/* <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-[20%]'>
+            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-[20%]'>
               <Image
                 src='/images/logos/leipzig.png'
                 width={240}
                 height={80}
                 alt='Deutsche Kinder und Jugendstiftung Logo'
               />
-            </div> */}
+            </div>
           </div>
         </Container>{' '}
         {/* Wave */}

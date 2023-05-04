@@ -1664,7 +1664,7 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Aktuelles-- */}
-      <section id='Aktuelles' className='relative bg-middleYellow'>
+      {/* <section id='Aktuelles' className='relative bg-middleYellow'>
         <Container styling={'flex flex-col items-center pt-10'}>
           <Textbox
             animation={'fade-up'}
@@ -1676,13 +1676,12 @@ export default function Home({ feed }) {
               Ob Lagerfeuer und Stockbrot, Akrobatik und Theater oder regelmäßige Lernförderungen
               mit spannenden Ausflügen. Hier können Sie sich ein Bild machen.
             </div>
-          </Textbox>
-          {/* Instagram */}
-          <div
+          </Textbox> */}
+      {/* Instagram */}
+      {/* <div
             data-aos='fade-up'
             className='m-auto flex w-[100%] max-w-[950px] flex-wrap justify-center'
           >
-            {/* Headers */}
             <div className='w-1/3'>
               <div className='mt-7 text-center font-poppins text-base sm:text-xl'>News</div>
               <div className='mx-auto mt-3 mb-8 h-[5px] w-10 bg-primary'></div>
@@ -1697,7 +1696,6 @@ export default function Home({ feed }) {
               </div>
               <div className='mx-auto mt-3 mb-8 h-[5px] w-10 bg-primary'></div>
             </div>
-            {/* Posts */}
             {images.map((image, index) => {
               if (index <= end) {
                 return (
@@ -1712,9 +1710,9 @@ export default function Home({ feed }) {
               }
             })}
           </div>
-          <Button click={loadMore} styling={'my-10'} cta={'Mehr laden'}></Button>
-        </Container>
-      </section>
+          <Button click={loadMore} styling={'my-10'} cta={'Mehr laden'}></Button> */}
+      {/* </Container>
+      </section> */}
 
       {/* --Termin Formular-- */}
       <section className='relative bg-middleYellow'>

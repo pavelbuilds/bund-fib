@@ -36,6 +36,7 @@ import InstaImage from '../components/InstaImage';
 
 export default function Home({ feed }) {
   const images = feed.data;
+  console.log('feed: ', feed.data);
 
   // Initialize AOS Animation Library
   useEffect(() => {
@@ -1664,55 +1665,59 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Aktuelles-- */}
-      {/* <section id='Aktuelles' className='relative bg-middleYellow'>
-        <Container styling={'flex flex-col items-center pt-10'}>
-          <Textbox
-            animation={'fade-up'}
-            section={'Aktuelles'}
-            slogan={'Neuigkeiten von uns, unseren Lerngruppen und Projekten.'}
-            styling={'lg:w-3/5 -mt-1'}
-          >
-            <div className='mb-0 font-source leading-tight sm:mb-20'>
-              Ob Lagerfeuer und Stockbrot, Akrobatik und Theater oder regelmäßige Lernförderungen
-              mit spannenden Ausflügen. Hier können Sie sich ein Bild machen.
-            </div>
-          </Textbox> */}
-      {/* Instagram */}
-      {/* <div
-            data-aos='fade-up'
-            className='m-auto flex w-[100%] max-w-[950px] flex-wrap justify-center'
-          >
-            <div className='w-1/3'>
-              <div className='mt-7 text-center font-poppins text-base sm:text-xl'>News</div>
-              <div className='mx-auto mt-3 mb-8 h-[5px] w-10 bg-primary'></div>
-            </div>
-            <div className='w-1/3'>
-              <div className='mt-7 text-center font-poppins text-base sm:text-xl'>Lerngruppen</div>
-              <div className='mx-auto mt-3 mb-8 h-[5px] w-10 bg-primary'></div>
-            </div>
-            <div className='w-1/3'>
-              <div className='mt-7 text-center font-poppins text-base sm:text-xl'>
-                Mitarbeitende
+      {images && (
+        <section id='Aktuelles' className='relative bg-middleYellow'>
+          <Container styling={'flex flex-col items-center pt-10'}>
+            <Textbox
+              animation={'fade-up'}
+              section={'Aktuelles'}
+              slogan={'Neuigkeiten von uns, unseren Lerngruppen und Projekten.'}
+              styling={'lg:w-3/5 -mt-1'}
+            >
+              <div className='mb-0 font-source leading-tight sm:mb-20'>
+                Ob Lagerfeuer und Stockbrot, Akrobatik und Theater oder regelmäßige Lernförderungen
+                mit spannenden Ausflügen. Hier können Sie sich ein Bild machen.
               </div>
-              <div className='mx-auto mt-3 mb-8 h-[5px] w-10 bg-primary'></div>
+            </Textbox>
+            {/* Instagram */}
+            <div
+              data-aos='fade-up'
+              className='m-auto flex w-[100%] max-w-[950px] flex-wrap justify-center'
+            >
+              <div className='w-1/3'>
+                <div className='mt-7 text-center font-poppins text-base sm:text-xl'>News</div>
+                <div className='mx-auto mt-3 mb-8 h-[5px] w-10 bg-primary'></div>
+              </div>
+              <div className='w-1/3'>
+                <div className='mt-7 text-center font-poppins text-base sm:text-xl'>
+                  Lerngruppen
+                </div>
+                <div className='mx-auto mt-3 mb-8 h-[5px] w-10 bg-primary'></div>
+              </div>
+              <div className='w-1/3'>
+                <div className='mt-7 text-center font-poppins text-base sm:text-xl'>
+                  Mitarbeitende
+                </div>
+                <div className='mx-auto mt-3 mb-8 h-[5px] w-10 bg-primary'></div>
+              </div>
+              {images.map((image, index) => {
+                if (index <= end) {
+                  return (
+                    <InstaImage
+                      key={index}
+                      src={image.media_type === 'VIDEO' ? image.thumbnail_url : image.media_url}
+                      alt={image.caption}
+                      link={image.permalink}
+                      prompt={image.media_type === 'VIDEO' ? true : false}
+                    />
+                  );
+                }
+              })}
             </div>
-            {images.map((image, index) => {
-              if (index <= end) {
-                return (
-                  <InstaImage
-                    key={index}
-                    src={image.media_type === 'VIDEO' ? image.thumbnail_url : image.media_url}
-                    alt={image.caption}
-                    link={image.permalink}
-                    prompt={image.media_type === 'VIDEO' ? true : false}
-                  />
-                );
-              }
-            })}
-          </div>
-          <Button click={loadMore} styling={'my-10'} cta={'Mehr laden'}></Button> */}
-      {/* </Container>
-      </section> */}
+            <Button click={loadMore} styling={'my-10'} cta={'Mehr laden'}></Button>
+          </Container>
+        </section>
+      )}
 
       {/* --Termin Formular-- */}
       <section className='relative bg-middleYellow'>

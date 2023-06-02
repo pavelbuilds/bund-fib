@@ -1752,7 +1752,7 @@ export default function Home({ feed }) {
                     primaryColor: 'F9B233',
                     textColor: '4d5055',
                   }}
-                  url='https://calendly.com/bundfib/kennenlerngesprach-allgemein'
+                  url='https://calendly.com/bundfib/erstes_kennenlernen_projekt_ffs'
                 />
               </div>
             </div>

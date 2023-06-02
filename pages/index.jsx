@@ -36,7 +36,6 @@ import InstaImage from '../components/InstaImage';
 
 export default function Home({ feed }) {
   const images = feed.data;
-  console.log('feed: ', feed.data);
 
   // Initialize AOS Animation Library
   useEffect(() => {

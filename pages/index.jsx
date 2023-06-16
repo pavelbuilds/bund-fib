@@ -1587,18 +1587,86 @@ export default function Home({ feed }) {
             <Gründer />
           </div>
           {/* Mitarbeiter Übersicht */}
-          <div data-aos='fade-up' className='mt-10 flex flex-wrap justify-between sm:mt-24'>
-            <Mitarbeiter bild={'/images/marlene.webp'} name={'Marlene'} job={'Projektleitung'} />
-            <Mitarbeiter bild={'/images/anna.webp'} name={'Anna'} job={''} />
-            <Mitarbeiter bild={'/images/arin.webp'} name={'Arin'} job={''} />
-            <Mitarbeiter bild={'/images/karin.webp'} name={'Camilla'} job={''} />
-            <Mitarbeiter bild={'/images/lukas.webp'} name={'Lukas'} job={''} />
-            <Mitarbeiter bild={'/images/madeleine.webp'} name={'Madeleine'} job={''} />
-            <Mitarbeiter bild={'/images/maggy.webp'} name={'Maggy'} job={''} />
-            <Mitarbeiter bild={'/images/matthias.webp'} name={'Matthias'} job={''} />
-            <Mitarbeiter bild={'/images/pauline.webp'} name={'Pauline'} job={''} />
-            <Mitarbeiter bild={'/images/salim.webp'} name={'Salim'} job={''} />
-            <Mitarbeiter bild={'/images/victoria.webp'} name={'Victoria'} job={''} />
+          <div className='mt-10 flex flex-wrap justify-between sm:mt-24'>
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/marlene.jpg'}
+              name={'Marlene'}
+              job={'Koordination & Projektleitung'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/maddy.jpg'}
+              name={'Maddy'}
+              job={'Betreuung & Workshopleitung'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/teodora.jpg'}
+              name={'Teodora'}
+              job={'Workshopleitung'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/lukas.jpg'}
+              name={'Lukas'}
+              job={'Workshopleitung'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/willi.jpg'}
+              name={'Willi'}
+              job={'Lehrkraft & Workshopleitung'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/pauline.jpg'}
+              name={'Pauline'}
+              job={'Lehrkraft & Workshopleitung'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/rim.jpg'}
+              name={'Rim'}
+              job={'Betreeung & Workshopleitung'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/julia.jpg'}
+              name={'Julia'}
+              job={'Betreeung & Workshopleitung'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/lika.jpg'}
+              name={'Lika'}
+              job={'Betreeung & Dokumentation'}
+            />
+            <Mitarbeiter bild={'/images/mitarbeiter/rosa.jpg'} name={'Rosa'} job={'Lehrkraft'} />
+            <Mitarbeiter bild={'/images/mitarbeiter/maggy.jpg'} name={'Maggy'} job={'Betreuung'} />
+            <Mitarbeiter bild={'/images/mitarbeiter/paul.jpg'} name={'Paul'} job={'Lehrkraft'} />
+            <Mitarbeiter bild={'/images/mitarbeiter/musa.jpg'} name={'Musa'} job={'Lehrkraft'} />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/adriana.jpg'}
+              name={'Adriana'}
+              job={'Lehrkraft & Workshopleitung'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/felix.jpg'}
+              name={'Felix'}
+              job={'Lehrkraft & Workshopleitung'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/ara.jpg'}
+              name={'Ara'}
+              job={'Lehrkraft & Workshopleitung'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/luisa.jpg'}
+              name={'Luisa'}
+              job={'Lehrkraft & Workshopleitung'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/katherina.jpg'}
+              name={'Katherina'}
+              job={'Betreeung'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/julius.jpg'}
+              name={'Julius'}
+              job={'Lehrkraft'}
+            />
           </div>
         </Container>{' '}
       </section>

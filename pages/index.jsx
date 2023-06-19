@@ -1621,17 +1621,17 @@ export default function Home({ feed }) {
             <Mitarbeiter
               bild={'/images/mitarbeiter/rim.jpg'}
               name={'Rim'}
-              job={'Betreeung & Workshopleitung'}
+              job={'Betreuung & Workshopleitung'}
             />
             <Mitarbeiter
               bild={'/images/mitarbeiter/julia.jpg'}
               name={'Julia'}
-              job={'Betreeung & Workshopleitung'}
+              job={'Betreuung & Workshopleitung'}
             />
             <Mitarbeiter
               bild={'/images/mitarbeiter/lika.jpg'}
               name={'Lika'}
-              job={'Betreeung & Dokumentation'}
+              job={'Betreuung & Dokumentation'}
             />
             <Mitarbeiter bild={'/images/mitarbeiter/rosa.jpg'} name={'Rosa'} job={'Lehrkraft'} />
             <Mitarbeiter bild={'/images/mitarbeiter/maggy.jpg'} name={'Maggy'} job={'Betreuung'} />
@@ -1660,7 +1660,7 @@ export default function Home({ feed }) {
             <Mitarbeiter
               bild={'/images/mitarbeiter/katherina.jpg'}
               name={'Katherina'}
-              job={'Betreeung'}
+              job={'Betreuung'}
             />
             <Mitarbeiter
               bild={'/images/mitarbeiter/julius.jpg'}

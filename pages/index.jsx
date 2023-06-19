@@ -114,7 +114,7 @@ export default function Home({ feed }) {
           </div>
           {/* Kalender */}
           <div className='mt-20 mb-20 flex w-full flex-col justify-center sm:mt-[5vh] sm:mb-[10vh] md:flex-row lg:mt-10 lg:mb-10'>
-            <div className='ml-5 mr-5 mb-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
+            {/* <div className='ml-5 mr-5 mb-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
               <div className='hidden md:block'>Standort Berlin</div>
 
               <a
@@ -142,7 +142,7 @@ export default function Home({ feed }) {
                   url='https://calendly.com/bundfib/erstes_kennenlernen_projekt_ffs'
                 />
               </div>
-            </div>
+            </div> */}
             <div className='ml-5 mr-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
               <div className='hidden md:block'>Standort Leipzig</div>
               <a

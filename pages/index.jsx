@@ -114,8 +114,8 @@ export default function Home({ feed }) {
           </div>
           {/* Kalender */}
           <div className='mt-20 mb-20 flex w-full flex-col justify-center sm:mt-[5vh] sm:mb-[10vh] md:flex-row lg:mt-10 lg:mb-10'>
-            {/* <div className='ml-5 mr-5 mb-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
-              <div className='hidden md:block'>Standort Berlin</div>
+            <div className='ml-5 mr-5 mb-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
+              <div className='hidden md:block'>Standort Hannover</div>
 
               <a
                 href='https://calendly.com/bundfib/erstes_kennenlernen_projekt_ffs'
@@ -123,7 +123,7 @@ export default function Home({ feed }) {
                 rel='noreferrer'
               >
                 <div className='mb-5 mt-5 block md:hidden'>
-                  <u>Standort Berlin</u>
+                  <u>Standort Hannover</u>
                 </div>
               </a>
               <div className='hidden md:block'>
@@ -139,10 +139,10 @@ export default function Home({ feed }) {
                     primaryColor: 'F9B233',
                     textColor: '4d5055',
                   }}
-                  url='https://calendly.com/bundfib/erstes_kennenlernen_projekt_ffs'
+                  url='https://calendly.com/bundfib/kennenlerngesprach-standort-in-hannover?month=2024-03'
                 />
               </div>
-            </div> */}
+            </div>
             <div className='ml-5 mr-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
               <div className='hidden md:block'>Standort Leipzig</div>
               <a

@@ -118,7 +118,7 @@ export default function Home({ feed }) {
               <div className='hidden md:block'>Standort Hannover</div>
 
               <a
-                href='https://calendly.com/bundfib/erstes_kennenlernen_projekt_ffs'
+                href='https://calendly.com/bundfib/kennenlerngesprach-standort-in-hannover?month=2024-03'
                 target='_blank'
                 rel='noreferrer'
               >

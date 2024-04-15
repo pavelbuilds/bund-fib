@@ -462,7 +462,7 @@ export default function Home({ feed }) {
               Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:
             </p>{' '}
             <p>
-              Basel Seido
+              {/* Basel Seido */}
               <br />
               Bund-fiB gUG (haftungsbeschr&auml;nkt)
               <br />

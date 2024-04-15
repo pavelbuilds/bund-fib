@@ -270,7 +270,7 @@ export default function Home({ feed }) {
             <b>Angaben gemäß § 5 TMG</b>
             <br />
             <br />
-            Basel Seido
+            {/* Basel Seido */}
             <br />
             Bund-fiB gUG (haftungsbeschränkt)
             <br />

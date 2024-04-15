@@ -853,7 +853,12 @@ export default function Home({ feed }) {
         <div className='mx-auto flex max-w-screen-xl items-center justify-between px-5 sm:px-20'>
           {/* Logo */}
           <a href='#Titelseite'>
-            <Image src='/images/logos/bund_fib_logo.webp' width={170} height={75} />
+            <Image
+              src='/images/logos/bund_fib_logo.webp'
+              width={170}
+              height={75}
+              alt='bund fib logo'
+            />
           </a>
           {/* Menu */}
           <ul className='hidden w-[400px] items-center justify-between font-source text-sm lg:flex'>
@@ -1365,11 +1370,12 @@ export default function Home({ feed }) {
                     </div>
                   </div>
                   <div className='my-8 mx-7 text-left font-source text-sm'>
-                    Als Bildungsträger sehen wir uns in der Verantwortung, unsere Ressourcen mit
-                    geflüchteten Familien zu teilen. Manchmal dauert es leider länger bis ein
-                    geflüchtetes Kind einen Schulplatz zugewiesen bekommt. In diesem Fall, fangen
+                    Als Bildungsträger sehen wir es als unsere Verantwortung, unsere Ressourcen mit
+                    geflüchteten Familien zu teilen. Manchmal dauert es leider länger, bis ein
+                    geflüchtetes Kind einen Schulplatz zugewiesen bekommt. In solchen Fällen fangen
                     wir die Kinder auf, beschulen sie und führen mit ihnen spannende Workshops und
-                    Projekte durch.
+                    Projekte durch, die nicht nur ihre Bildung fördern, sondern auch bis hin zur
+                    Berufsorientierung reichen.
                   </div>
                   {/* <a
                     className='flex bg-primary text-white text-sm font-semibold float-right sm:mt-5 mt-10 px-4 py-2 rounded-tl-2xl rounded-br-2xl'
@@ -1390,15 +1396,12 @@ export default function Home({ feed }) {
                     </div>
                   </div>
                   <div className='my-8 mx-7 text-left font-source text-sm'>
-                    {/* Auch auf europäischer Ebene möchten wir sozialbenachteiligte Kinder und
-                    Jugendliche miteinbeziehen und die Teilhabe an Bildung ermöglichen. Gemeinsam */}
-                    Gemeinsam mit der&nbsp;
-                    <a href='https://nachhaltigkeit.bvng.org/' className='underline'>
-                      Bundesvereinigung Nachhaltigkeit
-                    </a>
-                    &nbsp;wollen wir den Kindern und Jugendlichen zeigen, dass die Europäische Union
-                    entschlossen und vereint für Chancengleichheit steht. Wir bieten die Plattform
-                    für kulturellen Austausch und sprachbildende Angebote in Europa.
+                    Lehrkräfte sind die Schlüsselfiguren, wenn es um die Berufsorientierung unserer
+                    Schülerinnen und Schüler geht. Deshalb haben wir ein Programm entwickelt, das
+                    die Lehrkräfte, die mit uns arbeiten, in ihrer Weiterentwicklung unterstützt.
+                    Wir sind davon überzeugt, dass gut ausgebildete Lehrkräfte einen entscheidenden
+                    Beitrag dazu leisten können, junge Menschen auf ihrem Weg in die Berufswelt zu
+                    begleiten und zu inspirieren.
                   </div>
                   {/* <a
                     className='flex bg-primary text-white text-sm font-semibold float-right sm:mt-5 mt-10 px-4 py-2 rounded-tl-2xl rounded-br-2xl'

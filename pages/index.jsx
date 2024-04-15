@@ -1033,7 +1033,7 @@ export default function Home({ feed }) {
       {/* --Leistungsübersicht-- */}
       <section
         id='Leistungsübersicht'
-        className='relative bg-lightYellow pb-[650px] pt-20 sm:pb-28 sm:pt-32 lg:pb-0'
+        className='relative bg-lightYellow pb-[650px] pt-20 sm:pb-28 sm:pt-32 lg:pb-10'
       >
         <Container styling={'pb-40 flex lg:flex-row flex-col lg:items-center lg:justify-between'}>
           {/* Textabschnitt */}

@@ -1790,45 +1790,48 @@ export default function Home({ feed }) {
       )}
 
       {/* --Termin Formular-- */}
-      <section className='relative bg-middleYellow'>
-        <Container
-          data-aos='fade-up'
-          styling={'pt-32 pb-32 flex flex-col lg:flex-row items-center '}
-        >
-          <Textbox
-            section={'Persönlich oder digital'}
-            slogan={'Buchen Sie jetzt einen Termin'}
-            styling={'lg:w-1/2 -mt-1 pb-16 lg:px-20 sm:px-0'}
-            align={'left'}
-          >
-            <div className='mb-5 font-source leading-tight sm:mb-20'>
-              Finden Sie jetzt die passende Lernförderung für Ihre Schule. Wir setzen uns zusammen
-              und passen unsere Konzeption auf Ihre Schule an.
-            </div>
-          </Textbox>
-          {/* Calendly */}
-          <div className='relative z-10 flex w-1/2 items-center justify-center'>
-            <div className='mt-0 mb-10 flex w-full justify-center sm:mt-[5vh] sm:mb-[10vh] lg:mt-10 lg:mb-10'>
-              <div className='rounded-xl bg-white p-1 shadow-xl lg:my-10'>
-                <InlineWidget
-                  styles={{
-                    width: '45vh',
-                    height: '45vh',
-                  }}
-                  pageSettings={{
-                    backgroundColor: 'ffffff',
-                    hideEventTypeDetails: true,
-                    hideLandingPageDetails: true,
-                    primaryColor: 'F9B233',
-                    textColor: '4d5055',
-                  }}
-                  url='https://calendly.com/bundfib/erstes_kennenlernen_projekt_ffs'
-                />
-              </div>
-            </div>
-          </div>
-          <div />
-        </Container>
+
+      <section className='relative bg-darkYellow'>
+        {
+          //   <Container
+          //   data-aos='fade-up'
+          //   styling={'pt-32 pb-32 flex flex-col lg:flex-row items-center '}
+          // >
+          //   <Textbox
+          //     section={'Persönlich oder digital'}
+          //     slogan={'Buchen Sie jetzt einen Termin'}
+          //     styling={'lg:w-1/2 -mt-1 pb-16 lg:px-20 sm:px-0'}
+          //     align={'left'}
+          //   >
+          //     <div className='mb-5 font-source leading-tight sm:mb-20'>
+          //       Finden Sie jetzt die passende Lernförderung für Ihre Schule. Wir setzen uns zusammen
+          //       und passen unsere Konzeption auf Ihre Schule an.
+          //     </div>
+          //   </Textbox>
+          //   {/* Calendly */}
+          //   <div className='relative z-10 flex w-1/2 items-center justify-center'>
+          //     <div className='mt-0 mb-10 flex w-full justify-center sm:mt-[5vh] sm:mb-[10vh] lg:mt-10 lg:mb-10'>
+          //       <div className='rounded-xl bg-white p-1 shadow-xl lg:my-10'>
+          //         <InlineWidget
+          //           styles={{
+          //             width: '45vh',
+          //             height: '45vh',
+          //           }}
+          //           pageSettings={{
+          //             backgroundColor: 'ffffff',
+          //             hideEventTypeDetails: true,
+          //             hideLandingPageDetails: true,
+          //             primaryColor: 'F9B233',
+          //             textColor: '4d5055',
+          //           }}
+          //           url='https://calendly.com/bundfib/erstes_kennenlernen_projekt_ffs'
+          //         />
+          //       </div>
+          //     </div>
+          //   </div>
+          //   <div />
+          // </Container>
+        }
         {/* Wave */}
         <div className='wave-7 z-0'>
           <svg

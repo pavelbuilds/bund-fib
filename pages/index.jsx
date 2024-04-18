@@ -917,7 +917,7 @@ export default function Home({ feed }) {
           </h1>
           {/* Untertitle */}
           <div className='mt-10 px-5 text-center font-source text-lg leading-tight text-white sm:w-[600px] sm:px-0'>
-            Wir fördern und fordern mit individuellem Erfolgskonzept.
+            Als gemeinnützige Organisation bauen wir auf Bildung durch Wertschätzung.
           </div>
           {/* Buttons */}
           <div className='mt-10 flex flex-col items-center justify-center sm:flex-row'>
@@ -1871,36 +1871,38 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Downloads-- */}
-      <section id='Downloads' className='bg-darkYellow pt-20'>
-        <Container styling={'pb-2 flex justify-center'}>
-          {/* Karte */}
-          <div className='relative z-10 mt-10 mb-28 flex w-full flex-wrap'>
-            {/* Text - linke Seite */}
-            <div className='flex w-full flex-col items-center rounded-tl-3xl rounded-tr-3xl bg-navy py-16 px-14 shadow-2xl sm:block sm:w-2/5 sm:rounded-tr-none sm:rounded-bl-3xl'>
-              <div className='font-regular font-source text-lg text-white'>Downloads</div>
-              <div className='mt-5 h-[5px] w-10 bg-primary'></div>
-              <div className='font-pooppins mt-10 text-center text-xl font-bold leading-tight text-white sm:text-left sm:text-xl lg:text-3xl'>
-                Hier finden Sie alle Dokumente und Dateien
-              </div>
-            </div>
-            {/* Download Icons - rechte Seite */}
-            <div className='downloadsCSS flex w-full items-center justify-evenly rounded-br-3xl rounded-tr-none rounded-bl-3xl sm:w-3/5 sm:rounded-tr-3xl sm:rounded-bl-none'>
-              <a href='zusatzbogen.pdf' target='_blank'>
-                <div className='flex flex-col items-center justify-center py-14 text-center text-xs text-white sm:py-0 sm:text-sm'>
-                  <FontAwesomeIcon className='w-10 pb-4 text-white' icon={faFilePdf} />
-                  Zusatzbogen für <br /> Lernförderung
-                </div>
-              </a>
-              <a href='FIB-Heft.pdf' target='_blank'>
-                <div className='flex flex-col items-center justify-center text-xs text-white sm:text-sm'>
-                  <FontAwesomeIcon className='w-10 pb-4 text-white' icon={faFilePdf} />
-                  Unser fiB-Heft – <br /> Das Lerntagebuch <br /> <br />
-                </div>
-              </a>
-            </div>
-          </div>
-        </Container>
-      </section>
+      {
+        // <section id='Downloads' className='bg-darkYellow pt-20'>
+        //   <Container styling={'pb-2 flex justify-center'}>
+        //     {/* Karte */}
+        //     <div className='relative z-10 mt-10 mb-28 flex w-full flex-wrap'>
+        //       {/* Text - linke Seite */}
+        //       <div className='flex w-full flex-col items-center rounded-tl-3xl rounded-tr-3xl bg-navy py-16 px-14 shadow-2xl sm:block sm:w-2/5 sm:rounded-tr-none sm:rounded-bl-3xl'>
+        //         <div className='font-regular font-source text-lg text-white'>Downloads</div>
+        //         <div className='mt-5 h-[5px] w-10 bg-primary'></div>
+        //         <div className='font-pooppins mt-10 text-center text-xl font-bold leading-tight text-white sm:text-left sm:text-xl lg:text-3xl'>
+        //           Hier finden Sie alle Dokumente und Dateien
+        //         </div>
+        //       </div>
+        //       {/* Download Icons - rechte Seite */}
+        //       <div className='downloadsCSS flex w-full items-center justify-evenly rounded-br-3xl rounded-tr-none rounded-bl-3xl sm:w-3/5 sm:rounded-tr-3xl sm:rounded-bl-none'>
+        //         <a href='zusatzbogen.pdf' target='_blank'>
+        //           <div className='flex flex-col items-center justify-center py-14 text-center text-xs text-white sm:py-0 sm:text-sm'>
+        //             <FontAwesomeIcon className='w-10 pb-4 text-white' icon={faFilePdf} />
+        //             Zusatzbogen für <br /> Lernförderung
+        //           </div>
+        //         </a>
+        //         <a href='FIB-Heft.pdf' target='_blank'>
+        //           <div className='flex flex-col items-center justify-center text-xs text-white sm:text-sm'>
+        //             <FontAwesomeIcon className='w-10 pb-4 text-white' icon={faFilePdf} />
+        //             Unser fiB-Heft – <br /> Das Lerntagebuch <br /> <br />
+        //           </div>
+        //         </a>
+        //       </div>
+        //     </div>
+        //   </Container>
+        // </section>
+      }
 
       {/* --Footer-- */}
       <footer className='relative mx-auto  bg-lightYellow px-7 pt-20 pb-10 sm:px-20'>

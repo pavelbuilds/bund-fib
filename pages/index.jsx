@@ -1399,12 +1399,13 @@ export default function Home({ feed }) {
                     </div>
                   </div>
                   <div className='my-8 mx-7 text-left font-source text-sm'>
-                    Als Bildungsträger sehen wir es als unsere Verantwortung, unsere Ressourcen mit
+                    Als Bildungsträger sehen wir uns in der Verantwortung, unsere Ressourcen mit
                     geflüchteten Familien zu teilen. Manchmal dauert es leider länger, bis ein
                     geflüchtetes Kind einen Schulplatz zugewiesen bekommt. In solchen Fällen fangen
                     wir die Kinder auf, beschulen sie und führen mit ihnen spannende Workshops und
-                    Projekte durch, die nicht nur ihre Bildung fördern, sondern auch bis hin zur
-                    Berufsorientierung reichen.
+                    Projekte durch, die nicht nur ihre Bildung fördern, sondern auch gezielt auf die
+                    Berufsvorbereitung ausgerichtet sind. Unsere Grundbildung bereitet die Kinder
+                    somit auch auf eine mögliche berufliche Zukunft vor.
                   </div>
                   {/* <a
                     className='flex bg-primary text-white text-sm font-semibold float-right sm:mt-5 mt-10 px-4 py-2 rounded-tl-2xl rounded-br-2xl'

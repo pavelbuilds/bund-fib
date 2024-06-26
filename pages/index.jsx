@@ -1622,6 +1622,37 @@ export default function Home({ feed }) {
           {/* Mitarbeiter Übersicht */}
           <div className='mt-10 flex flex-wrap justify-between sm:mt-24'>
             <Mitarbeiter
+              bild={'/images/mitarbeiter/Marlene_neu.jpeg'}
+              name={'Marlene'}
+              // job={'Alle Teams'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/Katrin_neu.jpeg'}
+              name={'Katrin'}
+              // job={'Alle Teams'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/Lika_neu.jpeg'}
+              name={'Lika'}
+              // job={'Alle Teams'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/Schabnaz_neu.jpeg'}
+              name={'Schabnaz'}
+              // job={'Alle Teams'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/Nathalie_neu.jpeg'}
+              name={'Nathalie'}
+              // job={'Alle Teams'}
+            />
+            <Mitarbeiter
+              bild={'/images/mitarbeiter/Mika_neu.jpeg'}
+              name={'Mika'}
+              // job={'Alle Teams'}
+            />
+            {/*             
+            <Mitarbeiter
               bild={'/images/mitarbeiter/marlene.jpg'}
               name={'Marlene'}
               job={'Koordination & Projektleitung'}
@@ -1661,6 +1692,7 @@ export default function Home({ feed }) {
               name={'Julia'}
               job={'Betreuung & Workshopleitung'}
             />
+
             <Mitarbeiter
               bild={'/images/mitarbeiter/lika.jpg'}
               name={'Lika'}
@@ -1699,7 +1731,7 @@ export default function Home({ feed }) {
               bild={'/images/mitarbeiter/julius.jpg'}
               name={'Julius'}
               job={'Lehrkraft'}
-            />
+            /> */}
           </div>
         </Container>{' '}
       </section>

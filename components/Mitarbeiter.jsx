@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Mitarbeiter = ({ bild, name, job }) => {
   return (
-    <div className='mt-8 flex w-[45%] flex-col items-center sm:w-[27%] lg:w-[17%]'>
+    <div className='mt-8 flex w-[45%] flex-col items-center sm:w-[27%] lg:mx-[5%] lg:w-[20%]'>
       <Image
         priority
         width='100'

@@ -1415,12 +1415,12 @@ export default function Home({ feed }) {
               </div>
               <div className='mx-12 mt-5 h-[5px] w-10 bg-primary '></div>
               <div className='text-md mx-12 mt-8 mb-16 font-source sm:mt-10'>
-                Die Zusatzausbildung "DaF/DaZ und souveräner Umgang mit interkulturellen
-                Klassen/Gruppen" ist wichtig, da sie Auszubildenden hilft, nicht nur sprachliche
-                Kompetenzen zu vermitteln, sondern auch interkulturelle Sensibilität zu entwickeln,
-                um auf die Vielfalt der Schülerinnen und Schüler angemessen einzugehen und ein
-                förderliches Lernumfeld zu schaffen. Dies fördert nicht nur den Lernprozess, sondern
-                stärkt auch das gegenseitige Verständnis und die Akzeptanz innerhalb der
+                Die Zusatzausbildung &quot;DaF/DaZ und souveräner Umgang mit interkulturellen
+                Klassen/Gruppen&quot; ist wichtig, da sie Auszubildenden hilft, nicht nur
+                sprachliche Kompetenzen zu vermitteln, sondern auch interkulturelle Sensibilität zu
+                entwickeln, um auf die Vielfalt der Schülerinnen und Schüler angemessen einzugehen
+                und ein förderliches Lernumfeld zu schaffen. Dies fördert nicht nur den Lernprozess,
+                sondern stärkt auch das gegenseitige Verständnis und die Akzeptanz innerhalb der
                 Lerngruppen.
               </div>
               <a className='umami--click--KennenlernenVereinabren-Termin-buchen absolute bottom-0 right-0 float-right mt-10 flex rounded-tl-2xl rounded-br-2xl bg-primary px-6 py-2 text-sm font-semibold text-white sm:mt-5'>
@@ -1440,13 +1440,13 @@ export default function Home({ feed }) {
               </div>
               <div className='mx-12 mt-5 h-[5px] w-10 bg-primary '></div>
               <div className='text-md mx-12 mt-8 mb-5 font-source sm:mt-10'>
-                Die Zusatzausbildung "Umgang mit traumatisierten Geflüchteten im Schul- und Sozialen
-                Bereich und Burnout Prävention" ist wichtig, weil sie Auszubildende befähigt,
-                angemessen auf die besonderen Bedürfnisse traumatisierter Geflüchteter einzugehen
-                und gleichzeitig ihre eigene psychische Gesundheit zu schützen. Dies trägt zur
-                Schaffung einer unterstützenden Umgebung bei, die sowohl den Geflüchteten als auch
-                den Auszubildenden zugutekommt und langfristig zur erfolgreichen Integration
-                beiträgt.
+                Die Zusatzausbildung &quot;Umgang mit traumatisierten Geflüchteten im Schul- und
+                Sozialen Bereich und Burnout Prävention&quot; ist wichtig, weil sie Auszubildende
+                befähigt, angemessen auf die besonderen Bedürfnisse traumatisierter Geflüchteter
+                einzugehen und gleichzeitig ihre eigene psychische Gesundheit zu schützen. Dies
+                trägt zur Schaffung einer unterstützenden Umgebung bei, die sowohl den Geflüchteten
+                als auch den Auszubildenden zugutekommt und langfristig zur erfolgreichen
+                Integration beiträgt.
               </div>
               <a className='umami--click--ProbestundeVereinbaren-Termin-buchen absolute bottom-0 right-0 float-right mt-10 flex rounded-tl-2xl rounded-br-2xl bg-primary px-6 py-2 text-sm font-semibold text-white sm:mt-5'>
                 Termin anfragen

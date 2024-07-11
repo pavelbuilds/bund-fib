@@ -254,6 +254,11 @@ export default function Home({ feed }) {
               Privatunterricht
             </div>
           </a>
+          <a href='#Berufsvorbereitung'>
+            <div onClick={toogleHamburgerMenu} className='mb-10 sm:mb-16'>
+              Berufsvorbereitung
+            </div>
+          </a>
           <a href='#Bildungsprojekte'>
             <div onClick={toogleHamburgerMenu} className='mb-10 sm:mb-16'>
               Bildungsprojekte
@@ -902,6 +907,9 @@ export default function Home({ feed }) {
                     <a href='#Privatunterricht'>
                       <li className='py-3 px-10 hover:bg-darkYellow'>Privatunterricht</li>
                     </a>
+                    <a href='#Berufsvorbereitung'>
+                      <li className='py-3 px-10 hover:bg-darkYellow'>Berufsvorbereitung</li>
+                    </a>
                     <a href='#Bildungsprojekte'>
                       <li className='py-3 px-10 hover:bg-darkYellow'>Bildungsprojekte</li>
                     </a>
@@ -1136,6 +1144,7 @@ export default function Home({ feed }) {
                 mehr erfahren <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
               </div>
             </a>
+
             {/* Bildungsprojekte */}
             <a
               data-aos='fade-up'
@@ -1296,10 +1305,7 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Privatunterricht-- */}
-      <section
-        id='Privatunterricht'
-        className='relative bg-lightYellow pt-0 sm:pb-10 sm:pt-20 lg:pb-52'
-      >
+      <section id='Privatunterricht' className='relative bg-lightYellow pt-0 sm:pb-10 sm:pt-20 '>
         <Container styling={'pb-32 flex flex-col items-center'}>
           {/* Textabschnitt */}
           <Textbox
@@ -1355,6 +1361,100 @@ export default function Home({ feed }) {
             </div>
           </div>
         </Container>
+      </section>
+
+      {/* --Berufsvorbereitung-- */}
+      <section id='Berufsvorbereitung' className='relative bg-lightYellow pt-0 sm:pt-20 lg:pb-52'>
+        <Container styling={'pb-32 flex flex-col items-center'}>
+          {/* Textabschnitt */}
+          <Textbox
+            animation={'fade-up'}
+            section={'Berufsvorbereitung'}
+            slogan={'Ein duales Studium beim Bund-fiB'}
+            align={'center'}
+            styling={'lg:w-3/5 -mt-1'}
+          >
+            {/* Text */}
+            <div className='mb-10 font-source leading-tight'>
+              Du möchtest dein Studium im sozialen Bereich durch praktische Erfahrung bereichern?
+              Werde unser Praxispartner im dualen Studium und gestalte die Zukunft im sozialen
+              Bereich aktiv mit! Profitiere von praxisnaher Ausbildung, individueller Betreuung,
+              finanzieller Unabhängigkeit, wertvollen Netzwerkaufbau, vielseitigen Aufgaben und
+              hervorragenden Karrierechancen.
+            </div>
+          </Textbox>
+          <Button
+            className='umami--click--TitleSeite-Termin-buchen'
+            cta={'Termin buchen'}
+            click={toggleKontaktieren}
+          ></Button>
+          <Textbox
+            animation={'fade-up'}
+            section={''}
+            slogan={'Zusatzqualifikationen für Auszubildende der Sozialen Berufe:'}
+            align={'center'}
+            styling={'lg:w-3/5 mt-20'}
+          >
+            {/* Text */}
+            <div className='mb-10 font-source leading-tight'>
+              Zusatzqualifikationen sind für Auszubildende im sozialen Bereich essenziell, da sie
+              spezialisierte Kenntnisse und Fähigkeiten vermitteln, die Karrierechancen verbessern
+              und die Qualität der Arbeit steigern.
+            </div>
+          </Textbox>
+          {/* Kennenlernen & Probestunde */}
+          <div className='relative z-10 mt-0 flex flex-col text-white sm:mt-14 lg:flex-row'>
+            {/* Kennenlernen Karte */}
+            <div
+              data-aos={'fade-up'}
+              onClick={toggleKontaktieren}
+              className='erstesKennenlernen relative mb-20  cursor-pointer rounded-2xl shadow-2xl transition-transform sm:w-full lg:mr-12 lg:mb-0 lg:w-1/2 lg:hover:scale-[102%]'
+            >
+              <div className='mx-12 mt-12 font-poppins text-xl sm:mt-12'>
+                DaF/ DaZ und souveräner Umgang mit interkulturellen Klassen/ Gruppen
+              </div>
+              <div className='mx-12 mt-5 h-[5px] w-10 bg-primary '></div>
+              <div className='text-md mx-12 mt-8 mb-16 font-source sm:mt-10'>
+                Die Zusatzausbildung "DaF/DaZ und souveräner Umgang mit interkulturellen
+                Klassen/Gruppen" ist wichtig, da sie Auszubildenden hilft, nicht nur sprachliche
+                Kompetenzen zu vermitteln, sondern auch interkulturelle Sensibilität zu entwickeln,
+                um auf die Vielfalt der Schülerinnen und Schüler angemessen einzugehen und ein
+                förderliches Lernumfeld zu schaffen. Dies fördert nicht nur den Lernprozess, sondern
+                stärkt auch das gegenseitige Verständnis und die Akzeptanz innerhalb der
+                Lerngruppen.
+              </div>
+              <a className='umami--click--KennenlernenVereinabren-Termin-buchen absolute bottom-0 right-0 float-right mt-10 flex rounded-tl-2xl rounded-br-2xl bg-primary px-6 py-2 text-sm font-semibold text-white sm:mt-5'>
+                Termin anfragen
+                <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
+              </a>
+            </div>
+            {/* Probestunde Karte */}
+            <div
+              data-aos={'fade-up'}
+              onClick={toggleKontaktieren}
+              className='kostenloseProbestunde relative  cursor-pointer rounded-2xl shadow-2xl transition-transform sm:w-full lg:mr-12 lg:mb-0 lg:w-1/2 lg:hover:scale-[102%]'
+            >
+              <div className='mx-12 mt-12 font-poppins text-xl sm:mt-12'>
+                Umgang mit traumatisierten Geflüchteten im Schul- und Sozialen Bereich und Burnout
+                Prävention
+              </div>
+              <div className='mx-12 mt-5 h-[5px] w-10 bg-primary '></div>
+              <div className='text-md mx-12 mt-8 mb-5 font-source sm:mt-10'>
+                Die Zusatzausbildung "Umgang mit traumatisierten Geflüchteten im Schul- und Sozialen
+                Bereich und Burnout Prävention" ist wichtig, weil sie Auszubildende befähigt,
+                angemessen auf die besonderen Bedürfnisse traumatisierter Geflüchteter einzugehen
+                und gleichzeitig ihre eigene psychische Gesundheit zu schützen. Dies trägt zur
+                Schaffung einer unterstützenden Umgebung bei, die sowohl den Geflüchteten als auch
+                den Auszubildenden zugutekommt und langfristig zur erfolgreichen Integration
+                beiträgt.
+              </div>
+              <a className='umami--click--ProbestundeVereinbaren-Termin-buchen absolute bottom-0 right-0 float-right mt-10 flex rounded-tl-2xl rounded-br-2xl bg-primary px-6 py-2 text-sm font-semibold text-white sm:mt-5'>
+                Termin anfragen
+                <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
+              </a>
+            </div>
+          </div>
+        </Container>
         {/* Wave */}
         <div className='wave-four z-0'>
           <svg
@@ -1372,7 +1472,7 @@ export default function Home({ feed }) {
       </section>
 
       {/* --Bildungsprojekte-- */}
-      <section id='Bildungsprojekte' className='bg-middleYellow pt-10 pb-14 sm:pt-20'>
+      <section id='Bildungsprojekte' className='bg-middleYellow pt-10 pb-14'>
         <Container styling={'flex lg:flex-row flex-col-reverse'}>
           {/* Slider */}
           <div
@@ -2002,6 +2102,9 @@ export default function Home({ feed }) {
             </a>
             <a href='#Privatunterricht'>
               <div className='my-1 font-source text-sm'>Privatunterricht</div>
+            </a>
+            <a href='#Berufsvorbereitung'>
+              <div className='my-1 font-source text-sm'>Berufsvorbereitung</div>
             </a>
             <a href='#Bildungsprojekte'>
               <div className='my-1 font-source text-sm'>Bildungsprojekte</div>

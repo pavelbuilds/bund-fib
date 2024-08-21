@@ -958,11 +958,11 @@ export default function Home({ feed }) {
           </div>
           {/* Buttons */}
           <div className='mt-10 flex flex-col items-center justify-center sm:flex-row'>
-            <Button
+            {/* <Button
               className='umami--click--TitleSeite-Termin-buchen'
               cta={'Termin buchen'}
               click={toggleKontaktieren}
-            ></Button>
+            ></Button> */}
             <a href='#Leistungsübersicht'>
               <button className=' mt-5 rounded-full border-2 border-white px-9 py-1 font-source text-lg font-semibold text-white transition-all sm:ml-5 sm:mt-0 sm:h-8 sm:py-0 sm:text-sm lg:hover:scale-[102%]'>
                 mehr erfahren

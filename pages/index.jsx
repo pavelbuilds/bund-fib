@@ -118,7 +118,7 @@ export default function Home({ feed }) {
               <div className='hidden md:block'>Standort Berlin</div>
 
               <a
-                href='https://calendly.com/bundfib/erstes_kennenlernen_projekt_ffs'
+                href='https://calendly.com/schabnaz-saba-bund-fib/kennenlerngespraech-berlin'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -139,7 +139,7 @@ export default function Home({ feed }) {
                     primaryColor: 'F9B233',
                     textColor: '4d5055',
                   }}
-                  url='https://calendly.com/bundfib/erstes_kennenlernen_projekt_ffs'
+                  url='https://calendly.com/schabnaz-saba-bund-fib/kennenlerngespraech-berlin'
                 />
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function Home({ feed }) {
               <div className='hidden md:block'>Standort Hannover</div>
 
               <a
-                href='https://calendly.com/bundfib/kennenlerngesprach-standort-in-hannover?month=2024-03'
+                href='https://calendly.com/benedict-hepp-bund-fib/kennlerngespraech-hannover'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -168,14 +168,14 @@ export default function Home({ feed }) {
                     primaryColor: 'F9B233',
                     textColor: '4d5055',
                   }}
-                  url='https://calendly.com/bundfib/kennenlerngesprach-standort-in-hannover?month=2024-03'
+                  url='https://calendly.com/benedict-hepp-bund-fib/kennlerngespraech-hannover'
                 />
               </div>
             </div>
             <div className='ml-5 mr-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
               <div className='hidden md:block'>Standort Leipzig</div>
               <a
-                href='https://calendly.com/bundfib/kennenlerngesprach-lehkraft-in-leipzig'
+                href='https://calendly.com/nathalie-thorleuchter-bund-fib/kennenlerngespraech-standort-leipzig'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -196,7 +196,7 @@ export default function Home({ feed }) {
                     primaryColor: 'F9B233',
                     textColor: '4d5055',
                   }}
-                  url='https://calendly.com/bundfib/kennenlerngesprach-lehkraft-in-leipzig'
+                  url='https://calendly.com/nathalie-thorleuchter-bund-fib/kennenlerngespraech-standort-leipzig'
                 />
               </div>
             </div>

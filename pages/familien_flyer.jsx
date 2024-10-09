@@ -2,8 +2,7 @@ import { useEffect } from 'react';
 
 function Flyer() {
   useEffect(() => {
-    // This will open the PDF in a new tab automatically when the component mounts
-    window.open('/familien_flyer.pdf', 'noopener,noreferrer');
+    window.location.href = '/familien_flyer.pdf';
   }, []);
 
   return (

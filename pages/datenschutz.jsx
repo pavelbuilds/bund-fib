@@ -177,7 +177,7 @@ const Datenschutz = () => {
             Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:
           </p>{' '}
           <p>
-            {/* Basel Seido */}
+            Marlene Langenbucher de Olavarrieta & Sören Dübel
             <br />
             Bund-fiB gUG (haftungsbeschr&auml;nkt)
             <br />

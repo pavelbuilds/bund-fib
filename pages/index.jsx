@@ -2176,9 +2176,15 @@ export default function Home({ feed }) {
             </a>
           </div>
           {/* Mobile Block*/}
-          <div className='mt-10 block flex w-full items-center justify-between  font-poppins sm:w-1/2 lg:hidden'>
+          <div className='mt-10  flex w-full items-center justify-between  font-poppins sm:w-1/2 lg:hidden'>
             <div onClick={toggleImpressum}>Impressum</div>
-            <div onClick={toggleDatenschutz}>Datenschutz</div>
+            <a
+              className='my-1 cursor-pointer font-source text-sm'
+              href='/datenschutz'
+              target='_blank'
+            >
+              Datenschutz
+            </a>
             <div>Kontakt</div>
           </div>
         </div>

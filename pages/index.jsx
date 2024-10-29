@@ -147,20 +147,21 @@ export default function Home({ feed }) {
             <div className='ml-5 mr-5 mb-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
               <div className='hidden md:block'>Standort Hannover</div>
 
-              {/* <a
+              <a
                 href='https://calendly.com/benedict-hepp-bund-fib/kennlerngespraech-hannover'
                 target='_blank'
                 rel='noreferrer'
-              > */}
-              <div className='mb-5 mt-5 block md:hidden'>
-                <u>Standort Hannover</u> <br />
+              >
+                <div className='mb-5 mt-5 block md:hidden'>
+                  <u>Standort Hannover</u>
+                  {/* <br />
                 <br />
                 Aktuell sind wir für den Standort Hannover nicht auf der Suche nach neuen
-                Nachhilfekräften
-              </div>
-              {/* </a> */}
+                Nachhilfekräften */}
+                </div>
+              </a>
               <div className='hidden md:block'>
-                {/* <InlineWidget
+                <InlineWidget
                   styles={{
                     width: '50vh',
                     height: '50vh',
@@ -173,11 +174,11 @@ export default function Home({ feed }) {
                     textColor: '4d5055',
                   }}
                   url='https://calendly.com/benedict-hepp-bund-fib/kennlerngespraech-hannover'
-                /> */}
-                <div className='flex h-[50vh] w-[25vw] items-center justify-center'>
+                />
+                {/* <div className='flex h-[50vh] w-[25vw] items-center justify-center'>
                   Aktuell sind wir für den Standort Hannover nicht auf der Suche nach neuen
                   Nachhilfekräften
-                </div>
+                </div> */}
               </div>
             </div>
             <div className='ml-5 mr-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>

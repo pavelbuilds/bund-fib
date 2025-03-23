@@ -26,8 +26,8 @@ const Datenschutz = () => {
           <br />
           <br />
           Die Gesellschaft verfolgt ausschließlich und unmittelbar gemeinnützige Zwecke im Sinne des
-          Abschnitts "Steuerbegünstigte Zwecke" der Abgabenordnung. Die Körperschaft ist selbstlos
-          tätig; sie verfolgt nicht in erster Linie eigenwirtschaftliche Zwecke. Zweck der
+          Abschnitts &ldquo;Steuerbegünstigte Zwecke&rdquo; der Abgabenordnung. Die Körperschaft ist
+          selbstlos tätig; sie verfolgt nicht in erster Linie eigenwirtschaftliche Zwecke. Zweck der
           Gesellschaft ist die Förderung der Erziehung, Volks- und Berufsbildung, einschließlich der
           Studentenhilfe. Die Gesellschaft verwirklicht ihre Satzungszwecke insbesondere durch
           Betrieb von einem Bildungsinstitut, die Organisation und Durchführung von Lernförderung

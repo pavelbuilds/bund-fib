@@ -20,17 +20,17 @@ const Testimonials = () => {
   return (
     <>
       {testimonials.map((testimonial, index) => (
-        <figure key={index} className='mt-28'>
-          <blockquote>
+        <div key={index} className='mt-28'>
+          <div>
             <p className='text-base font-semibold text-gray-900'>{testimonial.text}</p>
-          </blockquote>
-          <figcaption className='mt-6 flex items-center justify-end space-x-3 rtl:space-x-reverse'>
+          </div>
+          <div className='mt-6 flex items-center justify-end space-x-3 rtl:space-x-reverse'>
             <div className='flex items-center divide-x-2 divide-gray-300 rtl:divide-x-reverse dark:divide-gray-700'>
-              <cite className='pr-3 font-medium'>{testimonial.name}</cite>
-              <cite className='pl-3 text-sm'>{testimonial.company}</cite>
+              <div className='pr-3 font-medium'>{testimonial.name}</div>
+              <div className='pl-3 text-sm'>{testimonial.company}</div>
             </div>
-          </figcaption>
-        </figure>
+          </div>
+        </div>
       ))}
     </>
   );

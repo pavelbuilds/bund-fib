@@ -22,7 +22,9 @@ const Testimonials = () => {
       {testimonials.map((testimonial, index) => (
         <figure key={index} className='mt-28'>
           <blockquote>
-            <p className='text-base font-semibold text-gray-900'>"{testimonial.text}"</p>
+            <p className='text-base font-semibold text-gray-900'>
+              &ldquo;{testimonial.text}&rdquo;
+            </p>
           </blockquote>
           <figcaption className='mt-6 flex items-center justify-end space-x-3 rtl:space-x-reverse'>
             <div className='flex items-center divide-x-2 divide-gray-300 rtl:divide-x-reverse dark:divide-gray-700'>

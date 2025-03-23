@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Router, { useRouter } from 'next/router';
-
 import { useState, useEffect } from 'react';
+
 // Import Components
 import Container from '../components/Container';
 import Textbox from '../components/Textbox';
@@ -12,6 +12,8 @@ import Mitarbeiter from '../components/Mitarbeiter';
 import Gründer from '../components/Gründer';
 import KontaktFormular from '../components/KontaktFormular';
 import NavigationsLeiste from '../components/NavigationsLeiste';
+import PartnerLogos from '../components/PartnerLogos';
+import Testimonials from '../components/Testimonials.jsx';
 // Import Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -25,14 +27,17 @@ import {
   faArrowUp,
 } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 // Import Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper';
+
 // Import Animtaion Library
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 // Import Calendly
 import { InlineWidget } from 'react-calendly';
 import InstaImage from '../components/InstaImage';
@@ -942,82 +947,7 @@ export default function Home({ feed }) {
 
       {/* --Partner Logos-- */}
       <section className='bg-lightYellow'>
-        <Container styling={'pt-5'}>
-          {/* Partner Logos */}
-          <div className='flex flex-wrap items-center justify-evenly overflow-hidden'>
-            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/4'>
-              <Image
-                src='/images/logos/weißes_berlin_logo.webp'
-                width={200}
-                height={200}
-                alt='Berliner Senat Logo'
-              />
-              {/* <img
-                className='sm:h-9 h-9 sm:px-0'
-                src='/images/logos/weißes_berlin_logo.webp'
-                alt=''
-              /> */}
-            </div>
-            <div className='flex w-1/2 justify-center pl-5 pt-5 sm:w-1/2 sm:pl-0 md:w-1/4'>
-              <Image
-                src='/images/logos/stacked_berlin_logo.webp'
-                width={130}
-                height={100}
-                alt='Berzirksamt Mitte Logo'
-              />
-              {/* <img
-                className='sm:h-14 h-9 sm:px-0'
-                src='/images/logos/stacked_berlin_logo.webp'
-                alt=''
-              /> */}
-            </div>
-            <div className='flex w-1/2 justify-center pl-5 pt-5 sm:w-1/2 sm:pl-0 md:w-[20%]'>
-              <Image
-                src='/images/logos/leipzig.png'
-                width={240}
-                height={80}
-                alt='Stadt Leipzig Logo'
-              />
-            </div>
-            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/4'>
-              <Image
-                src='/images/logos/haus_der_jugend.webp'
-                width={120}
-                height={80}
-                alt='Haus der Jugend Logo'
-              />
-              {/* <img
-                className='sm:h-12 h-9 sm:px-0'
-                src='/images/logos/haus_der_jugend.webp'
-                alt=''
-              /> */}
-            </div>
-            {/* <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/4'>
-              <Image src='/images/logos/OASE_logo.webp' width={160} height={80} alt='OASE Logo' />
-            </div> */}
-            <div className='flex w-1/2 justify-center pr-5 pt-14  sm:w-1/2 sm:pr-0 md:w-1/4'>
-              <Image
-                src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
-                width={170}
-                height={80}
-                alt='Bundesvereinigung Nachhaltigkeit Logo'
-              />
-              {/* <img
-                className='sm:h-12 h-9 sm:px-0'
-                src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
-                alt=''
-              /> */}
-            </div>
-            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/4'>
-              <Image
-                src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
-                width={240}
-                height={80}
-                alt='Deutsche Kinder und Jugendstiftung Logo'
-              />
-            </div>
-          </div>
-        </Container>
+        <PartnerLogos />
       </section>
 
       {/* --Leistungsübersicht-- */}
@@ -1542,82 +1472,8 @@ export default function Home({ feed }) {
             data-aos='fade-up'
             className='relative z-10 flex w-full flex-wrap items-center justify-evenly overflow-hidden'
           >
-            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/4'>
-              <Image
-                src='/images/logos/weißes_berlin_logo.webp'
-                width={200}
-                height={200}
-                alt='Berliner Senat Logo'
-              />
-              {/* <img
-                className='sm:h-9 h-9 sm:px-0'
-                src='/images/logos/weißes_berlin_logo.webp'
-                alt=''
-              /> */}
-            </div>
-            <div className='flex w-1/2 justify-center pl-5 pt-5 sm:w-1/2 sm:pl-0 md:w-1/4'>
-              <Image
-                src='/images/logos/stacked_berlin_logo.webp'
-                width={130}
-                height={100}
-                alt='Berzirksamt Mitte Logo'
-              />
-              {/* <img
-                className='sm:h-14 h-9 sm:px-0'
-                src='/images/logos/stacked_berlin_logo.webp'
-                alt=''
-              /> */}
-            </div>
-            <div className='flex w-1/2 justify-center pr-5 pt-5 sm:w-1/2 sm:pr-0 md:w-1/4'>
-              <Image
-                src='/images/logos/haus_der_jugend.webp'
-                width={120}
-                height={80}
-                alt='Haus der Jugend Logo'
-              />
-              {/* <img
-                className='sm:h-12 h-9 sm:px-0'
-                src='/images/logos/haus_der_jugend.webp'
-                alt=''
-              /> */}
-            </div>
-            {/* <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/4'>
-              <Image src='/images/logos/OASE_logo.webp' width={160} height={80} alt='OASE Logo' />
-            </div> */}
-            <div className='flex w-1/2 justify-center pr-5 pt-14  sm:w-1/2 sm:pr-0 md:w-1/4'>
-              <Image
-                src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
-                width={170}
-                height={80}
-                alt='Bundesvereinigung Nachhaltigkeit Logo'
-              />
-              {/* <img
-                className='sm:h-12 h-9 sm:px-0'
-                src='/images/logos/bundesvereinigung_nachhaltigkeit.svg'
-                alt=''
-              /> */}
-            </div>
-            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-1/4'>
-              <Image
-                src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
-                width={240}
-                height={80}
-                alt='Deutsche Kinder und Jugendstiftung Logo'
-              />
-              {/* <img
-                className='sm:h-9 h-9 sm:px-0'
-                src='/images/logos/deutsche_kinder_und_jugendstiftung.png'
-                alt=''
-              /> */}
-            </div>
-            <div className='flex w-1/2 justify-center pl-5 pt-14 sm:w-1/2 sm:pl-0 md:w-[20%]'>
-              <Image
-                src='/images/logos/leipzig.png'
-                width={240}
-                height={80}
-                alt='Deutsche Kinder und Jugendstiftung Logo'
-              />
-            </div>
+            <PartnerLogos />
+            <Testimonials />
           </div>
         </Container>{' '}
         {/* Wave */}
@@ -1988,27 +1844,83 @@ export default function Home({ feed }) {
       <section id='Downloads' className='bg-darkYellow pt-20'>
         <Container styling={'pb-2 flex justify-center'}>
           {/* Karte */}
-          <div className='relative z-10 mt-10 mb-28 flex w-full flex-wrap'>
+          <div className='relative z-10 mt-10 mb-28 flex w-full '>
             {/* Text - linke Seite */}
-            <div className='flex w-full flex-col items-center rounded-tl-3xl rounded-tr-3xl bg-navy py-16 px-14 shadow-2xl sm:block sm:w-2/5 sm:rounded-tr-none sm:rounded-bl-3xl'>
-              <div className='font-regular font-source text-lg text-white'>Material-fiB</div>
-              <div className='mt-5 h-[5px] w-10 bg-primary'></div>
-              <div className='font-pooppins mt-10 text-center text-xl font-bold leading-tight text-white sm:text-left sm:text-xl lg:text-3xl'>
-                Hier finden Sie alle Dokumente und Dateien
+            <div className='flex h-full w-full items-center justify-center rounded-tl-3xl  rounded-tr-none rounded-bl-3xl bg-navy px-14 shadow-2xl sm:block sm:w-2/5'>
+              <div className='j flex h-full flex-col justify-center'>
+                <div className='font-regular font-source text-lg text-white'>Material-fiB</div>
+                <div className='mt-5 h-[5px] w-10 bg-primary'></div>
+                <div className='font-pooppins mt-10 text-left text-xl font-bold leading-tight text-white sm:text-xl lg:text-3xl'>
+                  Hier finden Sie alle Dokumente und Dateien
+                </div>
               </div>
             </div>
             {/* Download Icons - rechte Seite */}
-            <div className='downloadsCSS flex w-full items-center justify-evenly rounded-br-3xl rounded-tr-none rounded-bl-3xl sm:w-3/5 sm:rounded-tr-3xl sm:rounded-bl-none'>
+            <div className='downloadsCSS flex w-full flex-wrap items-center justify-center gap-4 rounded-br-3xl  rounded-tr-3xl  rounded-bl-none py-14 sm:w-3/5'>
               <a href='zusatzbogen.pdf' target='_blank'>
-                <div className='flex flex-col items-center justify-center py-14 text-center text-xs text-white sm:py-0 sm:text-sm'>
-                  <FontAwesomeIcon className='w-10 pb-4 text-white' icon={faFilePdf} />
-                  Zusatzbogen für <br /> Lernförderung
+                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='w-8 pb-2 text-white' icon={faFilePdf} />
+                  Zusatzbogen für <br /> Lernförderung <br /> <br />
                 </div>
               </a>
               <a href='FIB-Heft.pdf' target='_blank'>
-                <div className='flex flex-col items-center justify-center text-xs text-white sm:text-sm'>
-                  <FontAwesomeIcon className='w-10 pb-4 text-white' icon={faFilePdf} />
+                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='w-8 pb-2 text-white' icon={faFilePdf} />
                   Unser fiB-Heft – <br /> Das Lerntagebuch <br /> <br />
+                </div>
+              </a>
+              <a href='/images/flyer/F_arabisch.png' target='_blank'>
+                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='w-8 pb-2  text-white' icon={faFilePdf} />
+                  Fit für die Schule <br /> Arabisch <br /> <br />
+                </div>
+              </a>
+              <a href='/images/flyer/F_deutsch.png' target='_blank'>
+                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='w-8 pb-2  text-white' icon={faFilePdf} />
+                  Fit für die Schule <br /> Deutsch <br /> <br />
+                </div>
+              </a>
+              <a href='/images/flyer/F_englisch.png' target='_blank'>
+                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='w-8 pb-2  text-white' icon={faFilePdf} />
+                  Fit für die Schule <br /> Englisch <br /> <br />
+                </div>
+              </a>
+              <a href='/images/flyer/F_farsi.png' target='_blank'>
+                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='w-8 pb-2  text-white' icon={faFilePdf} />
+                  Fit für die Schule <br /> Farsi <br /> <br />
+                </div>
+              </a>
+              <a href='/images/flyer/F_franzosisch.png' target='_blank'>
+                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='w-8 pb-2  text-white' icon={faFilePdf} />
+                  Fit für die Schule <br /> Französisch <br /> <br />
+                </div>
+              </a>
+              <a href='/images/flyer/F_kurdisch.png' target='_blank'>
+                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='w-8 pb-2  text-white' icon={faFilePdf} />
+                  Fit für die Schule <br /> Kurdisch <br /> <br />
+                </div>
+              </a>
+              <a href='/images/flyer/F_russisch.png' target='_blank'>
+                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='w-8 pb-2  text-white' icon={faFilePdf} />
+                  Fit für die Schule <br /> Russisch <br /> <br />
+                </div>
+              </a>
+              <a href='/images/flyer/F_spanisch.png' target='_blank'>
+                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='w-8 pb-2  text-white' icon={faFilePdf} />
+                  Fit für die Schule <br /> Spanisch <br /> <br />
+                </div>
+              </a>
+              <a href='/images/flyer/F_türkisch.png' target='_blank'>
+                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='w-8 pb-2  text-white' icon={faFilePdf} />
+                  Fit für die Schule <br /> Türkisch <br /> <br />
                 </div>
               </a>
             </div>
@@ -2125,6 +2037,11 @@ export default function Home({ feed }) {
             </a>
             <a href='#Downloads'>
               <div className='my-1 font-source text-sm'>Material-fiB</div>
+            </a>
+            <a className='my-1 cursor-pointer font-source text-sm' href='/satzung' target='_blank'>
+              {/* onClick={toggleDatenschutz}
+              className='my-1 cursor-pointer font-source text-sm'>  */}
+              Satzung
             </a>
           </div>
           {/* Kontakt */}

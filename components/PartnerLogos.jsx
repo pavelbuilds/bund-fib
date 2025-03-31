@@ -3,7 +3,7 @@ import Container from './Container';
 
 const partnerLogos = [
   {
-    src: '/images/logos/EU.jpg',
+    src: '/images/logos/supportLogo-1-removebg-preview.png',
     width: 180,
     height: 50,
     alt: 'Berliner Senat Logo',

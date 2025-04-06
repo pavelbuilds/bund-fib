@@ -9,7 +9,7 @@ import Textbox from '../components/Textbox';
 import Button from '../components/Button';
 import BurgerMenu from '../components/BurgerMenu';
 import Mitarbeiter from '../components/Mitarbeiter';
-import Gründer from '../components/Gründer';
+import Gruender from '../components/Gruender.jsx';
 import KontaktFormular from '../components/KontaktFormular';
 import NavigationsLeiste from '../components/NavigationsLeiste';
 import PartnerLogos from '../components/PartnerLogos';
@@ -1525,15 +1525,16 @@ export default function Home({ feed }) {
                 click={toggleKontaktieren}
               ></Button>
             </Textbox>
-            <Gründer />
+            <Gruender />
           </div>
+
           {/* Mitarbeiter Übersicht */}
-          <div className='mt-10 flex flex-wrap justify-between sm:mt-24'>
-            <Mitarbeiter
+          <div className='mt-60 flex flex-wrap justify-between sm:mt-44 sm:justify-start'>
+            {/* <Mitarbeiter
               bild={'/images/mitarbeiter/Marlene_neu.jpeg'}
               name={'Marlene'}
               // job={'Alle Teams'}
-            />
+            /> */}
             <Mitarbeiter
               bild={'/images/mitarbeiter/Katrin_neu.jpeg'}
               name={'Katrin'}
@@ -2054,8 +2055,8 @@ export default function Home({ feed }) {
             <a href='mailto:verwaltung@bund-fib.de'>
               <div className='my-1 font-source text-sm'>verwaltung@bund-fib.de</div>
             </a>
-            <a href='tel:+4915758745855'>
-              <div className='my-1 font-source text-sm'>+49 157 58745855</div>
+            <a href='tel:+493068908696'>
+              <div className='my-1 font-source text-sm'>+49 30 68908696</div>
             </a>
           </div>
           {/* Mobile Block*/}

@@ -8,7 +8,7 @@ import Textbox from '../components/Textbox';
 import Button from '../components/Button';
 import BurgerMenu from '../components/BurgerMenu';
 import Mitarbeiter from '../components/Mitarbeiter';
-import Gründer from '../components/Gründer';
+import Gruender from '../components/Gruender';
 import KontaktFormular from '../components/KontaktFormular';
 // Import Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -1628,7 +1628,7 @@ export default function Home({ feed }) {
                 click={toggleKontaktieren}
               ></Button>
             </Textbox>
-            <Gründer />
+            <Gruender />
           </div>
           {/* Mitarbeiter Übersicht */}
           <div className='mt-10 flex flex-wrap justify-between sm:mt-24'>

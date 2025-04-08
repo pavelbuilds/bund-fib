@@ -21,6 +21,12 @@ const partnerLogos = [
     alt: 'Berliner Senat Logo',
   },
   {
+    src: '/images/logos/Landeshauptstadt-Hannover.png',
+    width: 180,
+    height: 50,
+    alt: 'Berliner Senat Logo',
+  },
+  {
     src: '/images/logos/MindsEurope.png',
     width: 100,
     height: 50,

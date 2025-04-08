@@ -17,7 +17,7 @@ const Gruender = ({ animation }) => {
         {/* Stacked photos effect */}
         <div className='relative h-96'>
           {/* First image (bottom) */}
-          <div className='absolute -top-10 h-96 w-full rotate-[-3deg] overflow-hidden rounded-xl'>
+          <div className='absolute -top-20 h-96 w-full rotate-[-3deg] overflow-hidden rounded-xl'>
             <Image
               src='/images/GesellschafterArbeiten.jpg'
               alt='Gesellschafter'
@@ -27,7 +27,7 @@ const Gruender = ({ animation }) => {
             />
           </div>
           {/* Second image (top) */}
-          <div className='absolute top-48 left-8 h-96 w-full rotate-6 overflow-hidden rounded-xl shadow-xl'>
+          <div className='absolute top-52 left-8 h-96 w-full rotate-6 overflow-hidden rounded-xl shadow-xl'>
             <Image
               src='/images/Gesellschafter.jpg'
               alt='Gesellschafter'

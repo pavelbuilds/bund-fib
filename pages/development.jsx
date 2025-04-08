@@ -1982,7 +1982,7 @@ export default function Home({ feed }) {
           />
           {/* <img className='h-12 object-contain' src='/images/logos/bund_fib_logo.webp' alt='' /> */}
           {/* Leistungen */}
-          <div className='hidden lg:block'>
+          {/* <div className='hidden lg:block'>
             <div className='font-poppins text-base'>Leistungen</div>
             <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
             <a href='#Lernförderung'>
@@ -1997,7 +1997,7 @@ export default function Home({ feed }) {
             <a href='#Bildungsprojekte'>
               <div className='my-1 font-source text-sm'>Erasmus+</div>
             </a>
-          </div>
+          </div> */}
           {/* Unternehmen */}
           <div className='hidden lg:block'>
             <div className='font-poppins text-base'>Unternehmen</div>

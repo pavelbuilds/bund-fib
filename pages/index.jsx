@@ -1987,7 +1987,7 @@ export default function Home({ feed }) {
           </div>
           {/* <img className='h-12 object-contain' src='/images/logos/bund_fib_logo.webp' alt='' /> */}
           {/* Leistungen */}
-          <div className='hidden lg:block'>
+          {/* <div className='hidden lg:block'>
             <div className='font-poppins text-base'>Leistungen</div>
             <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
             <a href='#Lernförderung'>
@@ -2005,10 +2005,10 @@ export default function Home({ feed }) {
             <a href='#Bildungsprojekte'>
               <div className='my-1 font-source text-sm'>Erasmus+</div>
             </a>
-          </div>
-          {/* Unternehmen */}
+          </div> */}
+          {/* Organisation */}
           <div className='hidden lg:block'>
-            <div className='font-poppins text-base'>Unternehmen</div>
+            <div className='font-poppins text-base'>Organisation</div>
             <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
             <a href='#ÜberUns'>
               <div className='my-1 font-source text-sm'>Über Uns</div>
@@ -2018,6 +2018,11 @@ export default function Home({ feed }) {
             </a>
             <a href='#Jobs'>
               <div className='my-1 font-source text-sm'>Jobs</div>
+            </a>
+            <a className='my-1 cursor-pointer font-source text-sm' href='/satzung' target='_blank'>
+              {/* onClick={toggleDatenschutz}
+              className='my-1 cursor-pointer font-source text-sm'>  */}
+              Satzung
             </a>
           </div>
           {/* Informationen */}
@@ -2039,23 +2044,18 @@ export default function Home({ feed }) {
             <a href='#Downloads'>
               <div className='my-1 font-source text-sm'>Material-fiB</div>
             </a>
-            <a className='my-1 cursor-pointer font-source text-sm' href='/satzung' target='_blank'>
-              {/* onClick={toggleDatenschutz}
-              className='my-1 cursor-pointer font-source text-sm'>  */}
-              Satzung
-            </a>
           </div>
           {/* Kontakt */}
           <div className='hidden lg:block'>
             <div className='font-poppins text-base'>Kontakt</div>
             <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
-            <a className='cursor-pointer' onClick={toggleKontaktieren}>
+            {/* <a className='cursor-pointer' onClick={toggleKontaktieren}>
               <div className='my-1 font-source text-sm'>Termin vereinbaren</div>
-            </a>
+            </a> */}
             <a href='mailto:verwaltung@bund-fib.de'>
               <div className='my-1 font-source text-sm'>verwaltung@bund-fib.de</div>
             </a>
-            <a href='tel:+493068908696'>
+            <a href='tel:+493068908697'>
               <div className='my-1 font-source text-sm'>+49 30 68908696</div>
             </a>
           </div>

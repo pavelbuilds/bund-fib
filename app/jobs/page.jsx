@@ -311,7 +311,7 @@ const Jobs = () => {
                   <div className='py-32'>
                     <p>
                       Bitte akzeptieren Sie die Verwendung von Cookies, um das Kalender-Widget zu
-                      verwenden.{' '}
+                      verwenden.
                       <span
                         className='underline cursor-pointer'
                         onClick={() => setShowCookieConsent(true)}

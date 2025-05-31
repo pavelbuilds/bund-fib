@@ -24,8 +24,8 @@ const FitFuerDieSchule = () => {
           <p className='text-lg pb-20'>
             Viele geflüchtete Kinder und Jugendliche müssen in Berlin lange auf einen Schulplatz
             warten – und damit auch auf die Möglichkeit, Deutsch zu lernen. Genau hier setzt das
-            Programm "Fit für die Schule" an: In Lerngruppen können Kinder und Jugendliche
-            unabhängig vom Regelunterricht ihre Sprachkenntnisse auf- und ausbauen.
+            Programm &quot;Fit f&uuml;r die Schule&quot; an: In Lerngruppen k&ouml;nnen Kinder und
+            Jugendliche unabhängig vom Regelunterricht ihre Sprachkenntnisse auf- und ausbauen.
           </p>
 
           <p className='text-lg pb-20'>
@@ -39,10 +39,10 @@ const FitFuerDieSchule = () => {
           </p>
 
           <p className='text-lg pb-20'>
-            Zusätzlich bieten wir ebenfalls das Programm "Berliner Ferienschulen" an, dass sowohl
-            Kinder und Jugendliche ohne Schulplatz als auch Kindern und Jugendlichen, die bereits in
-            Willkommensklassen sind, ein Ferienangebot schafft. Spielerisch wird das Deutsch lernen
-            mit Ausflügen und Kreativworkshops verbunden, um auch in den Ferien das
+            Zusätzlich bieten wir ebenfalls das Programm &quot;Berliner Ferienschulen&quot; an, dass
+            sowohl Kinder und Jugendliche ohne Schulplatz als auch Kindern und Jugendlichen, die
+            bereits in Willkommensklassen sind, ein Ferienangebot schafft. Spielerisch wird das
+            Deutsch lernen mit Ausflügen und Kreativworkshops verbunden, um auch in den Ferien das
             Selbstbewusstsein zu stärken und den Sozialraum erfahrbar zu machen.
           </p>
         </Container>

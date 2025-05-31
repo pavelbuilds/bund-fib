@@ -40,11 +40,12 @@ const GemeinsamHandeln = () => {
           </p>
           <p className='pb-20  text-lg'>
             2024 führte der Bund für integrative Bildung in kleinem Rahmen Beteiligungsund
-            Workshopangebote an Berliner Schulen unter dem eigenen Konzept "Integratives Lernen &
-            Lehren" durch.
+            Workshopangebote an Berliner Schulen unter dem eigenen Konzept &quot;Integratives Lernen
+            & Lehren&quot; durch.
           </p>
           <p className='pb-20  text-lg'>
-            <b>"Gemeinsam handeln"</b> ist ein Programm von <b>Save the Children</b> und der
+            <b>&quot;Gemeinsam handeln&quot;</b> ist ein Programm von <b>Save the Children</b> und
+            der
             <b> Deutschen Kinder- und Jugendstiftung (DKJS)</b>.
           </p>
 

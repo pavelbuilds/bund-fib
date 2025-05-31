@@ -1,3 +1,8 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import Image from 'next/image';
 const testimonials = [
   {
     text: '"Die Zusammenarbeit mit fiB funktioniert problemlos. Es ist immer jemand erreichbar und hat ein offenes Ohr für unsere Anliegen. Die Organisation der Nachhilfe sowie alle damit verbundenen bürokratischen Angelegenheiten werden von den Mitarbeiter:innen von fiB übernommen. Der Kontakt ist stets sehr angenehm, und wir freuen uns, dass die Kinder in unserer Gemeinschaftsunterkunft durch fiB in der Nachhilfe unterstützt werden."',
@@ -18,21 +23,57 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <>
-      {testimonials.map((testimonial, index) => (
-        <div key={index} className='mt-28'>
-          <div>
-            <p className='text-base font-semibold text-gray-900'>{testimonial.text}</p>
-          </div>
-          <div className='mt-6 flex items-center justify-end space-x-3 rtl:space-x-reverse'>
-            <div className='flex items-center divide-x-2 divide-gray-300 rtl:divide-x-reverse dark:divide-gray-700'>
-              <div className='pr-3 font-medium'>{testimonial.name}</div>
-              <div className='pl-3 text-sm'>{testimonial.company}</div>
+    <div className='w-full relative sm:mt-10'>
+      <Swiper
+        modules={[Pagination]}
+        spaceBetween={30}
+        slidesPerView={1}
+        pagination={{
+          clickable: true,
+          bulletClass: 'swiper-pagination-bullet !bg-gray-400',
+          bulletActiveClass: 'swiper-pagination-bullet-active !bg-gray-900',
+        }}
+        className='sm:pb-12'
+      >
+        {testimonials.map((testimonial, index) => (
+          <SwiperSlide key={index}>
+            <div className='relative mb-2 w-[80%] rounded-md px-8 py-20 overflow-visible'>
+              {/* Bottom left splash */}
+              <div className='absolute bottom-14 -left-14 size-24'>
+                <Image
+                  className='object-contain'
+                  src='/images/splashes_bottom.svg'
+                  alt='Testimonial'
+                  fill
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
+              {/* Top right splash */}
+              <div className='absolute top-4 -right-10 size-24'>
+                <Image
+                  className='object-contain'
+                  src='/images/splashes_top.svg'
+                  alt='Testimonial'
+                  fill
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
+              <div>
+                <p className='text-base text-left font-semibold text-gray-900'>
+                  {testimonial.text}
+                </p>
+              </div>
+              <div className='translate-y-20 sm:translate-y-0 mt-6 flex items-center justify-end space-x-3 rtl:space-x-reverse'>
+                <div className='flex items-center divide-x-2 divide-gray-300 rtl:divide-x-reverse dark:divide-gray-700'>
+                  <div className='pr-3 font-medium'>{testimonial.name}</div>
+                  <div className='pl-3 text-sm'>{testimonial.company}</div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      ))}
-    </>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 

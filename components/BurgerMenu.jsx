@@ -1,14 +1,18 @@
-const BurgerMenu = ({ state, onClickFunc }) => {
+import { useState } from 'react';
+
+const BurgerMenu = ({ hamburgerClicked, toogleHamburgerMenu }) => {
   return (
-    <button
-      onClick={onClickFunc}
-      className={`lg:hidden hamburger hamburger--slider ${state ? 'is-active' : ''}`}
-      type='button'
-    >
-      <span className='hamburger-box'>
-        <span className='hamburger-inner'></span>
-      </span>
-    </button>
+    <>
+      <button
+        onClick={toogleHamburgerMenu}
+        className={`lg:hidden hamburger hamburger--slider ${hamburgerClicked ? 'is-active' : ''}`}
+        type='button'
+      >
+        <span className='hamburger-box'>
+          <span className='hamburger-inner'></span>
+        </span>
+      </button>
+    </>
   );
 };
 

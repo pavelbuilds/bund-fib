@@ -54,7 +54,7 @@ const KontaktFormular = ({ styling }) => {
   };
 
   return (
-    <div className='lg:min-h-[372px]'>
+    <div className='lg:min-h-[372px] w-full'>
       {submitted ? (
         <div className='w-full h-full flex justify-center items-center'>
           <img className='w-20 h-20 rounded-[30px]' src='images/check_icon.gif' alt='' />
@@ -103,7 +103,7 @@ const KontaktFormular = ({ styling }) => {
           ></textarea>
           <button
             onClick={(e) => handleSubmit(e)}
-            className='mx-auto mt-10 w-2/4 bg-primary font-source px-9 sm:py-0 py-1 rounded-full text-white sm:text-sm text-lg sm:h-8 font-semibold'
+            className='mx-auto mt-10  bg-primary font-source px-9 sm:py-0 py-1 rounded-full text-white sm:text-sm text-lg sm:h-8 font-semibold'
             type='submit'
           >
             Abschicken

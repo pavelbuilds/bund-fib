@@ -27,7 +27,7 @@ const Gruender = ({ animation }) => {
             />
           </div>
           {/* Second image (top) */}
-          <div className='absolute top-52 left-8 h-96 w-full rotate-6 overflow-hidden rounded-xl shadow-xl'>
+          <div className='absolute top-52 md:left-8 h-96 w-full rotate-6 overflow-hidden rounded-xl shadow-xl'>
             <Image
               src='/images/Gesellschafter.jpg'
               alt='Gesellschafter'
@@ -47,7 +47,7 @@ const Gruender = ({ animation }) => {
             showLarsInfo ? 'bg-[rgba(0,0,0,0.7)]' : ''
           } absolute top-[75%] left-[25%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:top-[85%] sm:text-[10px]`}
         >
-          <FontAwesomeIcon className='w-8 text-primary' icon={faCircle} />
+          <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
           {showLarsInfo && (
             <div className='ml-2'>
               <b>Lars Mikeler</b>
@@ -65,7 +65,7 @@ const Gruender = ({ animation }) => {
             showBenedictInfo ? 'bg-[rgba(0,0,0,0.7)]' : ''
           } absolute top-[90%] left-[37%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:top-[100%] sm:text-[10px]`}
         >
-          <FontAwesomeIcon className='w-8 text-primary' icon={faCircle} />
+          <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
           {showBenedictInfo && (
             <div className='ml-2'>
               <b>Benedict Hepp</b>
@@ -83,7 +83,7 @@ const Gruender = ({ animation }) => {
             showMarleneInfo ? 'bg-[rgba(0,0,0,0.7)]' : ''
           } absolute top-[75%] left-[58%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:top-[85%] sm:text-[10px]`}
         >
-          <FontAwesomeIcon className='w-8 text-primary' icon={faCircle} />
+          <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
           {showMarleneInfo && (
             <div className='ml-2'>
               <b>Marlene Langenbucher de Olavarrieta</b>
@@ -101,7 +101,7 @@ const Gruender = ({ animation }) => {
             showSorenInfo ? 'bg-[rgba(0,0,0,0.7)]' : ''
           } absolute top-[105%] left-[73%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:top-[100%] sm:text-[10px]`}
         >
-          <FontAwesomeIcon className='w-8 text-primary' icon={faCircle} />
+          <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
           {showSorenInfo && (
             <div className='ml-2'>
               <b>Sören Dübel</b>

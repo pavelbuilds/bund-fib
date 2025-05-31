@@ -2,11 +2,6 @@
 
 import { useEffect } from 'react';
 
-export const metadata = {
-  title: 'Familien Flyer - Bund FIB',
-  description: 'Familien Flyer der Bund FIB gUG',
-};
-
 export default function Flyer() {
   useEffect(() => {
     window.location.href = '/familien_flyer.pdf';

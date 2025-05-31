@@ -2,10 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import Container from '../../components/Container';
 import Image from 'next/image';
-export const metadata = {
-  title: 'Partner - Bund FIB',
-  description: 'Partner der Bund FIB gUG',
-};
 
 export default function Partner() {
   const partnerLogos = [

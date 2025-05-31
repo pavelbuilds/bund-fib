@@ -25,7 +25,8 @@ const GemeinsamHandeln = () => {
           <p className='pb-20 pt-20  text-lg'>
             Geflüchtete Kinder und Jugendliche stehen vor vielen Herausforderungen: belastende
             Erfahrungen, ein neues Schulsystem und Sprachbarrieren erschweren das Ankommen.
-            <b>"Gemeinsam handeln"</b> hilft Schulen, diese Kinder gezielt zu unterstützen.
+            <b>&quot;Gemeinsam handeln&quot;</b> hilft Schulen, diese Kinder gezielt zu
+            unterstützen.
           </p>
           <p className='pb-20   text-lg'>
             Das Programm vermittelt Wissen und Strategien zur psychosozialen Unterstützung,

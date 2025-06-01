@@ -53,10 +53,10 @@ const Jobs = () => {
                 {/* Text - rechte Seite */}
               </div>
               <div className='mb-12 flex w-full flex-col items-start rounded-3xl bg-white py-20 px-10 shadow-2xl sm:mb-0 sm:px-14 lg:w-3/5 lg:items-start lg:rounded-3xl lg:rounded-tl-none lg:rounded-bl-none'>
-                <div className='font-poppins text-lg'>Ich möchte mitmachen</div>
+                <div className='font-poppins text-base sm:text-lg'>Ich möchte mitmachen</div>
                 <div className='mt-5 h-[5px] w-10 bg-primary'></div>
                 {/* Slogan */}
-                <div className='my-10 text-left font-berlin text-5xl leading-tight'>
+                <div className='my-10 text-left font-berlin text-3xl sm:text-5xl leading-tight'>
                   Honorartätigkeiten bei uns
                 </div>
                 {/* Beschreibung */}
@@ -93,10 +93,10 @@ const Jobs = () => {
                 {/* Text - rechte Seite */}
               </div>
               <div className='mb-12 flex w-full flex-col items-start rounded-3xl bg-white py-20 px-10 shadow-2xl sm:mb-0 sm:px-14 lg:w-3/5 lg:items-start lg:rounded-3xl lg:rounded-tl-none lg:rounded-bl-none'>
-                <div className='font-poppins text-lg'>Ich möchte mitmachen</div>
+                <div className='font-poppins text-base sm:text-lg'>Ich möchte mitmachen</div>
                 <div className='mt-5 h-[5px] w-10 bg-primary'></div>
                 {/* Slogan */}
-                <div className='my-10 text-left font-berlin text-5xl leading-tight'>
+                <div className='my-10 text-left font-berlin text-3xl sm:text-5xl leading-tight'>
                   Jobs bei uns
                 </div>
                 {/* Beschreibung */}
@@ -123,7 +123,7 @@ const Jobs = () => {
               animation={'fade-up'}
               section={'Ich möchte mitmachen'}
               slogan={'Initiativbewerbung'}
-              styling={'w-full'}
+              styling={'w-full '}
               align={'left'}
             >
               <div className='mb-10 font-source leading-loose sm:mb-20 w-[80%]'>

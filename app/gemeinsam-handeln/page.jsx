@@ -50,12 +50,12 @@ const GemeinsamHandeln = () => {
             <b> Deutschen Kinder- und Jugendstiftung (DKJS)</b>.
           </p>
 
-          <p className='text-lg pb-5 hover:underline pl-10'>
+          <p className='text-sm sm:text-lg pb-5 hover:underline sm:pl-10 overflow-hidden'>
             <a href='https://eduaid.online/' target='_blank'>
               <span className='pr-4'>🔗</span>https://www.dkjs.de/programm/gemeinsam-handeln/
             </a>
           </p>
-          <p className='text-lg pb-40 hover:underline pl-10'>
+          <p className='text-sm sm:text-lg pb-40 hover:underline sm:pl-10 overflow-hidden'>
             <a href='https://www.instagram.com/eduaid_online/' target='_blank'>
               <span className='pr-4'>🔗</span>
               https://www.savethechildren.de/informieren/einsatzorte/deutschland/bildung/gemeinsam-handeln/

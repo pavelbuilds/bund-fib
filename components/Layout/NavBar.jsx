@@ -564,7 +564,7 @@ const NavBar = () => {
             </AnimatePresence>
           </div>
           {/* Social Media Icons for Burger Menu */}
-          <div className='flex items-center gap-4 mt-10 absolute bottom-5 left-1/2 -translate-x-1/2'>
+          <div className='flex items-center gap-4 mt-10 absolute bottom-20 left-1/2 -translate-x-1/2'>
             {/* Instagram */}
             <a
               href='https://www.instagram.com/bund_fib/'

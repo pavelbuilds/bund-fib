@@ -46,8 +46,8 @@ const AktivWerden = () => {
                 <br />
                 <h2 className='text-2xl font-bold'>Was wir bieten:</h2>
                 <br />
-                <ul className='list-disc pl-5'>
-                  <li className='mb-2'>Ein herzliches Team, das auf Augenhöhe zusammenarbeitet</li>
+                <ul className='list-disc pl-5 text-left'>
+                  <li className='mb-2 '>Ein herzliches Team, das auf Augenhöhe zusammenarbeitet</li>
                   <li className='mb-2'>Raum für eigene Ideen und Eigenverantwortung</li>
                   <li className='mb-2'>Austausch, Begleitung und ggf. Fortbildungsmöglichkeiten</li>
                 </ul>
@@ -110,7 +110,7 @@ const AktivWerden = () => {
                 <br />
                 <h2 className='text-2xl font-bold'>Das bringst du mit:</h2>
                 <br />
-                <ul className='list-disc pl-5'>
+                <ul className='list-disc pl-5 text-left'>
                   <li className='mb-2'>
                     Du bist immatrikuliert an einer Universität und befindest dich im Rahmen deines
                     Studiums (Sozialwissenschaften, Lehramt, Erziehungswissenschaften, Soziale
@@ -133,7 +133,7 @@ const AktivWerden = () => {
                 <br />
                 <h2 className='text-2xl font-bold'>Was wir bieten:</h2>
                 <br />
-                <ul className='list-disc pl-5'>
+                <ul className='list-disc pl-5 text-left'>
                   <li className='mb-2'>
                     Ein kleines, junges Team und eine niedrige Hierarchie – wir arbeiten auf
                     Augenhöhe.

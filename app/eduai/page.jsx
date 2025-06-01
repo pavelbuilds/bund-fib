@@ -32,7 +32,7 @@ const EduAI = () => {
             Um die KI-Schulung so praktisch wie möglich zu gestalten, wird sich EduAId auf Folgendes
             konzentrieren:
           </p>
-          <ol className='list-decimal pl-10 space-y-12 text-lg pb-20'>
+          <ol className='list-decimal pl-5 sm:pl-10 space-y-12 text-lg pb-20'>
             <li>
               Eine benutzerfreundliche digitale Plattform: Pädagog*innen können von einem Ort aus
               auf Schulungsmodule, Ressourcen und Zertifizierungsprogramme zugreifen.
@@ -58,12 +58,12 @@ const EduAI = () => {
             Alle weiteren Informationen und aktuellen Entwicklungen finden sich auf der offiziellen
             Website des Projekts oder über Instagram:
           </p>
-          <p className='text-lg pb-5 hover:underline pl-10'>
+          <p className='text-sm sm:text-lg pb-5 hover:underline sm:pl-10 '>
             <a href='https://eduaid.online/' target='_blank'>
               <span className='pr-4'>🔗</span> https://eduaid.online/
             </a>
           </p>
-          <p className='text-lg pb-32 hover:underline pl-10'>
+          <p className='text-sm sm:text-lg pb-32 hover:underline sm:pl-10'>
             <a href='https://www.instagram.com/eduaid_online/' target='_blank'>
               <span className='pr-4'>🔗</span> https://www.instagram.com/eduaid_online/
             </a>

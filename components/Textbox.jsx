@@ -8,11 +8,11 @@ const Textbox = ({ section, slogan, align, styling, children, animation, devider
         align == 'left' ? 'lg:text-left' : ''
       } lg:pb-0 pb-16 lg:mx-0 sm:mx-auto ${styling}`}
     >
-      <div className='font-poppins w-full text-lg mt-7'>{section}</div>
+      <div className='font-poppins w-full text-base sm:text-lg mt-7'>{section}</div>
       {/* Line */}
       {devider && <div className='w-10 h-[5px] bg-primary mt-5'></div>}
       {/* Heading */}
-      <div className='font-berlin text-5xl leading-tight my-10'>{slogan}</div>
+      <div className='font-berlin text-3xl sm:text-5xl leading-tight my-10'>{slogan}</div>
       {children}
     </div>
   );

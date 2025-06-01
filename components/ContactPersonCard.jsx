@@ -4,14 +4,14 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const ContactPersonCard = ({ person, project, className = '' }) => {
   return (
-    <div className={`${className} flex flex-col justify-start w-full  items-start pt-20 pb-32 `}>
+    <div className={`${className} flex flex-col justify-start w-full items-start pt-20 pb-32 `}>
       {/* Line */}
       <div className='w-10 h-[5px] bg-primary mb-20'></div>
       <div className='w-full  mb-20'>
         <h3 className='text-2xl font-bold mb-4'>Interesse geweckt?</h3>
         <p className='text-lg'>Unser Ansprechpartner {project ? project : ''}:</p>
       </div>
-      <div className='flex flex-col sm:flex-row items-center bg-[rgba(255,255,255,0.3)] rounded-[30px] py-10 pl-10 pr-10 md:pr-20 shadow-[0_0_80px_rgba(0,0,0,0.05)] '>
+      <div className='flex w-full sm:w-auto flex-col sm:flex-row items-center bg-[rgba(255,255,255,0.3)] rounded-[30px] py-10 pl-10 pr-10 md:pr-20 shadow-[0_0_80px_rgba(0,0,0,0.05)] '>
         {/* Person Image */}
         <div className='rounded-full md:w-48 w-32 md:h-48 h-32'>
           <Image

@@ -38,35 +38,37 @@ const Testimonials = () => {
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
             <div className='relative mb-2 w-[80%] rounded-md px-8 py-20 overflow-visible'>
-              {/* Bottom left splash */}
-              <div className='absolute bottom-14 -left-14 size-24'>
-                <Image
-                  className='object-contain'
-                  src='/images/splashes_bottom.svg'
-                  alt='Testimonial'
-                  fill
-                  style={{ objectFit: 'contain' }}
-                />
+              <div className='relative'>
+                {/* Bottom left splash */}
+                <div className='absolute -bottom-20 -left-24 scale-75 sm:scale-100 size-24'>
+                  <Image
+                    className='object-contain'
+                    src='/images/splashes_bottom.svg'
+                    alt='Testimonial'
+                    fill
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
+                {/* Top right splash */}
+                <div className='absolute -top-20 -right-24 scale-75 sm:scale-100 size-24'>
+                  <Image
+                    className='object-contain'
+                    src='/images/splashes_top.svg'
+                    alt='Testimonial'
+                    fill
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
+                <div>
+                  <p className='text-base text-left font-semibold text-gray-900'>
+                    {testimonial.text}
+                  </p>
+                </div>
               </div>
-              {/* Top right splash */}
-              <div className='absolute top-4 -right-10 size-24'>
-                <Image
-                  className='object-contain'
-                  src='/images/splashes_top.svg'
-                  alt='Testimonial'
-                  fill
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-              <div>
-                <p className='text-base text-left font-semibold text-gray-900'>
-                  {testimonial.text}
-                </p>
-              </div>
-              <div className='translate-y-20 sm:translate-y-0 mt-6 flex items-center justify-end space-x-3 rtl:space-x-reverse'>
+              <div className='pt-32 sm:translate-y-0 sm:mt-6 flex items-center justify-end space-x-3 rtl:space-x-reverse'>
                 <div className='flex items-center divide-x-2 divide-gray-300 rtl:divide-x-reverse dark:divide-gray-700'>
-                  <div className='pr-3 font-medium'>{testimonial.name}</div>
-                  <div className='pl-3 text-sm'>{testimonial.company}</div>
+                  <div className='pr-3 font-medium text-left'>{testimonial.name}</div>
+                  <div className='pl-3 text-sm text-left'>{testimonial.company}</div>
                 </div>
               </div>
             </div>

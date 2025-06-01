@@ -35,6 +35,7 @@ const NavBar = () => {
   const [showMitmachen, setShowMitmachen] = useState(false);
   const [showJobs, setShowJobs] = useState(false);
   const [showAktivWerden, setShowAktivWerden] = useState(false);
+  const [viewportHeight, setViewportHeight] = useState(0);
 
   const showDropdown = () => {
     setShow(true);
@@ -113,6 +114,29 @@ const NavBar = () => {
   const toogleHamburgerMenu = () => {
     setHamburgerClicked(!hamburgerClicked);
   };
+
+  useEffect(() => {
+    const updateHeight = () => {
+      // Use visual viewport height if available, otherwise fall back to inner height
+      const height = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+      setViewportHeight(height);
+    };
+
+    // Initial height
+    updateHeight();
+
+    // Add event listeners
+    window.visualViewport?.addEventListener('resize', updateHeight);
+    window.visualViewport?.addEventListener('scroll', updateHeight);
+    window.addEventListener('resize', updateHeight);
+
+    // Cleanup
+    return () => {
+      window.visualViewport?.removeEventListener('resize', updateHeight);
+      window.visualViewport?.removeEventListener('scroll', updateHeight);
+      window.removeEventListener('resize', updateHeight);
+    };
+  }, []);
 
   return (
     <>
@@ -564,7 +588,10 @@ const NavBar = () => {
             </AnimatePresence>
           </div>
           {/* Social Media Icons for Burger Menu */}
-          <div className='flex items-center gap-4 mt-10 absolute bottom-[5vh] left-1/2 -translate-x-1/2'>
+          <div
+            className='flex items-center md:hidden gap-4 mt-10 absolute left-1/2 -translate-x-1/2'
+            style={{ bottom: Math.max(20, viewportHeight * 0.1) + 'px' }}
+          >
             {/* Instagram */}
             <a
               href='https://www.instagram.com/bund_fib/'

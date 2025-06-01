@@ -563,6 +563,34 @@ const NavBar = () => {
               )}
             </AnimatePresence>
           </div>
+          {/* Social Media Icons for Burger Menu */}
+          <div className='flex items-center gap-4 mt-10 absolute bottom-5 left-1/2 -translate-x-1/2'>
+            {/* Instagram */}
+            <a
+              href='https://www.instagram.com/bund_fib/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex h-10 w-10 items-center justify-center rounded-full bg-darkYellow text-black'
+            >
+              <FontAwesomeIcon className='w-5 text-black' icon={faInstagram} />
+            </a>
+            {/* LinkedIn */}
+            <a
+              href='https://www.linkedin.com/company/bund-f%C3%BCr-integrative-bildung/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex h-10 w-10 items-center justify-center rounded-full bg-darkYellow text-black'
+            >
+              <FontAwesomeIcon className='w-5 text-black' icon={faLinkedin} />
+            </a>
+            {/* Email */}
+            <a
+              href='mailto:verwaltung@bund-fib.de'
+              className='flex h-10 w-10 items-center justify-center rounded-full bg-darkYellow text-black'
+            >
+              <FontAwesomeIcon className='w-5' icon={faEnvelope} />
+            </a>
+          </div>
         </div>
       </div>
     </>

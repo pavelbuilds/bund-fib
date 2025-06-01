@@ -590,7 +590,7 @@ const NavBar = () => {
           {/* Social Media Icons for Burger Menu */}
           <div
             className='flex items-center md:hidden gap-4 mt-10 absolute left-1/2 -translate-x-1/2'
-            style={{ bottom: Math.max(20, viewportHeight * 0.1) + 'px' }}
+            style={{ bottom: Math.max(150, viewportHeight * 0.1) + 'px' }}
           >
             {/* Instagram */}
             <a

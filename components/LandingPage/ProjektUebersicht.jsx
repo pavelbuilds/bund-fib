@@ -4,7 +4,14 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Container from '../Container';
 import Textbox from '../Textbox';
 import Link from 'next/link';
+import Button from '../Button';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+
 const ProjektUebersicht = () => {
+  const [showLocations, setShowLocations] = useState(false);
+  const router = useRouter();
+
   return (
     <section
       id='Leistungsübersicht'
@@ -33,24 +40,37 @@ const ProjektUebersicht = () => {
             className='w-full rounded-2xl bg-white shadow-2xl transition-all sm:w-[45%] lg:hover:scale-[102%]'
           >
             <Image
-              className='h-48 w-full rounded-t-3xl object-cover brightness-[0.6] '
+              className='h-48 w-full rounded-t-3xl object-cover brightness-[0.6]'
               src='/images/schule.webp'
               width={200}
               height={100}
               alt='Schule'
             />
-            {/* <img className='rounded-t-3xl brightness-[0.6]' src='/images/schule.webp' alt='' /> */}
             <div className='mx-7 mt-12 font-poppins text-xl lg:mt-7'>Lernförderung</div>
-            <div className='mx-7 mt-8 font-source text-sm lg:mt-5'>
-              Wir führen an Schulen und in privaten Haushalten Lernförderung durch und fördern
-              Schülerinnen und Schüler individuell und auf Augenhöhe, um Wissenslücken zu schließen
-              und Lernziele zu erreichen.
-            </div>
-            <Link href='/lernfoerderung-berlin'>
-              <div className='float-right mt-10 flex rounded-tl-2xl rounded-br-2xl bg-primary px-4 py-2 text-sm font-semibold text-white lg:mt-5'>
-                mehr erfahren <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
-              </div>
-            </Link>
+            {!showLocations ? (
+              <>
+                <div className='mx-7 mt-8 font-source text-sm lg:mt-5'>
+                  Wir führen an Schulen und in privaten Haushalten Lernförderung durch und fördern
+                  Schülerinnen und Schüler individuell und auf Augenhöhe, um Wissenslücken zu
+                  schließen und Lernziele zu erreichen.
+                </div>
+                <div
+                  className='float-right mt-10 flex rounded-tl-2xl rounded-br-2xl bg-primary px-4 py-2 text-sm font-semibold text-white lg:mt-5 cursor-pointer'
+                  onClick={() => setShowLocations(true)}
+                >
+                  mehr erfahren <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className='mx-7 mt-8'>Bitte wähle einen Standort:</div>
+                <div className='flex flex-col gap-2 w-full px-7 py-5'>
+                  <Button click={() => router.push('/lernfoerderung-berlin')} cta='Berlin' />
+                  <Button click={() => router.push('/lernfoerderung-hannover')} cta='Hannover' />
+                  <Button click={() => router.push('/lernfoerderung-leipzig')} cta='Leipzig' />
+                </div>
+              </>
+            )}
           </div>
 
           {/* Fit für die Schule */}

@@ -113,16 +113,16 @@ const Footer = () => {
               </a>
             </div>
             <button onClick={() => setShowCookieConsent(true)}>
-              <div className='my-1 font-source text-sm'>Cookie Einstellungen</div>
+              <div className='my-1 font-source text-sm text-left'>Cookie Einstellungen</div>
             </button>
           </div>
           {/* Kontakt */}
           <div className='mt-16 sm:mt-0 w-full sm:w-auto flex justify-center flex-col items-center sm:items-start sm:justify-start'>
             <div className='font-poppins text-base'>Kontakt</div>
             <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
-            <a href='#ContactForm'>
+            <Link href='/#ContactForm'>
               <div className='my-1 font-source text-sm'>Kontaktiere uns</div>
-            </a>
+            </Link>
             <a href='/ansprechpartnerinnen' target='_blank'>
               <div className='my-1 font-source text-sm'>Ansprechpartner:innen</div>
             </a>

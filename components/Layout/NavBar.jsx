@@ -273,12 +273,12 @@ const NavBar = () => {
                       </ul>
                     )}
                   </li>
-                  <li className='py-3 px-10 hover:bg-darkYellow'>
-                    <Link href='/duales-studium'>Duales Studium</Link>
-                  </li>
-                  <li className='py-3 px-10 hover:bg-darkYellow'>
-                    <Link href='/berufsvorbereitung'>Berufsvorbereitung</Link>
-                  </li>
+                  <Link href='/duales-studium'>
+                    <li className='py-3 px-10 hover:bg-darkYellow'>Duales Studium</li>
+                  </Link>
+                  <Link href='/berufsvorbereitung'>
+                    <li className='py-3 px-10 hover:bg-darkYellow'>Berufsvorbereitung</li>
+                  </Link>
                 </ul>
               )}
             </li>

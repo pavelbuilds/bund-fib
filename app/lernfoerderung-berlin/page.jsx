@@ -19,34 +19,34 @@ const LernfoerderungBerlin = () => {
         {/* Content */}
         <Container>
           {/* Text */}
-          <p className='pb-20 pt-20  text-lg'>
+          <p className='pb-10 pt-20  text-lg'>
             Manchmal brauchen Kinder zusätzliche Unterstützung, um in der Schule erfolgreich zu
             sein. Unsere ergänzende Lernförderung hilft gezielt dabei, Lernlücken zu schließen und
             schulische Herausforderungen zu meistern.
           </p>
-          <h3 className='text-2xl py-10 font-bold'>Individuelle Förderung am vertrauten Lernort</h3>
-          <p className='text-lg pb-20'>
+          <h3 className='text-xl py-5 font-bold'>Individuelle Förderung am vertrauten Lernort</h3>
+          <p className='text-lg pb-10'>
             Unsere qualifizierten Fachkräfte unterstützen Schülerinnen und Schüler direkt an ihrer
             Schule – in kleinen Gruppen von maximal sechs Kindern. So wird das Lernen in einer
             gewohnten Umgebung erleichtert und zusätzliche Wege entfallen. Die Förderung kann
             während des Ganztags oder im Nachmittagsbereich stattfinden.
           </p>
-          <h3 className='text-2xl py-10 font-bold'>Erfahrene Fachkräfte und bewährte Methoden</h3>
-          <p className='text-lg pb-20'>
+          <h3 className='text-xl py-5 font-bold'>Erfahrene Fachkräfte und bewährte Methoden</h3>
+          <p className='text-lg pb-10'>
             Unsere Fachkräfte bringen umfangreiche pädagogische Erfahrung mit und nutzen Methoden
             aus der Montessoripädagogik, Lerntherapie und einer individuellen Stärkenorientierung,
             um gezielt auf die Fähigkeiten und Bedürfnisse der Kinder einzugehen. Dabei arbeiten sie
             eng mit den Lehrkräften der Schule zusammen und erstellen regelmäßig Lernberichte, um
             den Fortschritt transparent zu machen.
           </p>
-          <h3 className='text-2xl py-10 font-bold'>Für wen ist die Förderung geeignet?</h3>
-          <p className='text-lg pb-20'>
+          <h3 className='text-xl py-5 font-bold'>Für wen ist die Förderung geeignet?</h3>
+          <p className='text-lg pb-10'>
             Die ergänzende Lernförderung ist Teil des Bildungs- und Teilhabepakets und kann in
             Anspruch genommen werden, wenn ein gültiger &quot;berlinpass-BuT&quot; vorliegt und die
             Schulleitung den Bedarf bestätigt. In der Regel sind bis zu zwei Doppelstunden pro Woche
             möglich.
           </p>
-          <h3 className='text-2xl py-10 font-bold'>Unser Standort in Berlin</h3>
+          <h3 className='text-xl py-5 font-bold'>Unser Standort in Berlin</h3>
           <p className='text-lg pb-10'>
             Unsere Räumlichkeiten in Berlin finden sich im Herzen der Stadt in dem Bezirk Mitte, in
             der Rheinsberger Straße 7. Von dort aus verwalten und gestalten wir die Projekte in

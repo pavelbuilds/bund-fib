@@ -25,23 +25,20 @@ const DualesStudium = () => {
         <Container>
           <section className='pt-32 '>
             <div className='mb-10 font-source leading-loose sm:mb-20 w-[80%]'>
-              <h2 className='text-2xl font-bold'>Duales Studium bei uns - Theorie trifft Praxis</h2>
-              <br />
-              <br />
+              <h2 className='text-lg font-bold'>Duales Studium bei uns - Theorie trifft Praxis</h2>
+
               <p>
                 Du willst studieren und gleichzeitig praktische Erfahrungen sammeln? Dann starte
                 dein duales Studium bei uns!
               </p>
-              <br />
-              <p>
+              <p className='mb-10'>
                 Wir bieten dir die Möglichkeit, dein Wissen direkt in der Praxis anzuwenden, eigene
                 Projekte zu übernehmen und in einem engagierten Team mitzuwirken.{' '}
               </p>
-              <br />
-              <br />
-              <h2 className='text-2xl font-bold'>Was dich erwartet:</h2>
-              <br />
-              <ul className='list-disc pl-5'>
+
+              <h2 className='text-lg font-bold'>Was dich erwartet:</h2>
+
+              <ul className='list-disc pl-5 mb-10'>
                 <li className='mb-2'>
                   Ein abwechslungsreicher Arbeitsalltag in einem offenen, kreativen Umfeld
                 </li>
@@ -50,10 +47,9 @@ const DualesStudium = () => {
                 <li className='mb-2'>Flexible Arbeitszeiten und Arbeitsgerät (Laptop/ Handy)</li>
                 <li className='mb-2'>Eine monatliche Vergütung.</li>
               </ul>
-              <br />
-              <br />
-              <h2 className='text-2xl font-bold'>Neugierig geworden?</h2>
-              <br />
+
+              <h2 className='text-lg font-bold'>Neugierig geworden?</h2>
+
               <p>
                 Dann freuen wir uns auf deine Bewerbung oder deine Fragen – werde Teil unseres
                 Teams!

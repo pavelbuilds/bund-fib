@@ -16,11 +16,7 @@ const AktivWerden = () => {
       <NavBar />
       <div className='bg-darkYellow pt-14'>
         {/* Title */}
-        <ProjectTitleSection
-          image='/images/Bild31.jpeg'
-          imageStyle='center'
-          title={`Aktiv werden`}
-        />
+        <ProjectTitleSection image='/images/Bild31.jpeg' imageStyle='top' title={`Aktiv werden`} />
         {/* Content */}
         <Container>
           <section id='ehrenamt' className='pt-20 '>

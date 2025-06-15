@@ -22,11 +22,12 @@ const TranskulturellesSommerfest = () => {
         {/* Content */}
         <Container>
           <p className='text-lg pb-32  pt-32'>
-            In unserer Arbeit in den Standorten Leipzig und Hannover begegnen wir jeden Sommer der
-            langen Ferienzeit mit kleineren oder größeren Ferienangeboten. Von Ausflügen, Kreativ,-
-            und Sportangeboten bis hin zu Workshops arbeiten wir eng mit den
-            Gemeinschaftsunterkünften zusammen, um die sechs Wochen zu überbrücken und den
-            Teilnehmenden Programm zu bieten.
+            Unsere transkulturellen Sommerfeste sind ein lebendiges Zeichen für Offenheit,
+            Zusammenhalt und gelebte Vielfalt. 2023 feierten wir zusammen mit der Kinder- und
+            Jugendeinrichtung &quot;die Oase&quot; ein Sommerfest mit Pools und Wasserrutsche,
+            Bastel-, - und Grafittiangebot, (Kinder)DJs und einer Tanzbühne. Ziel war es einen Raum
+            für Begegnung auf Augenhöhe zu schaffen, das Miteinander zu stärken und sich im
+            Sozialraum zu vernetzen.
           </p>
         </Container>
         {/* Image Gallery */}
@@ -40,17 +41,6 @@ const TranskulturellesSommerfest = () => {
                   width={400}
                   height={300}
                   alt='Gallery Image 1'
-                  className='shadow-xl object-cover w-full h-[325px]'
-                />
-              </div>
-
-              {/* Top Middle Image */}
-              <div className='relative transform rotate-[3deg]'>
-                <Image
-                  src='/images/Sommerfest.jpg'
-                  width={400}
-                  height={300}
-                  alt='Gallery Image 2'
                   className='shadow-xl object-cover w-full h-[325px]'
                 />
               </div>

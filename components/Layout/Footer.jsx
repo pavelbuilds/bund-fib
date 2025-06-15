@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faLinkedin, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import Container from '../Container';
@@ -45,6 +45,15 @@ const Footer = () => {
             />
             {/* Social Media Icons */}
             <div className='mt-10 flex w-full items-center justify-center gap-4'>
+              {/* TikTok */}
+              <a
+                href='https://www.tiktok.com/@bund_fib'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='flex h-10 w-10 items-center justify-center rounded-full bg-darkYellow text-black'
+              >
+                <FontAwesomeIcon className='w-5 text-black' icon={faTiktok} />
+              </a>
               {/* Instagram */}
               <a
                 href='https://www.instagram.com/bund_fib/'
@@ -77,28 +86,29 @@ const Footer = () => {
           <div className='mt-16 sm:mt-0 w-full sm:w-auto flex justify-center flex-col items-center sm:items-start sm:justify-start'>
             <div className='font-poppins text-base'>Organisation</div>
             <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
-            <Link href='/#UnserTeam' className='my-1 font-source text-sm'>
-              <div className='my-1 font-source text-sm'>Team</div>
+
+            <Link href='/jobs' className='my-1 font-source text-sm'>
+              Jobs
             </Link>
             <Link href='/#ueberuns' className='my-1 font-source text-sm'>
-              <div className='my-1 font-source text-sm'>Über uns</div>
+              Über uns
             </Link>
-            <a href='/jobs'>
-              <div className='my-1 font-source text-sm'>Jobs</div>
-            </a>
-            <a className='my-1 cursor-pointer font-source text-sm' href='/satzung' target='_blank'>
+            <Link href='/#UnserTeam' className='my-1 font-source text-sm'>
+              Team
+            </Link>
+            <Link href='/satzung' target='_blank' className='my-1 font-source text-sm'>
               Satzung
-            </a>
-            <a className='my-1 cursor-pointer font-source text-sm' href='/partner' target='_blank'>
-              <div className='my-1 font-source text-sm'>Partner</div>
-            </a>
+            </Link>
+            <Link href='/partner' target='_blank' className='my-1 font-source text-sm'>
+              Partner
+            </Link>
           </div>
           {/* Informationen */}
           <div className='mt-16 sm:mt-0 w-full sm:w-auto flex justify-center flex-col items-center sm:items-start sm:justify-start'>
             <div className='font-poppins text-base'>Informationen</div>
             <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
-            <Link href='/#Downloads' className='my-1 font-source text-sm'>
-              <div className='my-1 font-source text-sm'>Material-fiB</div>
+            <Link href='/material' target='_blank' className='my-1 font-source text-sm'>
+              Material-fiB
             </Link>
             <div onClick={toggleImpressum} className='my-1 cursor-pointer font-source text-sm'>
               Impressum
@@ -120,12 +130,12 @@ const Footer = () => {
           <div className='mt-16 sm:mt-0 w-full sm:w-auto flex justify-center flex-col items-center sm:items-start sm:justify-start'>
             <div className='font-poppins text-base'>Kontakt</div>
             <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
-            <Link href='/#ContactForm'>
-              <div className='my-1 font-source text-sm'>Kontaktiere uns</div>
+            <Link href='/#ContactForm' className='my-1 font-source text-sm'>
+              Kontaktiere uns
             </Link>
-            <a href='/ansprechpartnerinnen' target='_blank'>
-              <div className='my-1 font-source text-sm'>Ansprechpartner:innen</div>
-            </a>
+            <Link href='/ansprechpartnerinnen' target='_blank' className='my-1 font-source text-sm'>
+              Ansprechpartner:innen
+            </Link>
             <a href='mailto:verwaltung@bund-fib.de'>
               <div className='my-1 font-source text-sm'>verwaltung@bund-fib.de</div>
             </a>

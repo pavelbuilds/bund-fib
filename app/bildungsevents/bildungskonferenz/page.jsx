@@ -5,6 +5,7 @@ import Footer from '../../../components/Layout/Footer';
 import Container from '../../../components/Container';
 import ProjectTitleSection from '../../../components/Layout/ProjectTitleSection';
 import Image from 'next/image';
+import { useStore } from '../../../src/store';
 
 const panelSpeakers = [
   {
@@ -56,6 +57,7 @@ const partnerLogos = [
 ];
 
 const Bildungskonferenz = () => {
+  const { cookiesAccepted, setShowCookieConsent } = useStore();
   return (
     <>
       <NavBar />
@@ -101,7 +103,7 @@ const Bildungskonferenz = () => {
             </div>
           </div>
 
-          <h3 className='text-2xl pb-20 pt-28 font-bold'>
+          <h3 className='text-xl pb-10 pt-28 font-bold'>
             Impulse und Inspiration: Das Programm der Konferenz
           </h3>
           <p className='text-lg pb-10'>Wir sind mit einem Paneltalk zu der Frage</p>
@@ -115,11 +117,35 @@ const Bildungskonferenz = () => {
           ))}
           <p className='text-lg pb-10 pt-10'>unter der Moderation von:</p>
           <PanelSpeaker {...panelModerator} />
-          <p className='text-lg pb-32 pt-10'>
+          <p className='text-lg pb-14 pt-10'>
             Sie thematisierten unter anderem, wie Bildung einen Beitrag zu gesellschaftlichem
             Zusammenhalt und demokratischen Prozessen leisten kann.{' '}
           </p>
-          <p className='text-lg pb-14'>
+          {cookiesAccepted ? (
+            <iframe
+              width='560'
+              height='315'
+              src='https://www.youtube.com/embed/RAmXMhmo1OY'
+              title='YouTube video player'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+              allowFullScreen
+              className='w-full h-[70vh]'
+            ></iframe>
+          ) : (
+            <div className='h-[70vh] p-10 bg-gray-500 rounded-lg flex justify-center items-center'>
+              <p>
+                Bitte akzeptieren Sie die Verwendung von Cookies, um das YouTube-Video anzuzeigen.{' '}
+                <span
+                  className='underline cursor-pointer'
+                  onClick={() => setShowCookieConsent(true)}
+                >
+                  hier clicken um Cookie-Einstellungen zu ändern
+                </span>
+              </p>
+            </div>
+          )}
+
+          <p className='text-lg py-14'>
             Anschließend gab es zwei Workshops, die verschiedene für Pädagog*innen und die Bildung
             relevante Themen vertieften.
           </p>
@@ -134,21 +160,20 @@ const Bildungskonferenz = () => {
             Herausforderungen und Chancen der Thematisierung von Israel und Palästina in
             Bildungssettings.
           </p>
-          <p className='text-lg pb-32 '>
+          <p className='text-lg pb-14 '>
             Beide Workshops sollten den Teilnehmenden ermöglichten neue Perspektiven kennenzulernen
             und praxisnahe Methoden für ihre eigene Arbeit zu entwickeln und sich selbst auch
             kritisch zu hinterfragen.
           </p>
           <p className='text-lg pb-14 '>
-            In der <b>abschließenden</b> Reflexionsrunde kamen alle Teilnehmenden zusammen, um
-            Ergebnisse zusammenzutragen und offene Fragen, aber auch politische Forderungen zu
-            formulieren.
+            In der abschließenden Reflexionsrunde kamen alle Teilnehmenden zusammen, um Ergebnisse
+            zusammenzutragen und offene Fragen, aber auch politische Forderungen zu formulieren.
           </p>
-          <p className='text-lg pb-32 '>
+          <p className='text-lg pb-14 '>
             In der Publikation zur Bildungskonferenz, kann man die Ergebnisse der Reflexionsrunde,
             sowie eine Aufbereitung des gesamten Tages und weiterführendes Material finden.
           </p>
-          <h3 className='text-2xl pb-20 font-bold'>Ausblick: Wie geht es weiter?</h3>
+          <h3 className='text-xl pb-10 font-bold'>Ausblick: Wie geht es weiter?</h3>
           <p className='text-lg pb-14 '>
             Die Bildungskonferenz hat gezeigt, dass das Interesse an diesen Themen groß ist und der
             Bedarf an Austausch und Weiterbildung stetig wächst. Dies bestärkt uns in unserer Arbeit

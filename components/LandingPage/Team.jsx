@@ -3,8 +3,17 @@ import Textbox from '../Textbox';
 import Button from '../Button';
 import Gruender from '../Gruender';
 import Mitarbeiter from '../Mitarbeiter';
+import Image from 'next/image';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Team = () => {
+  const [showTeam1Info, setTeam1Info] = useState(false);
+  const [showTeam2Info, setTeam2Info] = useState(false);
+  const [showTeam3Info, setTeam3Info] = useState(false);
+  const [showTeam4Info, setTeam4Info] = useState(false);
+
   return (
     <section id='UnserTeam' className='bg-darkYellow pb-14 sm:pt-20'>
       <Container styling={'pt-32'}>
@@ -32,8 +41,8 @@ const Team = () => {
         </div>
 
         {/* Mitarbeiter Übersicht */}
-        <div className='mt-60 flex flex-wrap justify-between sm:mt-72 sm:justify-start text-center'>
-          <div className='mt-20 mb-16'>
+        <div className='mt-60 mb-20 flex flex-wrap justify-between sm:mt-72 sm:justify-start text-center'>
+          <div className='mb-16'>
             In den letzten Jahren sind unterschiedliche Menschen dazugekommen, die diese Vision
             unterstützen und kräftig voranbringen. Das Team vereint Expertise in den Bereichen der
             Erziehung, DaF/DaZ Spezialisierung im Lehramt, Kunstpädagogik, Sozialer Arbeit,
@@ -41,112 +50,94 @@ const Team = () => {
             zugänglicher machen und gemeinsam mit Kindern und Jugendlichen auf Augenhöhe nachhaltig
             weiterentwickeln!
           </div>
-          <Mitarbeiter
-            bild={'/images/mitarbeiter/Katrin_neu.jpeg'}
-            name={'Katrin'}
-            // job={'Alle Teams'}
-          />
-          <Mitarbeiter
-            bild={'/images/mitarbeiter/Lika_neu.jpeg'}
-            name={'Lika'}
-            // job={'Alle Teams'}
-          />
-          <Mitarbeiter
-            bild={'/images/mitarbeiter/Schabnaz_neu.jpeg'}
-            name={'Schabnaz'}
-            // job={'Alle Teams'}
-          />
-          <Mitarbeiter
-            bild={'/images/mitarbeiter/Nathalie_neu.jpeg'}
-            name={'Nathalie'}
-            // job={'Alle Teams'}
-          />
-          <Mitarbeiter
-            bild={'/images/mitarbeiter/Mika_neu.jpeg'}
-            name={'Mika'}
-            // job={'Alle Teams'}
-          />
-          {/*             
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/marlene.jpg'}
-              name={'Marlene'}
-              job={'Koordination & Projektleitung'}
-            />
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/maddy.jpg'}
-              name={'Maddy'}
-              job={'Betreuung & Workshopleitung'}
-            />
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/teodora.jpg'}
-              name={'Teodora'}
-              job={'Workshopleitung'}
-            />
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/lukas.jpg'}
-              name={'Lukas'}
-              job={'Workshopleitung'}
-            />
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/willi.jpg'}
-              name={'Willi'}
-              job={'Lehrkraft & Workshopleitung'}
-            />
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/pauline.jpg'}
-              name={'Pauline'}
-              job={'Lehrkraft & Workshopleitung'}
-            />
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/rim.jpg'}
-              name={'Rim'}
-              job={'Betreuung & Workshopleitung'}
-            />
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/julia.jpg'}
-              name={'Julia'}
-              job={'Betreuung & Workshopleitung'}
-            />
 
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/lika.jpg'}
-              name={'Lika'}
-              job={'Betreuung & Dokumentation'}
-            />
-            <Mitarbeiter bild={'/images/mitarbeiter/rosa.jpg'} name={'Rosa'} job={'Lehrkraft'} />
-            <Mitarbeiter bild={'/images/mitarbeiter/maggy.jpg'} name={'Maggy'} job={'Betreuung'} />
-            <Mitarbeiter bild={'/images/mitarbeiter/paul.jpg'} name={'Paul'} job={'Lehrkraft'} />
-            <Mitarbeiter bild={'/images/mitarbeiter/musa.jpg'} name={'Musa'} job={'Lehrkraft'} />
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/adriana.jpg'}
-              name={'Adriana'}
-              job={'Lehrkraft & Workshopleitung'}
-            />
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/felix.jpg'}
-              name={'Felix'}
-              job={'Lehrkraft & Workshopleitung'}
-            />
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/ara.jpg'}
-              name={'Ara'}
-              job={'Lehrkraft & Workshopleitung'}
-            />
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/luisa.jpg'}
-              name={'Luisa'}
-              job={'Lehrkraft & Workshopleitung'}
-            />
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/katherina.jpg'}
-              name={'Katherina'}
-              job={'Betreuung'}
-            />
-            <Mitarbeiter
-              bild={'/images/mitarbeiter/julius.jpg'}
-              name={'Julius'}
-              job={'Lehrkraft'}
-            /> */}
+          {/* Side by side photos effect */}
+          <div className='relative z-10 md:mt-20 h-[800px] md:h-96 w-full flex flex-col md:flex-row justify-center '>
+            {/* First image (left) */}
+            <div className='relative z-20 h-[800px] md:h-96 w-full md:w-[55%] rotate-[-3deg] overflow-hidden rounded-xl'>
+              <Image
+                src='/images/TeamLeipzig.jpg'
+                alt='Team Mitglieder'
+                width={1000}
+                height={1000}
+                className='h-full w-full scale-110 rounded-xl bg-black object-cover object-top'
+              />
+              {/* Team 1 Button */}
+              <div
+                onClick={() => setTeam1Info(!showTeam1Info)}
+                className={`${
+                  showTeam1Info ? 'bg-[rgba(0,0,0,0.7)]' : ''
+                } absolute rotate-[3deg] top-[60%] left-[15%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+              >
+                <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
+                {showTeam1Info && (
+                  <div className='ml-2'>
+                    <b>Katrin Gorochov</b>
+                    <br />
+                    Duale Studentin der sozialen Arbeit
+                  </div>
+                )}
+              </div>
+              {/* Team 2 Button */}
+              <div
+                onClick={() => setTeam2Info(!showTeam2Info)}
+                className={`${
+                  showTeam2Info ? 'bg-[rgba(0,0,0,0.7)]' : ''
+                } absolute rotate-[3deg] top-[50%] left-[35%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+              >
+                <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
+                {showTeam2Info && (
+                  <div className='ml-2'>
+                    <b>Sarah Hennig</b>
+                    <br />
+                    Standortleiterin Leipzig
+                  </div>
+                )}
+              </div>
+              {/* Team 3 Button */}
+              <div
+                onClick={() => setTeam3Info(!showTeam3Info)}
+                className={`${
+                  showTeam3Info ? 'bg-[rgba(0,0,0,0.7)]' : ''
+                } absolute rotate-[3deg] top-[40%] left-[55%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+              >
+                <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
+                {showTeam3Info && (
+                  <div className='ml-2'>
+                    <b> Nathalie Thorleuchter</b>
+                    <br />
+                    Standortleiterin Leipzig
+                  </div>
+                )}
+              </div>
+              {/* Team 4 Button */}
+              <div
+                onClick={() => setTeam4Info(!showTeam4Info)}
+                className={`${
+                  showTeam4Info ? 'bg-[rgba(0,0,0,0.7)]' : ''
+                } absolute top-[50%] left-[70%] rotate-[3deg] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+              >
+                <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
+                {showTeam4Info && (
+                  <div className='ml-2'>
+                    <b>Sören Dübel</b>
+                    <br />
+                    Geschäftsführung
+                  </div>
+                )}
+              </div>
+            </div>
+            {/* Second image (right) */}
+            <div className='relative h-[800px] md:h-96 w-full md:w-[55%] md:-ml-10 rotate-6 overflow-hidden rounded-xl shadow-xl'>
+              <Image
+                src='/images/team2.jpg'
+                alt='Team Mitglieder'
+                width={1000}
+                height={1000}
+                className='h-full w-full scale-110 rounded-xl bg-black object-cover object-top'
+              />
+            </div>
+          </div>
         </div>
       </Container>{' '}
     </section>

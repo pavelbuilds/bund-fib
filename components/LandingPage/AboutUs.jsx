@@ -13,7 +13,7 @@ const AboutUs = () => {
           slogan={'Was uns als Partner besonders macht'}
           styling={'lg:w-4/5 -mt-1'}
         >
-          <div className='mb-10 font-source leading-loose sm:mb-20'>
+          <div className='mb-10 font-source leading-loose sm:mb-20 text-justify'>
             Der Bund-fiB ist eine gemeinnützige Organisation tätig in Berlin, Leipzig und Hannover.
             Wir bieten verschiedene Bildungsprojekte an Schulen, Gemeinschaftsunterkünften und in
             privaten Haushalten an. Unsere Projektpalette variiert von inklusiven Schulprojekten bis

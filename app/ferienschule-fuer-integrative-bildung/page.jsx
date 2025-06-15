@@ -15,7 +15,10 @@ const FerienschuleFuerIntegrativeBildung = () => {
       <NavBar />
       <div className='bg-darkYellow pt-14'>
         {/* Title */}
-        <ProjectTitleSection title={`Ferienschulen für integrative Bildung `} />
+        <ProjectTitleSection
+          title={`Ferienschulen für integrative Bildung `}
+          image='/ferienschule/Bild11.jpg'
+        />
         {/* Content */}
         <Container>
           <p className='text-lg pb-32  pt-32'>

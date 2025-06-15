@@ -14,10 +14,10 @@ const ProjectTitleSection = ({
       }}
       className='text-center text-4xl font-bold font-berlin bg-no-repeat bg-center bg-cover text-white relative'
     >
-      <div className='w-full h-full bg-black/70 pt-40 pb-40 md:pb-64 text-left'>
+      <div className='w-full h-full bg-black/70 pt-40 pb-40 md:pb-64 text-center'>
         <Container>
-          <h1 className='text-5xl font-bold'>{title}</h1>
-          <h2 className='text-2xl mt-10 font-bold'>{subtitle}</h2>
+          <h1 className='text-5xl font-berlin text-white'>{title}</h1>
+          <h2 className='text-2xl mt-10 font-bold font-source'>{subtitle}</h2>
         </Container>
       </div>
       <svg

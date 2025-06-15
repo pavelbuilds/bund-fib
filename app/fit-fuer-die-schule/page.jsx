@@ -20,15 +20,15 @@ const FitFuerDieSchule = () => {
         />
         {/* Content */}
         <Container>
-          <h3 className='text-2xl pb-20 pt-28 font-bold'>Sprachförderung für einen guten Start</h3>
-          <p className='text-lg pb-20'>
+          <h3 className='text-xl pb-10 pt-28 font-bold'>Sprachförderung für einen guten Start</h3>
+          <p className='text-lg pb-10'>
             Viele geflüchtete Kinder und Jugendliche müssen in Berlin lange auf einen Schulplatz
             warten – und damit auch auf die Möglichkeit, Deutsch zu lernen. Genau hier setzt das
             Programm &quot;Fit f&uuml;r die Schule&quot; an: In Lerngruppen k&ouml;nnen Kinder und
             Jugendliche unabhängig vom Regelunterricht ihre Sprachkenntnisse auf- und ausbauen.
           </p>
 
-          <p className='text-lg pb-20'>
+          <p className='text-lg pb-10'>
             Doch es geht um mehr als nur die Sprache. Die jungen Teilnehmenden sollen sich in ihrer
             neuen Umgebung wohlfühlen, Vertrauen fassen und mit Spaß lernen. Eine familiäre
             Atmosphäre und gemeinschaftliche Aktivitäten fördern nicht nur die Sprachentwicklung,
@@ -38,7 +38,7 @@ const FitFuerDieSchule = () => {
             aus Büchern, sondern auch im echten Leben.
           </p>
 
-          <p className='text-lg pb-20'>
+          <p className='text-lg pb-10'>
             Zusätzlich bieten wir ebenfalls das Programm &quot;Berliner Ferienschulen&quot; an, dass
             sowohl Kinder und Jugendliche ohne Schulplatz als auch Kindern und Jugendlichen, die
             bereits in Willkommensklassen sind, ein Ferienangebot schafft. Spielerisch wird das
@@ -110,8 +110,8 @@ const FitFuerDieSchule = () => {
               className='!pb-20'
             />
             <div className='flex flex-col lg:pt-32'>
-              <h3 className='text-2xl pb-20 pt-10 font-bold'>Downloads</h3>
-              <div className='flex gap-14 pt-14 items-start flex-wrap pb-20'>
+              <h3 className='text-2xl  pt-10 font-bold'>Downloads</h3>
+              <div className='flex gap-14 pt-14 items-start  pb-20'>
                 <a
                   href='/Anmeldebogen.pdf'
                   target='_blank'

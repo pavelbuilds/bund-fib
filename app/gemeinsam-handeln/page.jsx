@@ -22,29 +22,29 @@ const GemeinsamHandeln = () => {
         {/* Content */}
         <Container>
           {/* Text */}
-          <p className='pb-20 pt-20  text-lg'>
+          <p className='pb-10 pt-20  text-lg'>
             Geflüchtete Kinder und Jugendliche stehen vor vielen Herausforderungen: belastende
             Erfahrungen, ein neues Schulsystem und Sprachbarrieren erschweren das Ankommen.
             <b>&quot;Gemeinsam handeln&quot;</b> hilft Schulen, diese Kinder gezielt zu
             unterstützen.
           </p>
-          <p className='pb-20   text-lg'>
+          <p className='pb-10   text-lg'>
             Das Programm vermittelt Wissen und Strategien zur psychosozialen Unterstützung,
             Resilienzförderung und Selbstfürsorge. Pädagogische Fachkräfte und Engagierte erhalten
             praktische Ansätze, um sowohl die Bedürfnisse der Kinder als auch ihre eigene mentale
             Gesundheit im Blick zu behalten.
           </p>
-          <p className='pb-20   text-lg'>
+          <p className='pb-10   text-lg'>
             Zudem werden Beteiligungsformate angeboten, in denen Kinder und Jugendliche aktiv
             mitgestalten und Selbstwirksamkeit erfahren. So entsteht eine unterstützende Umgebung,
             die ihnen Sicherheit gibt und das Ankommen erleichtert.
           </p>
-          <p className='pb-20  text-lg'>
+          <p className='pb-10  text-lg'>
             2024 führte der Bund für integrative Bildung in kleinem Rahmen Beteiligungsund
             Workshopangebote an Berliner Schulen unter dem eigenen Konzept &quot;Integratives Lernen
             & Lehren&quot; durch.
           </p>
-          <p className='pb-20  text-lg'>
+          <p className='pb-10  text-lg'>
             <b>&quot;Gemeinsam handeln&quot;</b> ist ein Programm von <b>Save the Children</b> und
             der
             <b> Deutschen Kinder- und Jugendstiftung (DKJS)</b>.

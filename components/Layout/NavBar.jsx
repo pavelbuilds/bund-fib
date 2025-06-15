@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faLinkedin, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faCaretDown, faXmark, faEnvelope, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import BurgerMenu from '../BurgerMenu';
@@ -309,6 +309,15 @@ const NavBar = () => {
           </ul>
           {/* Social Media Icons */}
           <div className='hidden items-center gap-4 md:flex'>
+            {/* TikTok */}
+            <a
+              href='https://www.tiktok.com/@bund.fib'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex h-10 w-10 items-center justify-center rounded-full bg-darkYellow text-black'
+            >
+              <FontAwesomeIcon className='w-5 text-black' icon={faTiktok} />
+            </a>
             {/* Instagram */}
             <a
               href='https://www.instagram.com/bund_fib/'
@@ -592,6 +601,15 @@ const NavBar = () => {
             className='flex items-center md:hidden gap-4 mt-10 absolute left-1/2 -translate-x-1/2'
             style={{ bottom: Math.max(150, viewportHeight * 0.1) + 'px' }}
           >
+            {/* TikTok */}
+            <a
+              href='https://www.tiktok.com/@bund.fib'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex h-10 w-10 items-center justify-center rounded-full bg-darkYellow text-black'
+            >
+              <FontAwesomeIcon className='w-5 text-black' icon={faTiktok} />
+            </a>
             {/* Instagram */}
             <a
               href='https://www.instagram.com/bund_fib/'

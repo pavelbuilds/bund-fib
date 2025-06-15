@@ -10,6 +10,7 @@ import { useRouter } from 'next/navigation';
 
 const ProjektUebersicht = () => {
   const [showLocations, setShowLocations] = useState(false);
+  const [showProjects, setShowProjects] = useState(false);
   const router = useRouter();
 
   return (
@@ -113,16 +114,33 @@ const ProjektUebersicht = () => {
             />
 
             <div className='mx-7 mt-12 font-poppins text-xl lg:mt-7'>Bildungsprojekte</div>
-            <div className='mx-7 mt-8 font-source text-sm lg:mt-5'>
-              Mit nationalen und internationalen Partner:innen führen wir unterschiedliche
-              Bildungsprojekte für Kinder und Jugendliche durch, die lokal greifen und
-              Bildungslücken schließen.
-            </div>
-            <Link href='/eduai'>
-              <div className='float-right mt-10 flex rounded-tl-2xl rounded-br-2xl bg-primary px-4 py-2 text-sm font-semibold text-white lg:mt-5'>
-                mehr erfahren <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
-              </div>
-            </Link>
+            {!showProjects ? (
+              <>
+                <div className='mx-7 mt-8 font-source text-sm lg:mt-5'>
+                  Mit nationalen und internationalen Partner:innen führen wir unterschiedliche
+                  Bildungsprojekte für Kinder und Jugendliche durch, die lokal greifen und
+                  Bildungslücken schließen.
+                </div>
+                <div
+                  className='float-right mt-10 flex rounded-tl-2xl rounded-br-2xl bg-primary px-4 py-2 text-sm font-semibold text-white lg:mt-5 cursor-pointer'
+                  onClick={() => setShowProjects(true)}
+                >
+                  mehr erfahren <FontAwesomeIcon className='ml-2 w-3' icon={faArrowRight} />
+                </div>
+              </>
+            ) : (
+              <>
+                <div className='mx-7 mt-8'>Bitte wähle ein Projekt:</div>
+                <div className='flex flex-col gap-2 w-full px-7 py-5'>
+                  <Button click={() => router.push('/eduai')} cta='EduAid' />
+                  <Button click={() => router.push('/gemeinsam-handeln')} cta='Gemeinsam Handeln' />
+                  <Button
+                    click={() => router.push('/ferienschule-fuer-integrative-bildung')}
+                    cta='Ferienschule'
+                  />
+                </div>
+              </>
+            )}
           </div>
           {/* Bildungsevents*/}
           <div

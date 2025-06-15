@@ -5,7 +5,24 @@ import Footer from '../../components/Layout/Footer';
 import Container from '../../components/Container';
 import ContactPersonCard from '../../components/ContactPersonCard';
 import ProjectTitleSection from '../../components/Layout/ProjectTitleSection';
+import Image from 'next/image';
 
+const partnerLogos = [
+  {
+    src: '/images/logos/supportLogo-1-removebg-preview.png',
+    width: 180,
+    height: 50,
+    alt: 'Berliner Senat Logo',
+    link: 'https://european-union.europa.eu/index_de',
+  },
+  {
+    src: '/images/logos/UnivesitaetOldenburg.png',
+    width: 130,
+    height: 50,
+    alt: 'Berliner Senat Logo',
+    link: 'https://uol.de/',
+  },
+];
 const EduAI = () => {
   return (
     <>
@@ -13,13 +30,14 @@ const EduAI = () => {
       <div className='bg-darkYellow pt-14'>
         {/* Title */}
         <ProjectTitleSection
-          title='EduAId: Pädagog*innen zu AI-integriertem Lernen befähigen'
+          title='EduAId'
+          subtitle='Pädagog*innen zu AI-integriertem Lernen befähigen'
           image='/images/eduaid-cover.jpg'
         />
         {/* Content */}
         <Container>
           {/* Text */}
-          <p className='pb-20 pt-20  text-lg'>
+          <p className='pb-10 pt-20  text-lg'>
             Das EduAId-Projekt strebt an, die Bildungslandschaft europaweit durch die Integration
             von KI-basierten Werkzeugen und Praktiken mittels eines MicroCredentials-Ansatzes zu
             transformieren. Es richtet sich an Lehrkräfte, Schulleitungen und Pädagog*innen mit dem
@@ -27,12 +45,12 @@ const EduAI = () => {
             kontinuierliche berufliche Weiterentwicklung zu unterstützen. Das Projekt und die daraus
             resultierenden Workshops werden in englischer Sprache durchgeführt.
           </p>
-          <h3 className='text-2xl py-10 font-bold'>Die wichtigsten Schritte der Implementierung</h3>
-          <p className='text-lg pb-20'>
+          <h3 className='text-xl py-5 font-bold'>Die wichtigsten Schritte der Implementierung</h3>
+          <p className='text-lg pb-10'>
             Um die KI-Schulung so praktisch wie möglich zu gestalten, wird sich EduAId auf Folgendes
             konzentrieren:
           </p>
-          <ol className='list-decimal pl-5 sm:pl-10 space-y-12 text-lg pb-20'>
+          <ol className='list-decimal pl-5 sm:pl-10 space-y-12 text-lg pb-10'>
             <li>
               Eine benutzerfreundliche digitale Plattform: Pädagog*innen können von einem Ort aus
               auf Schulungsmodule, Ressourcen und Zertifizierungsprogramme zugreifen.
@@ -51,7 +69,7 @@ const EduAI = () => {
               KI-Tools für verschiedene Schulumgebungen nützlich und relevant sind.
             </li>
           </ol>
-          <p className='text-lg pb-20'>
+          <p className='text-lg pb-10'>
             Das Projekt läuft vom 1. November 2024 bis zum 31. Oktober 2027.
           </p>
           <p className='text-lg pb-10'>
@@ -68,6 +86,13 @@ const EduAI = () => {
               <span className='pr-4'>🔗</span> https://www.instagram.com/eduaid_online/
             </a>
           </p>
+          <div className='flex justify-center items-center pb-32 '>
+            {partnerLogos.map((logo, index) => (
+              <div key={index} className='flex w-1/2 justify-center px-5 py-3 '>
+                <Image src={logo.src} width={logo.width} height={logo.height} alt={logo.alt} />
+              </div>
+            ))}
+          </div>
         </Container>
       </div>
       <Footer />

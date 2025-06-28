@@ -96,9 +96,9 @@ const Footer = () => {
             <Link href='/#UnserTeam' className='my-1 font-source text-sm'>
               Team
             </Link>
-            <Link href='/satzung' target='_blank' className='my-1 font-source text-sm'>
+            <a href='/SatzungBund-fiB.pdf' target='_blank' className='my-1 font-source text-sm'>
               Satzung
-            </Link>
+            </a>
             <Link href='/partner' target='_blank' className='my-1 font-source text-sm'>
               Partner
             </Link>

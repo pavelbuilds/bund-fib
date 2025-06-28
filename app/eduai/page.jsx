@@ -9,18 +9,74 @@ import Image from 'next/image';
 
 const partnerLogos = [
   {
-    src: '/images/logos/supportLogo-1-removebg-preview.png',
-    width: 180,
+    src: '/images/logos/eduaid/ESHA-logo-text.png',
+    width: 100,
     height: 50,
-    alt: 'Berliner Senat Logo',
-    link: 'https://european-union.europa.eu/index_de',
+    alt: 'ESHA Logo',
+    link: null,
   },
   {
-    src: '/images/logos/UnivesitaetOldenburg.png',
-    width: 130,
+    src: '/images/logos/eduaid/Logo_salesiani_cnos-fap_italia_Poli_Orizz_Pos.png',
+    width: 100,
     height: 50,
-    alt: 'Berliner Senat Logo',
-    link: 'https://uol.de/',
+    alt: 'Salesiani CNOS-FAP Logo',
+    link: null,
+  },
+  {
+    src: '/images/logos/eduaid/MEI_Logo_Page1.png',
+    width: 80,
+    height: 50,
+    alt: 'MEI Logo',
+    link: null,
+  },
+  {
+    src: '/images/logos/eduaid/mentortec_4.jpg',
+    width: 100,
+    height: 50,
+    alt: 'Mentortec Logo',
+    link: null,
+  },
+  {
+    src: '/images/logos/eduaid/11.png',
+    width: 80,
+    height: 50,
+    alt: 'Partner Logo 11',
+    link: null,
+  },
+  {
+    src: '/images/logos/eduaid/Carl_von_Ossietzky_Universitat_Oldenburg_2021_logo21.png',
+    width: 100,
+    height: 50,
+    alt: 'Carl von Ossietzky Universität Oldenburg Logo',
+    link: null,
+  },
+  {
+    src: '/images/logos/eduaid/GimnazijaSmart-logo.png',
+    width: 100,
+    height: 50,
+    alt: 'Gimnazija Smart Logo',
+    link: null,
+  },
+  {
+    src: '/images/logos/eduaid/OBSLogoneuExport.png',
+    width: 100,
+    height: 50,
+    alt: 'OBS Logo',
+    link: null,
+  },
+  {
+    src: '/images/logos/eduaid/cropped-LogoBira_ver.preferente1.png',
+    width: 100,
+    height: 50,
+    alt: 'Bira Logo',
+    link: null,
+  },
+  {
+    src: '/images/logos/eduaid/logo-couleur-trans1.png',
+    width: 100,
+    height: 50,
+    alt: 'Logo Couleur',
+    link: null,
   },
 ];
 const EduAI = () => {
@@ -86,10 +142,22 @@ const EduAI = () => {
               <span className='pr-4'>🔗</span> https://www.instagram.com/eduaid_online/
             </a>
           </p>
-          <div className='flex justify-center items-center pb-32 '>
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center pb-32'>
             {partnerLogos.map((logo, index) => (
-              <div key={index} className='flex w-1/2 justify-center px-5 py-3 '>
-                <Image src={logo.src} width={logo.width} height={logo.height} alt={logo.alt} />
+              <div key={index} className='flex justify-center items-center px-3 py-3'>
+                {logo.link ? (
+                  <a href={logo.link} target='_blank' rel='noopener noreferrer'>
+                    <Image
+                      src={logo.src}
+                      width={logo.width}
+                      height={logo.height}
+                      alt={logo.alt}
+                      className='hover:opacity-80 transition-opacity'
+                    />
+                  </a>
+                ) : (
+                  <Image src={logo.src} width={logo.width} height={logo.height} alt={logo.alt} />
+                )}
               </div>
             ))}
           </div>

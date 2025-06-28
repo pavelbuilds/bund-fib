@@ -106,12 +106,14 @@ const Bildungskonferenz = () => {
           <h3 className='text-xl pb-10 pt-28 font-bold'>
             Impulse und Inspiration: Das Programm der Konferenz
           </h3>
-          <p className='text-lg pb-10'>Wir sind mit einem Paneltalk zu der Frage</p>
-          <p className='text-lg pb-10 italic'>
-            &quot;Wie kann man im Bildungskontext Räume für einen respektvollen Diskurs öffnen und
-            den Grundstein für einen demokratischen Dialog legen?&quot;
+          <p className='text-lg pb-10'>
+            Wir sind mit einem Paneltalk zu der Frage
+            <span className='text-lg pb-10 italic'>
+              &quot;Wie kann man im Bildungskontext Räume für einen respektvollen Diskurs öffnen und
+              den Grundstein für einen demokratischen Dialog legen?&quot;
+            </span>
+            in den Tag gestartet. Zu Gast waren:
           </p>
-          <p className='text-lg pb-14'>in den Tag gestartet. Zu Gast waren:</p>
           {panelSpeakers.map((speaker) => (
             <PanelSpeaker key={speaker.name} {...speaker} />
           ))}

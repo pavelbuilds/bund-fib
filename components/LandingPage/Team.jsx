@@ -9,10 +9,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Team = () => {
-  const [showTeam1Info, setTeam1Info] = useState(false);
-  const [showTeam2Info, setTeam2Info] = useState(false);
-  const [showTeam3Info, setTeam3Info] = useState(false);
-  const [showTeam4Info, setTeam4Info] = useState(false);
+  const [activeTeam, setActiveTeam] = useState(null);
+
+  const handleTeamClick = (teamId) => {
+    setActiveTeam(activeTeam === teamId ? null : teamId);
+  };
 
   return (
     <section id='UnserTeam' className='bg-darkYellow pb-14 sm:pt-20'>
@@ -64,13 +65,13 @@ const Team = () => {
               />
               {/* Team 1 Button */}
               <div
-                onClick={() => setTeam1Info(!showTeam1Info)}
+                onClick={() => handleTeamClick('team1')}
                 className={`${
-                  showTeam1Info ? 'bg-[rgba(0,0,0,0.7)]' : ''
+                  activeTeam === 'team1' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
                 } absolute rotate-[3deg] top-[60%] left-[15%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
-                {showTeam1Info && (
+                {activeTeam === 'team1' && (
                   <div className='ml-2'>
                     <b>Katrin Gorochov</b>
                     <br />
@@ -80,13 +81,13 @@ const Team = () => {
               </div>
               {/* Team 2 Button */}
               <div
-                onClick={() => setTeam2Info(!showTeam2Info)}
+                onClick={() => handleTeamClick('team2')}
                 className={`${
-                  showTeam2Info ? 'bg-[rgba(0,0,0,0.7)]' : ''
+                  activeTeam === 'team2' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
                 } absolute rotate-[3deg] top-[50%] left-[35%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
-                {showTeam2Info && (
+                {activeTeam === 'team2' && (
                   <div className='ml-2'>
                     <b>Sarah Hennig</b>
                     <br />
@@ -96,13 +97,13 @@ const Team = () => {
               </div>
               {/* Team 3 Button */}
               <div
-                onClick={() => setTeam3Info(!showTeam3Info)}
+                onClick={() => handleTeamClick('team3')}
                 className={`${
-                  showTeam3Info ? 'bg-[rgba(0,0,0,0.7)]' : ''
+                  activeTeam === 'team3' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
                 } absolute rotate-[3deg] top-[40%] left-[55%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
-                {showTeam3Info && (
+                {activeTeam === 'team3' && (
                   <div className='ml-2'>
                     <b> Nathalie Thorleuchter</b>
                     <br />
@@ -112,13 +113,13 @@ const Team = () => {
               </div>
               {/* Team 4 Button */}
               <div
-                onClick={() => setTeam4Info(!showTeam4Info)}
+                onClick={() => handleTeamClick('team4')}
                 className={`${
-                  showTeam4Info ? 'bg-[rgba(0,0,0,0.7)]' : ''
+                  activeTeam === 'team4' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
                 } absolute top-[50%] left-[70%] rotate-[3deg] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
-                {showTeam4Info && (
+                {activeTeam === 'team4' && (
                   <div className='ml-2'>
                     <b>Sören Dübel</b>
                     <br />
@@ -130,12 +131,140 @@ const Team = () => {
             {/* Second image (right) */}
             <div className='relative h-[800px] md:h-96 w-full md:w-[55%] md:-ml-10 rotate-6 overflow-hidden rounded-xl shadow-xl'>
               <Image
-                src='/images/team2.jpg'
+                src='/images/mitarbeiterStein-min.jpg'
                 alt='Team Mitglieder'
                 width={1000}
                 height={1000}
                 className='h-full w-full scale-110 rounded-xl bg-black object-cover object-top'
               />
+              {/* Team 1 Button */}
+              <div
+                onClick={() => handleTeamClick('team5')}
+                className={`${
+                  activeTeam === 'team5' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
+                } absolute top-[60%] rotate-[-6deg] left-[15%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+              >
+                <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
+                {activeTeam === 'team5' && (
+                  <div className='ml-2'>
+                    <b>Sören Dübel</b>
+                    <br />
+                    Geschäftsführung & Projektleitung
+                  </div>
+                )}
+              </div>
+              {/* Team 2 Button */}
+              <div
+                onClick={() => handleTeamClick('team6')}
+                className={`${
+                  activeTeam === 'team6' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
+                } absolute rotate-[-6deg] top-[60%] left-[45%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+              >
+                <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
+                {activeTeam === 'team6' && (
+                  <div className='ml-2'>
+                    <b>Lars Mikeler</b>
+                    <br />
+                    Pädagogische Leitung
+                  </div>
+                )}
+              </div>
+              {/* Team 3 Button */}
+              <div
+                onClick={() => handleTeamClick('team7')}
+                className={`${
+                  activeTeam === 'team7' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
+                } absolute rotate-[-6deg] top-[35%] left-[15%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+              >
+                <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
+                {activeTeam === 'team7' && (
+                  <div className='ml-2'>
+                    <b>Mika Dombrowski</b>
+                    <br />
+                    Bundesfreiwilligendienst Backoffice + Pädagogik
+                  </div>
+                )}
+              </div>
+              {/* Team 4 Button */}
+              <div
+                onClick={() => handleTeamClick('team8')}
+                className={`${
+                  activeTeam === 'team8' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
+                } absolute rotate-[-6deg] top-[35%] left-[40%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+              >
+                <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
+                {activeTeam === 'team8' && (
+                  <div className='ml-2'>
+                    <b>Marlene Langenbucher</b>
+                    <br />
+                    Geschäftsführung & Projektleitung
+                  </div>
+                )}
+              </div>
+              {/* Team 5 Button */}
+              <div
+                onClick={() => handleTeamClick('team9')}
+                className={`${
+                  activeTeam === 'team9' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
+                } absolute rotate-[-6deg] top-[25%] left-[30%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+              >
+                <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
+                {activeTeam === 'team9' && (
+                  <div className='ml-2'>
+                    <b>Schabnaz Khadem Saba</b>
+                    <br />
+                    Projektleitung Fit für die Schule
+                  </div>
+                )}
+              </div>
+              {/* Team 6 Button */}
+              <div
+                onClick={() => handleTeamClick('team10')}
+                className={`${
+                  activeTeam === 'team10' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
+                } absolute rotate-[-6deg] top-[25%] left-[55%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+              >
+                <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
+                {activeTeam === 'team10' && (
+                  <div className='ml-2'>
+                    <b>Johanna Nedelmann</b>
+                    <br />
+                    Praktikantin Öffentlichkeitsarbeit
+                  </div>
+                )}
+              </div>
+              {/* Team 7 Button */}
+              <div
+                onClick={() => handleTeamClick('team11')}
+                className={`${
+                  activeTeam === 'team11' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
+                } absolute rotate-[-6deg] top-[15%] left-[48%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+              >
+                <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
+                {activeTeam === 'team11' && (
+                  <div className='ml-2'>
+                    <b>Kristina Savichyte</b>
+                    <br />
+                    Praktikantin Fördermittel
+                  </div>
+                )}
+              </div>
+              {/* Team 8 Button */}
+              <div
+                onClick={() => handleTeamClick('team12')}
+                className={`${
+                  activeTeam === 'team12' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
+                } absolute rotate-[-6deg] top-[35%] left-[70%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+              >
+                <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
+                {activeTeam === 'team12' && (
+                  <div className='ml-2'>
+                    <b>Gina Misselhorn</b>
+                    <br />
+                    Öffentlichkeitsarbeit und Backoffice
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

@@ -33,7 +33,7 @@ const TranskulturellesSommerfest = () => {
         {/* Image Gallery */}
         <Container>
           <div className='relative w-full flex justify-center items-center pb-32'>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 relative'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 relative max-w-4xl'>
               {/* Top Left Image */}
               <div className='relative transform rotate-[-5deg]'>
                 <Image
@@ -67,7 +67,7 @@ const TranskulturellesSommerfest = () => {
                 />
               </div>
 
-              {/* Bottom Middle Image */}
+              {/* Bottom Right Image */}
               <div className='relative transform rotate-[-3deg]'>
                 <Image
                   src='/images/Bild25.jpeg'

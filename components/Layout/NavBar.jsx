@@ -212,7 +212,7 @@ const NavBar = () => {
                       <ul className='absolute left-full top-0 rounded-xl bg-lightYellow pb-5 shadow-md'>
                         <li className='hover:bg-darkYellow rounded-t-xl'>
                           <Link href='/eduai' className='block py-3 px-10 text-left'>
-                            EduAid
+                            EduAId
                           </Link>
                         </li>
                         <li className='hover:bg-darkYellow'>
@@ -260,6 +260,11 @@ const NavBar = () => {
                     </div>
                     {showJobs && (
                       <ul className='absolute left-full top-0 rounded-xl bg-lightYellow pb-5 shadow-md'>
+                        <Link href='/jobs#honorartaetigkeiten'>
+                          <li className='py-3 px-10 hover:bg-darkYellow hover:rounded-t-xl'>
+                            Honorartätigkeiten
+                          </li>
+                        </Link>
                         <Link href='/jobs#jobs'>
                           <li className='py-3 px-10 hover:bg-darkYellow hover:rounded-t-xl'>
                             Ausschreibung
@@ -520,6 +525,11 @@ const NavBar = () => {
                           exit='hidden'
                           variants={dropdownVariants}
                         >
+                          <li>
+                            <Link href='/jobs#honorartaetigkeiten' onClick={toogleHamburgerMenu}>
+                              Honorartätigkeiten
+                            </Link>
+                          </li>
                           <li>
                             <Link href='/jobs#jobs' onClick={toogleHamburgerMenu}>
                               Ausschreibung

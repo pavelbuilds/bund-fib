@@ -202,7 +202,7 @@ const Jobs = () => {
                   <InlineWidget
                     styles={{
                       width: '50vh',
-                      height: '50vh',
+                      height: 'min(40vh)',
                     }}
                     pageSettings={{
                       backgroundColor: 'ffffff',
@@ -214,7 +214,7 @@ const Jobs = () => {
                     url='https://calendly.com/schabnaz-saba-bund-fib/kennenlerngespraech-berlin'
                   />
                 ) : (
-                  <div className='py-32'>
+                  <div className='py-16 sm:py-24 md:py-32'>
                     <p>
                       Bitte akzeptieren Sie die Verwendung von Cookies, um das Kalender-Widget zu
                       verwenden.{' '}
@@ -249,7 +249,7 @@ const Jobs = () => {
                   <InlineWidget
                     styles={{
                       width: '50vh',
-                      height: '50vh',
+                      height: 'min(40vh)',
                     }}
                     pageSettings={{
                       backgroundColor: 'ffffff',
@@ -261,7 +261,7 @@ const Jobs = () => {
                     url='https://calendly.com/benedict-hepp-bund-fib/kennlerngespraech-hannover'
                   />
                 ) : (
-                  <div className='py-32'>
+                  <div className='py-16 sm:py-24 md:py-32'>
                     <p>
                       Bitte akzeptieren Sie die Verwendung von Cookies, um das Kalender-Widget zu
                       verwenden.{' '}
@@ -274,10 +274,6 @@ const Jobs = () => {
                     </p>
                   </div>
                 )}
-                {/* <div className='flex h-[50vh] w-[25vw] items-center justify-center'>
-                    Aktuell sind wir für den Standort Hannover nicht auf der Suche nach neuen
-                    Nachhilfekräften
-                  </div> */}
               </div>
             </div>
             <div className='ml-5 mr-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
@@ -296,7 +292,7 @@ const Jobs = () => {
                   <InlineWidget
                     styles={{
                       width: '50vh',
-                      height: '50vh',
+                      height: 'min(40vh)',
                     }}
                     pageSettings={{
                       backgroundColor: 'ffffff',
@@ -308,7 +304,7 @@ const Jobs = () => {
                     url='https://calendly.com/nathalie-thorleuchter-bund-fib/kennenlerngespraech-standort-leipzig'
                   />
                 ) : (
-                  <div className='py-32'>
+                  <div className='py-16 sm:py-24 md:py-32'>
                     <p>
                       Bitte akzeptieren Sie die Verwendung von Cookies, um das Kalender-Widget zu
                       verwenden.
@@ -325,7 +321,7 @@ const Jobs = () => {
             </div>
           </div>
 
-          <Button click={toggleKontaktieren} styling={' mt-10 w-40 mx-auto'} cta={'Schließen'} />
+          <Button click={toggleKontaktieren} styling={'w-40 mx-auto'} cta={'Schließen'} />
         </div>
       </div>
     </>

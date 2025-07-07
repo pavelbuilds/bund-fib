@@ -18,6 +18,7 @@ const GemeinsamHandeln = () => {
           title='Gemeinsam handeln'
           subtitle='Gemeinsam stark – Geflüchtete Kinder unterstützen'
           image='/images/fit-fuer-die-schule.jpeg'
+          imageStyle='center 65%'
         />
         {/* Content */}
         <Container>

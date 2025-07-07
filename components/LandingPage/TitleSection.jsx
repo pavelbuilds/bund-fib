@@ -10,7 +10,7 @@ const TitleSection = () => {
           Kinder und Jugendliche nachhaltig stärken
         </h1>
         {/* Untertitle */}
-        <div className='mt-10 px-5 text-center font-source text-lg leading-tight text-white sm:w-[600px] sm:px-0'>
+        <div className='mt-10 px-5 text-center font-source text-3xl leading-tight text-white sm:w-full sm:px-0'>
           Als gemeinnützige Organisation bauen wir auf Bildung durch Wertschätzung.
         </div>
         {/* Buttons */}

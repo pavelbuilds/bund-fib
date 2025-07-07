@@ -16,7 +16,7 @@ const AktivWerden = () => {
       <NavBar />
       <div className='bg-darkYellow pt-14'>
         {/* Title */}
-        <ProjectTitleSection image='/images/Bild31.jpeg' imageStyle='top' title={`Aktiv werden`} />
+        {/* <ProjectTitleSection image='/images/Bild31.jpeg' imageStyle='top' title={`Aktiv werden`} /> */}
         {/* Content */}
         <Container>
           <section id='ehrenamt' className='pt-20 '>
@@ -88,7 +88,7 @@ const AktivWerden = () => {
           </section>
           <section id='praktikum' className='pt-20 '>
             <Textbox
-              // section={'Praktikum'}
+              section={'Absolviere dein Pflichtpraktikum bei uns'}
               slogan={'Praktikum'}
               styling={'w-full'}
               align={'left'}
@@ -191,7 +191,7 @@ const AktivWerden = () => {
           </section>
           <section id='bundesfreiwilligendienst' className='pt-20 pb-32'>
             <Textbox
-              // section={'Praktikum'}
+              section={'Mache ein Bundesfreiwilligendienst beim Bund-fiB'}
               slogan={'Bundesfreiwilligendienst'}
               styling={'w-full'}
               align={'left'}

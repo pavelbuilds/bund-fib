@@ -29,7 +29,7 @@ const Team = () => {
             styling={'lg:w-2/5 sm:pb-0 pb-16'}
             align={'left'}
           >
-            <div className='mb-10 text-center font-source leading-tight lg:text-left'>
+            <div className='mb-10 text-center font-source leading-loose lg:text-left'>
               Das Bund-fiB Leitungsteam setzt sich aus Sören und Marlene in der Geschäftsführung,
               Lars als pädagogischer Leiter und Ben als Standortleiter in Hannover zusammen.
               Gemeinsam haben sie ihre Schwerpunkte in der Pädagogik und Sonderpädagogik, sowie der
@@ -42,7 +42,7 @@ const Team = () => {
         </div>
 
         {/* Mitarbeiter Übersicht */}
-        <div className='mt-60 mb-20 flex flex-wrap justify-between sm:mt-72 sm:justify-start text-center'>
+        <div className='mt-60 mb-20 flex flex-wrap font-source leading-loose justify-between sm:mt-72 sm:justify-start text-center'>
           <div className='mb-16'>
             In den letzten Jahren sind unterschiedliche Menschen dazugekommen, die diese Vision
             unterstützen und kräftig voranbringen. Das Team vereint Expertise in den Bereichen der

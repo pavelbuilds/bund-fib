@@ -16,7 +16,9 @@ const FitFuerDieSchule = () => {
         {/* Title */}
         <ProjectTitleSection
           image='/images/fit-fuer-die-schule.jpeg'
-          title={`Fit für die Schule plus Berliner Ferienschulen`}
+          title={` Fit für die Schule und Berliner Ferienschule`}
+          subtitle={`Die ersten Schritte ins Bildungssystem`}
+          imageStyle='center 65%'
         />
         {/* Content */}
         <Container>

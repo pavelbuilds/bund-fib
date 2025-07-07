@@ -9,7 +9,7 @@ import Image from 'next/image';
 import Button from '../../components/Button';
 import Textbox from '../../components/Textbox';
 import ContactPersonCard from '../../components/ContactPersonCard';
-import { faPhone, faEnvelope, faSquarePhone } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope, faSquarePhone, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
 import { InlineWidget } from 'react-calendly';
@@ -176,16 +176,22 @@ const Jobs = () => {
       <Footer />
       {/* Kontaktieren Popup */}
       <div
-        className={`fixed top-0 z-30 h-screen min-h-[600px] w-screen bg-lightYellow pt-24 transition-all duration-700 ease-out sm:pt-[10vh] lg:pt-24 ${
+        className={`fixed top-0 z-30 h-screen  w-screen bg-lightYellow pt-24 transition-all duration-700 ease-out sm:pt-[10vh] lg:pt-24 ${
           kontaktieren ? '-translate-y-0' : '-translate-y-full'
         }`}
       >
         {/* Container */}
-        <div className='mx-auto flex max-w-screen-xl flex-col justify-center'>
+        <div className='mx-auto flex max-w-screen-xl flex-col items-center justify-center'>
+          <button
+            className='rounded-full size-14 mb-[5vh] bg-primary text-white flex items-center justify-center'
+            onClick={toggleKontaktieren}
+          >
+            <FontAwesomeIcon icon={faXmark} className='text-2xl' />
+          </button>
           {/* Header */}
           <div className='text-center font-berlin text-2xl'>Buch ein Gespräch mit uns:</div>
           {/* Kalender */}
-          <div className='mt-20 mb-20 flex w-full flex-col justify-center sm:mt-[5vh] sm:mb-[10vh] md:flex-row lg:mt-10 lg:mb-10'>
+          <div className='mt-20 mb-20 flex w-full flex-col justify-center sm:mt-[5vh] sm:mb-[10vh] md:flex-row lg:mt-[5vh] lg:mb-[5vh]'>
             <div className='ml-5 mr-5 mb-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
               <div className='hidden md:block'>Standort Berlin</div>
               <a
@@ -320,8 +326,6 @@ const Jobs = () => {
               </div>
             </div>
           </div>
-
-          <Button click={toggleKontaktieren} styling={'w-40 mx-auto'} cta={'Schließen'} />
         </div>
       </div>
     </>

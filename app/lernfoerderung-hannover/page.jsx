@@ -5,15 +5,9 @@ import Footer from '../../components/Layout/Footer';
 import Container from '../../components/Container';
 import ContactPersonCard from '../../components/ContactPersonCard';
 import ProjectTitleSection from '../../components/Layout/ProjectTitleSection';
-import { useState } from 'react';
+import { useStore } from '../../src/store';
 
 const LernfoerderungHannover = () => {
-  const [cookiesAccepted, setCookiesAccepted] = useState(false);
-
-  const setShowCookieConsent = () => {
-    setCookiesAccepted(true);
-  };
-
   return (
     <>
       <NavBar />
@@ -66,39 +60,9 @@ const LernfoerderungHannover = () => {
             kreativer Atmosphäre aus – immer mit dem Ziel, Kindern die bestmögliche Förderung zu
             ermöglichen.
           </p>
-          {/* Map */}
-          {cookiesAccepted ? (
-            <iframe
-              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.0876865725584!2d9.72756937689657!3d52.36862747201638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b074c2d0f9c4d1%3A0x4f5b8c2c3f6c0f0a!2sOeltzenstra%C3%9Fe%2013A%2C%2030169%20Hannover!5e0!3m2!1sen!2sde!4v1689324001882!5m2!1sen!2sde'
-              width='100%'
-              height='450'
-              style={{ border: 0 }}
-              allowFullScreen=''
-              loading='lazy'
-              referrerPolicy='no-referrer-when-downgrade'
-              className='mb-10 mt-10'
-            ></iframe>
-          ) : (
-            <div className='h-[450px] p-10 bg-gray-500 rounded-lg flex justify-center items-center mb-10 mt-10'>
-              <p className='text-center'>
-                Bitte akzeptieren Sie die Verwendung von Cookies, um die Google Maps-Karte
-                anzuzeigen.{' '}
-                <span
-                  className='underline cursor-pointer'
-                  onClick={() => setShowCookieConsent(true)}
-                >
-                  hier clicken um Cookie-Einstellungen zu ändern
-                </span>
-              </p>
-            </div>
-          )}
-          <p className='text-lg pb-10'>
-            Bund-fiB gUG <br />
-            Coworking Studiö <br />
-            Oeltzenstraße 13a <br />
-            30169 Hannover
-          </p>
-
+        </Container>
+        {/* Contact Person Card with Map */}
+        <Container>
           <ContactPersonCard
             person={{
               image: '/images/mitarbeiter/benedict_ansprechpartner.jpeg',
@@ -107,6 +71,7 @@ const LernfoerderungHannover = () => {
               email: 'benedict.hepp@bund-fib.de',
             }}
             project='für die Lernförderung Hannover'
+            address='Oeltzenstraße 13a, 30169 Hannover, Germany'
           />
         </Container>
       </div>

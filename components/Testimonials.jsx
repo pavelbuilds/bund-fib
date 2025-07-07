@@ -6,7 +6,7 @@ import Image from 'next/image';
 const testimonials = [
   {
     text: '"Die Zusammenarbeit mit fiB funktioniert problemlos. Es ist immer jemand erreichbar und hat ein offenes Ohr für unsere Anliegen. Die Organisation der Nachhilfe sowie alle damit verbundenen bürokratischen Angelegenheiten werden von den Mitarbeiter:innen von fiB übernommen. Der Kontakt ist stets sehr angenehm, und wir freuen uns, dass die Kinder in unserer Gemeinschaftsunterkunft durch fiB in der Nachhilfe unterstützt werden."',
-    name: 'Sophie',
+    name: 'Team GU Arno-Nitzsche-Straße',
     company: 'Pandechaion – Herberge e.V.',
   },
   {

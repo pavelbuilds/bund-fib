@@ -17,7 +17,7 @@ const ProjectTitleSection = ({
       <div className='w-full h-full bg-black/70 pt-40 pb-40 md:pb-64 text-center'>
         <Container>
           <h1 className='text-5xl font-berlin text-white'>{title}</h1>
-          <h2 className='text-2xl mt-10 font-bold font-source'>{subtitle}</h2>
+          <h2 className='text-3xl mt-10 font-normal font-source'>{subtitle}</h2>
         </Container>
       </div>
       <svg

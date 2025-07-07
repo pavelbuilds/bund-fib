@@ -18,6 +18,7 @@ const FerienschuleFuerIntegrativeBildung = () => {
         <ProjectTitleSection
           title={`Ferienschulen für integrative Bildung `}
           image='/ferienschule/Bild11.jpg'
+          imageStyle='center 50% '
         />
         {/* Content */}
         <Container>

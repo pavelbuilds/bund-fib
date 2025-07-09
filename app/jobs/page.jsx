@@ -16,7 +16,7 @@ import { InlineWidget } from 'react-calendly';
 import { useStore } from '../../src/store';
 
 const contactPerson = {
-  image: '/images/mitarbeiter/Bild27.jpg',
+  image: '/images/mitarbeiter/Marlene.png',
   name: 'Marlene Langenbucher de Olavarrieta',
   phone: '+49 3068908697',
   email: 'marlene.langenbucher@bund-fib.de ',

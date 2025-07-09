@@ -65,7 +65,7 @@ const LernfoerderungHannover = () => {
         <Container>
           <ContactPersonCard
             person={{
-              image: '/images/mitarbeiter/benedict_ansprechpartner.jpeg',
+              image: '/images/mitarbeiter/Ben.png',
               name: 'Benedict Hepp',
               phone: '+49 176 84919977',
               email: 'benedict.hepp@bund-fib.de',

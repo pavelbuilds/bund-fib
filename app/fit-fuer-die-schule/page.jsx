@@ -103,7 +103,7 @@ const FitFuerDieSchule = () => {
           <div className='flex justify-start flex-col lg:flex-row'>
             <ContactPersonCard
               person={{
-                image: '/images/mitarbeiter/shabnaz_ansprechpartner.jpeg',
+                image: '/images/mitarbeiter/Schabnaz.png',
                 name: 'Schabnaz Khadem Saba',
                 phone: '+49 176 11842231',
                 email: 'schabnaz.saba@bund-fib.de ',

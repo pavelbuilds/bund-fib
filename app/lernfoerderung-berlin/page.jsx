@@ -60,7 +60,7 @@ const LernfoerderungBerlin = () => {
         <Container>
           <ContactPersonCard
             person={{
-              image: '/images/mitarbeiter/soeren_ansprechpartner.jpeg',
+              image: '/images/mitarbeiter/Soeren.png',
               name: 'Sören Dübel',
               phone: '+49 15758756855',
               email: 'soeren.duebel@bund-fib.de',

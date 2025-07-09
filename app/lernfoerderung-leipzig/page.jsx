@@ -60,7 +60,7 @@ const LernfoerderungLeipzig = () => {
         <Container>
           <ContactPersonCard
             person={{
-              image: '/images/mitarbeiter/NathalieThorleuchter.jpeg',
+              image: '/images/mitarbeiter/Nathalie.png',
               name: 'Nathalie Thorleuchter',
               phone: '+49 17611842230',
               email: 'nathalie.thorleuchter@bund-fib.de',

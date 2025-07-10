@@ -67,7 +67,7 @@ const DualesStudium = () => {
                 {/* Person Image */}
                 <div className='rounded-full md:w-48 w-32 md:h-48 h-32'>
                   <Image
-                    src={'/images/mitarbeiter/Bild27.jpg'}
+                    src={'/images/mitarbeiter/Marlene.png'}
                     className='rounded-full md:w-full w-32 md:h-full h-32 object-cover object-top'
                     alt='Contact Person'
                     width={100}

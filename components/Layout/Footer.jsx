@@ -87,19 +87,33 @@ const Footer = () => {
             <div className='font-poppins text-base'>Organisation</div>
             <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
 
-            <Link href='/jobs' className='my-1 font-source text-sm'>
+            <Link href='/jobs' className='my-1 font-source text-sm w-full text-center sm:text-left'>
               Jobs
             </Link>
-            <Link href='/#ueberuns' className='my-1 font-source text-sm'>
+            <Link
+              href='/#ueberuns'
+              className='my-1 font-source text-sm w-full text-center sm:text-left'
+            >
               Über uns
             </Link>
-            <Link href='/#UnserTeam' className='my-1 font-source text-sm'>
+            <Link
+              href='/#UnserTeam'
+              className='my-1 font-source text-sm w-full text-center sm:text-left'
+            >
               Team
             </Link>
-            <a href='/SatzungBund-fiB.pdf' target='_blank' className='my-1 font-source text-sm'>
+            <a
+              href='/SatzungBund-fiB.pdf'
+              target='_blank'
+              className='my-1 font-source text-sm w-full text-center sm:text-left'
+            >
               Satzung
             </a>
-            <Link href='/partner' target='_blank' className='my-1 font-source text-sm'>
+            <Link
+              href='/partner'
+              target='_blank'
+              className='my-1 font-source text-sm w-full text-center sm:text-left'
+            >
               Partner
             </Link>
           </div>
@@ -107,40 +121,61 @@ const Footer = () => {
           <div className='mt-16 sm:mt-0 w-full sm:w-auto flex justify-center flex-col items-center sm:items-start sm:justify-start'>
             <div className='font-poppins text-base'>Informationen</div>
             <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
-            <Link href='/material' target='_blank' className='my-1 font-source text-sm'>
+            <Link
+              href='/material'
+              target='_blank'
+              className='my-1 font-source text-sm w-full text-center sm:text-left'
+            >
               Material-fiB
             </Link>
-            <div onClick={toggleImpressum} className='my-1 cursor-pointer font-source text-sm'>
+            <button
+              onClick={toggleImpressum}
+              className='my-1 font-source text-sm w-full text-center sm:text-left bg-transparent border-none cursor-pointer'
+            >
               Impressum
-            </div>
-            <div>
-              <a
-                className='my-1 cursor-pointer font-source text-sm'
-                href='/datenschutz'
-                target='_blank'
-              >
-                Datenschutz
-              </a>
-            </div>
-            <button onClick={() => setShowCookieConsent(true)}>
-              <div className='my-1 font-source text-sm text-left'>Cookie Einstellungen</div>
+            </button>
+            <Link
+              href='/datenschutz'
+              target='_blank'
+              className='my-1 font-source text-sm w-full text-center sm:text-left'
+            >
+              Datenschutz
+            </Link>
+            <button
+              onClick={() => setShowCookieConsent(true)}
+              className='my-1 font-source text-sm w-full text-center sm:text-left bg-transparent border-none cursor-pointer'
+            >
+              Cookie Einstellungen
             </button>
           </div>
           {/* Kontakt */}
           <div className='mt-16 sm:mt-0 w-full sm:w-auto flex justify-center flex-col items-center sm:items-start sm:justify-start'>
             <div className='font-poppins text-base'>Kontakt</div>
             <div className='mt-2 mb-5 h-[5px] w-8 bg-primary'></div>
-            <Link href='/#ContactForm' className='my-1 font-source text-sm'>
+            <Link
+              href='/#ContactForm'
+              className='my-1 font-source text-sm w-full text-center sm:text-left'
+            >
               Kontaktiere uns
             </Link>
-            <Link href='/ansprechpartnerinnen' target='_blank' className='my-1 font-source text-sm'>
+            <Link
+              href='/ansprechpartnerinnen'
+              target='_blank'
+              className='my-1 font-source text-sm w-full text-center sm:text-left'
+            >
               Ansprechpartner:innen
             </Link>
-            <a href='mailto:verwaltung@bund-fib.de'>
-              <div className='my-1 font-source text-sm'>verwaltung@bund-fib.de</div>
+            <a
+              href='mailto:verwaltung@bund-fib.de'
+              className='my-1 font-source text-sm w-full text-center sm:text-left'
+            >
+              verwaltung@bund-fib.de
             </a>
-            <a href='tel:+493068908697'>
-              <div className='my-1 font-source text-sm'>+49 30 68908696</div>
+            <a
+              href='tel:+493068908697'
+              className='my-1 font-source text-sm w-full text-center sm:text-left'
+            >
+              +49 30 68908696
             </a>
           </div>
         </div>

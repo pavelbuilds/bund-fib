@@ -5,7 +5,10 @@ import Testimonials from '../Testimonials';
 
 const AboutUs = () => {
   return (
-    <section id='ueberuns' className='relative bg-darkYellow  md:pt-52  pt-[600px] '>
+    <section
+      id='ueberuns'
+      className='relative bg-darkYellow md:pt-52 pt-[600px] scroll-mt-[-500px] sm:scroll-mt-0'
+    >
       <Container styling={'flex items-center flex-col'}>
         <Textbox
           animation={'fade-up'}
@@ -13,7 +16,7 @@ const AboutUs = () => {
           slogan={'Was uns als Partner besonders macht'}
           styling={'lg:w-4/5 -mt-1'}
         >
-          <div className='mb-10 font-source leading-loose sm:mb-20 text-justify'>
+          <div className='mb-10 font-source leading-loose sm:mb-20 sm:text-justify'>
             Der Bund-fiB ist eine gemeinnützige Organisation tätig in Berlin, Leipzig und Hannover.
             Wir bieten verschiedene Bildungsprojekte an Schulen, Gemeinschaftsunterkünften und in
             privaten Haushalten an. Unsere Projektpalette variiert von inklusiven Schulprojekten bis

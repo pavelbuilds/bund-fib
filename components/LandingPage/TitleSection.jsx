@@ -6,11 +6,11 @@ const TitleSection = () => {
     >
       <div className='flex h-full w-full flex-col items-center justify-center bg-black bg-opacity-60'>
         {/* Title Slogal */}
-        <h1 className='text-center font-berlin text-5xl text-white sm:w-[600px] sm:text-6xl'>
+        <h1 className='text-center font-berlin text-4xl text-white sm:w-[600px] sm:text-6xl'>
           Kinder und Jugendliche nachhaltig stärken
         </h1>
         {/* Untertitle */}
-        <div className='mt-10 px-5 text-center font-source text-3xl leading-tight text-white sm:w-full sm:px-0'>
+        <div className='mt-10 px-5 text-center font-source text-2xl leading-tight text-white sm:w-full sm:px-0'>
           Als gemeinnützige Organisation bauen wir auf Bildung durch Wertschätzung.
         </div>
         {/* Buttons */}

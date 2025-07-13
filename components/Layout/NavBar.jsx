@@ -364,13 +364,17 @@ const NavBar = () => {
         }`}
       >
         {/* Container */}
-        <div className='flex h-full max-w-screen-xl flex-col items-start pl-14 justify-center font-berlin text-3xl sm:text-[40px]'>
+        <div className='flex h-full max-w-screen-xl flex-col items-start justify-center font-berlin text-3xl sm:text-[40px]'>
           {/* Header */}
-          <Link href='/#ueberuns' onClick={toogleHamburgerMenu} className='mb-10 sm:mb-16 block'>
+          <Link
+            href='/#ueberuns'
+            onClick={toogleHamburgerMenu}
+            className='mb-10 sm:mb-16 block pl-14 '
+          >
             Über uns
           </Link>
 
-          <div className='mb-10 sm:mb-16'>
+          <div className='mb-10 sm:mb-16 pl-14 '>
             <div onClick={toggleBurgerProjekte} className='flex items-center cursor-pointer'>
               Projekte
               <motion.div
@@ -487,7 +491,7 @@ const NavBar = () => {
               )}
             </AnimatePresence>
           </div>
-          <div className='mb-10 sm:mb-16'>
+          <div className='mb-10 sm:mb-16 pl-14 '>
             <div onClick={toggleBurgerMitmachen} className='flex items-center cursor-pointer'>
               Mitmachen
               <motion.div
@@ -608,7 +612,7 @@ const NavBar = () => {
           </div>
           {/* Social Media Icons for Burger Menu */}
           <div
-            className='flex items-center md:hidden gap-4 mt-10 absolute left-1/2 -translate-x-1/2'
+            className='flex items-center md:hidden gap-4 mt-10  justify-center w-full'
             style={{ bottom: Math.max(150, viewportHeight * 0.1) + 'px' }}
           >
             {/* TikTok */}

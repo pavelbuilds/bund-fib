@@ -44,8 +44,12 @@ const Gruender = ({ animation }) => {
             setLarsInfo(!showLarsInfo);
           }}
           className={`${
-            showLarsInfo ? 'bg-[rgba(0,0,0,0.7)]' : ''
-          } absolute top-[75%] left-[25%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:top-[85%] sm:text-[10px]`}
+            showLarsInfo ? 'bg-[rgba(0,0,0,0.7)] z-20' : 'z-10'
+          } absolute top-[75%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all  sm:top-[85%] sm:text-[14px] sm:left-[25%] ${
+            showLarsInfo
+              ? 'left-1/2 sm:left-[25%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+              : 'left-[5%] sm:left-[25%]'
+          }`}
         >
           <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
           {showLarsInfo && (
@@ -62,8 +66,12 @@ const Gruender = ({ animation }) => {
             setBenedictInfo(!showBenedictInfo);
           }}
           className={`${
-            showBenedictInfo ? 'bg-[rgba(0,0,0,0.7)]' : ''
-          } absolute top-[90%] left-[37%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:top-[100%] sm:text-[10px]`}
+            showBenedictInfo ? 'bg-[rgba(0,0,0,0.7)] z-20' : 'z-10'
+          } absolute top-[90%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all  sm:top-[100%] sm:text-[14px] sm:left-[37%] ${
+            showBenedictInfo
+              ? 'left-1/2 sm:left-[37%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+              : 'left-[23%] sm:left-[37%]'
+          }`}
         >
           <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
           {showBenedictInfo && (
@@ -80,8 +88,12 @@ const Gruender = ({ animation }) => {
             setMarleneInfo(!showMarleneInfo);
           }}
           className={`${
-            showMarleneInfo ? 'bg-[rgba(0,0,0,0.7)]' : ''
-          } absolute top-[75%] left-[58%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:top-[85%] sm:text-[10px]`}
+            showMarleneInfo ? 'bg-[rgba(0,0,0,0.7)] z-20' : 'z-10'
+          } absolute top-[75%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all  sm:top-[85%] sm:text-[14px] sm:left-[58%] ${
+            showMarleneInfo
+              ? 'left-1/2 sm:left-[58%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+              : 'left-[48%] sm:left-[58%]'
+          }`}
         >
           <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
           {showMarleneInfo && (
@@ -98,8 +110,12 @@ const Gruender = ({ animation }) => {
             setSorenInfo(!showSorenInfo);
           }}
           className={`${
-            showSorenInfo ? 'bg-[rgba(0,0,0,0.7)]' : ''
-          } absolute top-[105%] left-[73%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:top-[100%] sm:text-[10px]`}
+            showSorenInfo ? 'bg-[rgba(0,0,0,0.7)] z-20' : 'z-10'
+          } absolute top-[105%]^ flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all sm:top-[100%] sm:text-[14px] sm:left-[73%] ${
+            showSorenInfo
+              ? 'left-1/2 sm:left-[73%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+              : 'left-[73%] sm:left-[73%]'
+          }`}
         >
           <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
           {showSorenInfo && (

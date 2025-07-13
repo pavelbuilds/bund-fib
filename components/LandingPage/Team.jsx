@@ -68,7 +68,11 @@ const Team = () => {
                 onClick={() => handleTeamClick('team1')}
                 className={`${
                   activeTeam === 'team1' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
-                } absolute rotate-[3deg] top-[60%] left-[15%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+                } absolute rotate-[3deg] top-[60%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all sm:text-[14px] ${
+                  activeTeam === 'team1'
+                    ? 'left-1/2 sm:left-[15%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+                    : 'left-[3%] sm:left-[15%]'
+                }`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
                 {activeTeam === 'team1' && (
@@ -84,7 +88,11 @@ const Team = () => {
                 onClick={() => handleTeamClick('team2')}
                 className={`${
                   activeTeam === 'team2' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
-                } absolute rotate-[3deg] top-[50%] left-[35%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+                } absolute rotate-[3deg] top-[50%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all sm:text-[14px] ${
+                  activeTeam === 'team2'
+                    ? 'left-1/2 sm:left-[35%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+                    : 'left-[25%] sm:left-[35%]'
+                }`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
                 {activeTeam === 'team2' && (
@@ -100,7 +108,11 @@ const Team = () => {
                 onClick={() => handleTeamClick('team3')}
                 className={`${
                   activeTeam === 'team3' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
-                } absolute rotate-[3deg] top-[40%] left-[55%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+                } absolute rotate-[3deg] top-[40%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all sm:text-[14px] ${
+                  activeTeam === 'team3'
+                    ? 'left-1/2 sm:left-[55%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+                    : 'left-[55%] sm:left-[55%]'
+                }`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
                 {activeTeam === 'team3' && (
@@ -116,7 +128,11 @@ const Team = () => {
                 onClick={() => handleTeamClick('team4')}
                 className={`${
                   activeTeam === 'team4' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
-                } absolute top-[50%] left-[70%] rotate-[3deg] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+                } absolute top-[50%] rotate-[3deg] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all sm:text-[14px] ${
+                  activeTeam === 'team4'
+                    ? 'left-1/2 sm:left-[70%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+                    : 'left-[80%] sm:left-[70%]'
+                }`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
                 {activeTeam === 'team4' && (
@@ -142,7 +158,11 @@ const Team = () => {
                 onClick={() => handleTeamClick('team5')}
                 className={`${
                   activeTeam === 'team5' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
-                } absolute top-[60%] rotate-[-6deg] left-[15%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+                } absolute top-[60%] rotate-[-6deg] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all sm:text-[14px] ${
+                  activeTeam === 'team5'
+                    ? 'left-1/2 sm:left-[15%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+                    : 'left-[0%] sm:left-[15%]'
+                }`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
                 {activeTeam === 'team5' && (
@@ -158,7 +178,11 @@ const Team = () => {
                 onClick={() => handleTeamClick('team6')}
                 className={`${
                   activeTeam === 'team6' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
-                } absolute rotate-[-6deg] top-[60%] left-[45%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+                } absolute rotate-[-6deg] top-[60%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all sm:text-[14px] ${
+                  activeTeam === 'team6'
+                    ? 'left-1/2 sm:left-[45%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+                    : 'left-[35%] sm:left-[45%]'
+                }`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
                 {activeTeam === 'team6' && (
@@ -174,7 +198,11 @@ const Team = () => {
                 onClick={() => handleTeamClick('team7')}
                 className={`${
                   activeTeam === 'team7' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
-                } absolute rotate-[-6deg] top-[35%] left-[15%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+                } absolute rotate-[-6deg] top-[35%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all sm:text-[14px] ${
+                  activeTeam === 'team7'
+                    ? 'left-1/2 sm:left-[15%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+                    : 'left-[-2%] sm:left-[15%]'
+                }`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
                 {activeTeam === 'team7' && (
@@ -190,7 +218,11 @@ const Team = () => {
                 onClick={() => handleTeamClick('team8')}
                 className={`${
                   activeTeam === 'team8' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
-                } absolute rotate-[-6deg] top-[35%] left-[40%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+                } absolute rotate-[-6deg] top-[35%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all sm:text-[14px] ${
+                  activeTeam === 'team8'
+                    ? 'left-1/2 sm:left-[40%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+                    : 'left-[30%] sm:left-[40%]'
+                }`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
                 {activeTeam === 'team8' && (
@@ -206,7 +238,11 @@ const Team = () => {
                 onClick={() => handleTeamClick('team9')}
                 className={`${
                   activeTeam === 'team9' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
-                } absolute rotate-[-6deg] top-[25%] left-[30%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+                } absolute rotate-[-6deg] top-[25%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all sm:text-[14px] ${
+                  activeTeam === 'team9'
+                    ? 'left-1/2 sm:left-[30%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+                    : 'left-[20%] sm:left-[30%]'
+                }`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
                 {activeTeam === 'team9' && (
@@ -222,7 +258,11 @@ const Team = () => {
                 onClick={() => handleTeamClick('team10')}
                 className={`${
                   activeTeam === 'team10' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
-                } absolute rotate-[-6deg] top-[25%] left-[55%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+                } absolute rotate-[-6deg] top-[25%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all sm:text-[14px] ${
+                  activeTeam === 'team10'
+                    ? 'left-1/2 sm:left-[55%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+                    : 'left-[55%] sm:left-[55%]'
+                }`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
                 {activeTeam === 'team10' && (
@@ -238,7 +278,11 @@ const Team = () => {
                 onClick={() => handleTeamClick('team11')}
                 className={`${
                   activeTeam === 'team11' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
-                } absolute rotate-[-6deg] top-[15%] left-[48%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+                } absolute rotate-[-6deg] top-[15%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all sm:text-[14px] ${
+                  activeTeam === 'team11'
+                    ? 'left-1/2 sm:left-[48%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+                    : 'left-[48%] sm:left-[48%]'
+                }`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
                 {activeTeam === 'team11' && (
@@ -254,7 +298,11 @@ const Team = () => {
                 onClick={() => handleTeamClick('team12')}
                 className={`${
                   activeTeam === 'team12' ? 'bg-[rgba(0,0,0,0.7)] z-50' : ''
-                } absolute rotate-[-6deg] top-[35%] left-[70%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all hover:scale-110 sm:text-[10px]`}
+                } absolute rotate-[-6deg] top-[35%] flex cursor-pointer items-center rounded-2xl py-2 px-4 text-[14px] text-white transition-all sm:text-[14px] ${
+                  activeTeam === 'team12'
+                    ? 'left-1/2 sm:left-[70%] transform -translate-x-1/2 w-3/4 sm:transform-none sm:w-auto'
+                    : 'left-[80%] sm:left-[70%]'
+                }`}
               >
                 <FontAwesomeIcon className='text-2xl text-primary' icon={faCircle} />
                 {activeTeam === 'team12' && (

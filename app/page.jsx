@@ -119,53 +119,6 @@ export default function Home() {
         <link rel='icon' href='/favicon.png' />
       </Head>
 
-      {/* Burger Menu */}
-
-      {/* Impressum Popup */}
-      {
-        // <div
-        //   className={`fixed z-50 h-screen min-h-[600px] w-screen overflow-scroll bg-lightYellow pt-24 transition-all duration-700 ease-out sm:pt-36 lg:pt-24 ${
-        //     impressum ? 'translate-y-0' : 'translate-y-full'
-        //   }`}
-        // >
-        //   {/* Container */}
-        //   <Container>
-        //     {/* Header */}
-        //     <div className='flex justify-between'>
-        //       <div className='text-center font-berlin text-2xl'>Impressum</div>
-        //       <FontAwesomeIcon
-        //         onClick={toggleImpressum}
-        //         className='w-6 cursor-pointer'
-        //         icon={faXmark}
-        //       />
-        //     </div>
-        //     {/* Text */}
-        //     <p>
-        //       <b>Angaben gemäß § 5 TMG</b>
-        //       <br />
-        //       <br />
-        //       <br />
-        //       <b>Geschäftsführung</b>
-        //       <br />
-        //       Marlene Langenbucher de Olavarrieta & Sören Dübel
-        //       <br />
-        //       <br />
-        //       Bund-fiB gUG (haftungsbeschränkt)
-        //       <br />
-        //       Schwedenstraße 17
-        //       <br />
-        //       13357 Berlin
-        //       <br />
-        //       <br />
-        //       <br />
-        //       <b>Kontakt</b>
-        //       <br />
-        //       Telefon: +49 157 58745855 E-Mail: verwaltung@bund-fib.de​
-        //     </p>
-        //   </Container>
-        // </div>
-      }
-
       {/* --Navigationsleiste-- */}
       <NavBar hamburgerClicked={hamburgerClicked} toogleHamburgerMenu={toogleHamburgerMenu} />
 

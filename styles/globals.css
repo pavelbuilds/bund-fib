@@ -108,6 +108,19 @@ html {
   height: 100px;
 }
 
+/* Mobile responsive wave stretching */
+@media (max-width: 768px) {
+  .wave svg {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wave svg {
+    height: 75px;
+  }
+}
+
 .wave .shape-fill {
   fill: #fffaf1;
 }
@@ -129,6 +142,19 @@ html {
   width: calc(100% + 1.3px);
   height: 289px;
   transform: rotateY(180deg);
+}
+
+/* Mobile responsive wave-two stretching */
+@media (max-width: 768px) {
+  .wave-two svg {
+    height: 339px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wave-two svg {
+    height: 164px;
+  }
 }
 
 .wave-two .shape-fill {
@@ -153,6 +179,19 @@ html {
   transform: rotateY(180deg);
 }
 
+/* Mobile responsive wave-three stretching */
+@media (max-width: 768px) {
+  .wave-three svg {
+    height: 550px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wave-three svg {
+    height: 575px;
+  }
+}
+
 .wave-three .shape-fill {
   fill: #fffaf1;
 }
@@ -175,6 +214,19 @@ html {
   transform: rotateY(180deg);
 }
 
+/* Mobile responsive wave-four stretching */
+@media (max-width: 768px) {
+  .wave-four svg {
+    height: 288px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wave-four svg {
+    height: 313px;
+  }
+}
+
 .wave-four .shape-fill {
   fill: #fff2da;
 }
@@ -195,6 +247,19 @@ html {
   display: block;
   width: calc(100% + 1.3px);
   height: 269px;
+}
+
+/* Mobile responsive wave-5 stretching */
+@media (max-width: 768px) {
+  .wave-5 svg {
+    height: 319px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wave-5 svg {
+    height: 344px;
+  }
 }
 
 .wave-5 .shape-fill {
@@ -221,6 +286,19 @@ html {
   transform: rotateY(180deg);
 }
 
+/* Mobile responsive wave-6 stretching */
+@media (max-width: 768px) {
+  .wave-6 svg {
+    height: 417px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wave-6 svg {
+    height: 442px;
+  }
+}
+
 .wave-6 .shape-fill {
   fill: #fff2da;
 }
@@ -245,6 +323,19 @@ html {
   transform: rotateY(180deg);
 }
 
+/* Mobile responsive wave-7 stretching */
+@media (max-width: 768px) {
+  .wave-7 svg {
+    height: 345px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wave-7 svg {
+    height: 370px;
+  }
+}
+
 .wave-7 .shape-fill {
   fill: #fde4b8;
 }
@@ -266,6 +357,19 @@ html {
   display: block;
   width: calc(100% + 1.3px);
   height: 123px;
+}
+
+/* Mobile responsive wave-8 stretching */
+@media (max-width: 768px) {
+  .wave-8 svg {
+    height: 173px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wave-8 svg {
+    height: 100px;
+  }
 }
 
 .wave-8 .shape-fill {

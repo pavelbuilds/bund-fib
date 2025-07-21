@@ -109,10 +109,54 @@ const Jobs = () => {
                   <br />
                   <br />
                 </div>
-                <div className='text-lg'>AKTUELL KEINE FREIEN STELLEN</div>
+                <div className=''>
+                  <div className='text-lg font-semibold text-primary mb-4'>
+                    Aktuelle Stellenangebote:
+                  </div>
+                  <ul className='space-y-3'>
+                    <li className='flex items-start'>
+                      <span className='text-primary mr-2'>•</span>
+                      <a
+                        href='/stellenausschreibungen/Werkstundent_in im Bereich Bildung und Soziale Arbeit am Standort Leipzig (m:w:d).pdf'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='text-base underline cursor-pointer'
+                      >
+                        Werkstudent*in im Bereich Bildung und Soziale Arbeit am Standort Leipzig
+                        (m/w/d) - Personalwesen
+                      </a>
+                    </li>
+                    <li className='flex items-start'>
+                      <span className='text-primary mr-2'>•</span>
+                      <a
+                        href='/stellenausschreibungen/Stellenausschreibung Praktikant_in Sept 25.pdf'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='text-base underline cursor-pointer'
+                      >
+                        Stellenausschreibung: Pflichtpraktikum im Bereich Bildung und Soziale Arbeit
+                        am Standort Berlin (m/w/d)
+                      </a>
+                    </li>
+                    <li className='flex items-start'>
+                      <span className='text-primary mr-2'>•</span>
+                      <a
+                        href='/stellenausschreibungen/Sta?ndige_Stellenausschreibu ng Praktikant_in_Bund-fiB.pdf'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='text-base underline cursor-pointer'
+                      >
+                        Ständige Stellenausschreibung: Pflichtpraktikum im Bereich Bildung und
+                        Soziale Arbeit am Standort Berlin (m/w/d)
+                      </a>
+                    </li>
+                  </ul>
+                </div>
                 {/* <Button
+                
+                  styling='mt-12'
                   className='umami--click--Jobs-Termin-buchen'
-                  // click={toggleKontaktieren}
+                  click={toggleKontaktieren}
                   cta={'Bewirb dich hier bei uns!'}
                 ></Button> */}
               </div>

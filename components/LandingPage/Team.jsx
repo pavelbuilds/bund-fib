@@ -145,7 +145,7 @@ const Team = () => {
               </div>
             </div>
             {/* Second image (right) */}
-            <div className='relative h-[800px] md:h-96 w-full md:w-[55%] md:-ml-10 rotate-6 overflow-hidden rounded-xl shadow-xl'>
+            <div className='relative h-[500px] md:h-96 w-full md:w-[55%] md:-ml-10 rotate-6 overflow-hidden rounded-xl shadow-xl'>
               <Image
                 src='/images/mitarbeiterStein-min.jpg'
                 alt='Team Mitglieder'

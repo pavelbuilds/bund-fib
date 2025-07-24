@@ -114,7 +114,7 @@ const Jobs = () => {
                     Aktuelle Stellenangebote:
                   </div>
                   <ul className='space-y-3'>
-                    <li className='flex items-start'>
+                    {/* <li className='flex items-start'>
                       <span className='text-primary mr-2'>•</span>
                       <a
                         href='/stellenausschreibungen/Werkstundent_in im Bereich Bildung und Soziale Arbeit am Standort Leipzig (m:w:d).pdf'
@@ -125,7 +125,7 @@ const Jobs = () => {
                         Werkstudent*in im Bereich Bildung und Soziale Arbeit am Standort Leipzig
                         (m/w/d) - Personalwesen
                       </a>
-                    </li>
+                    </li> */}
                     <li className='flex items-start'>
                       <span className='text-primary mr-2'>•</span>
                       <a

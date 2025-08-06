@@ -97,41 +97,51 @@ export default function Datenschutz() {
           <br />
           <p>
             Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website
-            erfasst werden, werden auf den Servern des Hosters / der Hoster gespeichert. Hierbei
-            kann es sich v.&nbsp;a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten,
-            Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die &uuml;ber
-            eine Website generiert werden, handeln.
+            erfasst werden, werden auf den Servern unseres Hosting-Anbieters gespeichert. Dabei
+            handelt es sich insbesondere um IP-Adressen, Kontaktanfragen, Meta- und
+            Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe sowie sonstige
+            Daten, die über eine Website generiert werden können.
           </p>
           <p>
-            Das externe Hosting erfolgt zum Zwecke der Vertragserf&uuml;llung gegen&uuml;ber unseren
-            potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer
-            sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen
+            Das Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und
+            bestehenden Kund:innen (Art. 6 Abs. 1 lit. b DSGVO) sowie im Interesse einer sicheren,
+            schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen
             professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO). Sofern eine entsprechende
-            Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschlie&szlig;lich auf
-            Grundlage von Art. 6 Abs. 1 lit. a DSGVO und &sect; 25 Abs. 1 TTDSG, soweit die
-            Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im
-            Endger&auml;t des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne des TTDSG umfasst.
-            Die Einwilligung ist jederzeit widerrufbar.
+            Einwilligung eingeholt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von
+            Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, soweit die Einwilligung die
+            Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät der Nutzer:innen
+            (z.&nbsp;B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung kann
+            jederzeit widerrufen werden.
           </p>
           <p>
-            Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten, wie dies zur
-            Erf&uuml;llung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug
-            auf diese Daten befolgen.
+            Unser Hosting-Anbieter verarbeitet personenbezogene Daten nur in dem Umfang, wie es zur
+            Erfüllung seiner Leistungspflichten erforderlich ist, und ausschließlich nach unseren
+            Weisungen.
           </p>
-          <p>Wir setzen folgende(n) Hoster ein:</p>
+          <p>Wir setzen folgenden Hosting-Dienstleister ein:</p>
           <p>
-            GoDaddy.com, LLC <br />
-            Hansestr. 111 <br />
-            51149 K&ouml;ln
+            Vercel Inc.
+            <br />
+            440 N Barranca Ave #4133
+            <br />
+            Covina, CA 91723
+            <br />
+            USA
+          </p>
+          <p>
+            Unsere Serverless-Funktionen sind so konfiguriert, dass sie ausschließlich in
+            Rechenzentren innerhalb der Europäischen Union ausgeführt werden – konkret in Frankfurt
+            am Main (Deutschland). Dadurch stellen wir sicher, dass auch serverseitig verarbeitete
+            personenbezogene Daten nicht außerhalb der EU übermittelt werden.
           </p>
           <h4>Auftragsverarbeitung</h4>
           <p>
-            Wir haben einen Vertrag &uuml;ber Auftragsverarbeitung (AVV) zur Nutzung des oben
-            genannten Dienstes geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich
-            vorgeschriebenen Vertrag, der gew&auml;hrleistet, dass dieser die personenbezogenen
-            Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO
-            verarbeitet.
+            Wir haben mit Vercel einen Vertrag zur Auftragsverarbeitung (AVV) gemäß Art. 28 DSGVO
+            abgeschlossen. Dieser stellt sicher, dass Vercel personenbezogene Daten unserer
+            Websitebesucher:innen nur nach unseren Weisungen und unter Einhaltung der europäischen
+            Datenschutzvorgaben verarbeitet.
           </p>
+
           <br />
           <br />
           <br />

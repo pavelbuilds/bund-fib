@@ -16,7 +16,7 @@ const ansprechpartnerinnen = [
     name: 'Sören Dübel',
     image: '/images/mitarbeiter/Soeren.png',
     role: 'Geschäftsführung, Projektleitung “Fit für die Schule” & Lernförderung',
-    phone: '+49 15758756855',
+    phone: '015758745855',
     email: 'soeren.duebel@bund-fib.de',
   },
   {

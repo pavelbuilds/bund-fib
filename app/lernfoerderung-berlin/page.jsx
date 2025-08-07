@@ -62,7 +62,7 @@ const LernfoerderungBerlin = () => {
             person={{
               image: '/images/mitarbeiter/Soeren.png',
               name: 'Sören Dübel',
-              phone: '+49 15758756855',
+              phone: '015758745855',
               email: 'soeren.duebel@bund-fib.de',
             }}
             project='für die Lernförderung Berlin'

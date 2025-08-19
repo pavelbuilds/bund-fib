@@ -126,7 +126,7 @@ const Jobs = () => {
                         (m/w/d) - Personalwesen
                       </a>
                     </li> */}
-                    <li className='flex items-start'>
+                    {/* <li className='flex items-start'>
                       <span className='text-primary mr-2'>•</span>
                       <a
                         href='/stellenausschreibungen/Stellenausschreibung Praktikant_in Sept 25.pdf'
@@ -137,7 +137,7 @@ const Jobs = () => {
                         Stellenausschreibung: Pflichtpraktikum im Bereich Bildung und Soziale Arbeit
                         am Standort Berlin (m/w/d)
                       </a>
-                    </li>
+                    </li> */}
                     <li className='flex items-start'>
                       <span className='text-primary mr-2'>•</span>
                       <a

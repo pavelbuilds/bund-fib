@@ -12,8 +12,8 @@ import ContactPersonCard from '../../components/ContactPersonCard';
 import { faPhone, faEnvelope, faSquarePhone, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
-import { InlineWidget } from 'react-calendly';
 import { useStore } from '../../src/store';
+import Standort from './components/Standort';
 
 const contactPerson = {
   image: '/images/mitarbeiter/Marlene.png',
@@ -236,139 +236,30 @@ const Jobs = () => {
           <div className='text-center font-berlin text-2xl'>Buch ein Gespräch mit uns:</div>
           {/* Kalender */}
           <div className='mt-20 mb-20 flex w-full flex-col justify-center sm:mt-[5vh] sm:mb-[10vh] md:flex-row lg:mt-[5vh] lg:mb-[5vh]'>
-            <div className='ml-5 mr-5 mb-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
-              <div className='hidden md:block'>Standort Berlin</div>
-              <a
-                href='https://calendly.com/schabnaz-saba-bund-fib/kennenlerngespraech-berlin'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='mb-5 mt-5 block md:hidden'>
-                  <u>Standort Berlin</u>
-                </div>
-              </a>
-              <div className='hidden md:block'>
-                {cookiesAccepted ? (
-                  <InlineWidget
-                    styles={{
-                      width: '50vh',
-                      height: 'min(40vh)',
-                    }}
-                    pageSettings={{
-                      backgroundColor: 'ffffff',
-                      hideEventTypeDetails: true,
-                      hideLandingPageDetails: true,
-                      primaryColor: 'F9B233',
-                      textColor: '4d5055',
-                    }}
-                    url='https://calendly.com/schabnaz-saba-bund-fib/kennenlerngespraech-berlin'
-                  />
-                ) : (
-                  <div className='py-16 sm:py-24 md:py-32'>
-                    <p>
-                      Bitte akzeptieren Sie die Verwendung von Cookies, um das Kalender-Widget zu
-                      verwenden.{' '}
-                      <span
-                        className='underline cursor-pointer'
-                        onClick={() => setShowCookieConsent(true)}
-                      >
-                        hier clicken um Cookie-Einstellungen zu ändern
-                      </span>
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-            <div className='ml-5 mr-5 mb-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
-              <div className='hidden md:block'>Standort Hannover</div>
-              <a
-                href='https://calendly.com/benedict-hepp-bund-fib/kennlerngespraech-hannover'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='mb-5 mt-5 block md:hidden'>
-                  <u>Standort Hannover</u>
-                  {/* <br />
-                  <br />
-                  Aktuell sind wir für den Standort Hannover nicht auf der Suche nach neuen
-                  Nachhilfekräften */}
-                </div>
-              </a>
-              <div className='hidden md:block'>
-                {cookiesAccepted ? (
-                  <InlineWidget
-                    styles={{
-                      width: '50vh',
-                      height: 'min(40vh)',
-                    }}
-                    pageSettings={{
-                      backgroundColor: 'ffffff',
-                      hideEventTypeDetails: true,
-                      hideLandingPageDetails: true,
-                      primaryColor: 'F9B233',
-                      textColor: '4d5055',
-                    }}
-                    url='https://calendly.com/benedict-hepp-bund-fib/kennlerngespraech-hannover'
-                  />
-                ) : (
-                  <div className='py-16 sm:py-24 md:py-32'>
-                    <p>
-                      Bitte akzeptieren Sie die Verwendung von Cookies, um das Kalender-Widget zu
-                      verwenden.{' '}
-                      <span
-                        className='underline cursor-pointer'
-                        onClick={() => setShowCookieConsent(true)}
-                      >
-                        hier clicken um Cookie-Einstellungen zu ändern
-                      </span>
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-            <div className='ml-5 mr-5 rounded-xl bg-white p-1 text-center shadow-xl lg:my-4'>
-              <div className='hidden md:block'>Standort Leipzig</div>
-              <a
-                href='https://calendly.com/nathalie-thorleuchter-bund-fib/kennenlerngespraech-standort-leipzig'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='mb-5 mt-5 block md:hidden'>
-                  <u>Standort Leipzig</u>
-                </div>
-              </a>
-              <div className='hidden md:block'>
-                {cookiesAccepted ? (
-                  <InlineWidget
-                    styles={{
-                      width: '50vh',
-                      height: 'min(40vh)',
-                    }}
-                    pageSettings={{
-                      backgroundColor: 'ffffff',
-                      hideEventTypeDetails: true,
-                      hideLandingPageDetails: true,
-                      primaryColor: 'F9B233',
-                      textColor: '4d5055',
-                    }}
-                    url='https://calendly.com/nathalie-thorleuchter-bund-fib/kennenlerngespraech-standort-leipzig'
-                  />
-                ) : (
-                  <div className='py-16 sm:py-24 md:py-32'>
-                    <p>
-                      Bitte akzeptieren Sie die Verwendung von Cookies, um das Kalender-Widget zu
-                      verwenden.
-                      <span
-                        className='underline cursor-pointer'
-                        onClick={() => setShowCookieConsent(true)}
-                      >
-                        hier clicken um Cookie-Einstellungen zu ändern
-                      </span>
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
+            <Standort
+              name='Berlin'
+              calendlyUrl='https://calendly.com/schabnaz-saba-bund-fib/kennenlerngespraech-berlin'
+              cookiesAccepted={cookiesAccepted}
+              setShowCookieConsent={setShowCookieConsent}
+            />
+            <Standort
+              name='Hannover'
+              calendlyUrl='https://calendly.com/benedict-hepp-bund-fib/kennlerngespraech-hannover'
+              cookiesAccepted={cookiesAccepted}
+              setShowCookieConsent={setShowCookieConsent}
+            />
+            <Standort
+              name='Leipzig'
+              calendlyUrl='https://calendly.com/nathalie-thorleuchter-bund-fib/kennenlerngespraech-standort-leipzig'
+              cookiesAccepted={cookiesAccepted}
+              setShowCookieConsent={setShowCookieConsent}
+            />
+            <Standort
+              name='Magdeburg'
+              calendlyUrl='https://calendly.com/anna-rochol-bund-fib/30min'
+              cookiesAccepted={cookiesAccepted}
+              setShowCookieConsent={setShowCookieConsent}
+            />
           </div>
         </div>
       </div>

@@ -250,7 +250,7 @@ const Jobs = () => {
             />
             <Standort
               name='Leipzig'
-              calendlyUrl='https://calendly.com/nathalie-thorleuchter-bund-fib/kennenlerngespraech-standort-leipzig'
+              calendlyUrl='https://calendly.com/tatjana-heinrich-bund-fib'
               cookiesAccepted={cookiesAccepted}
               setShowCookieConsent={setShowCookieConsent}
             />

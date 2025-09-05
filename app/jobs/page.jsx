@@ -141,7 +141,7 @@ const Jobs = () => {
                     <li className='flex items-start'>
                       <span className='text-primary mr-2'>•</span>
                       <a
-                        href='/stellenausschreibungen/Sta?ndige_Stellenausschreibu ng Praktikant_in_Bund-fiB.pdf'
+                        href='/stellenausschreibungen/Staendige_Stellenausschreibung_Praktikant_in_Bund-fiB.pdf'
                         target='_blank'
                         rel='noopener noreferrer'
                         className='text-base underline cursor-pointer'

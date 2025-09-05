@@ -234,7 +234,7 @@ const Jobs = () => {
           </button>
           {/* Header */}
           <div className='text-center font-berlin text-2xl'>Buch ein Gespräch mit uns:</div>
-          {/* Kalender */}
+          {/* Calendar */}
           <div className='mt-20 mb-20 flex w-full flex-col justify-center sm:mt-[5vh] sm:mb-[10vh] md:flex-row lg:mt-[5vh] lg:mb-[5vh]'>
             <Standort
               name='Berlin'
@@ -250,7 +250,7 @@ const Jobs = () => {
             />
             <Standort
               name='Leipzig'
-              calendlyUrl='https://calendly.com/tatjana-heinrich-bund-fib'
+              calendlyUrl='https://calendly.com/tatjana-heinrich-bund-fib/30min'
               cookiesAccepted={cookiesAccepted}
               setShowCookieConsent={setShowCookieConsent}
             />

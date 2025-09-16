@@ -238,7 +238,7 @@ const Jobs = () => {
           <div className='mt-20 mb-20 flex w-full flex-col justify-center sm:mt-[5vh] sm:mb-[10vh] md:flex-row lg:mt-[5vh] lg:mb-[5vh]'>
             <Standort
               name='Berlin'
-              calendlyUrl='https://calendly.com/schabnaz-saba-bund-fib/kennenlerngespraech-berlin'
+              calendlyUrl='https://calendly.com/lika-kondrateva-bund-fib/30min'
               cookiesAccepted={cookiesAccepted}
               setShowCookieConsent={setShowCookieConsent}
             />

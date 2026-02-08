@@ -16,10 +16,10 @@ import { useStore } from '../../src/store';
 import Standort from './components/Standort';
 
 const contactPerson = {
-  image: '/images/mitarbeiter/Marlene.png',
-  name: 'Marlene Langenbucher de Olavarrieta',
-  phone: '+49 3068908697',
-  email: 'marlene.langenbucher@bund-fib.de ',
+  image: '/images/mitarbeiter/Ben.png',
+  name: 'Benedict Hepp',
+  phone: '+49 176 84919977',
+  email: 'benedict.hepp@bund-fib.de',
 };
 
 const Jobs = () => {

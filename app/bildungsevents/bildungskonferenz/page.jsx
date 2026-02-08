@@ -175,6 +175,30 @@ const Bildungskonferenz = () => {
             In der Publikation zur Bildungskonferenz, kann man die Ergebnisse der Reflexionsrunde,
             sowie eine Aufbereitung des gesamten Tages und weiterführendes Material finden.
           </p>
+
+          {/* Publikation */}
+          <div className='flex flex-col items-center justify-center py-10 mb-20 bg-white rounded-3xl shadow-xl'>
+            <h3 className='text-2xl font-bold mb-8 text-center'>Publikation der Bildungskonferenz</h3>
+            <a
+              href='/Bund-fiB_Bericht_Bildungskonferenz.pdf'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex flex-col items-center group'
+            >
+              <div className='relative w-64 h-80 mb-6 shadow-2xl transform transition-transform duration-300 group-hover:scale-105'>
+                <Image
+                  src='/images/Bildungskonferenz.jpg'
+                  fill
+                  alt='Publikation Bildungskonferenz Cover'
+                  className='object-cover rounded-lg'
+                />
+              </div>
+              <button className='bg-primary text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-opacity-90 transition-all duration-300'>
+                Zur Publikation
+              </button>
+            </a>
+          </div>
+
           <h3 className='text-xl pb-10 font-bold'>Ausblick: Wie geht es weiter?</h3>
           <p className='text-lg pb-14 '>
             Die Bildungskonferenz hat gezeigt, dass das Interesse an diesen Themen groß ist und der

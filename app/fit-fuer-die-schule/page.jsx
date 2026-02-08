@@ -135,6 +135,23 @@ const FitFuerDieSchule = () => {
             </div>
           </div>
         </Container>
+        {/* Förderhinweis */}
+        <Container>
+          <div className='flex flex-col items-center justify-center py-20 text-center'>
+            <p className='text-base sm:text-lg pb-10 max-w-4xl'>
+              Fit für die Schule plus Berliner Ferienschulen – Sprachförderung, Bildung und Teilhabe
+              für geflüchtete Kinder und Jugendliche. Ein Programm der Deutschen Kinder- und Jugendstiftung
+              gefördert durch die Senatsverwaltung für Bildung, Jugend und Familie des Landes Berlin.
+            </p>
+            <Image
+              src='/images/logos/foerderlogos_fit_fuer_die_schule.png'
+              width={600}
+              height={150}
+              alt='Förderlogos Fit für die Schule'
+              className='object-contain'
+            />
+          </div>
+        </Container>
       </div>
       <Footer />
     </>

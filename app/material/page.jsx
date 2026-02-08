@@ -35,6 +35,12 @@ export default function Material() {
                   Unser fiB-Heft – <br /> Das Lerntagebuch <br /> <br />
                 </div>
               </a>
+              <a href='/Bund-fiB_Bericht_Bildungskonferenz.pdf' target='_blank'>
+                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='w-12 pb-2 text-white ' icon={faFilePdf} />
+                  Publikation <br /> Bildungskonferenz <br /> <br />
+                </div>
+              </a>
               <a href='/images/flyer/F_arabisch.png' target='_blank'>
                 <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
                   <FontAwesomeIcon className='w-12 pb-2  text-white' icon={faFilePdf} />

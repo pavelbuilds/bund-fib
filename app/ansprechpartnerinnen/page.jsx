@@ -6,30 +6,23 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const ansprechpartnerinnen = [
   {
-    name: 'Marlene Langenbucher de Olavarrieta',
-    image: '/images/mitarbeiter/Marlene.png',
-    role: 'Geschäftsführung, Projektleitung “Fit für die Schule” & Bewerbungen',
-    phone: '+49 1575 8745856',
-    email: 'marlene.langenbucher@bund-fib.de',
-  },
-  {
     name: 'Sören Dübel',
     image: '/images/mitarbeiter/Soeren.png',
-    role: 'Geschäftsführung, Projektleitung “Fit für die Schule” & Lernförderung',
+    role: 'Geschäftsführung und Lernförderung',
     phone: '015758745855',
     email: 'soeren.duebel@bund-fib.de',
   },
   {
     name: 'Lars Mikeler',
     image: '/images/mitarbeiter/Lars.png',
-    role: 'Pädagogische Leitung',
+    role: 'Geschäftsführung und pädagogische Leitung',
     phone: '+49 160 95736116',
     email: 'lars.mikeler@bund-fib.de',
   },
   {
     name: 'Benedict Hepp',
     image: '/images/mitarbeiter/Ben.png',
-    role: 'Standortleiter Hannover & Lernförderung Hannover',
+    role: 'Geschäftsführung und Standortleitung Hannover',
     phone: '+49 176 84919977',
     email: 'benedict.hepp@bund-fib.de',
   },
@@ -46,13 +39,6 @@ const ansprechpartnerinnen = [
     role: 'Standortleiterin Leipzig & Lernförderung Leipzig',
     phone: '+49 155 60421249',
     email: 'sarah.hennig@bund-fib.de',
-  },
-  {
-    name: 'Schabnaz Khadem Saba',
-    image: '/images/mitarbeiter/Schabnaz.png',
-    role: 'Projekt: “Fit für die Schule”',
-    phone: '+49 176 11842231',
-    email: 'schabnaz.saba@bund-fiB.de',
   },
   {
     name: 'Mika Dombrowski',

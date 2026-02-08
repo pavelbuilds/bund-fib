@@ -286,13 +286,13 @@ const NavBar = () => {
                     </div>
                     {showAktivWerden && (
                       <ul className='absolute left-full top-0 rounded-xl bg-lightYellow pb-5 shadow-md'>
-                        <Link href='/aktiv-werden#ehrenamt'>
+                        {/* <Link href='/aktiv-werden#ehrenamt'>
                           <li className='py-3 px-10 hover:bg-darkYellow hover:rounded-t-xl'>
                             Ehrenamt
                           </li>
-                        </Link>
+                        </Link> */}
                         <Link href='/aktiv-werden#praktikum'>
-                          <li className='py-3 px-10 hover:bg-darkYellow'>Praktikum</li>
+                          <li className='py-3 px-10 hover:bg-darkYellow hover:rounded-t-xl'>Praktikum</li>
                         </Link>
                         <Link href='/aktiv-werden#bundesfreiwilligendienst'>
                           <li className='py-3 px-10 hover:bg-darkYellow'>
@@ -570,11 +570,11 @@ const NavBar = () => {
                           exit='hidden'
                           variants={dropdownVariants}
                         >
-                          <li>
+                          {/* <li>
                             <Link href='/aktiv-werden#ehrenamt' onClick={toogleHamburgerMenu}>
                               Ehrenamt
                             </Link>
-                          </li>
+                          </li> */}
                           <li>
                             <Link href='/aktiv-werden#praktikum' onClick={toogleHamburgerMenu}>
                               Praktikum

@@ -497,6 +497,15 @@ const NavBar = () => {
                       )}
                     </AnimatePresence>
                   </li>
+                  <li className='mt-4'>
+                    <Link
+                      href='/bildungsevents'
+                      onClick={toogleHamburgerMenu}
+                      className='text-2xl'
+                    >
+                      (Bildungs)Events
+                    </Link>
+                  </li>
                 </motion.ul>
               )}
             </AnimatePresence>

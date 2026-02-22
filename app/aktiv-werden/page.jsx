@@ -16,14 +16,13 @@ const AktivWerden = () => {
       <NavBar />
       <div className='bg-darkYellow pt-14'>
         {/* Title */}
-        {/* <ProjectTitleSection image='/images/Bild31.jpeg' imageStyle='top' title={`Aktiv werden`} /> */}
+        <ProjectTitleSection image='/images/Bild31.jpeg' imageStyle='top' title={`Aktiv werden`} />
         {/* Content */}
         <Container>
-{/*
           <section id='ehrenamt' className='pt-20 '>
             <Textbox
-              section={'Engagiere dich ehrenamtlich'}
-              slogan={'Ehrenamt'}
+              section={'Ehrenamt'}
+              slogan={'Engagiere dich ehrenamtlich'}
               styling={'w-full'}
               align={'left'}
             >
@@ -53,39 +52,40 @@ const AktivWerden = () => {
             <div className={` flex flex-col justify-start w-full  items-start  `}>
               <div className='w-full  mb-10'>
                 <h3 className='text-2xl font-bold mb-4'>Interesse geweckt?</h3>
-                <p className='text-lg'>Unsere Ansprechpartnerin ist:</p>
+                <p className='text-lg'>Unser Ansprechpartner ist:</p>
               </div>
               <div className='flex flex-col sm:flex-row items-center bg-[rgba(255,255,255,0.3)] rounded-[30px] py-10 pl-10 pr-10 md:pr-20 shadow-[0_0_80px_rgba(0,0,0,0.05)] '>
+                {/* Person Image */}
                 <div className='rounded-full md:w-48 w-32 md:h-48 h-32'>
                   <Image
-                    src={'/images/mitarbeiter/Marlene.png'}
+                    src={'/images/mitarbeiter/Ben.png'}
                     className='rounded-full md:w-full w-32 md:h-full h-32 object-cover object-top'
                     alt='Contact Person'
                     width={100}
                     height={100}
                   />
                 </div>
+                {/* Details */}
                 <div className='flex flex-col mt-10 sm:mt-0 sm:ml-10 md:ml-20'>
                   <div className='md:text-2xl text-lg font-medium text-center sm:text-left'>
-                    Marlene Langenbucher
+                    Benedict Hepp
                   </div>
                   <div className='md:text-lg text-sm flex items-center pt-8 md:pt-5'>
                     <FontAwesomeIcon className='mr-6 text-xl md:text-2xl' icon={faPhone} />
-                    <a href={`tel:+493068908697`} className='hover:underline'>
-                      +49 3068908697
+                    <a href={`tel:+4917684919977`} className='hover:underline'>
+                      +49 176 84919977
                     </a>
                   </div>
                   <div className='md:text-lg text-sm flex items-center pt-3 md:pt-3'>
                     <FontAwesomeIcon className='mr-6 text-xl md:text-2xl' icon={faEnvelope} />
-                    <a href={`mailto:marlene.langenbucher@bund-fib.de`} className='hover:underline'>
-                      marlene.langenbucher@bund-fib.de
+                    <a href={`mailto:benedict.hepp@bund-fib.de`} className='hover:underline'>
+                      benedict.hepp@bund-fib.de
                     </a>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-*/}
           <section id='praktikum' className='pt-20 '>
             <Textbox
               section={'Absolviere dein Pflichtpraktikum bei uns'}
@@ -138,8 +138,7 @@ const AktivWerden = () => {
                     Viel Raum für eigene Ideen und die Möglichkeit, eigene Projekte zu entwickeln.
                   </li>
                   <li className='mb-2'>
-                    Ein Arbeitsumfeld, das dich sowohl fachlich als auch persönlich weiterbringt
-                    (z.B. durch Workshops und Fortbildungen).
+                    Ein Arbeitsumfeld, das dich sowohl fachlich als auch persönlich weiterbringt.
                   </li>
                   <li className='mb-2'>Arbeitshandy und Laptop zur Verfügung.</li>
                   <li className='mb-2'>

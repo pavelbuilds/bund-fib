@@ -3,8 +3,8 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import Container from '../../components/Container';
 
 export const metadata = {
-  title: 'Satzung - Bund FIB',
-  description: 'Satzung der Bund FIB gUG',
+  title: 'Satzung - Bund-fiB',
+  description: 'Satzung der Bund-fiB gUG',
 };
 
 export default function Satzung() {

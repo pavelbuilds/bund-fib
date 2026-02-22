@@ -1,11 +1,14 @@
 import '../styles/globals.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+config.autoAddCss = false;
 import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script';
 import CookieConsent from '../components/LandingPage/CookieConsent';
 
 export const metadata = {
-  title: 'Bund FIB',
-  description: 'Bund FIB Website',
+  title: 'Bund-fiB',
+  description: 'Bund-fiB Website',
 };
 
 export default function RootLayout({ children }) {

@@ -38,7 +38,7 @@ const Gruender = ({ animation }) => {
           </div>
         </div>
 
-        {/* Lars Button */}
+        {/* Dot buttons deactivated
         <div
           onClick={() => {
             setLarsInfo(!showLarsInfo);
@@ -60,7 +60,6 @@ const Gruender = ({ animation }) => {
             </div>
           )}
         </div>
-        {/* Benedict Button */}
         <div
           onClick={() => {
             setBenedictInfo(!showBenedictInfo);
@@ -82,7 +81,6 @@ const Gruender = ({ animation }) => {
             </div>
           )}
         </div>
-        {/* Marlene Button */}
         <div
           onClick={() => {
             setMarleneInfo(!showMarleneInfo);
@@ -104,7 +102,6 @@ const Gruender = ({ animation }) => {
             </div>
           )}
         </div>
-        {/* Sören Button */}
         <div
           onClick={() => {
             setSorenInfo(!showSorenInfo);
@@ -126,6 +123,7 @@ const Gruender = ({ animation }) => {
             </div>
           )}
         </div>
+        */}
       </div>
     </div>
   );

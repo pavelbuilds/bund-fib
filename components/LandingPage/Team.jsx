@@ -35,7 +35,7 @@ const Team = () => {
               Gemeinsam haben sie ihre Schwerpunkte in der Pädagogik und Sonderpädagogik, sowie der
               Anthropologie, Politikwissenschaft und Wirtschaft. Zusammen bringen sie Erfahrung,
               Herzblut und eine klare Vision mit: Bildung soll für alle zugänglich, inklusiv und
-              chancengerecht sein
+              chancengerecht sein.
             </div>
           </Textbox>
           <Gruender />
@@ -63,7 +63,7 @@ const Team = () => {
                 height={1000}
                 className='h-full w-full scale-110 rounded-xl bg-black object-cover object-top'
               />
-              {/* Team 1 Button */}
+              {/* Team dot buttons deactivated
               <div
                 onClick={() => handleTeamClick('team1')}
                 className={`${
@@ -83,7 +83,6 @@ const Team = () => {
                   </div>
                 )}
               </div>
-              {/* Team 2 Button */}
               <div
                 onClick={() => handleTeamClick('team2')}
                 className={`${
@@ -103,7 +102,6 @@ const Team = () => {
                   </div>
                 )}
               </div>
-              {/* Team 3 Button */}
               <div
                 onClick={() => handleTeamClick('team3')}
                 className={`${
@@ -123,7 +121,6 @@ const Team = () => {
                   </div>
                 )}
               </div>
-              {/* Team 4 Button */}
               <div
                 onClick={() => handleTeamClick('team4')}
                 className={`${
@@ -143,6 +140,7 @@ const Team = () => {
                   </div>
                 )}
               </div>
+              */}
             </div>
             {/* Second image (right) */}
             <div className='relative h-[500px] md:h-96 w-full md:w-[55%] md:-ml-10 rotate-6 overflow-hidden rounded-xl shadow-xl'>
@@ -153,7 +151,7 @@ const Team = () => {
                 height={1000}
                 className='h-full w-full scale-110 rounded-xl bg-black object-cover object-top'
               />
-              {/* Team 1 Button */}
+              {/* Team dot buttons deactivated
               <div
                 onClick={() => handleTeamClick('team5')}
                 className={`${
@@ -173,7 +171,6 @@ const Team = () => {
                   </div>
                 )}
               </div>
-              {/* Team 2 Button */}
               <div
                 onClick={() => handleTeamClick('team6')}
                 className={`${
@@ -193,7 +190,6 @@ const Team = () => {
                   </div>
                 )}
               </div>
-              {/* Team 3 Button */}
               <div
                 onClick={() => handleTeamClick('team7')}
                 className={`${
@@ -213,7 +209,6 @@ const Team = () => {
                   </div>
                 )}
               </div>
-              {/* Team 4 Button */}
               <div
                 onClick={() => handleTeamClick('team8')}
                 className={`${
@@ -233,7 +228,6 @@ const Team = () => {
                   </div>
                 )}
               </div>
-              {/* Team 5 Button */}
               <div
                 onClick={() => handleTeamClick('team9')}
                 className={`${
@@ -253,7 +247,6 @@ const Team = () => {
                   </div>
                 )}
               </div>
-              {/* Team 6 Button */}
               <div
                 onClick={() => handleTeamClick('team10')}
                 className={`${
@@ -273,7 +266,6 @@ const Team = () => {
                   </div>
                 )}
               </div>
-              {/* Team 7 Button */}
               <div
                 onClick={() => handleTeamClick('team11')}
                 className={`${
@@ -293,7 +285,6 @@ const Team = () => {
                   </div>
                 )}
               </div>
-              {/* Team 8 Button */}
               <div
                 onClick={() => handleTeamClick('team12')}
                 className={`${
@@ -313,8 +304,10 @@ const Team = () => {
                   </div>
                 )}
               </div>
+              */}
             </div>
           </div>
+          <p className='mt-4 text-center font-source text-sm italic'>Unser Team im Sommer 2025</p>
         </div>
       </Container>{' '}
     </section>

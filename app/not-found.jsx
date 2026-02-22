@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: '404 - Page Not Found - Bund FIB',
+  title: '404 - Page Not Found - Bund-fiB',
   description: 'The page you are looking for does not exist.',
 };
 

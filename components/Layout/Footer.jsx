@@ -41,7 +41,7 @@ const Footer = () => {
               src='/images/logos/bund_fib_logo.webp'
               width={300}
               height={30}
-              alt='Bund fiB Logo'
+              alt='Bund-fiB Logo'
             />
             {/* Social Media Icons */}
             <div className='mt-10 flex w-full items-center justify-center gap-4'>
@@ -212,7 +212,7 @@ const Footer = () => {
             <br />
             <b>Geschäftsführung</b>
             <br />
-            Marlene Langenbucher de Olavarrieta & Sören Dübel
+            Benedict Hepp, Lars Mikeler & Sören Dübel
             <br />
             <br />
             Bund-fiB gUG (haftungsbeschränkt)

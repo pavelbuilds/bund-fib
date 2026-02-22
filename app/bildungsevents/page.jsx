@@ -27,6 +27,13 @@ const Bildungsevents = () => {
           <h1 className='text-2xl font-bold mt-32 mb-14'>Vergangenes</h1>
           <div className='flex flex-wrap gap-14 pb-20'>
             <Card
+              imageSrc='/images/sommerfest-2025/Bild_2_Sommerfest_web.jpg'
+              title='Sommerfest'
+              subtitle='Sommer, Sonne, Strand – das Kulturfest für alle'
+              text='Am 14. August verwandelten wir den Plötzensee in einen bunten Begegnungsort für Jung und Alt! Unser Sommerfest brachte Menschen unterschiedlicher Kulturen zusammen und schuf einen Raum für gemeinsame Erlebnisse.'
+              link='/bildungsevents/sommerfest-2025'
+            />
+            <Card
               imageSrc='/images/bildungs-events.jpeg'
               title='Bildungskonferenz - Voneinander lernen '
               subtitle='Wege zu demokratischem Dialog - Impulse für

@@ -151,7 +151,7 @@ const NavBar = () => {
               src='/images/logos/bund_fib_logo.webp'
               width={170}
               height={75}
-              alt='bund fib logo'
+              alt='Bund-fiB Logo'
             />
           </Link>
           {/* Menu */}
@@ -190,6 +190,11 @@ const NavBar = () => {
                         <li className='hover:bg-darkYellow'>
                           <Link href='/lernfoerderung-leipzig' className='px-10 block py-3'>
                             Leipzig
+                          </Link>
+                        </li>
+                        <li className='hover:bg-darkYellow'>
+                          <Link href='/lernfoerderung-magdeburg' className='px-10 block py-3'>
+                            Magdeburg
                           </Link>
                         </li>
                       </ul>
@@ -286,11 +291,11 @@ const NavBar = () => {
                     </div>
                     {showAktivWerden && (
                       <ul className='absolute left-full top-0 rounded-xl bg-lightYellow pb-5 shadow-md'>
-                        {/* <Link href='/aktiv-werden#ehrenamt'>
+                        <Link href='/aktiv-werden#ehrenamt'>
                           <li className='py-3 px-10 hover:bg-darkYellow hover:rounded-t-xl'>
                             Ehrenamt
                           </li>
-                        </Link> */}
+                        </Link>
                         <Link href='/aktiv-werden#praktikum'>
                           <li className='py-3 px-10 hover:bg-darkYellow hover:rounded-t-xl'>Praktikum</li>
                         </Link>
@@ -428,6 +433,11 @@ const NavBar = () => {
                           <li>
                             <Link href='/lernfoerderung-leipzig' onClick={toogleHamburgerMenu}>
                               Leipzig
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href='/lernfoerderung-magdeburg' onClick={toogleHamburgerMenu}>
+                              Magdeburg
                             </Link>
                           </li>
                         </motion.ul>
@@ -570,11 +580,11 @@ const NavBar = () => {
                           exit='hidden'
                           variants={dropdownVariants}
                         >
-                          {/* <li>
+                          <li>
                             <Link href='/aktiv-werden#ehrenamt' onClick={toogleHamburgerMenu}>
                               Ehrenamt
                             </Link>
-                          </li> */}
+                          </li>
                           <li>
                             <Link href='/aktiv-werden#praktikum' onClick={toogleHamburgerMenu}>
                               Praktikum

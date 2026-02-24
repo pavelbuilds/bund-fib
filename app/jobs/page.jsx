@@ -13,7 +13,15 @@ import { faPhone, faEnvelope, faSquarePhone, faXmark } from '@fortawesome/free-s
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
 import { useStore } from '../../src/store';
+import { InlineWidget } from 'react-calendly';
 import Standort from './components/Standort';
+
+const standorte = [
+  { name: 'Berlin', calendlyUrl: 'https://calendly.com/lika-kondrateva-bund-fib/30min' },
+  { name: 'Hannover', calendlyUrl: 'https://calendly.com/benedict-hepp-bund-fib/kennlerngespraech-hannover' },
+  { name: 'Leipzig', calendlyUrl: 'https://calendly.com/tatjana-heinrich-bund-fib/30min' },
+  { name: 'Magdeburg', calendlyUrl: 'https://calendly.com/anna-rochol-bund-fib/30min' },
+];
 
 const contactPerson = {
   image: '/images/mitarbeiter/Ben.png',
@@ -24,6 +32,7 @@ const contactPerson = {
 
 const Jobs = () => {
   const [kontaktieren, setKontaktieren] = useState(false);
+  const [selectedStandort, setSelectedStandort] = useState(null);
   const { setShowCookieConsent, cookiesAccepted } = useStore();
   const toggleKontaktieren = () => {
     setKontaktieren(!kontaktieren);
@@ -234,33 +243,56 @@ const Jobs = () => {
           </button>
           {/* Header */}
           <div className='text-center font-berlin text-2xl'>Buch ein Gespräch mit uns:</div>
-          {/* Calendar */}
-          <div className='mt-20 mb-20 flex w-full flex-col justify-center sm:mt-[5vh] sm:mb-[10vh] md:flex-row lg:mt-[5vh] lg:mb-[5vh]'>
-            <Standort
-              name='Berlin'
-              calendlyUrl='https://calendly.com/lika-kondrateva-bund-fib/30min'
-              cookiesAccepted={cookiesAccepted}
-              setShowCookieConsent={setShowCookieConsent}
-            />
-            <Standort
-              name='Hannover'
-              calendlyUrl='https://calendly.com/benedict-hepp-bund-fib/kennlerngespraech-hannover'
-              cookiesAccepted={cookiesAccepted}
-              setShowCookieConsent={setShowCookieConsent}
-            />
-            <Standort
-              name='Leipzig'
-              calendlyUrl='https://calendly.com/tatjana-heinrich-bund-fib/30min'
-              cookiesAccepted={cookiesAccepted}
-              setShowCookieConsent={setShowCookieConsent}
-            />
-            <Standort
-              name='Magdeburg'
-              calendlyUrl='https://calendly.com/anna-rochol-bund-fib/30min'
-              cookiesAccepted={cookiesAccepted}
-              setShowCookieConsent={setShowCookieConsent}
-            />
+          {/* Calendar - 2x2 Grid */}
+          <div className='mt-10 mb-20 grid grid-cols-2 gap-5 max-w-xl mx-auto sm:mt-[5vh] sm:mb-[10vh] lg:mt-[5vh] lg:mb-[5vh]'>
+            {standorte.map((s) => (
+              <Standort
+                key={s.name}
+                name={s.name}
+                onClick={() => setSelectedStandort(s)}
+              />
+            ))}
           </div>
+          {/* Calendly Popup */}
+          {selectedStandort && (
+            <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
+              <div className='relative w-[75vw] max-h-[80vh] rounded-2xl bg-white shadow-2xl flex flex-col'>
+                <div className='flex items-center justify-between px-6 py-4 border-b'>
+                  <h2 className='font-berlin text-xl'>Standort {selectedStandort.name}</h2>
+                  <button
+                    onClick={() => setSelectedStandort(null)}
+                    className='rounded-full size-10 bg-primary text-white flex items-center justify-center hover:bg-primary/80 cursor-pointer'
+                  >
+                    <FontAwesomeIcon icon={faXmark} className='text-lg' />
+                  </button>
+                </div>
+                <div className='flex-1 overflow-auto p-4'>
+                  {cookiesAccepted ? (
+                    <InlineWidget
+                      styles={{ width: '100%', height: '65vh' }}
+                      pageSettings={{
+                        backgroundColor: 'ffffff',
+                        hideEventTypeDetails: true,
+                        hideLandingPageDetails: true,
+                        primaryColor: 'F9B233',
+                        textColor: '4d5055',
+                      }}
+                      url={selectedStandort.calendlyUrl}
+                    />
+                  ) : (
+                    <div className='flex items-center justify-center py-32'>
+                      <p className='text-center'>
+                        Bitte akzeptieren Sie die Verwendung von Cookies, um das Kalender-Widget zu verwenden.{' '}
+                        <span className='underline cursor-pointer' onClick={() => setShowCookieConsent(true)}>
+                          hier clicken um Cookie-Einstellungen zu ändern
+                        </span>
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>

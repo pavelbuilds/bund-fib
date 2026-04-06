@@ -116,6 +116,13 @@ const Footer = () => {
             >
               Partner
             </Link>
+            <Link
+              href='/transparenz'
+              target='_blank'
+              className='my-1 font-source text-sm w-full text-center sm:text-left'
+            >
+              Transparenz
+            </Link>
           </div>
           {/* Informationen */}
           <div className='mt-16 sm:mt-0 w-full sm:w-auto flex justify-center flex-col items-center sm:items-start sm:justify-start'>

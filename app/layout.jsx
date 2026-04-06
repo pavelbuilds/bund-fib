@@ -5,6 +5,7 @@ config.autoAddCss = false;
 import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script';
 import CookieConsent from '../components/LandingPage/CookieConsent';
+import DevPanel from '../components/DevPanel';
 
 export const metadata = {
   title: 'Bund-fiB',
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
           strategy='lazyOnload'
         />
         <CookieConsent />
+        {process.env.NODE_ENV === 'development' && <DevPanel />}
         {children}
         <Analytics />
       </body>

@@ -16,7 +16,7 @@ const ansprechpartnerinnen = [
     name: 'Lars Mikeler',
     image: '/images/mitarbeiter/Lars.png',
     role: 'Geschäftsführung und pädagogische Leitung',
-    phone: '+49 160 95736116',
+    phone: '+49 1578 1284853',
     email: 'lars.mikeler@bund-fib.de',
   },
   {

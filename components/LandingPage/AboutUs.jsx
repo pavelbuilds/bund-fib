@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Container from '../Container';
 import Textbox from '../Textbox';
 import PartnerLogos from './PartnerLogos';
@@ -28,6 +29,14 @@ const AboutUs = () => {
             wichtig, gesellschaftliche und kulturelle Teilhabe zu ermöglichen. Dabei verfolgen wir
             einen ganzheitlichen Ansatz, der nicht nur die Integration durch Sprache und Kultur
             fördert, sondern auch bei bürokratischen und rechtlichen Herausforderungen unterstützt.
+          </div>
+          <div className='mb-10 text-center sm:text-left'>
+            <Link
+              href='/transparenz'
+              className='font-source text-base underline hover:no-underline'
+            >
+              Mehr zu unserer Transparenz &rarr;
+            </Link>
           </div>
         </Textbox>
         {/* Partner Logos */}

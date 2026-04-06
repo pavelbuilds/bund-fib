@@ -45,7 +45,7 @@ export default function Material() {
                   Zusatzbogen für <br /> Lernförderung <br /> <br />
                 </div>
               </a>
-              <a href='FIB-Heft.pdf' target='_blank'>
+              <a href='/Heft-fiB.pdf' target='_blank'>
                 <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
                   <FontAwesomeIcon className='pb-2 text-white' icon={faFilePdf} style={{ fontSize: '2.5rem' }} />
                   Unser fiB-Heft – <br /> Das Lerntagebuch <br /> <br />
@@ -55,6 +55,18 @@ export default function Material() {
                 <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
                   <FontAwesomeIcon className='pb-2 text-white' icon={faFilePdf} style={{ fontSize: '2.5rem' }} />
                   Publikation <br /> Bildungskonferenz <br /> <br />
+                </div>
+              </a>
+              <a href='/Kinderschutz-Konzept_Bund-fiB.pdf' target='_blank'>
+                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='pb-2 text-white' icon={faFilePdf} style={{ fontSize: '2.5rem' }} />
+                  Kinderschutzkonzept <br /> <br /> <br />
+                </div>
+              </a>
+              <a href='/Bund-fiB_Verhaltensampel.pdf' target='_blank'>
+                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                  <FontAwesomeIcon className='pb-2 text-white' icon={faFilePdf} style={{ fontSize: '2.5rem' }} />
+                  Verhaltensampel <br /> <br /> <br />
                 </div>
               </a>
               {/* Flyer Ordner */}

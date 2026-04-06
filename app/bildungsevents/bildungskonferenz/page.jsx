@@ -32,7 +32,7 @@ const panelModerator = {
   image: '/images/Marlene.jpeg',
   name: 'Marlene Langenbucher de Olavarrieta',
   occupation:
-    'Anthropologin mit Schwerpunkt Flucht und Migration und Geschäftsführerin vom Bund-fiB ',
+    'Anthropologin mit Schwerpunkt Flucht und Migration und ehemalige Geschäftsführerin vom Bund-fiB',
 };
 
 const partnerLogos = [

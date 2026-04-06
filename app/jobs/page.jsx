@@ -190,7 +190,7 @@ const Jobs = () => {
             <div className={` flex flex-col justify-start w-full  items-start pt-10 pb-32 `}>
               <div className='w-full  mb-20'>
                 <h3 className='text-2xl font-bold mb-4'>Interesse geweckt?</h3>
-                <p className='text-lg'>Unsere Ansprechpartnerin ist:</p>
+                <p className='text-lg'>Unser Ansprechpartner ist:</p>
               </div>
               <div className='flex flex-col sm:flex-row items-center bg-[rgba(255,255,255,0.3)] rounded-[30px] py-10 pl-10 pr-10 md:pr-20 shadow-[0_0_80px_rgba(0,0,0,0.05)] '>
                 {/* Person Image */}

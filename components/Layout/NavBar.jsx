@@ -155,7 +155,7 @@ const NavBar = () => {
             />
           </Link>
           {/* Menu */}
-          <ul className='hidden w-[400px] items-center justify-between font-source text-sm lg:flex'>
+          <ul className='hidden w-[500px] items-center justify-between font-source text-sm lg:flex'>
             <li>
               <Link href='/#ueberuns' className='block'>
                 Über Uns
@@ -315,6 +315,12 @@ const NavBar = () => {
                   </Link>
                 </ul>
               )}
+            </li>
+            {/* Kinderschutz */}
+            <li>
+              <Link href='/kinderschutz' className='block'>
+                Kinderschutz
+              </Link>
             </li>
           </ul>
           {/* Social Media Icons */}
@@ -629,6 +635,13 @@ const NavBar = () => {
               )}
             </AnimatePresence>
           </div>
+          <Link
+            href='/kinderschutz'
+            onClick={toogleHamburgerMenu}
+            className='mb-10 sm:mb-16 block pl-14'
+          >
+            Kinderschutz
+          </Link>
           {/* Social Media Icons for Burger Menu */}
           <div
             className='flex items-center md:hidden gap-4 mt-10  justify-center w-full'

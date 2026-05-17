@@ -176,7 +176,7 @@ export default function Datenschutz() {
           <br />
           <p>Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:</p>
           <p>
-            Marlene Langenbucher de Olavarrieta & Sören Dübel
+            Lars Mikeler, Benedikt Hepp &amp; S&ouml;ren D&uuml;bel
             <br />
             Bund-fiB gUG (haftungsbeschr&auml;nkt)
             <br />
@@ -193,6 +193,25 @@ export default function Datenschutz() {
             Verantwortliche Stelle ist die nat&uuml;rliche oder juristische Person, die allein oder
             gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von
             personenbezogenen Daten (z.&nbsp;B. Namen, E-Mail-Adressen o. &Auml;.) entscheidet.
+          </p>
+          <br />
+          <br />
+          <br />
+          <b>Datenschutzbeauftragter</b>
+          <br />
+          <br />
+          <p>
+            Datenschutzbeauftragter Art (intern/extern): externe/r Datenschutzbeauftragte:r
+            <br />
+            Unternehmen (bei externer Bestellung): PRIOLAN GmbH
+            <br />
+            Name: Jozanovic
+            <br />
+            Vorname: Luka
+            <br />
+            E-Mail: l.jozanovic@priolan.de
+            <br />
+            Datum der Bestellung: 01.05.2026
           </p>
         </div>
       </Container>

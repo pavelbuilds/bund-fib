@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Image from 'next/image';
@@ -37,7 +37,7 @@ const Testimonials = () => {
       >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
-            <div className='relative mb-2 w-[80%] rounded-md px-8 py-20 overflow-visible'>
+            <div className='relative mx-auto mb-2 w-[80%] rounded-md px-8 py-20 overflow-visible'>
               <div className='relative'>
                 {/* Bottom left splash */}
                 <div className='absolute -bottom-20 -left-24 scale-75 sm:scale-100 size-24'>

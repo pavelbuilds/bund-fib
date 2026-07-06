@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +10,7 @@ import Button from '../Button';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
+/** Homepage section with the four project overview cards. */
 const ProjektUebersicht = () => {
   const [showLocations, setShowLocations] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
@@ -69,6 +72,7 @@ const ProjektUebersicht = () => {
                   <Button click={() => router.push('/lernfoerderung-berlin')} cta='Berlin' />
                   <Button click={() => router.push('/lernfoerderung-hannover')} cta='Hannover' />
                   <Button click={() => router.push('/lernfoerderung-leipzig')} cta='Leipzig' />
+                  <Button click={() => router.push('/lernfoerderung-magdeburg')} cta='Magdeburg' />
                 </div>
               </>
             )}
@@ -132,7 +136,7 @@ const ProjektUebersicht = () => {
               <>
                 <div className='mx-7 mt-8'>Bitte wähle ein Projekt:</div>
                 <div className='flex flex-col gap-2 w-full px-7 py-5'>
-                  <Button click={() => router.push('/eduai')} cta='EduAid' />
+                  <Button click={() => router.push('/eduai')} cta='EduAId' />
                   <Button click={() => router.push('/gemeinsam-handeln')} cta='Gemeinsam Handeln' />
                   <Button
                     click={() => router.push('/ferienschule-fuer-integrative-bildung')}

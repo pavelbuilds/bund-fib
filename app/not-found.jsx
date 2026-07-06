@@ -1,23 +1,23 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: '404 - Page Not Found - Bund-fiB',
-  description: 'The page you are looking for does not exist.',
+  title: '404 – Seite nicht gefunden',
+  description: 'Die gesuchte Seite existiert nicht.',
 };
 
 export default function NotFound() {
   return (
     <div className='flex min-h-screen flex-col items-center justify-center bg-lightYellow'>
       <h1 className='mb-4 text-4xl font-bold'>404</h1>
-      <h2 className='mb-8 text-2xl'>Page Not Found</h2>
+      <h2 className='mb-8 text-2xl'>Seite nicht gefunden</h2>
       <p className='mb-8 text-center'>
-        The page you are looking for does not exist or has been moved.
+        Die gesuchte Seite existiert nicht oder wurde verschoben.
       </p>
       <Link
         href='/'
         className='rounded bg-yellow-500 px-6 py-3 text-white transition-colors hover:bg-yellow-600'
       >
-        Return Home
+        Zurück zur Startseite
       </Link>
     </div>
   );

@@ -1,6 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import Container from '../../components/Container';
+import Container from '@/components/Container';
+
+export const metadata = {
+  title: 'Datenschutz',
+  description: 'Datenschutzerklärung des Bund für integrative Bildung.',
+};
 
 export default function Datenschutz() {
   return (

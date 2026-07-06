@@ -1,29 +1,21 @@
 'use client';
+
+import { useEffect } from 'react';
 import { useStore } from '../../src/store';
 
+/**
+ * Cookie consent banner. Shown until the visitor accepts or declines;
+ * the choice is persisted in localStorage (see src/store.js) and gates
+ * the third-party embeds (Calendly, Google Maps).
+ */
 const CookieConsent = () => {
-  const { showCookieConsent, setShowCookieConsent, setCookiesAccepted } = useStore();
-  // useEffect(() => {
-  //   // Check if user has already made a choice
-  //   const consent = localStorage.getItem('cookieConsent');
-  //   if (!consent) {
-  //     setCookieConsent(true);
-  //   }
-  // }, []);
+  const { showCookieConsent, loadStoredConsent, acceptCookies, declineCookies } = useStore();
 
-  const handleAccept = () => {
-    // localStorage.setItem('cookieConsent', 'accepted');
-    // setCookieConsent(false);
-    setShowCookieConsent(false);
-    setCookiesAccepted(true);
-  };
-
-  const handleDecline = () => {
-    // localStorage.setItem('cookieConsent', 'declined');
-    // setCookieConsent(false);
-    setShowCookieConsent(false);
-    setCookiesAccepted(false);
-  };
+  // Restore a previously made choice after mount (localStorage is
+  // unavailable during server rendering).
+  useEffect(() => {
+    loadStoredConsent();
+  }, [loadStoredConsent]);
 
   if (!showCookieConsent) return null;
 
@@ -37,13 +29,13 @@ const CookieConsent = () => {
         </div>
         <div className='flex w-full sm:w-auto'>
           <button
-            onClick={handleDecline}
+            onClick={declineCookies}
             className='w-1/2 sm:w-auto px-4 text-sm font-medium text-gray-700 hover:text-gray-900'
           >
             Ablehnen
           </button>
           <button
-            onClick={handleAccept}
+            onClick={acceptCookies}
             className='w-1/2 sm:w-auto px-4 py-3 text-sm font-medium text-black bg-darkYellow hover:bg-darkYellow/80'
           >
             Akzeptieren

@@ -1,8 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import Container from '../../components/Container';
+import Container from '@/components/Container';
 import Image from 'next/image';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+export const metadata = {
+  title: 'Ansprechpartner:innen',
+  description:
+    'Unsere Ansprechpartner:innen beim Bund für integrative Bildung – Kontakte für Geschäftsführung, Lernförderung und die Standorte Berlin, Hannover, Leipzig und Magdeburg.',
+};
 
 const ansprechpartnerinnen = [
   {

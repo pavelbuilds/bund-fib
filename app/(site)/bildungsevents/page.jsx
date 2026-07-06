@@ -1,0 +1,67 @@
+import Container from '@/components/Container';
+import Card from '@/components/Card';
+
+export const metadata = {
+  title: '(Bildungs)Events',
+  description:
+    'Aktuelle und vergangene Bildungsevents des Bund-fiB: Sommerfeste am Plötzensee und in der Oase Berlin sowie die Bildungskonferenz "Voneinander lernen" zu demokratischem Dialog.',
+};
+
+const Bildungsevents = () => {
+  return (
+    <>
+      <div className='bg-darkYellow pt-14'>
+        {/* Title */}
+        {/* <ProjectTitleSection
+          title='Bildungsevents'
+          subtitle=''
+          image='/images/fit-fuer-die-schule.jpeg'
+        /> */}
+        {/* Content */}
+        <Container>
+          {/* Aktuelle */}
+          <h1 className='text-2xl font-bold mt-20 mb-10'>Aktuelles</h1>
+          {/* aktuelle keine events */}
+          <p className='text-lg '>Aktuell sind keine Events geplant.</p>
+          {/* Vergangenes */}
+          <h1 className='text-2xl font-bold mt-32 mb-14'>Vergangenes</h1>
+          <div className='flex flex-wrap gap-14 pb-20'>
+            <Card
+              imageSrc='/images/sommerfest-2025/Bild_2_Sommerfest_web.jpg'
+              title='Sommerfest'
+              subtitle='Sommer, Sonne, Strand – das Kulturfest für alle'
+              text='Am 14. August verwandelten wir den Plötzensee in einen bunten Begegnungsort für Jung und Alt! Unser Sommerfest brachte Menschen unterschiedlicher Kulturen zusammen und schuf einen Raum für gemeinsame Erlebnisse.'
+              link='/bildungsevents/sommerfest-2025'
+            />
+            <Card
+              imageSrc='/images/bildungs-events.jpeg'
+              title='Bildungskonferenz - Voneinander lernen '
+              subtitle='Wege zu demokratischem Dialog - Impulse für
+die Bildung '
+              text='Mit einer Förderung der Berliner Landeszentrale für politische Bildung haben
+wir eine Bildungskonferenz zu dem Thema "Voneinander lernen: Wege zu
+demokratischem Dialog - Impulse für die Bildung" durchgeführt.
+Bildungsinteressierte, Pädagog*innen und Expert *innen kamen zusammen,
+um sich über demokratischen Dialog und die Rolle beziehungsweise auch die
+Verantwortung des Bildungswesens auszutauschen.'
+              link='/bildungsevents/bildungskonferenz'
+            />
+            <Card
+              imageSrc='/images/Sommerfest.jpg'
+              title='Transkulturelles Sommerfest'
+              subtitle='Sommerspaß in der Oase Berlin'
+              text='Unsere transkulturellen Sommerfeste sind ein lebendiges Zeichen für
+Offenheit, Zusammenhalt und gelebte Vielfalt. 2023 feierten wir zusammen
+mit der Kinder- und Jugendeinrichtung "die Oase" ein Sommerfest mit Pools
+und Wasserrutsche, Bastel, - und Grafittiangebot, sowie (Kinder)DJs und einer
+Tanzbühne.'
+              link='/bildungsevents/transkulturelles-sommerfest'
+            />
+          </div>
+        </Container>
+      </div>
+    </>
+  );
+};
+
+export default Bildungsevents;

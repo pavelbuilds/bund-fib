@@ -1,3 +1,4 @@
+/** Homepage hero with background image, slogan and wave divider. */
 const TitleSection = () => {
   return (
     <section
@@ -13,19 +14,8 @@ const TitleSection = () => {
         <div className='mt-10 px-5 text-center font-source text-2xl leading-tight text-white sm:w-full sm:px-0'>
           Als gemeinnützige Organisation bauen wir auf Bildung durch Wertschätzung.
         </div>
-        {/* Buttons */}
-        <div className='mt-10 flex flex-col items-center justify-center sm:flex-row'>
-          {/* <Button
-        className='umami--click--TitleSeite-Termin-buchen'
-        cta={'Termin buchen'}
-        click={toggleKontaktieren}
-      ></Button> */}
-          {/* <a href='#Leistungsübersicht'>
-            <button className=' mt-5 rounded-full border-2 border-white px-9 py-1 font-source text-lg font-semibold text-white transition-all sm:ml-5 sm:mt-0 sm:h-8 sm:py-0 sm:text-sm lg:hover:scale-[102%]'>
-              mehr erfahren
-            </button>
-          </a> */}
-        </div>
+        {/* Spacer (former button row) — keeps the hero text vertically positioned as designed */}
+        <div className='mt-10 flex flex-col items-center justify-center sm:flex-row'></div>
       </div>
       {/* Wellen Teiler */}
       <div className='wave'>

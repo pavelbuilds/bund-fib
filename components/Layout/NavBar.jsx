@@ -1,149 +1,166 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedin, faTiktok } from '@fortawesome/free-brands-svg-icons';
-import { faCaretDown, faXmark, faEnvelope, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
-import BurgerMenu from '../BurgerMenu';
-import { useRouter } from 'next/router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';
+import BurgerMenu from '../BurgerMenu';
+import SocialLinks from './SocialLinks';
+import { navigation } from '../../lib/navigation';
 
 const dropdownVariants = {
-  hidden: {
-    opacity: 0,
-    height: 0,
-    transition: {
-      duration: 0.2,
-      ease: 'easeInOut',
-    },
-  },
-  visible: {
-    opacity: 1,
-    height: 'auto',
-    transition: {
-      duration: 0.3,
-      ease: 'easeInOut',
-    },
-  },
+  hidden: { opacity: 0, height: 0, transition: { duration: 0.2, ease: 'easeInOut' } },
+  visible: { opacity: 1, height: 'auto', transition: { duration: 0.3, ease: 'easeInOut' } },
 };
 
+/** Second-level flyout that opens to the right of a desktop dropdown entry. */
+const DesktopFlyout = ({ item }) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <li
+      className='relative py-3 px-10 hover:bg-darkYellow'
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <div className='flex items-center'>
+        {item.label} <FontAwesomeIcon className='ml-2 w-2' icon={faCaretRight} />
+      </div>
+      {open && (
+        <ul className='absolute left-full top-0 rounded-xl bg-lightYellow pb-5 shadow-md'>
+          {item.children.map((child, index) => (
+            <li
+              key={child.label}
+              className={`hover:bg-darkYellow ${index === 0 ? 'rounded-t-xl' : ''}`}
+            >
+              <Link href={child.href} className='block py-3 px-10 whitespace-nowrap'>
+                {child.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </li>
+  );
+};
+
+/** Top-level desktop menu entry; renders a hover dropdown when it has children. */
+const DesktopNavItem = ({ item }) => {
+  const [open, setOpen] = useState(false);
+
+  if (!item.children) {
+    return (
+      <li>
+        <Link href={item.href} className='block'>
+          {item.label}
+        </Link>
+      </li>
+    );
+  }
+
+  const trigger = (
+    <span className='flex items-center'>
+      {item.label} <FontAwesomeIcon className='ml-2 w-2' icon={faCaretDown} />
+    </span>
+  );
+
+  return (
+    <li
+      className='relative py-5'
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      {item.href ? <Link href={item.href}>{trigger}</Link> : trigger}
+      {open && (
+        <ul className='absolute mt-5 -translate-x-1/3 rounded-b-xl bg-lightYellow pb-5 shadow-md'>
+          {item.children.map((child) =>
+            child.children ? (
+              <DesktopFlyout key={child.label} item={child} />
+            ) : (
+              <li key={child.label} className='hover:bg-darkYellow'>
+                <Link href={child.href} className='block py-3 px-10 text-left whitespace-nowrap'>
+                  {child.label}
+                </Link>
+              </li>
+            )
+          )}
+        </ul>
+      )}
+    </li>
+  );
+};
+
+/**
+ * Entry of the mobile burger menu. Items with children become an animated
+ * accordion; plain links close the burger menu on navigation.
+ */
+const BurgerNavItem = ({ item, depth = 0, onNavigate }) => {
+  const [open, setOpen] = useState(false);
+
+  const textSize = ['', 'text-2xl', 'text-xl'][depth] || 'text-xl';
+
+  if (!item.children) {
+    return (
+      <li className={depth > 0 ? `mt-4 ${textSize}` : ''}>
+        <Link href={item.href} onClick={onNavigate} className='block'>
+          {item.label}
+        </Link>
+      </li>
+    );
+  }
+
+  return (
+    <li className={depth > 0 ? `mt-4 ${textSize}` : ''}>
+      <button
+        type='button'
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        className='flex items-center cursor-pointer'
+      >
+        {item.label}
+        <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.3 }}>
+          <FontAwesomeIcon className='mx-2 w-4' icon={faCaretDown} />
+        </motion.span>
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.ul
+            className='ml-4 mt-2 overflow-hidden'
+            initial='hidden'
+            animate='visible'
+            exit='hidden'
+            variants={dropdownVariants}
+          >
+            {item.children.map((child) => (
+              <BurgerNavItem
+                key={child.label}
+                item={child}
+                depth={depth + 1}
+                onNavigate={onNavigate}
+              />
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
+    </li>
+  );
+};
+
+/**
+ * Fixed page header: logo, desktop menu with hover dropdowns, social links
+ * and the full-screen mobile burger menu. Menu entries live in
+ * lib/navigation.js.
+ */
 const NavBar = () => {
-  const [show, setShow] = useState(false);
-  const [showLernfoerderung, setShowLernfoerderung] = useState(false);
-  const [showBildungsprojekte, setShowBildungsprojekte] = useState(false);
-  const [showMitmachen, setShowMitmachen] = useState(false);
-  const [showJobs, setShowJobs] = useState(false);
-  const [showAktivWerden, setShowAktivWerden] = useState(false);
-  const [viewportHeight, setViewportHeight] = useState(0);
-
-  const showDropdown = () => {
-    setShow(true);
-  };
-  const hideDropdown = () => {
-    setShow(false);
-  };
-
-  const showLernfoerderungDropdown = () => {
-    setShowLernfoerderung(true);
-  };
-  const hideLernfoerderungDropdown = () => {
-    setShowLernfoerderung(false);
-  };
-
-  const showBildungsprojekteDropdown = () => {
-    setShowBildungsprojekte(true);
-  };
-  const hideBildungsprojekteDropdown = () => {
-    setShowBildungsprojekte(false);
-  };
-
-  const showMitmachenDropdown = () => {
-    setShowMitmachen(true);
-  };
-  const hideMitmachenDropdown = () => {
-    setShowMitmachen(false);
-  };
-
-  const showJobsDropdown = () => {
-    setShowJobs(true);
-  };
-  const hideJobsDropdown = () => {
-    setShowJobs(false);
-  };
-
-  const showAktivWerdenDropdown = () => {
-    setShowAktivWerden(true);
-  };
-  const hideAktivWerdenDropdown = () => {
-    setShowAktivWerden(false);
-  };
-
-  const [hamburgerClicked, setHamburgerClicked] = useState(false);
-  const [burgerLernfoerderungOpen, setBurgerLernfoerderungOpen] = useState(false);
-  const [burgerBildungsprojekteOpen, setBurgerBildungsprojekteOpen] = useState(false);
-  const [burgerProjekteOpen, setBurgerProjekteOpen] = useState(false);
-  const [burgerMitmachenOpen, setBurgerMitmachenOpen] = useState(false);
-  const [burgerJobsOpen, setBurgerJobsOpen] = useState(false);
-  const [burgerAktivWerdenOpen, setBurgerAktivWerdenOpen] = useState(false);
-
-  const toggleBurgerLernfoerderung = () => {
-    setBurgerLernfoerderungOpen(!burgerLernfoerderungOpen);
-  };
-
-  const toggleBurgerBildungsprojekte = () => {
-    setBurgerBildungsprojekteOpen(!burgerBildungsprojekteOpen);
-  };
-
-  const toggleBurgerProjekte = () => {
-    setBurgerProjekteOpen(!burgerProjekteOpen);
-  };
-
-  const toggleBurgerMitmachen = () => {
-    setBurgerMitmachenOpen(!burgerMitmachenOpen);
-  };
-
-  const toggleBurgerJobs = () => {
-    setBurgerJobsOpen(!burgerJobsOpen);
-  };
-
-  const toggleBurgerAktivWerden = () => {
-    setBurgerAktivWerdenOpen(!burgerAktivWerdenOpen);
-  };
-
-  const toogleHamburgerMenu = () => {
-    setHamburgerClicked(!hamburgerClicked);
-  };
-
-  useEffect(() => {
-    const updateHeight = () => {
-      // Use visual viewport height if available, otherwise fall back to inner height
-      const height = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-      setViewportHeight(height);
-    };
-
-    // Initial height
-    updateHeight();
-
-    // Add event listeners
-    window.visualViewport?.addEventListener('resize', updateHeight);
-    window.visualViewport?.addEventListener('scroll', updateHeight);
-    window.addEventListener('resize', updateHeight);
-
-    // Cleanup
-    return () => {
-      window.visualViewport?.removeEventListener('resize', updateHeight);
-      window.visualViewport?.removeEventListener('scroll', updateHeight);
-      window.removeEventListener('resize', updateHeight);
-    };
-  }, []);
+  const [burgerOpen, setBurgerOpen] = useState(false);
+  const toggleBurger = () => setBurgerOpen((value) => !value);
+  const closeBurger = () => setBurgerOpen(false);
 
   return (
     <>
-      <nav
-        className='fixed z-50 min-w-full bg-lightYellow py-3
-                shadow-md lg:py-0'
-      >
+      <nav className='fixed z-50 min-w-full bg-lightYellow py-3 shadow-md lg:py-0'>
         <div className='mx-auto flex max-w-screen-xl items-center justify-between px-5 sm:px-20'>
           {/* Logo */}
           <Link href='/'>
@@ -154,533 +171,36 @@ const NavBar = () => {
               alt='Bund-fiB Logo'
             />
           </Link>
-          {/* Menu */}
+          {/* Desktop menu */}
           <ul className='hidden w-[500px] items-center justify-between font-source text-sm lg:flex'>
-            <li>
-              <Link href='/#ueberuns' className='block'>
-                Über Uns
-              </Link>
-            </li>
-            <li className='relative py-5' onMouseEnter={showDropdown} onMouseLeave={hideDropdown}>
-              <Link href='/#Leistungsübersicht' className='flex items-center'>
-                Projekte <FontAwesomeIcon className='ml-2 w-2' icon={faCaretDown} />
-              </Link>
-              {show && (
-                <ul className='absolute mt-5 -translate-x-1/3 rounded-b-xl bg-lightYellow pb-5 shadow-md'>
-                  <li
-                    className='py-3 px-10 hover:bg-darkYellow relative'
-                    onMouseEnter={showLernfoerderungDropdown}
-                    onMouseLeave={hideLernfoerderungDropdown}
-                  >
-                    <div className='flex items-center'>
-                      Lernförderung <FontAwesomeIcon className='ml-2 w-2' icon={faCaretRight} />
-                    </div>
-                    {showLernfoerderung && (
-                      <ul className='absolute left-full top-0 rounded-xl bg-lightYellow pb-5 shadow-md'>
-                        <li className='hover:bg-darkYellow rounded-t-xl'>
-                          <Link href='/lernfoerderung-berlin' className='px-10 block py-3'>
-                            Berlin
-                          </Link>
-                        </li>
-                        <li className='hover:bg-darkYellow'>
-                          <Link href='/lernfoerderung-hannover' className='px-10 block py-3'>
-                            Hannover
-                          </Link>
-                        </li>
-                        <li className='hover:bg-darkYellow'>
-                          <Link href='/lernfoerderung-leipzig' className='px-10 block py-3'>
-                            Leipzig
-                          </Link>
-                        </li>
-                        <li className='hover:bg-darkYellow'>
-                          <Link href='/lernfoerderung-magdeburg' className='px-10 block py-3'>
-                            Magdeburg
-                          </Link>
-                        </li>
-                      </ul>
-                    )}
-                  </li>
-                  <li className='hover:bg-darkYellow'>
-                    <Link href='/fit-fuer-die-schule' className='block py-3 px-10 text-left'>
-                      Fit für die Schule
-                    </Link>
-                  </li>
-                  <li
-                    className='py-3 px-10 hover:bg-darkYellow relative'
-                    onMouseEnter={showBildungsprojekteDropdown}
-                    onMouseLeave={hideBildungsprojekteDropdown}
-                  >
-                    <div className='flex items-center'>
-                      Bildungsprojekte <FontAwesomeIcon className='ml-2 w-2' icon={faCaretRight} />
-                    </div>
-                    {showBildungsprojekte && (
-                      <ul className='absolute left-full top-0 rounded-xl bg-lightYellow pb-5 shadow-md'>
-                        <li className='hover:bg-darkYellow rounded-t-xl'>
-                          <Link href='/eduai' className='block py-3 px-10 text-left'>
-                            EduAId
-                          </Link>
-                        </li>
-                        <li className='hover:bg-darkYellow'>
-                          <Link href='/gemeinsam-handeln' className='block py-3 px-10 text-left'>
-                            Gemeinsam Handeln
-                          </Link>
-                        </li>
-                        <li className='hover:bg-darkYellow'>
-                          <Link
-                            href='/ferienschule-fuer-integrative-bildung'
-                            className='block py-3 px-10 text-left'
-                          >
-                            Ferienschulen
-                          </Link>
-                        </li>
-                      </ul>
-                    )}
-                  </li>
-                  <li className='hover:bg-darkYellow'>
-                    <Link href='/bildungsevents' className='block py-3 px-10 text-left'>
-                      (Bildungs)Events
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-            {/* Mitmachen */}
-            <li
-              className='relative py-5'
-              onMouseEnter={showMitmachenDropdown}
-              onMouseLeave={hideMitmachenDropdown}
-            >
-              <div className='flex items-center'>
-                Mitmachen <FontAwesomeIcon className='ml-2 w-2' icon={faCaretDown} />
-              </div>
-              {showMitmachen && (
-                <ul className='absolute mt-5 -translate-x-1/3 rounded-b-xl bg-lightYellow pb-5 shadow-md'>
-                  <li
-                    className='py-3 px-10 hover:bg-darkYellow relative'
-                    onMouseEnter={showJobsDropdown}
-                    onMouseLeave={hideJobsDropdown}
-                  >
-                    <div className='flex items-center'>
-                      Jobs <FontAwesomeIcon className='ml-2 w-2' icon={faCaretRight} />
-                    </div>
-                    {showJobs && (
-                      <ul className='absolute left-full top-0 rounded-xl bg-lightYellow pb-5 shadow-md'>
-                        <Link href='/jobs#honorartaetigkeiten'>
-                          <li className='py-3 px-10 hover:bg-darkYellow hover:rounded-t-xl'>
-                            Honorartätigkeiten
-                          </li>
-                        </Link>
-                        <Link href='/jobs#jobs'>
-                          <li className='py-3 px-10 hover:bg-darkYellow hover:rounded-t-xl'>
-                            Ausschreibung
-                          </li>
-                        </Link>
-                        <Link href='/jobs#initiativbewerbung'>
-                          <li className='py-3 px-10 hover:bg-darkYellow'>Initiativbewerbung</li>
-                        </Link>
-                      </ul>
-                    )}
-                  </li>
-                  <li
-                    className='py-3 px-10 hover:bg-darkYellow relative'
-                    onMouseEnter={showAktivWerdenDropdown}
-                    onMouseLeave={hideAktivWerdenDropdown}
-                  >
-                    <div className='flex items-center'>
-                      Aktiv Werden <FontAwesomeIcon className='ml-2 w-2' icon={faCaretRight} />
-                    </div>
-                    {showAktivWerden && (
-                      <ul className='absolute left-full top-0 rounded-xl bg-lightYellow pb-5 shadow-md'>
-                        <Link href='/aktiv-werden#ehrenamt'>
-                          <li className='py-3 px-10 hover:bg-darkYellow hover:rounded-t-xl'>
-                            Ehrenamt
-                          </li>
-                        </Link>
-                        <Link href='/aktiv-werden#praktikum'>
-                          <li className='py-3 px-10 hover:bg-darkYellow hover:rounded-t-xl'>Praktikum</li>
-                        </Link>
-                        <Link href='/aktiv-werden#bundesfreiwilligendienst'>
-                          <li className='py-3 px-10 hover:bg-darkYellow'>
-                            Bundesfreiwilligendienst
-                          </li>
-                        </Link>
-                      </ul>
-                    )}
-                  </li>
-                  <Link href='/duales-studium'>
-                    <li className='py-3 px-10 hover:bg-darkYellow'>Duales Studium</li>
-                  </Link>
-                  <Link href='/berufsvorbereitung'>
-                    <li className='py-3 px-10 hover:bg-darkYellow'>Berufsvorbereitung</li>
-                  </Link>
-                </ul>
-              )}
-            </li>
-            {/* Kinderschutz */}
-            <li>
-              <Link href='/kinderschutz' className='block'>
-                Kinderschutz
-              </Link>
-            </li>
+            {navigation.map((item) => (
+              <DesktopNavItem key={item.label} item={item} />
+            ))}
           </ul>
-          {/* Social Media Icons */}
+          {/* Social media icons */}
           <div className='hidden items-center gap-4 md:flex'>
-            {/* TikTok */}
-            <a
-              href='https://www.tiktok.com/@bund.fib'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex h-10 w-10 items-center justify-center rounded-full bg-darkYellow text-black'
-            >
-              <FontAwesomeIcon className='w-5 text-black' icon={faTiktok} />
-            </a>
-            {/* Instagram */}
-            <a
-              href='https://www.instagram.com/bund_fib/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex h-10 w-10 items-center justify-center rounded-full bg-darkYellow text-black'
-            >
-              <FontAwesomeIcon className='w-5 text-black' icon={faInstagram} />
-            </a>
-            {/* LinkedIn */}
-            <a
-              href='https://www.linkedin.com/company/bund-f%C3%BCr-integrative-bildung/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex h-10 w-10 items-center justify-center rounded-full bg-darkYellow text-black'
-            >
-              <FontAwesomeIcon className='w-5 text-black' icon={faLinkedin} />
-            </a>
-            {/* Email */}
-            <a
-              href='mailto:verwaltung@bund-fib.de'
-              className='flex h-10 w-10 items-center justify-center rounded-full bg-darkYellow text-black'
-            >
-              <FontAwesomeIcon className='w-5' icon={faEnvelope} />
-            </a>
+            <SocialLinks />
           </div>
-          {/* Burger Menu */}
-          <BurgerMenu
-            hamburgerClicked={hamburgerClicked}
-            toogleHamburgerMenu={toogleHamburgerMenu}
-          />
+          {/* Burger toggle (mobile only) */}
+          <BurgerMenu hamburgerClicked={burgerOpen} toogleHamburgerMenu={toggleBurger} />
         </div>
       </nav>
 
-      {/* Burger Menu */}
+      {/* Full-screen burger menu */}
       <div
         className={`fixed z-40 h-screen w-screen bg-lightYellow transition-all duration-700 ease-out lg:pt-24 ${
-          hamburgerClicked ? '-translate-y-0' : '-translate-y-full'
+          burgerOpen ? '-translate-y-0' : '-translate-y-full'
         }`}
       >
-        {/* Container */}
         <div className='flex h-full max-w-screen-xl flex-col items-start justify-center font-berlin text-3xl sm:text-[40px]'>
-          {/* Header */}
-          <Link
-            href='/#ueberuns'
-            onClick={toogleHamburgerMenu}
-            className='mb-10 sm:mb-16 block pl-14 '
-          >
-            Über uns
-          </Link>
-
-          <div className='mb-10 sm:mb-16 pl-14 '>
-            <div onClick={toggleBurgerProjekte} className='flex items-center cursor-pointer'>
-              Projekte
-              <motion.div
-                animate={{ rotate: burgerProjekteOpen ? 180 : 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <FontAwesomeIcon className='mx-2 w-4' icon={faCaretDown} />
-              </motion.div>
-            </div>
-            <AnimatePresence>
-              {burgerProjekteOpen && (
-                <motion.ul
-                  className='ml-4 mt-4'
-                  initial='hidden'
-                  animate='visible'
-                  exit='hidden'
-                  variants={dropdownVariants}
-                >
-                  <li className='text-2xl'>
-                    <div
-                      onClick={toggleBurgerLernfoerderung}
-                      className='flex items-center cursor-pointer'
-                    >
-                      Lernförderung
-                      <motion.div
-                        animate={{ rotate: burgerLernfoerderungOpen ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <FontAwesomeIcon className='mx-2 w-4' icon={faCaretDown} />
-                      </motion.div>
-                    </div>
-                    <AnimatePresence>
-                      {burgerLernfoerderungOpen && (
-                        <motion.ul
-                          className='ml-4 mt-2 text-xl'
-                          initial='hidden'
-                          animate='visible'
-                          exit='hidden'
-                          variants={dropdownVariants}
-                        >
-                          <li>
-                            <Link href='/lernfoerderung-berlin' onClick={toogleHamburgerMenu}>
-                              Berlin
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/lernfoerderung-hannover' onClick={toogleHamburgerMenu}>
-                              Hannover
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/lernfoerderung-leipzig' onClick={toogleHamburgerMenu}>
-                              Leipzig
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/lernfoerderung-magdeburg' onClick={toogleHamburgerMenu}>
-                              Magdeburg
-                            </Link>
-                          </li>
-                        </motion.ul>
-                      )}
-                    </AnimatePresence>
-                  </li>
-                  <li className='mt-4'>
-                    <Link
-                      href='/fit-fuer-die-schule'
-                      onClick={toogleHamburgerMenu}
-                      className='text-2xl'
-                    >
-                      Fit für die Schule
-                    </Link>
-                  </li>
-                  <li className='mt-4'>
-                    <div
-                      onClick={toggleBurgerBildungsprojekte}
-                      className='flex items-center cursor-pointer text-2xl'
-                    >
-                      Bildungsprojekte
-                      <motion.div
-                        animate={{ rotate: burgerBildungsprojekteOpen ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <FontAwesomeIcon className='mx-2 w-4' icon={faCaretDown} />
-                      </motion.div>
-                    </div>
-                    <AnimatePresence>
-                      {burgerBildungsprojekteOpen && (
-                        <motion.ul
-                          className='ml-4 mt-2 text-xl'
-                          initial='hidden'
-                          animate='visible'
-                          exit='hidden'
-                          variants={dropdownVariants}
-                        >
-                          <li>
-                            <Link href='/eduai' onClick={toogleHamburgerMenu}>
-                              EduAid
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/gemeinsam-handeln' onClick={toogleHamburgerMenu}>
-                              Gemeinsam Handeln
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href='/ferienschule-fuer-integrative-bildung'
-                              onClick={toogleHamburgerMenu}
-                            >
-                              Ferienschulen
-                            </Link>
-                          </li>
-                        </motion.ul>
-                      )}
-                    </AnimatePresence>
-                  </li>
-                  <li className='mt-4'>
-                    <Link
-                      href='/bildungsevents'
-                      onClick={toogleHamburgerMenu}
-                      className='text-2xl'
-                    >
-                      (Bildungs)Events
-                    </Link>
-                  </li>
-                </motion.ul>
-              )}
-            </AnimatePresence>
-          </div>
-          <div className='mb-10 sm:mb-16 pl-14 '>
-            <div onClick={toggleBurgerMitmachen} className='flex items-center cursor-pointer'>
-              Mitmachen
-              <motion.div
-                animate={{ rotate: burgerMitmachenOpen ? 180 : 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <FontAwesomeIcon className='mx-2 w-4' icon={faCaretDown} />
-              </motion.div>
-            </div>
-            <AnimatePresence>
-              {burgerMitmachenOpen && (
-                <motion.ul
-                  className='ml-4 mt-4'
-                  initial='hidden'
-                  animate='visible'
-                  exit='hidden'
-                  variants={dropdownVariants}
-                >
-                  <li className='text-2xl'>
-                    <div onClick={toggleBurgerJobs} className='flex items-center cursor-pointer'>
-                      Jobs
-                      <motion.div
-                        animate={{ rotate: burgerJobsOpen ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <FontAwesomeIcon className='mx-2 w-4' icon={faCaretDown} />
-                      </motion.div>
-                    </div>
-                    <AnimatePresence>
-                      {burgerJobsOpen && (
-                        <motion.ul
-                          className='ml-4 mt-2 text-xl'
-                          initial='hidden'
-                          animate='visible'
-                          exit='hidden'
-                          variants={dropdownVariants}
-                        >
-                          <li>
-                            <Link href='/jobs#honorartaetigkeiten' onClick={toogleHamburgerMenu}>
-                              Honorartätigkeiten
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/jobs#jobs' onClick={toogleHamburgerMenu}>
-                              Ausschreibung
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/jobs#initiativbewerbung' onClick={toogleHamburgerMenu}>
-                              Initiativbewerbung
-                            </Link>
-                          </li>
-                        </motion.ul>
-                      )}
-                    </AnimatePresence>
-                  </li>
-                  <li className='text-2xl mt-4'>
-                    <div
-                      onClick={toggleBurgerAktivWerden}
-                      className='flex items-center cursor-pointer'
-                    >
-                      Aktiv Werden
-                      <motion.div
-                        animate={{ rotate: burgerAktivWerdenOpen ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <FontAwesomeIcon className='mx-2 w-4' icon={faCaretDown} />
-                      </motion.div>
-                    </div>
-                    <AnimatePresence>
-                      {burgerAktivWerdenOpen && (
-                        <motion.ul
-                          className='ml-4 mt-2 text-xl'
-                          initial='hidden'
-                          animate='visible'
-                          exit='hidden'
-                          variants={dropdownVariants}
-                        >
-                          <li>
-                            <Link href='/aktiv-werden#ehrenamt' onClick={toogleHamburgerMenu}>
-                              Ehrenamt
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href='/aktiv-werden#praktikum' onClick={toogleHamburgerMenu}>
-                              Praktikum
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href='/aktiv-werden#bundesfreiwilligendienst'
-                              onClick={toogleHamburgerMenu}
-                            >
-                              Bundesfreiwilligendienst
-                            </Link>
-                          </li>
-                        </motion.ul>
-                      )}
-                    </AnimatePresence>
-                  </li>
-                  <li className='text-2xl mt-4'>
-                    <Link href='/duales-studium' onClick={toogleHamburgerMenu} className='block'>
-                      Duales Studium
-                    </Link>
-                  </li>
-                  <li className='text-2xl mt-4'>
-                    <Link
-                      href='/berufsvorbereitung'
-                      onClick={toogleHamburgerMenu}
-                      className='block'
-                    >
-                      Berufsvorbereitung
-                    </Link>
-                  </li>
-                </motion.ul>
-              )}
-            </AnimatePresence>
-          </div>
-          <Link
-            href='/kinderschutz'
-            onClick={toogleHamburgerMenu}
-            className='mb-10 sm:mb-16 block pl-14'
-          >
-            Kinderschutz
-          </Link>
-          {/* Social Media Icons for Burger Menu */}
-          <div
-            className='flex items-center md:hidden gap-4 mt-10  justify-center w-full'
-            style={{ bottom: Math.max(150, viewportHeight * 0.1) + 'px' }}
-          >
-            {/* TikTok */}
-            <a
-              href='https://www.tiktok.com/@bund.fib'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex h-10 w-10 items-center justify-center rounded-full bg-darkYellow text-black'
-            >
-              <FontAwesomeIcon className='w-5 text-black' icon={faTiktok} />
-            </a>
-            {/* Instagram */}
-            <a
-              href='https://www.instagram.com/bund_fib/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex h-10 w-10 items-center justify-center rounded-full bg-darkYellow text-black'
-            >
-              <FontAwesomeIcon className='w-5 text-black' icon={faInstagram} />
-            </a>
-            {/* LinkedIn */}
-            <a
-              href='https://www.linkedin.com/company/bund-f%C3%BCr-integrative-bildung/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='flex h-10 w-10 items-center justify-center rounded-full bg-darkYellow text-black'
-            >
-              <FontAwesomeIcon className='w-5 text-black' icon={faLinkedin} />
-            </a>
-            {/* Email */}
-            <a
-              href='mailto:verwaltung@bund-fib.de'
-              className='flex h-10 w-10 items-center justify-center rounded-full bg-darkYellow text-black'
-            >
-              <FontAwesomeIcon className='w-5' icon={faEnvelope} />
-            </a>
+          <ul className='flex flex-col items-start [&>li]:mb-10 [&>li]:sm:mb-16 [&>li]:pl-14'>
+            {navigation.map((item) => (
+              <BurgerNavItem key={item.label} item={item} onNavigate={closeBurger} />
+            ))}
+          </ul>
+          {/* Social media icons (small screens only) */}
+          <div className='mt-10 flex w-full items-center justify-center gap-4 md:hidden'>
+            <SocialLinks />
           </div>
         </div>
       </div>

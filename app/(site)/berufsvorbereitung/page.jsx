@@ -1,0 +1,81 @@
+import Container from '@/components/Container';
+import Textbox from '@/components/Textbox';
+
+export const metadata = {
+  title: 'Berufsvorbereitung',
+  description:
+    'Zusatzqualifikationen für Auszubildende der Sozialen Berufe: DaF/DaZ, interkulturelle Kompetenz und der Umgang mit traumatisierten Geflüchteten inklusive Burnout-Prävention.',
+};
+
+// Note: an earlier version toggled a booking popup when clicking the two
+// cards, but the popup itself was never rendered on this page (clicks had
+// no effect). The dead handlers were removed; see git history.
+const Berufsvorbereitung = () => {
+  return (
+    <div className='bg-darkYellow pt-14'>
+      <Container>
+        <section className='w-full flex flex-col items-center pb-20'>
+          <Textbox
+            animation={'fade-up'}
+            section={''}
+            slogan={'Zusatzqualifikationen für Auszubildende der Sozialen Berufe:'}
+            align={'center'}
+            styling={'w-[75%] mt-20'}
+            devider={false}
+          >
+            {/* Text */}
+            <div className='mb-10 font-source leading-tight'>
+              Zusatzqualifikationen sind für Auszubildende im sozialen Bereich essenziell, da sie
+              spezialisierte Kenntnisse und Fähigkeiten vermitteln, die Karrierechancen verbessern
+              und die Qualität der Arbeit steigern.
+            </div>
+          </Textbox>
+          {/* Kennenlernen & Probestunde */}
+          <div className='relative z-10 mt-0 flex flex-col text-white sm:mt-14 lg:flex-row'>
+            {/* Kennenlernen Karte */}
+            <div
+              data-aos={'fade-up'}
+              className='erstesKennenlernen relative mb-20 rounded-2xl shadow-2xl transition-transform sm:w-full lg:mr-12 lg:mb-0 lg:w-1/2 lg:hover:scale-[102%]'
+            >
+              <div className='mx-12 mt-12 font-poppins text-xl sm:mt-12'>
+                DaF/ DaZ und souveräner Umgang mit interkulturellen Klassen/ Gruppen
+              </div>
+              <div className='mx-12 mt-5 h-[5px] w-10 bg-primary '></div>
+              <div className='text-md mx-12 mt-8 mb-16 font-source sm:mt-10'>
+                Die Zusatzausbildung &quot;DaF/DaZ und souveräner Umgang mit interkulturellen
+                Klassen/Gruppen&quot; ist wichtig, da sie Auszubildenden hilft, nicht nur
+                sprachliche Kompetenzen zu vermitteln, sondern auch interkulturelle Sensibilität zu
+                entwickeln, um auf die Vielfalt der Schülerinnen und Schüler angemessen einzugehen
+                und ein förderliches Lernumfeld zu schaffen. Dies fördert nicht nur den
+                Lernprozess, sondern stärkt auch das gegenseitige Verständnis und die Akzeptanz
+                innerhalb der Lerngruppen.
+              </div>
+            </div>
+            {/* Probestunde Karte */}
+            <div
+              data-aos={'fade-up'}
+              className='kostenloseProbestunde relative rounded-2xl shadow-2xl transition-transform sm:w-full lg:mr-12 lg:mb-0 lg:w-1/2 lg:hover:scale-[102%]'
+            >
+              <div className='mx-12 mt-12 font-poppins text-xl sm:mt-12'>
+                Umgang mit traumatisierten Geflüchteten im Schul- und Sozialen Bereich und Burnout
+                Prävention
+              </div>
+              <div className='mx-12 mt-5 h-[5px] w-10 bg-primary '></div>
+              <div className='text-md mx-12 mt-8 mb-5 font-source sm:mt-10'>
+                Die Zusatzausbildung &quot;Umgang mit traumatisierten Geflüchteten im Schul- und
+                Sozialen Bereich und Burnout Prävention&quot; ist wichtig, weil sie Auszubildende
+                befähigt, angemessen auf die besonderen Bedürfnisse traumatisierter Geflüchteter
+                einzugehen und gleichzeitig ihre eigene psychische Gesundheit zu schützen. Dies
+                trägt zur Schaffung einer unterstützenden Umgebung bei, die sowohl den Geflüchteten
+                als auch den Auszubildenden zugutekommt und langfristig zur erfolgreichen
+                Integration beiträgt.
+              </div>
+            </div>
+          </div>
+        </section>
+      </Container>
+    </div>
+  );
+};
+
+export default Berufsvorbereitung;

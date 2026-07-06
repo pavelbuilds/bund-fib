@@ -526,7 +526,3 @@ html {
   background-size: cover;
 }
 
-.kostenloseProbestunde {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/privat.webp');
-  background-size: cover;
-}

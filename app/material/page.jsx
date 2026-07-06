@@ -1,25 +1,30 @@
-'use client';
-
-import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFilePdf, faFolderClosed, faFolderOpen } from '@fortawesome/free-solid-svg-icons';
-import Container from '../../components/Container';
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import Container from '@/components/Container';
+import FlyerFolder from './components/FlyerFolder';
 
-const flyers = [
-  { href: '/images/flyer/F_arabisch.png', label: 'Arabisch' },
-  { href: '/images/flyer/F_deutsch.png', label: 'Deutsch' },
-  { href: '/images/flyer/F_english.png', label: 'Englisch' },
-  { href: '/images/flyer/F_farsi.png', label: 'Farsi' },
-  { href: '/images/flyer/F_französisch.png', label: 'Französisch' },
-  { href: '/images/flyer/F_kurdisch.png', label: 'Kurdisch' },
-  { href: '/images/flyer/F_russisch.png', label: 'Russisch' },
-  { href: '/images/flyer/F_spanisch.png', label: 'Spanisch' },
-  { href: '/images/flyer/F_türkisch.png', label: 'Türkisch' },
+export const metadata = {
+  title: 'Material-fiB',
+  description:
+    'Downloads des Bund für integrative Bildung: Anmeldebögen, fiB-Heft, Kinderschutzkonzept, Verhaltensampel und Flyer in verschiedenen Sprachen.',
+};
+
+// Downloadable documents (PDFs live in public/). Add or remove entries here.
+const documents = [
+  { href: '/zusatzbogen.pdf', label: <>Zusatzbogen für <br /> Lernförderung <br /> <br /></> },
+  { href: '/Heft-fiB.pdf', label: <>Unser fiB-Heft – <br /> Das Lerntagebuch <br /> <br /></> },
+  {
+    href: '/Bund-fiB_Bericht_Bildungskonferenz.pdf',
+    label: <>Publikation <br /> Bildungskonferenz <br /> <br /></>,
+  },
+  {
+    href: '/Kinderschutz-Konzept_Bund-fiB.pdf',
+    label: <>Kinderschutzkonzept <br /> <br /> <br /></>,
+  },
+  { href: '/Bund-fiB_Verhaltensampel.pdf', label: <>Verhaltensampel <br /> <br /> <br /></> },
 ];
 
 export default function Material() {
-  const [flyerOpen, setFlyerOpen] = useState(false);
-
   return (
     <main className='fixed z-50 h-screen min-h-[600px] w-screen overflow-scroll bg-darkYellow transition-all duration-700 ease-out '>
       {/* Container */}
@@ -39,65 +44,20 @@ export default function Material() {
             </div>
             {/* Download Icons - rechte Seite */}
             <div className='downloadsCSS flex w-full flex-wrap items-start justify-center gap-4 rounded-br-3xl  sm:rounded-tr-3xl  rounded-bl-3xl py-20 sm:w-3/5 sm:rounded-bl-none'>
-              <a href='zusatzbogen.pdf' target='_blank'>
-                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
-                  <FontAwesomeIcon className='pb-2 text-white' icon={faFilePdf} style={{ fontSize: '2.5rem' }} />
-                  Zusatzbogen für <br /> Lernförderung <br /> <br />
-                </div>
-              </a>
-              <a href='/Heft-fiB.pdf' target='_blank'>
-                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
-                  <FontAwesomeIcon className='pb-2 text-white' icon={faFilePdf} style={{ fontSize: '2.5rem' }} />
-                  Unser fiB-Heft – <br /> Das Lerntagebuch <br /> <br />
-                </div>
-              </a>
-              <a href='/Bund-fiB_Bericht_Bildungskonferenz.pdf' target='_blank'>
-                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
-                  <FontAwesomeIcon className='pb-2 text-white' icon={faFilePdf} style={{ fontSize: '2.5rem' }} />
-                  Publikation <br /> Bildungskonferenz <br /> <br />
-                </div>
-              </a>
-              <a href='/Kinderschutz-Konzept_Bund-fiB.pdf' target='_blank'>
-                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
-                  <FontAwesomeIcon className='pb-2 text-white' icon={faFilePdf} style={{ fontSize: '2.5rem' }} />
-                  Kinderschutzkonzept <br /> <br /> <br />
-                </div>
-              </a>
-              <a href='/Bund-fiB_Verhaltensampel.pdf' target='_blank'>
-                <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
-                  <FontAwesomeIcon className='pb-2 text-white' icon={faFilePdf} style={{ fontSize: '2.5rem' }} />
-                  Verhaltensampel <br /> <br /> <br />
-                </div>
-              </a>
-              {/* Flyer Ordner */}
-              <button
-                onClick={() => setFlyerOpen(!flyerOpen)}
-                className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm bg-transparent border-none cursor-pointer hover:opacity-80 transition-opacity'
-              >
-                <FontAwesomeIcon
-                  className='pb-2 text-white transition-transform duration-300'
-                  icon={flyerOpen ? faFolderOpen : faFolderClosed}
-                  style={{ fontSize: '2.5rem' }}
-                />
-                Flyer <br /> Fit für die Schule <br /> <br />
-              </button>
-              {/* Flyer Inhalt */}
-              <div
-                className={`w-full overflow-hidden transition-all duration-500 ease-in-out ${
-                  flyerOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
-                }`}
-              >
-                <div className='flex flex-wrap gap-4 items-start justify-center px-6'>
-                  {flyers.map((flyer) => (
-                    <a key={flyer.label} href={flyer.href} target='_blank'>
-                      <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm hover:opacity-80 transition-opacity'>
-                        <FontAwesomeIcon className='pb-2 text-white' icon={faFilePdf} style={{ fontSize: '2rem' }} />
-                        {flyer.label}
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
+              {documents.map((doc) => (
+                <a key={doc.href} href={doc.href} target='_blank' rel='noopener noreferrer'>
+                  <div className='flex flex-col items-center justify-center text-center text-xs text-white sm:text-sm'>
+                    <FontAwesomeIcon
+                      className='pb-2 text-white'
+                      icon={faFilePdf}
+                      style={{ fontSize: '2.5rem' }}
+                    />
+                    {doc.label}
+                  </div>
+                </a>
+              ))}
+              {/* Flyer Ordner (aufklappbar) */}
+              <FlyerFolder />
             </div>
           </div>
         </Container>

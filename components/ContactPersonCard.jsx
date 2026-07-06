@@ -1,8 +1,20 @@
+'use client';
+
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { useStore } from '../src/store';
 
+// Public key for the Google Maps Embed API (restricted to this domain in the
+// Google Cloud console). Can be overridden via env without a code change.
+const MAPS_EMBED_KEY =
+  process.env.NEXT_PUBLIC_GOOGLE_MAPS_EMBED_KEY || 'AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8';
+
+/**
+ * Contact block used on project pages: photo, phone and e-mail of the
+ * responsible person, optionally with a Google Maps embed of the location.
+ * The map only loads after cookie consent (see src/store.js).
+ */
 const ContactPersonCard = ({ person, project, address = undefined, className = '' }) => {
   const { cookiesAccepted, setShowCookieConsent } = useStore();
 
@@ -25,7 +37,7 @@ const ContactPersonCard = ({ person, project, address = undefined, className = '
               <Image
                 src={person.image}
                 className='w-full h-full object-cover object-top'
-                alt='Contact Person'
+                alt={`Foto von ${person.name}`}
                 width={128}
                 height={128}
               />
@@ -56,7 +68,7 @@ const ContactPersonCard = ({ person, project, address = undefined, className = '
           <div className='lg:w-1/2 w-full'>
             {cookiesAccepted ? (
               <iframe
-                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(address)}`}
+                src={`https://www.google.com/maps/embed/v1/place?key=${MAPS_EMBED_KEY}&q=${encodeURIComponent(address)}`}
                 width='100%'
                 height='300'
                 style={{ border: 0 }}
@@ -70,12 +82,13 @@ const ContactPersonCard = ({ person, project, address = undefined, className = '
                 <p className='text-center'>
                   Bitte akzeptieren Sie die Verwendung von Cookies, um die Google Maps-Karte
                   anzuzeigen.{' '}
-                  <span
+                  <button
+                    type='button'
                     className='underline cursor-pointer'
                     onClick={() => setShowCookieConsent(true)}
                   >
-                    hier clicken um Cookie-Einstellungen zu ändern
-                  </span>
+                    Hier klicken, um die Cookie-Einstellungen zu ändern.
+                  </button>
                 </p>
               </div>
             )}

@@ -1,7 +1,11 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import Container from '../../components/Container';
+import Container from '@/components/Container';
 import Image from 'next/image';
+
+export const metadata = {
+  title: 'Partner:innen',
+  description:
+    'Unsere Partner:innen und Förderer – Städte, Stiftungen und Universitäten, die die Bildungsarbeit des Bund für integrative Bildung unterstützen.',
+};
 
 export default function Partner() {
   const partnerLogos = [
@@ -9,14 +13,14 @@ export default function Partner() {
       src: '/images/logos/supportLogo-1-removebg-preview.png',
       width: 180,
       height: 50,
-      alt: 'Berliner Senat Logo',
+      alt: 'Europäische Union Logo',
       link: 'https://european-union.europa.eu/index_de',
     },
     {
       src: '/images/logos/BerlinerLandeszentrale.png',
       width: 180,
       height: 50,
-      alt: 'Berliner Senat Logo',
+      alt: 'Berliner Landeszentrale Logo',
     },
     {
       src: '/images/logos/weißes_berlin_logo.webp',
@@ -36,7 +40,7 @@ export default function Partner() {
       src: '/images/logos/Landeshauptstadt-Hannover.png',
       width: 180,
       height: 50,
-      alt: 'Berliner Senat Logo',
+      alt: 'Landeshauptstadt Hannover Logo',
       link: 'https://www.hannover.de/',
     },
     {
@@ -50,19 +54,19 @@ export default function Partner() {
       src: '/images/logos/MindsEurope.png',
       width: 100,
       height: 50,
-      alt: 'Berliner Senat Logo',
+      alt: 'Minds Europe Logo',
     },
     {
       src: '/images/logos/universiteDePau.png',
       width: 180,
       height: 50,
-      alt: 'Berliner Senat Logo',
+      alt: 'Université de Pau Logo',
     },
     {
       src: '/images/logos/UnivesitaetOldenburg.png',
       width: 130,
       height: 50,
-      alt: 'Berliner Senat Logo',
+      alt: 'Universität Oldenburg Logo',
       link: 'https://uol.de/',
     },
     {
@@ -76,7 +80,7 @@ export default function Partner() {
       src: '/images/logos/Basique.png',
       width: 140,
       height: 50,
-      alt: 'Berliner Senat Logo',
+      alt: 'Basique Logo',
       link: 'https://birabira.org/',
     },
 
@@ -93,16 +97,22 @@ export default function Partner() {
       <Container styling={'pt-5'}>
         <div className='text-center font-berlin text-4xl mb-32'>Unsere Partner:innen</div>
         <div className='flex flex-wrap items-center justify-evenly overflow-hidden mb-10 '>
-          {partnerLogos.map((logo, index) => (
-            <a
-              key={index}
-              className='flex w-1/2 justify-center px-5 py-3 md:py-0 sm:w-1/2 md:w-1/4'
-              href={logo.link}
-              target='_blank'
-            >
-              <Image src={logo.src} width={logo.width} height={logo.height} alt={logo.alt} />
-            </a>
-          ))}
+          {partnerLogos.map((logo, index) =>
+            logo.link ? (
+              <a
+                key={index}
+                className='flex w-1/2 justify-center px-5 py-3 md:py-0 sm:w-1/2 md:w-1/4'
+                href={logo.link}
+                target='_blank'
+              >
+                <Image src={logo.src} width={logo.width} height={logo.height} alt={logo.alt} />
+              </a>
+            ) : (
+              <div key={index} className='flex w-1/2 justify-center px-5 py-3 md:py-0 sm:w-1/2 md:w-1/4'>
+                <Image src={logo.src} width={logo.width} height={logo.height} alt={logo.alt} />
+              </div>
+            )
+          )}
         </div>
       </Container>
     </main>

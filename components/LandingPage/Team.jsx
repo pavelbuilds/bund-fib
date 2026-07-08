@@ -27,12 +27,11 @@ const Team = () => {
             align={'left'}
           >
             <div className='mb-10 text-center font-source leading-loose lg:text-left'>
-              Das Bund-fiB Leitungsteam setzt sich aus Sören und Marlene in der Geschäftsführung,
-              Lars als pädagogischer Leiter und Ben als Standortleiter in Hannover zusammen.
-              Gemeinsam haben sie ihre Schwerpunkte in der Pädagogik und Sonderpädagogik, sowie der
-              Anthropologie, Politikwissenschaft und Wirtschaft. Zusammen bringen sie Erfahrung,
-              Herzblut und eine klare Vision mit: Bildung soll für alle zugänglich, inklusiv und
-              chancengerecht sein.
+              Das Bund-fiB Leitungsteam setzt sich aus Ben, Lars und Sören zusammen. Gemeinsam
+              haben sie ihre Schwerpunkte in der Pädagogik und Sonderpädagogik, sowie der
+              Bildungswissenschaft und Wirtschaft. Gemeinsam bringen sie Erfahrung, Herzblut und
+              eine klare Vision mit: Bildung soll für alle zugänglich, inklusiv und chancengerecht
+              sein.
             </div>
           </Textbox>
           <Gruender />

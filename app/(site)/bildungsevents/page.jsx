@@ -4,7 +4,7 @@ import Card from '@/components/Card';
 export const metadata = {
   title: '(Bildungs)Events',
   description:
-    'Aktuelle und vergangene Bildungsevents des Bund-fiB: Sommerfeste am Plötzensee und in der Oase Berlin sowie die Bildungskonferenz "Voneinander lernen" zu demokratischem Dialog.',
+    'Aktuelle und vergangene Bildungsevents des Bund-fiB: Sommerfeste am Plötzensee und in der Oase Berlin sowie die Bildungskonferenzen "Bildungsgerechtigkeit schaffen!" und "Voneinander lernen".',
 };
 
 const Bildungsevents = () => {
@@ -26,6 +26,13 @@ const Bildungsevents = () => {
           {/* Vergangenes */}
           <h1 className='text-2xl font-bold mt-32 mb-14'>Vergangenes</h1>
           <div className='flex flex-wrap gap-14 pb-20'>
+            <Card
+              imageSrc='/images/bildungskonferenz-2026/Bild_1_Bildungskonferenz_web.jpg'
+              title='Bildungsgerechtigkeit schaffen!'
+              subtitle='Chancengerechtigkeit im Kontext von Flucht und Migration'
+              text='Mit einer Förderung der Doris-Wuppermann-Stiftung sind wir in Runde zwei unseres Formats Bildungskonferenz gestartet. Dieses Jahr haben wir uns unter dem Titel "Bildungsgerechtigkeit schaffen! Chancengerechtigkeit im Kontext von Flucht und Migration" versammelt und gemeinsam diskutiert und Lösungsansätze erarbeitet. Was bedeutet Bildungsgerechtigkeit oder auch Ungerechtigkeit? Wie können wir dieser Herausforderung begegnen?'
+              link='/bildungsevents/bildungskonferenz-2026'
+            />
             <Card
               imageSrc='/images/sommerfest-2025/Bild_2_Sommerfest_web.jpg'
               title='Sommerfest'
